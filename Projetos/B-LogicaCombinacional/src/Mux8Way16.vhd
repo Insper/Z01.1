@@ -31,4 +31,4 @@ begin
 		 h when others;
 
 		 
-end rtl;
+end architecture;
