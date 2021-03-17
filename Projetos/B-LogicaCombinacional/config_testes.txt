@@ -31,5 +31,5 @@
 
 ##### conceito A e B
 
-#ConceitoB.vhd
+ConceitoB.vhd
 #ConceitoA.vhd
