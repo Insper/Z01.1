@@ -1,32 +1,32 @@
 {
   "aluno-1": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "José Rafael Martins Fernandes",
+    "email-insper": "josermf2@al.insper.edu.br",
+    "user-github": "josermf2"
   },
   "aluno-2": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Bruno Boldrim Saboya",
+    "email-insper": "brunobs6@al.insper.edu.br",
+    "user-github": "BrunoSaboya"
   },
   "aluno-3": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Esther Gallo Dagir",
+    "email-insper": "esthergd@al.insper.edu.br",
+    "user-github": "esthergd"
   },
   "aluno-4": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome":"João Vitor Menezes de Magalhães",
+    "email-insper": "joaovmm@al.insper.edu.br",
+    "user-github": "JoaoVitorMenezesMagalhaes"
   },
   "aluno-5": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Lucca Barufatti Velini Sanches",
+    "email-insper": "luccabvs@al.insper.edu.br",
+    "user-github": "luccabvs"
   },
   "aluno-6": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Rafael Evangelista Monteiro",
+    "email-insper": "rafaelem2@al.insper.edu.br",
+    "user-github": "rafaelem2"
   }
 }
