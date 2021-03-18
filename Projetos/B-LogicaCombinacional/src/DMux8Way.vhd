@@ -17,6 +17,8 @@ end entity;
 
 architecture arch of DMux8Way is
 begin
-
+qo<= a when sel="000" else 
+	  b	
+		
 
 end architecture;
