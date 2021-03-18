@@ -20,4 +20,5 @@ with sel select
 			b when "01",
 			c when "11",
 			d when others;
+			
 end architecture;
