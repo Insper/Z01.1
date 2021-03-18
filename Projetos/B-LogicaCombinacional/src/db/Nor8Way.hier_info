@@ -1,0 +1,12 @@
+|Nor8Way
+a => q.IN0
+b => q.IN1
+c => q.IN1
+d => q.IN1
+e => q.IN1
+f => q.IN1
+g => q.IN1
+h => q.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
