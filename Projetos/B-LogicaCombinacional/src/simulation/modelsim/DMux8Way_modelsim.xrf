@@ -1,10 +1,10 @@
 vendor_name = ModelSim
-source_file = 1, /home/borg/Desktop/Insper/GitElementos/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd
+source_file = 1, /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd
 source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, /home/borg/Desktop/Insper/GitElementos/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/db/DMux8Way.cbx.xml
+source_file = 1, /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/db/DMux8Way.cbx.xml
 design_name = DMux8Way
 instance = comp, \q0~output , q0~output, DMux8Way, 1
 instance = comp, \q1~output , q1~output, DMux8Way, 1

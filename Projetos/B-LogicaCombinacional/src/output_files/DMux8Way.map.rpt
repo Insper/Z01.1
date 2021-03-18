@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DMux8Way
-Wed Mar 17 09:43:11 2021
+Thu Mar 18 16:14:09 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 17 09:43:11 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 18 16:14:09 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; DMux8Way                                    ;
 ; Top-level Entity Name           ; DMux8Way                                    ;
@@ -166,13 +166,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
-; DMux8Way.vhd                     ; yes             ; User VHDL File  ; /home/borg/Desktop/Insper/GitElementos/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; DMux8Way.vhd                     ; yes             ; User VHDL File  ; /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------+
@@ -257,13 +257,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 17 09:42:58 2021
+    Info: Processing started: Thu Mar 18 16:13:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DMux8Way -c DMux8Way
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file DMux8Way.vhd
-    Info (12022): Found design unit 1: DMux8Way-arch File: /home/borg/Desktop/Insper/GitElementos/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd Line: 18
-    Info (12023): Found entity 1: DMux8Way File: /home/borg/Desktop/Insper/GitElementos/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd Line: 4
+    Info (12022): Found design unit 1: DMux8Way-arch File: /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd Line: 18
+    Info (12023): Found entity 1: DMux8Way File: /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/DMux8Way.vhd Line: 4
 Info (12127): Elaborating entity "DMux8Way" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -273,9 +273,9 @@ Info (21057): Implemented 20 device resources after synthesis - the final resour
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 474 megabytes
-    Info: Processing ended: Wed Mar 17 09:43:11 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Peak virtual memory: 478 megabytes
+    Info: Processing ended: Thu Mar 18 16:14:09 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:26
 
 
