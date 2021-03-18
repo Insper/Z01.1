@@ -1,0 +1,7 @@
+|circuito
+A => x.IN0
+B => x.IN1
+C => x.IN1
+x <= x.DB_MAX_OUTPUT_PORT_TYPE
+
+
