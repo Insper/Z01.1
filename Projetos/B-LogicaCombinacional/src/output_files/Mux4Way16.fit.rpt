@@ -1,5 +1,5 @@
 Fitter report for Mux4Way16
-Thu Mar 18 14:36:54 2021
+Thu Mar 18 15:10:39 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Mar 18 14:36:54 2021       ;
+; Fitter Status                   ; Successful - Thu Mar 18 15:10:39 2021       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Mux4Way16                                   ;
 ; Top-level Entity Name           ; Mux4Way16                                   ;
@@ -1665,9 +1665,9 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file /home/borg/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/output_files/Mux4Way16.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1536 megabytes
-    Info: Processing ended: Thu Mar 18 14:36:55 2021
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 1541 megabytes
+    Info: Processing ended: Thu Mar 18 15:10:39 2021
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:23
 
 
