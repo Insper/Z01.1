@@ -31,7 +31,7 @@ Mux2Way.vhd
 # BarrelShifter16.vhd
 # circuito.vhd
 # detectorDeMoedas.vhd
-# #impressora.vhd
+#impressora.vhd
 # #sevenSeg.vhd
 =======
 >>>>>>> 2b5ee2ee38a4cda3e474ea0526ef73860e01d09c
@@ -55,7 +55,7 @@ Mux4Way16.vhd
 #BarrelShifter16.vhd
 #circuito.vhd
 #detectorDeMoedas.vhd
-#impressora.vhd
+impressora.vhd
 #sevenSeg.vhd
 <<<<<<< HEAD
 =======
