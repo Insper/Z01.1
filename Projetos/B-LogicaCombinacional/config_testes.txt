@@ -32,4 +32,4 @@
 ##### conceito A e B
 
 ConceitoB.vhd
-#ConceitoA.vhd
+ConceitoA.vhd
