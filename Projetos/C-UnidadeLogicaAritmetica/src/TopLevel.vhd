@@ -57,6 +57,8 @@ architecture rtl of TopLevel is
 ---------------
 begin
 
-  u1 : HalfAdder port map(a => SW(0), b=> SW(1), soma => LEDR(0), vaium => LEDR(1));
+  u1 : FullAdder port map(a => SW(0), b=> SW(2), c=>SW(4),soma => LEDR(0), vaium => LEDR(2));
+  u2 : FullAdder port map(a => SW(1), b=> SW(3), c=>SW(5),soma => LEDR(1), vaium => LEDR(3));
+
 
 end rtl;
