@@ -32,10 +32,11 @@ begin
   main : process
   begin
     test_runner_setup(runner, runner_cfg);
-
+      
       -- Teste: 1
       inA <= "0000000000000000"; inB<= "0000000000000001";
       wait for 200 ps;
+      -- JEITO DE DEBUGAR RESULTADOS BINARIOS(inserir em arquivoteste) report "Entity: outQ=" & to_string(outQ) & "bit";
       assert(outQ = "0000000000000001")  report "Falha em teste: 1" severity error;
 
       -- Teste: 2
@@ -46,6 +47,7 @@ begin
       -- Teste: 3
       inA <= "1111111111111111"; inB<= "1111111111111111";
       wait for 200 ps;
+      --report "Entity: outQ=" & to_string(outQ) & "bit";
       assert(outQ = "1111111111111110")  report "Falha em teste: 3" severity error;
 
       -- Teste: 4
