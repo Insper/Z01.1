@@ -1,0 +1,14 @@
+|FullAdder
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma << soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium << vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
