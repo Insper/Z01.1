@@ -18,10 +18,7 @@ end entity;
 
 architecture rtl of Add16 is
   -- Aqui declaramos sinais (fios auxiliares)
-<<<<<<< HEAD
   signal carry: STD_LOGIC_VECTOR(14 downto 0);
-=======
->>>>>>> upstream/master
   -- e componentes (outros módulos) que serao
   -- utilizados nesse modulo.
 
@@ -34,7 +31,6 @@ architecture rtl of Add16 is
 
 begin
   -- Implementação vem aqui!
-<<<<<<< HEAD
   
   u0: FullAdder
   port map(
@@ -179,7 +175,4 @@ begin
 				soma => q(15)
 				);
 				
-=======
-
->>>>>>> upstream/master
 end architecture;
