@@ -20,6 +20,7 @@ architecture rtl of inversor16 is
 
 begin
   -- Implementação vem aqui!
+<<<<<<< HEAD
   y(0) <=  a(0) when z = '0' else not a(0);
   y(1) <=  a(1) when z = '0' else not a(1);
   y(2) <=  a(2) when z = '0' else not a(2);
@@ -38,5 +39,7 @@ begin
   y(15) <=  a(15) when z = '0' else not a(15);
   
   
+=======
+>>>>>>> upstream/master
 
 end architecture;

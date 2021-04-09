@@ -4,7 +4,10 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
+<<<<<<< HEAD
 use IEEE.STD_LOGIC_SIGNED.all;
+=======
+>>>>>>> upstream/master
 
 entity comparador16 is
    port(
@@ -21,7 +24,10 @@ architecture rtl of comparador16 is
 
 begin
   -- Implementação vem aqui!
+<<<<<<< HEAD
   zr<= '1' when a = "0" else '0';
   ng<= '1' when a < "0" else '0'; 
+=======
+>>>>>>> upstream/master
 
 end architecture;
