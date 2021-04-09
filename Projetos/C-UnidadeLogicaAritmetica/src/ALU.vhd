@@ -70,15 +70,9 @@ architecture  rtl OF alu is
 
 	component And16 is
 		port (
-<<<<<<< HEAD
 			a :   in  STD_LOGIC_VECTOR(15 downto 0);
 			b :   in  STD_LOGIC_VECTOR(15 downto 0);
 			q :   out STD_LOGIC_VECTOR(15 downto 0)
-=======
-			a:   in  STD_LOGIC_VECTOR(15 downto 0);
-			b:   in  STD_LOGIC_VECTOR(15 downto 0);
-			q:   out STD_LOGIC_VECTOR(15 downto 0)
->>>>>>> upstream/master
 		);
 	end component;
 
@@ -103,7 +97,6 @@ architecture  rtl OF alu is
 
 begin
   -- Implementação vem aqui!
-<<<<<<< HEAD
   
 	a0: zerador16 port map (zx, x, zxout);
 	a1: zerador16 port map (zy, y, zyout);
@@ -115,7 +108,5 @@ begin
 	a7: inversor16 port map (no, muxout, precomp);
 	a8: comparador16 port map (precomp, zr, ng);
 	saida <= precomp;
-=======
->>>>>>> upstream/master
 
 end architecture;

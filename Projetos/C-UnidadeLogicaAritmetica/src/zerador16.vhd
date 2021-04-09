@@ -20,7 +20,6 @@ architecture rtl of zerador16 is
 
 begin
   -- Implementação vem aqui!
-<<<<<<< HEAD
 y(0 ) <= '0' when z = '1' else a(0 );
 y(1 ) <= '0' when z = '1' else a(1 );
 y(2 ) <= '0' when z = '1' else a(2 );
@@ -37,7 +36,4 @@ y(12) <= '0' when z = '1' else a(12);
 y(13) <= '0' when z = '1' else a(13);
 y(14) <= '0' when z = '1' else a(14);
 y(15) <= '0' when z = '1' else a(15);
-=======
-
->>>>>>> upstream/master
 end architecture;
