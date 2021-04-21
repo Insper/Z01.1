@@ -38,4 +38,9 @@ architecture arch of BinaryDigit is
 
 begin
 
+	bd1: Mux2Way port map(a => input, b => dffout, sel => not     load, q => muxout);
+	bd2: FlipFlopD port map(clock => clock, d => muxout, clear => '0', preset => '0', q => dffout);
+	
+	output <= dffout;
+
 end architecture;
