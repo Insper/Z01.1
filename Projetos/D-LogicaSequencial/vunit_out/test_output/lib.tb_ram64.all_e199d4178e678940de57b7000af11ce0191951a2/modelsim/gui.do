@@ -1,4 +1,4 @@
-source "/home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram64.all_e199d4178e678940de57b7000af11ce0191951a2/modelsim/common.do"
+source "/home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram64.all_e199d4178e678940de57b7000af11ce0191951a2/modelsim/common.do"
 proc vunit_user_init {} {
     return 0
 }
