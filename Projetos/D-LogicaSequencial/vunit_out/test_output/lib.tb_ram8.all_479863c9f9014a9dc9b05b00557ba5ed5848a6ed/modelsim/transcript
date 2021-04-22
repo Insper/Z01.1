@@ -1,7 +1,7 @@
 # Reading pref.tcl
-# source "/home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/modelsim/gui.do"
-# vsim -modelsimini /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/modelsim/modelsim.ini -wlf /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_ram8(tb) -L vunit_lib -L lib -g/tb_ram8/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/,tb path : /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/testes/,use_color : false" 
-# Start time: 18:59:23 on Apr 21,2021
+# source "/home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/modelsim/gui.do"
+# vsim -modelsimini /home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/modelsim/modelsim.ini -wlf /home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_ram8(tb) -L vunit_lib -L lib -g/tb_ram8/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/vunit_out/test_output/lib.tb_ram8.all_479863c9f9014a9dc9b05b00557ba5ed5848a6ed/,tb path : /home/borg/Documents/Insper/Elementos/Z01.1-F-5judeus2ateu/Projetos/D-LogicaSequencial/testes/,use_color : false" 
+# Start time: 10:26:24 on Apr 22,2021
 # ** Warning: Design size of 29350 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # List of VUnit commands:
@@ -19,3 +19,5 @@
 # vunit_restart
 #   - Recompiles the source files
 #   - and re-runs the simulation if the compile was successful
+# End time: 10:26:43 on Apr 22,2021, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 1
