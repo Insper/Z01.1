@@ -1,3 +1,33 @@
+
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@BrunoSaboya
+Insper /
+Z01.1
+
+4
+3
+
+    13
+
+Code
+Pull requests 20
+Discussions
+Actions
+Security
+
+    Insights
+
+Z01.1/Projetos/B-LogicaCombinacional/testes/tb_ConceitoA.vhd
+@rafaelcorsi
+rafaelcorsi add clock tb_conceitoA
+Latest commit 3a55760 14 hours ago
+History
+1 contributor
+72 lines (55 sloc) 1.84 KB
 -- Elementos de Sistemas
 -- developed by Luciano Soares
 -- file: tb_ConceitoA.vhd
@@ -70,3 +100,18 @@ begin
 
   end process;
 end architecture;
+
+    © 2021 GitHub, Inc.
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+

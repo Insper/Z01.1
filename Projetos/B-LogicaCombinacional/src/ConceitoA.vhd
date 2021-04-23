@@ -29,10 +29,55 @@ architecture rtl of ConceitoA is
 -- signals
 --------------
 
+
+signal bcds0 : std_logic_vector(3 downto 0);
+signal bcds1 : std_logic_vector(3 downto 0);
+signal bcds2 : std_logic_vector(3 downto 0);
+
+component binarioToBcd is
+generic (X : integer);
+  port (
+        clk, reset: in std_logic;
+        binary_in: in std_logic_vector(X-1 downto 0);
+        bcd0, bcd1, bcd2, bcd3, bcd4: out std_logic_vector(3 downto 0)
+    );
+end component;
+
+component sevenSeg is
+	port (
+			bcd : in  STD_LOGIC_VECTOR(3 downto 0);
+			leds: out STD_LOGIC_VECTOR(6 downto 0)
+			);
+end component;
+
 ---------------
 -- implementacao
 ---------------
+
 begin
 
 
+seven1: sevenSeg port map(
+		bcd => bcds2,
+		leds => HEX2
+	);
+	
+seven2: sevenSeg port map(
+		bcd => bcds1,
+		leds => HEX1
+	);
+	
+seven3: sevenSeg port map(
+		bcd => bcds0,
+		leds => HEX0  
+	);
+
+bintobcd: binarioToBcd generic map(X => 10) port map(
+		clk => CLOCK_50, 
+		reset=> '0',
+		binary_in => SW,
+		bcd0 => bcds0,
+		bcd1 => bcds1,
+		bcd2 => bcds2
+	);
 end rtl;
