@@ -85,6 +85,7 @@ begin
 		output => output2
 	);
 
+	
 	R3: Ram64 port map(
 		clock => clock,
 		input => input,
