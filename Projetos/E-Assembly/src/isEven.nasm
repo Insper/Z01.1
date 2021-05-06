@@ -8,3 +8,24 @@
 ; em RAM[0] e 0 caso contrário.
 
 
+
+leaw $5, %A
+movw (%A), %D
+leaw $1, %A
+andw %A, %D, %D
+leaw $IMPAR, %A
+jg %D
+nop
+leaw $1, %A
+movw %A, %D
+leaw $END, %A
+jmp
+nop
+ 
+IMPAR: 
+leaw $0, %A
+movw %A, %D
+ 
+END:
+leaw $0, %A
+movw %D, (%A)
