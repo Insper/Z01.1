@@ -8,7 +8,6 @@
 ; em RAM[0] e 0 caso contrário.
 
 
-
 leaw $5, %A
 movw (%A), %D
 leaw $1, %A

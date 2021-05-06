@@ -1,0 +1,310 @@
+|Inc16
+a[0] => Add16:inc1.a[0]
+a[1] => Add16:inc1.a[1]
+a[2] => Add16:inc1.a[2]
+a[3] => Add16:inc1.a[3]
+a[4] => Add16:inc1.a[4]
+a[5] => Add16:inc1.a[5]
+a[6] => Add16:inc1.a[6]
+a[7] => Add16:inc1.a[7]
+a[8] => Add16:inc1.a[8]
+a[9] => Add16:inc1.a[9]
+a[10] => Add16:inc1.a[10]
+a[11] => Add16:inc1.a[11]
+a[12] => Add16:inc1.a[12]
+a[13] => Add16:inc1.a[13]
+a[14] => Add16:inc1.a[14]
+a[15] => Add16:inc1.a[15]
+q[0] <= Add16:inc1.q[0]
+q[1] <= Add16:inc1.q[1]
+q[2] <= Add16:inc1.q[2]
+q[3] <= Add16:inc1.q[3]
+q[4] <= Add16:inc1.q[4]
+q[5] <= Add16:inc1.q[5]
+q[6] <= Add16:inc1.q[6]
+q[7] <= Add16:inc1.q[7]
+q[8] <= Add16:inc1.q[8]
+q[9] <= Add16:inc1.q[9]
+q[10] <= Add16:inc1.q[10]
+q[11] <= Add16:inc1.q[11]
+q[12] <= Add16:inc1.q[12]
+q[13] <= Add16:inc1.q[13]
+q[14] <= Add16:inc1.q[14]
+q[15] <= Add16:inc1.q[15]
+
+
+|Inc16|Add16:inc1
+a[0] => FullAdder:u0.a
+a[1] => FullAdder:u1.a
+a[2] => FullAdder:u2.a
+a[3] => FullAdder:u3.a
+a[4] => FullAdder:u4.a
+a[5] => FullAdder:u5.a
+a[6] => FullAdder:u6.a
+a[7] => FullAdder:u7.a
+a[8] => FullAdder:u8.a
+a[9] => FullAdder:u9.a
+a[10] => FullAdder:u10.a
+a[11] => FullAdder:u11.a
+a[12] => FullAdder:u12.a
+a[13] => FullAdder:u13.a
+a[14] => FullAdder:u14.a
+a[15] => FullAdder:u15.a
+b[0] => FullAdder:u0.b
+b[1] => FullAdder:u1.b
+b[2] => FullAdder:u2.b
+b[3] => FullAdder:u3.b
+b[4] => FullAdder:u4.b
+b[5] => FullAdder:u5.b
+b[6] => FullAdder:u6.b
+b[7] => FullAdder:u7.b
+b[8] => FullAdder:u8.b
+b[9] => FullAdder:u9.b
+b[10] => FullAdder:u10.b
+b[11] => FullAdder:u11.b
+b[12] => FullAdder:u12.b
+b[13] => FullAdder:u13.b
+b[14] => FullAdder:u14.b
+b[15] => FullAdder:u15.b
+q[0] <= FullAdder:u0.soma
+q[1] <= FullAdder:u1.soma
+q[2] <= FullAdder:u2.soma
+q[3] <= FullAdder:u3.soma
+q[4] <= FullAdder:u4.soma
+q[5] <= FullAdder:u5.soma
+q[6] <= FullAdder:u6.soma
+q[7] <= FullAdder:u7.soma
+q[8] <= FullAdder:u8.soma
+q[9] <= FullAdder:u9.soma
+q[10] <= FullAdder:u10.soma
+q[11] <= FullAdder:u11.soma
+q[12] <= FullAdder:u12.soma
+q[13] <= FullAdder:u13.soma
+q[14] <= FullAdder:u14.soma
+q[15] <= FullAdder:u15.soma
+
+
+|Inc16|Add16:inc1|FullAdder:u0
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u1
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u2
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u3
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u4
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u5
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u6
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u7
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u8
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u9
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u10
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u11
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u12
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u13
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u14
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Inc16|Add16:inc1|FullAdder:u15
+a => soma.IN0
+a => vaium.IN0
+a => vaium.IN0
+b => soma.IN1
+b => vaium.IN1
+b => vaium.IN0
+c => soma.IN1
+c => vaium.IN1
+c => vaium.IN1
+soma <= soma.DB_MAX_OUTPUT_PORT_TYPE
+vaium <= vaium.DB_MAX_OUTPUT_PORT_TYPE
+
+

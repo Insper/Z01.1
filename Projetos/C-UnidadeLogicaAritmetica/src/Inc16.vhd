@@ -32,4 +32,6 @@ begin
   -- Implementação vem aqui!
    inc1: Add16 port map (a,"0000000000000001",q);
 
+	inc1: Add16 port map (a,"0000000000000001",q);
+	
 end architecture;
