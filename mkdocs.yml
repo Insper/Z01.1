@@ -2,10 +2,9 @@ site_name: 'Elementos de Sistemas'
 theme:
   name: 'material'
   features:
-#    - navigation.tabs
     - navigation.instant
   palette:
-      primary: 'white'
+      primary: 'black'
       accent: 'pink'
 
 docs_dir: 'docs-src'
@@ -17,10 +16,6 @@ repo_name: 'Insper/Z01.1'
 repo_url: 'https://github.com/insper/Z01.1'
 
 copyright: 'Copyright &copy; Rafael Corsi @ insper'
-
-google_analytics:
-  - UA-G-XQ38NZ62XF
-  - auto
 
 nav:
 - Home:
@@ -61,13 +56,7 @@ nav:
   - 'assembly-Lab-4.md'
   - 'assembly-lab-HW.md'
   - 'cpu-lab-1.md'
-  - 'Lab 16: Assembler':
-    - 'assembler-Lab-1.md'
-    - 'assembler-Lab-1-parte-1.md'
-    - 'assembler-Lab-1-parte-2.md'
-    - 'assembler-Lab-1-parte-3.md'
-    - 'assembler-Lab-1-parte-4.md'
-    - 'assembler-Lab-1-parte-5.md'
+  - 'assembler-Lab-1.md'
   - 'vm-Lab-1.md'
   - 'VMtranslator-Lab-1.md'
 
@@ -132,27 +121,17 @@ nav:
 - História:
   - 'Historia-linux.md'
 
-#- Atendimento:
-#  - 'Atendimento.md'
-
-extra_css:
-  - css/progress.css
-  - css/quizlib.css
-
 extra_javascript:
-  - 'js/dom-confetti.js'
-  - 'js/progress.js'
-  - 'js/quizlib.js'
-  - 'js/quizes.js'
-  - 'translate_admonitions.js'
-  - js/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js
+  - https://www.gstatic.com/firebasejs/8.4.0/firebase-database.js
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - js/markdown-enhancer.js
 
 plugins:
-    - search
+  - git-revision-date-localized
 
-# Extensions
 markdown_extensions:
   - markdown.extensions.attr_list
   - markdown.extensions.admonition
