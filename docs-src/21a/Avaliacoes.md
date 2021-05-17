@@ -10,7 +10,6 @@ Simulados:
 
 - SW:
     - (20b) https://github.com/insper-classroom/20b-ele-av2-simulado
-    - (20a) https://github.com/insper-classroom/20a-ele-av2-simulado
 
 - HW:
     - (Lista) https://insper.github.io/Z01.1/Exercicio-CPU-2/
