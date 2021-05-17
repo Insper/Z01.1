@@ -13,7 +13,7 @@ Simulados:
 
 - HW:
     - (Lista) https://insper.github.io/Z01.1/Exercicio-CPU-2/
-    - (20b) https://github.com/insper-classroom/20b-ele-av3-simulado
+    - (20b editado) https://github.com/insper-classroom/21a-ele-av3-simulado/
    
 !!! info "Estudar"
     Projetos:
