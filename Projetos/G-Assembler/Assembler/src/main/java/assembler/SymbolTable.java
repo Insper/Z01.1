@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 /**
  * Mantém uma tabela com a correspondência entre os rótulos simbólicos e endereços numéricos de memória.
- */
+ *///
 public class SymbolTable {
 
     private HashMap<String, Integer> symbolTable;
