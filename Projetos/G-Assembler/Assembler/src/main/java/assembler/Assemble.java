@@ -8,9 +8,7 @@
  */
 
 package assembler;
-
 import java.io.*;
-
 /**
  * Faz a geração do código gerenciando os demais módulos
  */
