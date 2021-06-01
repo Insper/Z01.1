@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, /home/borg/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/impressora.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/borg/Z01.1-F-5judeus2ateu/Projetos/B-LogicaCombinacional/src/db/impressora.cbx.xml
+design_name = impressora
+instance = comp, \x~output , x~output, impressora, 1
+instance = comp, \SW4~input , SW4~input, impressora, 1
+instance = comp, \SW1~input , SW1~input, impressora, 1
+instance = comp, \SW3~input , SW3~input, impressora, 1
+instance = comp, \SW2~input , SW2~input, impressora, 1
+instance = comp, \x~0 , x~0, impressora, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, impressora, 1
