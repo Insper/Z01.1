@@ -1,0 +1,43 @@
+|DMux8Way
+a => q0.DATAB
+a => q1.DATAB
+a => q2.DATAB
+a => q3.DATAB
+a => q4.DATAB
+a => q5.DATAB
+a => q6.DATAB
+a => q7.DATAB
+sel[0] => Equal0.IN2
+sel[0] => Equal1.IN2
+sel[0] => Equal2.IN1
+sel[0] => Equal3.IN2
+sel[0] => Equal4.IN1
+sel[0] => Equal5.IN2
+sel[0] => Equal6.IN0
+sel[0] => Equal7.IN2
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN1
+sel[1] => Equal2.IN2
+sel[1] => Equal3.IN1
+sel[1] => Equal4.IN0
+sel[1] => Equal5.IN0
+sel[1] => Equal6.IN2
+sel[1] => Equal7.IN1
+sel[2] => Equal0.IN0
+sel[2] => Equal1.IN0
+sel[2] => Equal2.IN0
+sel[2] => Equal3.IN0
+sel[2] => Equal4.IN2
+sel[2] => Equal5.IN1
+sel[2] => Equal6.IN1
+sel[2] => Equal7.IN0
+q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= q2.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= q3.DB_MAX_OUTPUT_PORT_TYPE
+q4 <= q4.DB_MAX_OUTPUT_PORT_TYPE
+q5 <= q5.DB_MAX_OUTPUT_PORT_TYPE
+q6 <= q6.DB_MAX_OUTPUT_PORT_TYPE
+q7 <= q7.DB_MAX_OUTPUT_PORT_TYPE
+
+

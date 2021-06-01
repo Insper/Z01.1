@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/C-UnidadeLogicaAritmetica/src/FullAdder.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/borg/intelFPGA_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, /home/borg/Desktop/Z01.1-F-5judeus2ateu/Projetos/C-UnidadeLogicaAritmetica/src/db/FullAdder.cbx.xml
+design_name = FullAdder
+instance = comp, \soma~output , soma~output, FullAdder, 1
+instance = comp, \vaium~output , vaium~output, FullAdder, 1
+instance = comp, \a~input , a~input, FullAdder, 1
+instance = comp, \c~input , c~input, FullAdder, 1
+instance = comp, \b~input , b~input, FullAdder, 1
+instance = comp, \soma~0 , soma~0, FullAdder, 1
+instance = comp, \vaium~0 , vaium~0, FullAdder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, FullAdder, 1
