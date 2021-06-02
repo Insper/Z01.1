@@ -3,7 +3,7 @@
 -- Inc16.vhd
 
 -- Incrementador de 16 bits
--- adiciona 1 ao valore de entrada (adição aritmética)
+-- adiciona 1 ao valor de entrada (adição aritmética)
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -30,5 +30,14 @@ architecture rtl of Inc16 is
 
 begin
   -- Implementação vem aqui!
+  
+  inc : Add16
+  port map
+  (
+		a => a,
+		b => "0000000000000001",
+		q => q
+	);
+		
 
 end architecture;

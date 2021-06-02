@@ -7,15 +7,21 @@
 ; (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
 ; divisao para numeros inteiros positivos
 
-
-
-
-
-
-
-
-
-
+LOOP:
+leaw $1, %A
+movw (%A), %D
+leaw $0, %A
+subw (%A), %D, %D
+movw %D, (%A)
+leaw $2,%A
+movw (%A), %D
+addw $1, %D, %D
+movw %D, (%A)
+leaw $0, %A
+movw (%A), %D
+leaw $LOOP, %A
+jg %D
+nop
 
 
 

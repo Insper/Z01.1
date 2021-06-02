@@ -11,5 +11,6 @@ end entity;
 architecture arch of And16 is
 begin
 
-
+	q(15 downto 0)<= a(15 downto 0) and b(15 downto 0);
+	
 end architecture;

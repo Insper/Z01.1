@@ -8,3 +8,7 @@
 ;                                ^            ^
 ;                                | TRUQUE!    | TRUQUE!
 
+leaw $62, %A
+movw %A, %D
+leaw $21184, %A
+movw %D, (%A)

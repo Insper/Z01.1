@@ -25,6 +25,15 @@ architecture arch of Register64 is
       );
 	end component;
 
+			SIGNAL vet1, vet2, entrada1, entrada2: std_logic_vector(31 downto 0);
 begin
+
+		entrada1 <= input(63 downto 32);
+		entrada2 <= input(31 downto 0);
+		
+		register1: Register32 Port Map (clock, entrada1, load, vet1);
+		register2: Register32 Port Map (clock, entrada1, load, vet2);
+		
+		output <= vet1 & vet2;
 
 end architecture;

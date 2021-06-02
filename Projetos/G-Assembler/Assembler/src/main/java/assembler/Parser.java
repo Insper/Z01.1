@@ -6,8 +6,11 @@
 package assembler;
 
 import java.io.BufferedReader;
+
 import java.io.FileNotFoundException;
+
 import java.io.FileReader;
+
 import java.io.IOException;
 
 /**
@@ -15,34 +18,40 @@ import java.io.IOException;
  * analisa, e oferece acesso as partes da instrução  (campos e símbolos).
  * Além disso, remove todos os espaços em branco e comentários.
  */
+
 public class Parser {
 
     private final BufferedReader fileReader;
-    public String inputFile;		        // arquivo de leitura
-    public int lineNumber = 0;		     	// linha atual do arquivo (nao do codigo gerado)
-    public String currentCommand = "";      // comando atual
-    public String currentLine;			    // linha de codigo atual
+    public String inputFile;		       
+    public int lineNumber = 0;		     	
+    public String currentCommand = "";      
+    public String currentLine;			    
+
 
 
     /** Enumerator para os tipos de comandos do Assembler. */
     public enum CommandType {
-        A_COMMAND,      // comandos LEA, que armazenam no registrador A
-        C_COMMAND,      // comandos de calculos
-        L_COMMAND       // comandos de Label (símbolos)
+
+        A_COMMAND,
+        C_COMMAND,
+        L_COMMAND
     }
+
 
     /**
      * Abre o arquivo de entrada NASM e se prepara para analisá-lo.
      * @param file arquivo NASM que será feito o parser.
      */
+
     public Parser(String file) throws FileNotFoundException {
+
         this.inputFile = file;
         this.fileReader = new BufferedReader(new FileReader(file));
         this.lineNumber = 0;
     }
 
-    // fecha o arquivo de leitura
     public void close() throws IOException {
+
         fileReader.close();
     }
 
@@ -52,6 +61,7 @@ public class Parser {
      * entrada o método retorna "Falso", senão retorna "Verdadeiro".
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
+
     public Boolean advance() {
         /* ja esta pronto */
         while(true){
@@ -62,11 +72,11 @@ public class Parser {
             }
             lineNumber++;
             if (currentLine == null)
-                return false;  // caso não haja mais comandos
+                return false;  
             currentCommand = currentLine.replaceAll(";.*$", "").trim();
             if (currentCommand.equals(""))
                 continue;
-            return true;   // caso um comando seja encontrado
+            return true;   
         }
     }
 
@@ -87,9 +97,25 @@ public class Parser {
      * @param  command instrução a ser analisada.
      * @return o tipo da instrução.
      */
+
     public CommandType commandType(String command) {
-        /* TODO: implementar */
-    	return null;
+
+        String[] commands = command.split("\\s");
+        if (commands[0].equals("leaw")) {
+            return CommandType.A_COMMAND;
+        }
+
+        else if (commands[0].equals("movw")   || commands[0].equals("addw")  || commands[0].equals("subw") || commands[0].equals("rsubw")
+                || commands[0].equals("incw") || commands[0].equals("decw")  || commands[0].equals("notw") || commands[0].equals("negw")
+                || commands[0].equals("andw") || commands[0].equals("orw")   || commands[0].equals("jmp")  || commands[0].equals("je")
+                || commands[0].equals("jne")  || commands[0].equals("jg")    || commands[0].equals("jge")  || commands[0].equals("jle")
+                || commands[0].equals("nop")) {
+
+            return CommandType.C_COMMAND;
+        }
+        else {
+            return CommandType.L_COMMAND;
+        }
     }
 
     /**
@@ -98,9 +124,17 @@ public class Parser {
      * @param  command instrução a ser analisada.
      * @return somente o símbolo ou o valor número da instrução.
      */
+
     public String symbol(String command) {
-        /* TODO: implementar */
-    	return null;
+        String[] commands = command.replaceAll(",+", " ").replaceAll("\\$+", "").split("\\s");
+
+        if (commandType(command) == CommandType.A_COMMAND) {
+            return commands[1];
+        }
+
+        else {
+            return null;
+        }
     }
 
     /**
@@ -109,9 +143,17 @@ public class Parser {
      * @param  command instrução a ser analisada.
      * @return o símbolo da instrução (sem os dois pontos).
      */
+
     public String label(String command) {
-        /* TODO: implementar */
-    	return null;
+
+        if (commandType(command) == CommandType.L_COMMAND) {
+            return command.replaceAll(":", "");
+        }
+
+        else {
+            return null;
+        }
+
     }
 
     /**
@@ -120,10 +162,12 @@ public class Parser {
      * @param  command instrução a ser analisada.
      * @return um vetor de string contento os tokens da instrução (as partes do comando).
      */
-    public String[] instruction(String command) {
-        /* TODO: implementar */
-    	return null;
-    }
 
+    public String[] instruction(String command) {
+        String[] commands = command.replaceAll(",", " ").split("\\s");
+
+        return commands;
+
+    }
 
 }
