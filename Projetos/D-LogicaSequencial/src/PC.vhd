@@ -26,12 +26,21 @@ end entity;
 
 architecture arch of PC is
 
- signal muxOut : std_logic_vector(15 downto 0);
+ signal muxIn, muxLoadOut, muxResetOut, registerOut, incOut : std_logic_vector(15 downto 0);
 
   component Inc16 is
       port(
           a   :  in STD_LOGIC_VECTOR(15 downto 0);
           q   : out STD_LOGIC_VECTOR(15 downto 0)
+          );
+  end component;
+
+  component Mux16 is
+      port(
+          a  :   in  STD_LOGIC_VECTOR(15 downto 0);
+          b  :   in  STD_LOGIC_VECTOR(15 downto 0);
+          sel:   in  STD_LOGIC;
+          q  :   out STD_LOGIC_VECTOR(15 downto 0)
           );
   end component;
 
@@ -46,5 +55,16 @@ architecture arch of PC is
 
 begin
 
+  inc: Inc16 PORT MAP(registerOut, incOut);
+ 
+  muxIn <= registerOut when increment = '0' else incOut;
+
+  reg16: Register16 PORT MAP(clock, muxResetOut, '1', registerOut);
+
+  muxLoad: Mux16 PORT MAP(muxIn, input, load, muxLoadOut);
+
+  muxReset: Mux16 PORT MAP(muxLoadOut, x"0000", reset, muxResetOut);
+
+ output <= registerOut;
 
 end architecture;

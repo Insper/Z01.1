@@ -88,8 +88,15 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
-        /* TODO: implementar */
-    	return null;
+        if (command.contains(":")) {
+            return CommandType.L_COMMAND ;
+        }
+        else if ( command.contains("leaw")) {
+            return CommandType.A_COMMAND ;
+        }
+        else {
+            return CommandType.C_COMMAND ;
+        }
     }
 
     /**
@@ -99,8 +106,24 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-        /* TODO: implementar */
-    	return null;
+        String simbolo = "" ;
+        if (commandType(command) == CommandType.A_COMMAND){
+            boolean start_symbol = false ;
+            for (int i = 0;i<command.length();i++) {
+                if (command.charAt(i) == '$' && start_symbol == false) {
+                   start_symbol = true ;
+                }
+
+                else if (start_symbol && command.charAt(i) == ',') {
+                    start_symbol = false ;
+                    break;
+                }
+                else if (start_symbol) {
+                    simbolo += command.charAt(i) ;
+                }
+            }
+        }
+        return simbolo;
     }
 
     /**
@@ -111,7 +134,17 @@ public class Parser {
      */
     public String label(String command) {
         /* TODO: implementar */
-    	return null;
+        String simbolo = "";
+        int contador = 0;
+        
+        for (int i = 0; i < command.length(); i++) {
+            if (command.charAt(i) == ':'){
+                return simbolo;
+            } else {
+                simbolo += command.charAt(i);
+            }
+        }
+    return simbolo;
     }
 
     /**
@@ -122,8 +155,10 @@ public class Parser {
      */
     public String[] instruction(String command) {
         /* TODO: implementar */
-    	return null;
+        command = command.trim(); // remove os espaços do inicio e do fim da string
+        command = command.replace(", ", ","); // troca todos as virgulas com espaço por virgula
+        command = command.replace(" ", ","); // troca todos os espaços por virgula
+        String[] array = command.split(","); // Separa em diferentes strings dentro da variável array
+    	return array;
     }
-
-
 }
