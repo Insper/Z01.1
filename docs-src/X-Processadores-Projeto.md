@@ -1,7 +1,7 @@
 # Mundo Real
 
 !!! warning ""
-    Entregar até dia 3/12 (final da semana de AF).
+    2021a projeto individual pode ser entregue até dia 19/06
 
 | HW | SW |
 |----|----|
