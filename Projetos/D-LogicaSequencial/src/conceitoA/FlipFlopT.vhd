@@ -16,5 +16,6 @@ end entity;
 architecture arch of FlipFlopT is
 
 begin
+	
 
 end architecture;
