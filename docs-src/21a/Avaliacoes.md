@@ -1,8 +1,38 @@
 # Avaliações
 
-Informações sobre as avaliações (e simulados) da disciplina:
+Informações sobre as avaliações (e simulados) da disciplina.
+
+|                                  |                  | HW  | SW  |
+| ---                              | ---              | --- | --- |
+|                                  | AV1              | 29  | 0   |
+|                                  | AV2              | 35  | 5   |
+|                                  | AV3              | 15  | 50  |
+|                                  | AV4              | 41  | 65  |
+|                                  | Proj. Individual | 15  | 15  |
+| Total (AV1, AV2, AV3, AV4, Proj) |                  | 135 | 135 |
+
+## AV4
+
+Avaliacão prática sendo a parte de hardware uma revisão do que foi visto na matéria, com enfoque no começo do curso e a parte de software com enfoque na VM, mas podendo cair uma questão de revisão de assembly e alguma coisa mais teórica do Assembler.
+
+Simulados:
+
+- SW:
+    - (solução no branch Solução) https://github.com/insper-classroom/20b-ele-av4-simulado
+
+- HW:
+    - Estudar a parte referente a AV1 e AV2
+
+!!! info "Estudar"
+    Projetos:
+ 
+    - I: VM Translator
+    - H: VM
+    - E: Assembly
 
 ## AV3 - 21/5
+
+Avaliacão prática com foco em assemly e no projeto da CPU.
 
 Simulados:
 
