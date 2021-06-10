@@ -23,6 +23,33 @@
 // ---------------------------------
 
 function Main.main 0
+push constant 14
+push constant 2
+add
+pop temp 0 // temp0 = 16
+push constant 8
+push constant 1
+sub
+pop temp 1 // temp 1 = 7
+
+label loop 
+push temp 0 
+push constant 0
+eq // vai diminuindo 1 16 até chegar em 0
+if-goto end
+push temp 1
+push temp 3
+add
+pop temp 3
+push temp 0
+push constant 1
+sub
+pop temp 0
+goto loop
+label end
+push temp 3 
+pop temp 1
+
 
 
 
