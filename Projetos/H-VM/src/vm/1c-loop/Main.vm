@@ -17,7 +17,20 @@
 
 function Main.main 0
 
+label LOOP
+push temp 3 
+push constant 1 
+add 
+pop temp 3 
 
+push constant 55 
+push temp 3 
+eq // comparo
+if-goto end 
+
+goto LOOP // se não volta para o início
+
+label end
 
 // esse loop sempre deve existir!
 // caso contrario o computador vai

@@ -1,32 +1,38 @@
 {
   "aluno-1": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Alexandre Antar",
+    "email-insper": "alexandrea8@al.insper.edu.br",
+    "user-github": "alexandrea8"
   },
   "aluno-2": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Cesar Ezra Ades",
+    "email-insper": "cesarea@al.insper.edu.br",
+    "user-github": "Cesar0106"
   },
   "aluno-3": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Guilherme Caproni de Faria",
+    "email-insper": "guilhermecf4@al.insper.edu.br",
+    "user-github": "Capronii"
   },
   "aluno-4": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Jonathan Sutton",
+    "email-insper": "jonathans@al.insper.edu.br",
+    "user-github": "jonathansutton1"
   },
   "aluno-5": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Ricardo Israel",
+    "email-insper": "ricardoi@al.insper.edu.br",
+    "user-github": "ricardo2909"
   },
   "aluno-6": {
-    "nome": "",
-    "email-insper": "",
-    "user-github": ""
+    "nome": "Rafael Meyer Kahn",
+    "email-insper": "rafaelmk@al.insper.edu.br",
+    "user-github": "RMKahn"
+  },
+    "aluno-7": {
+    "nome": "Willian Kenzo Asanuma Lee",
+    "email-insper": "williankal@al.insper.edu.br",
+    "user-github": "williankal"
   }
+}
 }

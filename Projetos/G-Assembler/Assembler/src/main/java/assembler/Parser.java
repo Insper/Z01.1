@@ -89,7 +89,13 @@ public class Parser {
      */
     public CommandType commandType(String command) {
         /* TODO: implementar */
-    	return null;
+        if (command.contains("leaw")) {
+            return CommandType.A_COMMAND;
+        }
+        else if(command.contains(":")) {
+            return CommandType.L_COMMAND;
+        }
+        return CommandType.C_COMMAND;
     }
 
     /**
@@ -100,7 +106,14 @@ public class Parser {
      */
     public String symbol(String command) {
         /* TODO: implementar */
-    	return null;
+        String[] commands = command.replaceAll(",+", " ").replaceAll("\\$+", "").split("\\s");
+
+        if (commandType(command) == CommandType.A_COMMAND) {
+            return commands[1];
+        }
+        else {
+            return null;
+        }
     }
 
     /**
@@ -111,7 +124,9 @@ public class Parser {
      */
     public String label(String command) {
         /* TODO: implementar */
-    	return null;
+        String[] parts;
+        parts = command.split(":");
+        return parts[0];
     }
 
     /**
@@ -122,7 +137,10 @@ public class Parser {
      */
     public String[] instruction(String command) {
         /* TODO: implementar */
-    	return null;
+        String[] commands = command.replaceAll(",", " ").split("\\s");
+
+        return commands;
+
     }
 
 
