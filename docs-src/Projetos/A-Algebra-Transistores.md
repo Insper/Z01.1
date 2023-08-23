@@ -6,7 +6,7 @@
 
 Nesse projeto iremos utilizar a álgebra booleana para obter as funções lógicas de um sistema as quais deverão ser implementadas utilizando CIs.
 
-Esse projeto deverá ser realizado em grupos de 4 integrantes e os arquivos devem ser enviados pelo Blackboard (é necessário que apenas um(a) integrante do grupo envie, desde que identifique os demais membros).
+Esse projeto deverá ser realizado em grupos de 3 integrantes e os arquivos devem ser enviados pelo Blackboard (é necessário que apenas um(a) integrante do grupo envie, desde que identifique os demais membros).
 
 Queremos controlar o robô da figura a seguir:
 
@@ -21,40 +21,51 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 - "10" - motor ligado reversamente (andando para trás) 
 - "00" - motor desligado
 
-> os sinais y1 e y2 devem ser ligados as entradas I1, I2, I3 e I4 da ponte H.
+> **os sinais y1 e y2 devem ser ligados as entradas I1, I2, I3 e I4 da ponte H.**
 
-O controle deve ser feito da seguinte forma:
+![](../figs/A-Transistores/motor.png){width=400}
 
-1. Todos os motores devem ser desligados se (x1 ou x2) indicar colisão juntamente com (x3 ou x4).
-2. Todos os motores devem ser ligados diretamente se nenhum sensor indicar colisão.
-3. Ambos os motores devem ser ligados reversamente se os sensores x1 e x2 detectarem colisão.
-4. Ambos os motores devem ser ligados diretamente se os sensores x3 e x4 detectarem colisão.
-5. O motor esquerdo (y1) deverá ser desligado e o motor direito (y2) ligado reversamente, sempre que uma colisão for detectada em x2, mas não em x1.
-6. O motor esquerdo (y1) deverá ser ligado reversamente e o motor direito (y2) desligado, sempre que uma colisão for detectada em x1, mas não em x2.
-7. O motor esquerdo (y1) deverá ser desligado e o motor direito (y2) ligado diretamente, sempre que uma colisão for detectada em x4, mas não em x3.
-8. O motor esquerdo (y1) deverá ser ligado diretamente e o motor direito (y2) desligado, sempre que uma colisão for detectada em x3, mas não em x4.
-
-> Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
-
-<!--
-1. O motor esquerdo (y1) deverá ser ligado e o motor direito (y2) desligado, permitindo que o robô rotacione em sentido horário, sempre que um objeto for detectado em x1 e/ou x3, mas não em x2.
-1. O motor esquerdo (y1) deverá ser desligado e o motor direito (y2) ligado, permitindo que o robô rotacione em sentido anti-horário, sempre que um objeto for detectado em x2 e/ou x3, mas não em x1.
-1. Ambos os motores devem ser ligados se nenhum dos sensores detectar um objeto ou se x1 e x2 detectarem o objeto.
-1. Todos os motores devem ser desligados se os três sensores detectarem um objeto.
--> Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
--->
-
-
-
-## Rubricas
-
-| Conceito | Descritivo                                                  |
-|----------|-------------------------------------------------------------|
-| **A+**   | Funções lógicas implementadas com CIs no protoboard e testadas no carrinho       |
-|          | Anexar video                                                |
-| **B+**   | Funções lógicas implementadas com CIs no simulador falstad ou tinkercad |
-|          | Anexar video e/ou o arquivo texto da simulação              |
-| **C+**   | Funções lógicas obtidas e simplificadas                     |
-|          | Anexar foto da resolução                                    |
-| **D**    | Funções lógicas obtidas mas não simplificadas               |
-| **I**    | Funções lógicas não obtidas                                 |
+| **Rubricas do Projeto de Controle do Robô Utilizando Álgebra Booleana e CIs**  |
+|--------------------------------------------------------------------------------|
+| **A+**                                                                         |
+| - **Implementação no Robô das Funções Lógicas:** As funções lógicas a seguir foram  implementadas com sucesso usando Circuitos Integrados (CIs) no protoboard:
+|   1. Todos os motores desligados se (x1 e x2) e (x3 e x4) indicarem colisão.
+|   2. Todos os motores desligados se nenhum sensor indicar colisão.
+|   3. Ambos os motores ligados reversamente se os sensores (x1 e x2) detectarem colisão.
+|   4. Ambos os motores ligados diretamente se os sensores (x3 e x4) detectarem colisão.
+|   5. Motor esquerdo (y1) ligado e motor direito (y2) desligado para rotação horária quando x1 e/ou x3 detectarem colisão, mas não x2.
+|   6. Motor esquerdo (y1) desligado e motor direito (y2) ligado para rotação anti-horária quando x2 e/ou x4 detectarem colisão, mas não x1.
+|   7. Todos os motores desligados se todos os sensores detectarem objeto.
+| - **Testes Bem-Sucedidos e Comportamento Adequado:** As funções lógicas foram testadas no robô real e demonstraram um controle preciso do carrinho. O robô reagiu conforme as situações especificadas, mostrando movimentos de avanço, ré e rotação conforme as condições dos sensores.
+| - **Vídeo de Demonstração Abrangente:** O grupo forneceu um vídeo detalhado que mostra a montagem dos CIs no protoboard, a conexão com os sensores, a interação das funções lógicas com os sinais dos sensores e como o robô respondeu a diferentes cenários. O vídeo destacou a funcionalidade e a coerência do sistema implementado. |
+|                                                                                 |
+| **B+**                                                                          |
+| - **Implementação em Simulador das Funções Lógicas:** As funções lógicas a seguir foram derivadas dos requisitos do projeto e implementadas de forma precisa usando um simulador de circuitos, como o Falstad ou o Tinkercad:
+|   1. Todos os motores desligados se (x1 e x2) e (x3 e x4) indicarem colisão.
+|   2. Todos os motores desligados se nenhum sensor indicar colisão.
+|   3. Ambos os motores ligados reversamente se os sensores (x1 e x2) detectarem colisão.
+|   4. Ambos os motores ligados diretamente se os sensores (x3 e x4) detectarem colisão.
+|   5. Motor esquerdo (y1) ligado e motor direito (y2) desligado para rotação horária quando x1 e/ou x3 detectarem colisão, mas não x2.
+|   6. Motor esquerdo (y1) desligado e motor direito (y2) ligado para rotação anti-horária quando x2 e/ou x4 detectarem colisão, mas não x1.
+|   7. Todos os motores desligados se todos os sensores detectarem objeto.
+| - **Testes Simulados Efetivos:** As funções lógicas foram testadas no simulador, e o comportamento foi conforme o esperado. A simulação mostrou que os motores simulados reagem corretamente às diferentes combinações de entrada dos sensores, evidenciando a correta implementação das funções.
+| - **Vídeo ou Arquivo de Simulação Explicativo:** O grupo forneceu um vídeo explicativo ou um arquivo de texto que detalha a simulação das funções lógicas, incluindo a representação dos circuitos e os resultados observados em diferentes cenários. |
+|                                                                                 |
+| **C+**                                                                          |
+| - **Obtenção, Simplificação e Aplicação das Funções Lógicas:** As funções lógicas a seguir foram obtidas corretamente a partir dos requisitos do projeto e simplificadas usando técnicas de álgebra booleana:
+|   1. Todos os motores desligados se (x1 e x2) e (x3 e x4) indicarem colisão.
+|   2. Todos os motores desligados se nenhum sensor indicar colisão.
+|   3. Ambos os motores ligados reversamente se os sensores (x1 e x2) detectarem colisão.
+|   4. Ambos os motores ligados diretamente se os sensores (x3 e x4) detectarem colisão.
+|   5. Motor esquerdo (y1) ligado e motor direito (y2) desligado para rotação horária quando x1 e/ou x3 detectarem colisão, mas não x2.
+|   6. Motor esquerdo (y1) desligado e motor direito (y2) ligado para rotação anti-horária quando x2 e/ou x4 detectarem colisão, mas não x1.
+|   7. Todos os motores desligados se todos os sensores detectarem objeto.
+| - **Resolução das Funções Lógicas:** O grupo forneceu uma foto clara da resolução escrita das funções lógicas obtidas e simplificadas, demonstrando a aplicação dos conceitos de álgebra booleana. |
+|                                                                                 |
+| **D**                                                                           |
+| - **Obtenção sem Simplificação das Funções Lógicas:** As funções lógicas a seguir foram obtidas a partir dos requisitos do projeto, mas não foram simplificadas usando álgebra booleana.
+| - **Apresentação Pouco Clara das Funções Lógicas:** A apresentação das funções lógicas e sua relação com as condições do projeto pode estar confusa ou pouco clara, dificultando a compreensão. |
+|                                                                                |
+| **I (Insatisfatório)**                                                         |
+| - **Funções Lógicas Não Obtidas:** O grupo não conseguiu derivar as funções lógicas necessárias para o controle do motor com base nos requisitos do projeto.
+| - **Falta de Implementação/Simulação:** Não há evidência de tentativa de implementação física com CIs ou de simulação das funções lógicas. |

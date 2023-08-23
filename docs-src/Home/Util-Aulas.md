@@ -401,7 +401,7 @@ Estudar lógica booleana e praticar
 | [Teoria Álgebra Booleana](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Algebra-Booleana/) |
 
 1. Expositiva/ Dúvidas  (45 min)
-    <!-- - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf) -->
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf)
 
 1. Handout/ Exercício (1h15):
     - [Álgebra Booleana - 1](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
@@ -418,7 +418,7 @@ Aritmética Binária/Lógica booleana
 | [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/) |
 
 1. Expositiva/ Dúvidas  (1h00)
-    <!-- -  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf)    -->
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf)
 
 1. Handout/ Exercício (1h00):
     - [Aritmética Binária - **Fazer apenas ex. 1**](https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
