@@ -111,7 +111,8 @@ nav:
 - 'Teoria':
   - 'commum-content/teoria/Teoria-Dados.md'
   - 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
-  - 'commum-content/teoria/Teoria-Algebra-Booleana.md'
+  - Teoria Algebra Booleana: 'https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Algebra-Booleana/'
+  #- 'commum-content/teoria/Teoria-Algebra-Booleana.md'
   - 'commum-content/teoria/Teoria-CMOS.md'
   - 'commum-content/teoria/Teoria-RTL.md'
   - 'commum-content/teoria/Teoria-Componentes.md'
