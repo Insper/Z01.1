@@ -67,5 +67,4 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 | - **Apresentação Pouco Clara das Funções Lógicas:** A apresentação das funções lógicas e sua relação com as condições do projeto pode estar confusa ou pouco clara, dificultando a compreensão. |
 |                                                                                |
 | **I (Insatisfatório)**                                                         |
-| - **Funções Lógicas Não Obtidas:** O grupo não conseguiu derivar as funções lógicas necessárias para o controle do motor com base nos requisitos do projeto.
-| - **Falta de Implementação/Simulação:** Não há evidência de tentativa de implementação física com CIs ou de simulação das funções lógicas. |
+| - **Funções Lógicas Não Obtidas:** O grupo não conseguiu derivar as funções lógicas necessárias para o controle do motor com base nos requisitos do projeto.|
