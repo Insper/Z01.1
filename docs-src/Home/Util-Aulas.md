@@ -387,6 +387,7 @@ Trabalhar com transistores e circuitos integrados.
 | [Teoria CMOS](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-CMOS/) |
 
 1. Expositiva/ Dúvidas  (0h40):
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf)
 
 1. Laboratório (1h20):
     - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores/)

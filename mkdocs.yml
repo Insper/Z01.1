@@ -111,8 +111,8 @@ nav:
 - 'Teoria':
   - 'commum-content/teoria/Teoria-Dados.md'
   - 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
-  - Teoria Algebra Booleana: 'https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Algebra-Booleana/'
-  #- 'commum-content/teoria/Teoria-Algebra-Booleana.md'
+  #- Teoria Algebra Booleana: 'https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Algebra-Booleana/'
+  - 'commum-content/teoria/Teoria-Algebra-Booleana.md'
   - 'commum-content/teoria/Teoria-CMOS.md'
   - 'commum-content/teoria/Teoria-RTL.md'
   - 'commum-content/teoria/Teoria-Componentes.md'
@@ -157,6 +157,7 @@ nav:
   - 'Dados Digitais - 2 - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf'
   - 'Exercicios/Exercicio-Algebra-Booleana-1.md'
   - 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
+  - 'commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
   - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
 #  - 'Handout Aritmetica Booleana - Resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
   - 'Lógica Sequencial': 'https://forms.gle/XMsFCDMYsmz1qUP86'
