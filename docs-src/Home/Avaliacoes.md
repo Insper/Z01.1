@@ -102,6 +102,7 @@ Avaliação teórica será realizado no blackboard, com proctorio e sem consulta
 - Atividade de revisão:
     - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
     - [Transistores](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Ex_transistores.pdf)
+    - [Simulado](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado-solution.pdf)
     
 - Prova 02/2021
     -  [Prova](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_bb_respostas.pdf)
