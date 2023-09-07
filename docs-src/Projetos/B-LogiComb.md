@@ -2,7 +2,7 @@
 
 | Data da entrega| 
 |----------------|
-| Quinta - 14/09 |
+| {{apsB_date}} |
 
 ![](../figs/LogiComb/sistema-comb.svg)
 

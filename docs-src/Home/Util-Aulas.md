@@ -338,8 +338,9 @@ Finalizando o projeto B-Lógica Combinacional e começo do projeto C-ULA.
 2. Aula estúdio (1h00)
 3. Laboratório (0h30)
     - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
+-->  
 
-## Aula 08/03
+## Aula 15/09
 
 Projeto B - Lógica Combinacional
 
@@ -354,7 +355,7 @@ Projeto B - Lógica Combinacional
 1. Laboratórios (1h30)
     - [Lab4: Lógica Combinacional](https://insper.github.io/Z01.1/Labs/Lab4-LogiComb/)
     
-## Aula 03/03
+## Aula 13/09
 
 Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
 
@@ -371,7 +372,7 @@ Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
     - [Lab 2.2: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.2-Ambiente/)
     - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
     
--->  
+
 
 ## Aula 06/09
 
