@@ -45,35 +45,33 @@ Nas discussões com os outros colegas o scrum master deve definir os módulos qu
 
 ### Arquivos
 
-A pasta contém dois diretórios distintos : `src/` e `Quartus/`. O diretório `src` contém os arquivos fontes que deverão ser editados para implementar o projeto. O diretório `quartus/` contém o projeto que possibilitará compilar os módulos e testar em hardware.
+A pasta contém dois diretórios distintos : `src/` e `Quartus/`. O diretório `src` contém os arquivos fontes que deverão ser editados para implementar o projeto. O diretório `Quartus/` contém o projeto que possibilitará compilar os módulos e testar em hardware.
 
 ### Entendendo o projeto
 
 A pasta do projeto B no repositório `Z01.1-proj` possui a seguinte estrutura :
 
 ```
-/B-LogicaCombinacional
-  testeLogicaCombinacional.py
+/b_logComb
+  logComb_cocotb.py
+  test_logComb.py
   /Quartus
   /src
     *.vhd
-  config_testes.txt
-  /teste_cocotb/tests.py
 ```
 
-1. `Quartus`: Projeto Quartus que faz uso dos arquivos VHDL localizados em `src/rtl/*.vhd` 
+1. `Quartus`: Projeto Quartus que faz uso dos arquivos VHDL localizados em `src/*.vhd` 
      - Serve para programar a **FPGA**
 1. `*.py`: Scripts em python automatiza a execução dos testes
 1. `src/*.vhd`: Arquivos VHDL que serão implementado pelo grupo
-1. `config_testes.txt`: Configuração dos testes
-1. `/teste_cocotb/tests.py`: Script em python que realiza teste lógico nos arquivos em src
+
 
 ### Executando o script de teste 
 
-Abra o terminal na pasta `B-LogicaCombinacional` e execute o script python localizado nessa pasta:
+Abra o terminal na pasta `b_logComb` e execute os testes:
 
 ```bash
-$ ./testeLogicaCombinacional.py
+$ pytest -s
 ```
 
 <script id="asciicast-eolZDZIqCgTe3UQsX5jLrkF3D" src="https://asciinema.org/a/eolZDZIqCgTe3UQsX5jLrkF3D.js" async></script>
@@ -91,7 +89,7 @@ A entrega deve ser feita no ramo `main` do git.
 - [ ] Implementar acionamento do diplay de 7 segmentos e demonstrar na FPGA
 
 !!! note 
-    Esses arquivos estão localizados em `B-LogicaCombinacional/src/`
+    Esses arquivos estão localizados em `b_logComb/src/`
 
 !!! tip
     Utilize o VScode para editar os arquivos em `vhdl` e valide a implementação executando o script de testes.
@@ -101,62 +99,62 @@ Deve-se implementar os seguintes circuitos combinacionais:
 ### Conceito C+
 
 - AND 16 bits
-    - **Arquivo**   : `And16.vhd`
+    - **Arquivo**   : `and16.vhd`
     - **Descrição** : And bit a bit entre duas palavras de 16 bits.
  
 - OR de 16 bits
-    - **Arquivo**   : `Or16.vhd`
+    - **Arquivo**   : `or16.vhd`
     - **Descrição** : OR bit a bit entre duas palavras de 16 bits.
  
 - NOT de 16 bits
-    - **Arquivo**   : `Not16.vhd`
+    - **Arquivo**   : `not16.vhd`
     - **Descrição** : NOT bit a bit entre duas palavras de 16 bits.
     
 - NOR 8 Way 
-    - **Arquivo**   : `Nor8Way.vhd`
+    - **Arquivo**   : `nor8way.vhd`
     - **Descrição** : NOR entre 8 bits, resulta em uma única saída
     
 - OR 8 Way  
-    - **Arquivo**   : `Or8Way.vhd`
+    - **Arquivo**   : `or8way.vhd`
     - **Descrição** : OR entre 8 bits, resulta em uma única saída
  
 - Demultiplexador de 2 saídas 
-    - **Arquivo**   : `DMux2Way.vhd`
+    - **Arquivo**   : `dmux2way.vhd`
     - **Descrição** : Demultiplexa uma entrada binária em duas saídas.
     
 - Demultiplexador de 4 saídas
-    - **Arquivo**   : `DMux4Way.vhd`
+    - **Arquivo**   : `dmux4way.vhd`
     - **Descrição** : Demultiplexa uma entrada binária em quatro saídas.
     
 - Demultiplexador de 8 saídas
-    - **Arquivo**   : `DMux8Way.vhd`
+    - **Arquivo**   : `dmux8way.vhd`
     - **Descrição** : Demultiplexa uma entrada binária em oito saídas.
     
 - Multiplexador de duas entradas de 16 bits 
-    - **Arquivo**   : `Mux16.vhd`
+    - **Arquivo**   : `mux16.vhd`
     - **Descrição** : Multiplexa duas entradas de 16 bits para uma de 16 bits.
     
 -  Multiplexador 2 entradas de um bit cada
-    - **Arquivo**   : `Mux2Way.vhd`
+    - **Arquivo**   : `mux2way.vhd`
     - **Descrição** : Multiplexa 2 entradas binárias em uma saída binária
     
 -  Multiplexador 4 entradas de um bit cada
-    - **Arquivo**   : `Mux4Way.vhd`
+    - **Arquivo**   : `mux4way.vhd`
     - **Descrição** : Multiplexa 4 entradas binárias em uma saída binária
     
 -  Multiplexador 8 entradas de um bit cada
-    - **Arquivo**   : `Mux8Way.vhd`
+    - **Arquivo**   : `mux8way.vhd`
     - **Descrição** : Multiplexa 8 entradas binárias em uma saída binária
     
 -  Multiplexador 4 entradas de 16 bits cada
-    - **Arquivo**   : `Mux4Way16.vhd`
+    - **Arquivo**   : `mux4way16.vhd`
     - **Descrição** : Multiplexa 4 entradas de 16 bits cada em uma saída de 16 bits.
     
 -  Multiplexador 8 entradas de 16 bits cada
-    - **Arquivo**   : `Mux8Way16.vhd`
+    - **Arquivo**   : `mux8way16.vhd`
 
 -  Deslocador de bits
-    - **Arquivo**   : `BarrelShifter16.vhd`
+    - **Arquivo**   : `barrelshifter16.vhd`
 
 
 ### Conceito B+
@@ -166,20 +164,12 @@ Deve-se implementar os seguintes circuitos combinacionais:
     - **Descrição**: Primeira questão da lista de exercícios [Álgebra Booleana 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/)
 
 - Detector de moedas
-    - **Arquivo** : `detectorDeMoedas.vhd`
+    - **Arquivo** : `detectordemoedas.vhd`
     - **Descrição**: Questão do detector de moedas da lista de exercícios [Álgebra Booleana 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/)
 
 - Impressora
     - **Arquivo** : `impressora.vhd`
     - **Descrição**: Questão da impressora da lista de exercícios [Álgebra Booleana 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/)
-
-- Porta xor de 3 entradas
-    - **Arquivo** : `xor3.vhd`
-    - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando necessariamente apenas um Mux8Way.
-
-- Funções da APS-A
-    - **Arquivo** : `carrinho.vhd`
-    - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A.
 
 - Display de 7s
     - **Arquivo**: `sevenSeg.vhd'
@@ -188,6 +178,17 @@ Deve-se implementar os seguintes circuitos combinacionais:
 !!! tip "Display 7s"
     1. Esse item é uma continuação do que foi realizado no [Lab3](/Z01.1/Labs/Lab3-LogiComb-FPGA/), onde vocês tiveram que exibir um valor constante no display de 7s. 
     1. Para cada segmento do display, vocês devem encontrar uma equação booleana que o represente, e então implementar em VHDL e testar na FPGA.
+
+### Conceito A+
+
+- Porta xor de 3 entradas
+    - **Arquivo** : `xor3.vhd` (arquivos e testes não fornecidos)
+    - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando necessariamente apenas um mux8way.
+
+- Funções da APS-A
+    - **Arquivo** : `carrinho.vhd`
+    - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A.
+
 <!--
 - O grupo deve apresentar um vídeo da FPGA mostrando nos display de 7 segmentos o seguinte:
     - (C) O valor em hexadecimal da palavra binária formada pelas chaves SW(3 .. 0)
@@ -208,18 +209,17 @@ Para atingir os objetivos A e B, deve-se antes atingir o C.
 |----------|-------------------------------------------------------------|
 | **A+**   | Exibe três dígitos em Hexadecimal na FPGA - anexar video no repositório                     |
 |          | (exibir até o valor 0x3FF = 2^10 - 1)                       |
+|          | Módulos adicionais implementados e funcionado (xor, carrinho) |
 |          | Implemente as funções relacionadas a y1 e y2 da APS-A na FPGA - anexar video no repositório |
 | **B+**   | Módulos adicionais implementados e funcionado (circuito, detector de moedas, impressora, xor, carrinho) |
 |          | Implementar um único display de 7s (conta de 0x0 0xF) - anexar video ao repositório |
-| **C+**   | Ter criado o project no github                              |
-|          | Actions configurado e funcionando                           |
-|          | Todos os módulos básicos implementados e funcionado         |
+| **C+**   | Todos os módulos básicos implementados e funcionado         |
 | **D**    | Até dois Módulos com falha                                  |
 | **I**    | Mais de três módulos com falha                              |
 
 !!! tip "Conceito A"
 
-    Vocês devem implementar o "exibe hexadecimal" no arquivo `ConceitoA.vhd`.
+    Vocês devem implementar o "exibe hexadecimal" no arquivo `conceito_a.vhd`.
     Tem um teste para os módulos, ==você pode testar incluindo o arquivo de configuração de testes.==
 
     Sugerimos que vocês reutilizem o módulo `sevenSeg.vhd`, 
@@ -236,8 +236,8 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-
+<!--
 - [Scrum Master](https://forms.gle/Exjm23XGrsMEbpPd6)
 - [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
-
+-->
 

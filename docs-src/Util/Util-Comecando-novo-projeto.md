@@ -99,8 +99,8 @@ Edite o arquivo `actions.yml` localizado na pasta .github/workflows/ modificando
     Acrescentar o script do novo projeto ao final do arquivo.
     
 ``` yml
-        python3 B-LogicaCombinacional/testeLogicaCombinacional.py
-        python3 C-UnidadeLogicaAritmetica/testeULA.py
+        cd b_logComb
+        pytest -s
 ```
 
 Agora vamos realizar um commit e submeter aos demais colegas do grupo as alterações:
@@ -124,13 +124,6 @@ $ git push origin main
 !!! note
     Isso é importante pois os professores irão usar esse arquivo para saber quem são os mediadores de cada projeto.
 
-### Atualizar tools
-
-Você deve atualizar os scripts de teste, executando o comando a seguir:
-
-```bash
-$ ./updateZ01tools.sh
-```
 
 ## Antes de começar - Desenvolvedores
 
@@ -149,16 +142,3 @@ Agora todos os integrantes do grupo devem atualizar o repositório local:
 ```
 $ git pull origin main
 ```
-
-## Atualizando Infra
-
-!!! warning
-    Todos devem realizar essa etapa: Mediadores e Desenvolvedores
-
-Atualizar a infra da disciplina executando o comando a seguir na pasta raiz ro repositorio:
-
-```bash
-$ ./updateZ01tools.sh
-```
-
-Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.

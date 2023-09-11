@@ -10,46 +10,16 @@ Esse laboratório introduz o modelo de desenvolvimento baseado em testes que ser
 
 ## `or16.vhd`
 
-Iremos trabalhar implementando o módulo `or16` que é uma parte do projeto B. Para isso devemos editar o arquivo de configuração `Projetos/B-LogicaCombinacional/config_testes.txt` descomentando o módulo `Or16.vhd`:
+Iremos trabalhar implementando o módulo `or16` que é uma parte do projeto B. 
 
-```python
-######################################
-# Rafael.Corsi @ Insper.edu.br       #
-#  Elementos de Sistemas             # 
-#                                    # 
-# Arquivos de teste do projeto B     #
-#  - Para incluir o teste basta      #
-#  descomentar a linha               #
-#                                    #
-######################################
-
-nand.vhd
-Or16.vhd          
-#Nor8Way.vhd
-#And16.vhd
-#Not16.vhd
-#Or8Way.vhd
-#DMux2Way.vhd
-#DMux4Way.vhd
-#DMux8Way.vhd
-#Mux2Way.vhd
-#Mux4Way.vhd
-#Mux16.vhd
-#Mux4Way16.vhd
-#Mux8Way.vhd
-#Mux8Way16.vhd
-```
-
-!!! note 
-    Vamos ter dois módulos no teste: `nand.vhd` e o `Or16.vhd`
     
-Abra o terminal na pasta `B-Logica-Combinacional/` e execute o script python `testeLogicaCombinacional.py`:
+Abra o terminal na pasta `b_logComb/` e execute:
 
 ```bash
-$ ./testeLogicaCombinacional.py
+$ pytest -k or16
 ```
 
-O mesmo irá executar a compilação dos arquivos `src/*.vhd` e realizar testes unitários em cada um desses módulos, como os módulos não estão implementados e como estamos forçando o teste do `or16` devemos ter um erro nesse módulo.
+O mesmo irá executar a compilação dos arquivos `src/*.vhd` e realizar testes unitários em cada um do módulo, como os módulos não estão implementados e como estamos forçando o teste do `or16` devemos ter um erro nesse módulo.
 
 <script id="asciicast-hScw7GXpCGnSPw4ocDzwbt23m" src="https://asciinema.org/a/hScw7GXpCGnSPw4ocDzwbt23m.js" async></script>
 
@@ -61,7 +31,7 @@ O mesmo irá executar a compilação dos arquivos `src/*.vhd` e realizar testes 
 Esse erro acontece pois o módulo não possui nenhuma implementação:
 
 ``` vhdl
--- Or16.vhd
+-- or16.vhd
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -115,12 +85,12 @@ Com o branch enviado ao github você deve gerar um pull-request para o mediador 
 !!! progress
     Cheguei aqui!
 
-## `And16.vhd`
+## `and16.vhd`
 
-Agora você vai fazer o desenvolvimento do módulo `And16.vhd`. Esse componente recebe dois vetores
+Agora você vai fazer o desenvolvimento do módulo `and16.vhd`. Esse componente recebe dois vetores
 de 16 bits (`a` e `b`) e realizada uma `AND` bit a bit (`q(0) = a(0) and b(0) ....`). Para implementar você deve seguir os passos a seguir:
 
-1. Abrir o arquivo de teste e descomentar o módulo `And16.vhd`
+1. Abrir o arquivo de teste e descomentar o módulo `and16.vhd`
 1. Fazer a implementação em `vhdl`
 1. Testar
 1. Criar uma branch
@@ -133,15 +103,21 @@ de 16 bits (`a` e `b`) e realizada uma `AND` bit a bit (`q(0) = a(0) and b(0) ..
 !!! progress
     Cheguei aqui!
 
-## `Mux2Way.vhd`
+## `mux2way.vhd`
 
 !!! tip "Teoria"
     Para implementar esse módulo, leia a teoria em: [VHDL/Combinacional](/Z01.1/VHDL/VHDL-Combinacional).
 
-Faça a implementação do `Mux2Way.vhd`, usando os mesmos passos anteriores. 
+Faça a implementação do `mux2way.vhd`, usando os mesmos passos anteriores. 
 
 !!! progress
     Cheguei aqui!
+
+!!! note
+    Para testar todos os módulos, executar:
+    ```bash
+    $ pytest -s
+    ```
 
 ## Próximos passos
 

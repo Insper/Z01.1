@@ -25,10 +25,12 @@ Executar os comandos:
 
 ``` bash
 $ sudo apt install ghdl gtkwave
-$ pip install cocotb
+$ python3 -m venv env
+$ . env/bin/activate
+$ pip3 install -r requirements.txt
 ```
 
-para instalar o simulador GHDL e a library cocotb para os testes a serem realizados através de script.
+para instalar o simulador GHDL e as bibliotecas necessárias, caso não estejam instaladas.
 
 <!--
 Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](/Z01.1/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
@@ -42,30 +44,26 @@ Toda vez que um novo projeto começar será necessário realizar algumas configu
 
 ## Entendendo a estrutura de pastas dos projetos
 
-A pasta do projeto `B-LogicaCombinacional` no repositório Z01 possui a seguinte estrutura (assim como todos os demais projetos): 
+A pasta do projeto `b_logComb` no repositório possui a seguinte estrutura (assim como todos os demais projetos): 
 
 ```
-/B-LogicaCombinacional
-  testeLogicaCombinacional.py
+/b_logComb
+  logComb_cocotb.py
+  test_logComb.py
   /Quartus
   /src
     *.vhd
-  config_testes.txt
-  /testes
-    *.vhd
 ```
 
-1. `Quartus`: Projeto Quartus que faz uso dos arquivos VHDL localizados em `src/rtl/*.vhd` 
+1. `Quartus`: Projeto Quartus que faz uso dos arquivos VHDL localizados em `src/*.vhd` 
      - Serve para programar a **FPGA**
 1. `*.py`: Scripts em python automatiza a execução dos testes
 1. `src/*.vhd`: Arquivos VHDL que serão implementado pelo grupo
-1. `config_testes.txt`: Configuração dos testes
-1. `testes/*.vhd`: Arquivos VHDL que realizam teste lógico nos arquivos do rtl
 
 ## Abrindo o Quartus
 
 
-Abra o software do `Quartus` ![](../figs/LogiComb/quartusIcon.png){width=30px} e clique em `File` :arrow_right: `Open Project` :arrow_right: escolha o projeto localizado na pasta `B-LogicaCombinacional/Quartus`. O arquivo que o Quartus irá reconhecer é o: `DE0_CV_Default.qpf` como no gif a seguir:
+Abra o software do `Quartus` ![](../figs/LogiComb/quartusIcon.png){width=30px} e clique em `File` :arrow_right: `Open Project` :arrow_right: escolha o projeto localizado na pasta `b_logComb/Quartus`. O arquivo que o Quartus irá reconhecer é o: `DE0_CV_Default.qpf` como no gif a seguir:
 
 !!! tip
     Se não encontrar o software na barra de tarefas abra o terminal e escreva `quartus` :arrow_right: `enter`.
@@ -115,7 +113,7 @@ Onde podemos analisar que não existe nenhuma lógica que relaciona entrada com 
 
 ### Modificando o projeto
 
-Vamos modificar o arquivo `toplevel.vhd` do projeto para que o `bit 0` do vetor `LEDR` seja igual ao `bit 0` da chave `SW`, a arquitetura deve ficar como a seguir:
+Vamos modificar o arquivo `TopLevel.vhd` do projeto para que o `bit 0` do vetor `LEDR` seja igual ao `bit 0` da chave `SW`, a arquitetura deve ficar como a seguir:
 
 ```vhdl
 ---------------
