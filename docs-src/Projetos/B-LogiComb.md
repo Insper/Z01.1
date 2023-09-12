@@ -217,7 +217,7 @@ Para atingir os objetivos A e B, deve-se antes atingir o C.
 | **D**    | Até dois Módulos com falha                                  |
 | **I**    | Mais de três módulos com falha                              |
 
-!!! tip Conceito A
+!!! tip "Conceito A"
 
     Vocês devem implementar o "exibe hexadecimal" no arquivo `conceito_a.vhd`.
     Tem um teste para os módulos, ==você pode testar incluindo o arquivo de configuração de testes.==
