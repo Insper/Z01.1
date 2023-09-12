@@ -305,8 +305,9 @@ Finalizando o projeto C-ULA e começo do projeto D-Lógica Sequencial.
     - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
 
 1. Aula estúdio (1h00)
+-->  
 
-## Aula 15/03
+## Aula 22/09
 
 Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
 
@@ -325,9 +326,9 @@ Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
     - [Lab 6: Visualizando simulação ](/Z01.1/Labs/Lab6-Waves/)
     - [Lab 7: ULA](/Z01.1/Labs/Lab7-ULA/)
         
-## Aula 10/03
+## Aula 20/09
 
-Finalizando o projeto B-Lógica Combinacional e começo do projeto C-ULA.
+Começo do projeto C-ULA.
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -338,7 +339,7 @@ Finalizando o projeto B-Lógica Combinacional e começo do projeto C-ULA.
 2. Aula estúdio (1h00)
 3. Laboratório (0h30)
     - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
--->  
+
 
 ## Aula 15/09
 
@@ -366,6 +367,7 @@ Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
 | https://insper.github.io/Z01.1/VHDL/VHDL-Combinacional/ |
 
 1. Expositiva/ Dúvidas (0h30)
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/Aula6.pdf)
 
 1. Laboratórios (1h30)
     - [Lab 2.1: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.1-Ambiente/)
