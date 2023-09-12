@@ -82,7 +82,7 @@ Agora vamos realizar um commit e submeter aos demais colegas do grupo as alteraÃ
 $ git add .travis.yml
 $ git commit -m "configurando travis para novo projeto"
 ```
--->
+
 
 ### Actions
 
@@ -109,6 +109,7 @@ Agora vamos realizar um commit e submeter aos demais colegas do grupo as alteraÃ
 $ git add .github/workflows/actions.yml
 $ git commit -m "configurando actions para novo projeto"
 ```
+-->
 
 ### `SCRUM_MASTER.json`
 

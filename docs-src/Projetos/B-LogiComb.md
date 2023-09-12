@@ -85,7 +85,6 @@ A entrega deve ser feita no ramo `main` do git.
 
 - [ ] Implementar todos os módulos listados
 - [ ] Todos os módulos devem passar nos testes
-- [ ] Actions deve estar configurado e funcionando
 - [ ] Implementar acionamento do diplay de 7 segmentos e demonstrar na FPGA
 
 !!! note 

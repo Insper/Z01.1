@@ -123,8 +123,10 @@ Vamos agora gerar o pull-request na interface do github, de forma similar ao exe
 !!! warning
     Cuidado! Escolher o seu repositório no momento de realizar o pullrequest.
 
+<!--
 !!! tip
     Ao realizar o PR, o `Actions` irá verificar o seu arquivo com o mesmo teste que você executou anteriormente, esse será o fluxo geral da disciplina, onde o mesmo teste é realizado local na máquina de cada aluno e remoto automaticamente pelo Actions.
+-->
 
 !!! progress 
     Cheguei Aqui!

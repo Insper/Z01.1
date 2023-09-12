@@ -95,7 +95,7 @@ Para isso será alteramos algumas configurações no repositório:
 
     - **Pull-request**: Maneira de um líder de projeto receber alterações a um projeto e ter controle do que será aceito ou não. Na maioria dos casos o pull-request é criado por um usuário e revisado por outro. Quem for fazer a eletiva de [`Desenvolvimento Aberto`](https://igordsm.github.io/dev-aberto/aulas.html) do [Prof. Igor](https://github.com/igordsm) verá bem a fundo essa questão. 
 
-
+<!--
 ## Actions
 
 Irá executar de forma automática alguns testes (criado por nós) no projeto e em caso de alguma falha irá notificar no github.
@@ -117,7 +117,7 @@ Na pagina do seu repositório em commits deve aparecer uma pequena bolinha em ca
 
 !!! note
     Cada teste leva em torno de alguns minutos já que toda a infraestrutura é instalada sempre do zero, não utilize o sistema de Integração Contínua para validar as suas novas implementações, esse sistema deve ser utilizado para encontrar problemas mais amplos ou para o scrum master aceitar ou não um pull-request, já que o resultado do sucesso ou não dessa requisição é visível facilmente.
-
+-->
 
 ### Arquivo GRUPO.json de configuração 
 
