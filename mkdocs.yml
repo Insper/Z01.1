@@ -170,9 +170,9 @@ nav:
 - Útil:
 #  - "commum-content/util/Util-Comecando-novo-projeto.md"
   - "Util/Util-Comecando-novo-projeto.md"
-  - "commum-content/util/Util-vixi-sou-scrum.md"
+#  - "commum-content/util/Util-vixi-sou-scrum.md"
   - "commum-content/util/Util-vixi-sou-dev.md"
-  - 'Dicas git': 'Util/Util-Dicas-GIT.md'
+#  - 'Dicas git': 'Util/Util-Dicas-GIT.md'
 
 - História:
   - 'Util/Historia-linux.md'
