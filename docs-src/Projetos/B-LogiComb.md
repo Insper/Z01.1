@@ -235,8 +235,8 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-<!--
-- [Scrum Master](https://forms.gle/Exjm23XGrsMEbpPd6)
-- [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
--->
+
+- [Scrum Master](https://forms.gle/4HgqRn882yMTjxGY6)
+- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
+
 
