@@ -28,7 +28,8 @@ extra:
   custom_variables:
     lab2_link: 'https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/EY8O-PDebW9Nq2BEAlg7IIMBWXCJEGVlZT6K-xs04ZHUNg?e=cePMMz'
     apsA_date: 'Domingo  - 10/09'
-    apsB_date: 'Terça  - 19/09'
+    apsB_date: 'Quarta  - 20/09'
+    apsC_date: 'Quarta  - 27/09'
 
 markdown_extensions:
   - markdown.extensions.admonition

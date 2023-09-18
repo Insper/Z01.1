@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-| Quinta - 21/09 |
+| {{apsC_date}} |
 
 ![ULA](../figs/D-ULA/D-sistema-ula.png)
 
@@ -29,28 +29,33 @@ Neste projeto seu grupo terá que desenvolver os componentes para a implementaç
 A pasta do projeto C, no repositório Z01, possui a seguinte estrutura:
 
 ```bash
-/C-ULA
-    testeULA.py
-    programFPGA.py
+/c_ULA
+    test_ula.py
+    ula_cocotb.py
     /Quartus
     /src
         *.vhd
-    /teste_cocotb
-        tests.py
 ```
 
 1. Quartus: Projeto Quartus que faz uso dos arquivos VHDL localizados em src/*.vhd;
-1. testeULA.py: Scripts em python que automatizam a execução dos testes;
+1. *.py: Scripts em python que automatizam a execução dos testes;
 1. src/*.vhd: Arquivos VHDL que serão implementados pelo grupo;
-1. teste_cocotb/tests.py: Arquivo python que realizam o teste lógico nos arquivos do rtl.
 
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `C-UnidadeLogicaAritmetica/`  e execute o script python localizado nessa pasta:
+Abra o terminal na pasta `c_ULA/`  e execute:
 
 ```bash
-$ ./testeULA.py
+$ pytest -s
 ```
+
+para testar todos os módulos ou
+
+```bash
+$ pytest -k inc16
+```
+
+para testar apenas um módulo (neste caso o incrementador).
 
 O mesmo irá compilar os arquivos `src/*.vhd` e executar os testes unitários em cada um deles. Nesse momento do teste, como os módulos não estão implementados, o resultado deverá ser falho.
 
@@ -58,55 +63,55 @@ Esse comando executa um teste unitário em cada um dos módulos, verificando se 
 
 # O que deve ser feito: 
 
-Além de implementar os módulos, deve-se gerar uma imagem com a forma de onda de cada um desses módulos. Para cada nova implementação deve-se criar um novo branch e remover o comentário do arquivo: `tests/config.txt` somente o módulo que está sendo implementado. 
+Além de implementar os módulos, deve-se gerar uma imagem com a forma de onda de cada um desses módulos.
 
 Note que é possível reaproveitar, via **port map**, os módulos do projeto anterior (C). Esses módulos anteriores **já estão incluídos automaticamente (pelo script)** na compilação dos módulos do projeto C.
 
 ## Módulos 
 
 !!! note
-    Esses arquivos estão localizados em `C-UnidadeLogicaAritmetica/src/`
+    Esses arquivos estão localizados em `c_ULA/src/`
 
 Deve-se implementar os seguintes circuitos combinacionais:
 
 - HalfAdder
-    - **Arquivo**   : `HalfAdder.vhd`
+    - **Arquivo**   : `halfadder.vhd`
     - **Descrição** : Adiciona dois bits que resulta em um bit de soma e outro de carry out.
     - **Dependência**: Não tem.
  
 - FullAdder
-    - **Arquivo**   : `FullAdder.vhd`
+    - **Arquivo**   : `fulladder.vhd`
     - **Descrição** : Adiciona três bits, dois referentes às entradas e o outro referente ao carry in. O resultado é um bit com a soma e outro com o carry out.
      - **Dependência**: Não tem.
 
 - Add16
-    - **Arquivo**   : `Add16.vhd`
+    - **Arquivo**   : `add16.vhd`
     - **Descrição** : Adiciona dois vetores de 16 bits resultando em um vetor de 16 bits (sem carry out do bit mais significativo - MSB).
-    - **Dependência**: `FullAdder`
+    - **Dependência**: `fulladder`
     
 !!! note
-    Deve utilizar o `FullAdder` via port map.
+    Deve utilizar o `fulladder` via port map.
   
 - Inc16 
-    - **Arquivo**   : `Inc16.vhd`
+    - **Arquivo**   : `inc16.vhd`
     - **Descrição** : Adiciona '1' a um vetor de 16 bits resultando em um vetor de 16 bits (sem carry out).
-    - **Dependência**: `Add16`
+    - **Dependência**: `add16`
     
 !!! note
     Deve utilizar o `add16` via `port map`.
     
 - Inversor16 
-    - **Arquivo**   : `Inversor16.vhd`
+    - **Arquivo**   : `inversor16.vhd`
     - **Descrição** : Inverte um vetor de entrada quando o bit de controle **n** (nx ou ny) for igual a '1', e não modifica o vetor de entrada caso contrário. O resultado é um novo vetor de 16 bits.
     - **Dependência**: Não tem.
     
 - Zerador16
-    - **Arquivo**   : `Zerador16.vhd`
+    - **Arquivo**   : `zerador16.vhd`
     - **Descrição** : Zera um vetor de entrada quando o bit de controle **z** (zx ou zy) for igual a '1'. Não modifica o vetor de entrada se o bit for '0'. O resultado é um novo vetor de 16 bits.
     - **Dependência**: Não tem.
     
 - Comparador16
-    - **Arquivo**   : `Comparador16.vhd`
+    - **Arquivo**   : `comparador16.vhd`
     - **Descrição** : Verifica se o vetor de saída (16 bits) é igual a zero (**zr**) e se menor que Zero (**ng**). Caso igual a zero, faz com que o sinal **zr** seja igual a '1' e caso contrário '0'. Se o sinal de entrada for negativo faz com que **ng** receba '1' e '0' caso contrário.
     - **Dependência**: Não tem.
     
@@ -125,14 +130,14 @@ else:
 ```
     
 - ALU
-    - **Arquivo**   : `ALU.vhd`
+    - **Arquivo**   : `alu.vhd`
     - **Descrição** : A entidade que faz o mapeamento de todas as demais, interligando os blocos (zerador, comparador, inversor, Add ....) em um único bloco.
-    - **Dependência**: `Comparador16`, `Zerador16`, `Inversor16`, `Add16`, 
+    - **Dependência**: `comparador16`, `zerador16`, `inversor16`, `add16`, 
 
 !!! note
     Deve utilizar os módulos via via `port map`.
 
-Para implementar a ALU será necessário usar os blocos desenvolvidos neste projeto e os blocos desenvolvidos no projeto anterior: `And16`, `Mux16`. O script de compilação e teste já faz a inclusão deles. A arquitetura da ULA pode ser vista abaixo:
+Para implementar a ALU será necessário usar os blocos desenvolvidos neste projeto e os blocos desenvolvidos no projeto anterior: `and16`, `mux16`. O script de compilação e teste já faz a inclusão deles. A arquitetura da ULA pode ser vista abaixo:
 
 
 
@@ -144,27 +149,27 @@ Para cada teste realizado, deve-se carregar a interface gráfica e tirar um prin
 
 ``` bash
 /src/
-         Add16.vhd
-         Add16.png
-         ALU.vhd
-         ALU.png
-         Comparador16.vhd
-         Comparador16.png
-         FullAdder.vhd
-         FullAdder.png
-         HalfAdder.vhd
-         HalfAdder.png
-         Inc16.vhd
-         Inc16.png
-         Inversor16.vhd
-         Inversor16.png
-         Zerador16.vhd
-         Zerador16.png
+         add16.vhd
+         add16.png
+         alu.vhd
+         alu.png
+         comparador16.vhd
+         comparador16.png
+         fulladder.vhd
+         fulladder.png
+         halfadder.vhd
+         halfadder.png
+         inc16.vhd
+         inc16.png
+         inversor16.vhd
+         inversor16.png
+         zerador16.vhd
+         zerador16.png
 ```
 
 ## Testando em HW
 
-Para testar os módulos em hardware, deve-se abrir o projeto (`C-UnidadeLogicaAritmetica/Quartus`). Ele já inclui todos os módulos desta entrega e também os módulos da entrega passada. O arquivo localizado em `src/toplevel.vhd` já faz o mapeamento dos pinos da FPGA para os pinos da ULA. Para testar no hardware basta compilar e programar a FPGA.
+Para testar os módulos em hardware, deve-se abrir o projeto (`c_ULA/Quartus`). Ele já inclui todos os módulos desta entrega e também os módulos da entrega passada. O arquivo localizado em `src/toplevel.vhd` já faz o mapeamento dos pinos da FPGA para os pinos da ULA. Para testar no hardware basta compilar e programar a FPGA.
 
 ## Rubricas para avaliação de projetos
 
@@ -185,8 +190,7 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 |          | - Modifique a ULA adicionando a operação: X xor Y                                                     |
 |          | - Compila no Quartus a ULA do grupo e faz um vídeo demonstrando o seu funcionamento (FPGA).           |
 |          |                                                                                                       |
-| C+       | - Configurou o Actions para testar o projeto                                                          |
-|          | - Todos os modulos implementando e passam nos testes                                                  |
+| C+       | - Todos os modulos básicos implementando e passam nos                                                 |
 |          | - Faz reaproveitamentos dos módulos via `port map` sempre que possível                                |
 |          | - Possui a forma de onda de todos os módulos (.png).                                                  |
 |          |                                                                                                       |
@@ -210,8 +214,8 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
  - [Rubricas Scrum e Desenvolvedor](/Z01.1/Home/Sobre-Rubricas/)
 
 ### Formulários
-
+<!--
 - [Scrum Master](https://forms.gle/jx79naw8od3ResPL6)
 - [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
 
-
+-->
