@@ -31,7 +31,7 @@ Estudo prévio necessário para realizar esse lab:
 !!! warning 
     Antes de seguir você deve fazer uma leitura rápida do material de lógica sequencial em VHDL [VHDL -> Sequencial](https://insper.github.io/Z01.1/VHDL/VHDL-Sequencial/)
 
-Vamos agora implementar um FF tipo D em VHDL, para isso iremos modificar o arquivo `D-LogicaSequencial/src/FlipFlopD.vhd` que declara a entidade de um Flip Flop do tipo D.
+Vamos agora implementar um FF tipo D em VHDL, para isso iremos modificar o arquivo `d_logSeq/src/FlipFlopD.vhd` que declara a entidade de um Flip Flop do tipo D.
 
 ### Reset e Preset
 
@@ -48,7 +48,7 @@ Vamos agora implementar um FF tipo D em VHDL, para isso iremos modificar o arqui
 
 O modo síncrono seria que o **set** e o **clear** só podem ser executado na subida do **clock** e no assíncrono em qualquer momento que o sinal se **set** e **clear**  forem alterados o FF irá responder imediatamente. Nesse caso, iremos implementar o FF com **set** e **reset** assíncrono, para isso utilize a seguinte estrutura a seguir que já implementa o sinal de **clear**
 
-Iremos modificar o código localizado em `D-LogicaSequencial/src/FlipFlopD.vhd` que possui a implementação **parcial** de um FF tipo D, mas não tem o `preset`
+Iremos modificar o código localizado em `d_logSeq/src/FlipFlopD.vhd` que possui a implementação **parcial** de um FF tipo D, mas não tem o `preset`
     
 ``` vhdl
 process(clock, clear)
@@ -62,13 +62,16 @@ end process;
 ```
     
 !!! example "Tarefa: FF completo"
-    - `D-LogicaSequencial/src/FlipFlopD.vhd`
+    - `d_logSeq/src/FlipFlopD.vhd`
     - Implemente o **preset** (o clear já está feito)
     
 Agora você pode executar o script de teste do projeto e verificar se a implementação está correta.
 
 !!! example "Tarefa: waveform" 
-    - execute `./testeLogicaSequencial.py` 
+    - execute 
+        ```bash
+        $ WAVES=1 pytest -k flipflopd
+        ```
     - analise a forma de onda do teste do FF no GTKWave
 
 !!! tip 
@@ -96,7 +99,7 @@ Com o FFD implementando, vocês são capazes de implementar o binary-digit, que 
 
 ![](../figs/E-LogSeq/binarydigit_v2.svg){width=500}
 
-Para isso vocês terão que modificar o arquivo: `D-LogicaSequencial/src/BinaryDigit.vhd` e utilizando `port map` criar o componente `binaryDigit`.
+Para isso vocês terão que modificar o arquivo: `d_logSeq/src/BinaryDigit.vhd` e utilizando `port map` criar o componente `binaryDigit`.
 
 !!! example "Tarefa"
     1. Implemente o binary-digit

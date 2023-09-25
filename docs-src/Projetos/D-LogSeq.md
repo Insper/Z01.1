@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-| Terça - 03/10 |
+| {{apsD_date}} |
 
 ![](../figs/E-LogSeq/sistema-seq.png)
 
@@ -10,36 +10,38 @@ Neste projeto você terá que desenvolver os componentes de memória que serão 
 
 ## Instruções 
 
-A pasta do projeto `D-LogicaSequencial` no repositório Z01, possui a seguinte estrutura:
+A pasta do projeto `d_logSeq` no repositório Z01.1-proj, possui a seguinte estrutura:
 
-```
-/D-LogicaSequencial
-    testeLogicaSequencial.py
-    config_testes.txt
+```bash
+/d_logSeq
+    test_ula.py
+    ula_cocotb.py
     /Quartus
     /src
         *.vhd
-    /teste_cocotb
-        tests.py
 ```
 
-1. Quartus: Projeto Quartus que faz uso dos arquivos VHDL localizados em `src/*.vhd`;
-1. scripts: Scripts em python que automatizam a execução dos testes;
-1. `src/*.vhd`: Arquivos VHDL que serão implementados pelo grupo;
-1. `teste_cocotb/tests.py`: Arquivo que possui os testes lógicos dos arquivos do rtl.
+1. Quartus: Projeto Quartus que faz uso dos arquivos VHDL localizados em src/*.vhd;
+1. *.py: Scripts em python que automatizam a execução dos testes;
+1. src/*.vhd: Arquivos VHDL que serão implementados pelo grupo;
+
 
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `D-LogicaSequencial` e execute o script python localizado nessa pasta:
+Abra o terminal na pasta `d_logSeq/`  e execute:
 
 ```bash
-$ python testeLogicaSequencial.py
+$ pytest -s
 ```
 
-O mesmo irá compilar os arquivos `.vhd` e executar os testes unitários em cada um deles. Nesse momento do teste, como os módulos não estão implementados, o resultado deverá ser falho.
+para testar todos os módulos ou
 
-!!! note
-    Lembre que o arquivo `config_testes.txt` define quais testes serão executados.
+```bash
+$ pytest -k ram8
+```
+
+para testar apenas um módulo (neste caso a Ram8).
+
 
 ## Projeto
 
@@ -239,6 +241,7 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
  - [Rubricas Scrum e Desenvolvedor](/Z01.1/Home/Sobre-Rubricas/)
 
 ### Formulários
-
+<!--
 - [Scrum Master](https://forms.gle/n4ReCufxuGdeQ7fL8)
 - [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
+-->

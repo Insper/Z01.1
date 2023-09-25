@@ -30,6 +30,7 @@ extra:
     apsA_date: 'Domingo  - 10/09'
     apsB_date: 'Quarta  - 20/09'
     apsC_date: 'Quarta  - 27/09'
+    apsD_date: 'Sexta  - 13/10'
 
 markdown_extensions:
   - markdown.extensions.admonition
