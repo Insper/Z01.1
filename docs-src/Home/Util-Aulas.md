@@ -267,16 +267,18 @@ Terceira Avaliação Individual - Av3
 
 1. Laboratório (1h00)
     - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
+-->
 
+## Aula 06/10 - AI
 
-## Aula 24/03
+## Aula 04/10
 
 1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
 
 1. Aula estúdio (1h30)
 
 
-## Aula 22/03
+## Aula 29/09
 
 Projeto D-Lógica Sequencial.
 
@@ -291,7 +293,7 @@ Projeto D-Lógica Sequencial.
     - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
     
     
-## Aula 17/03
+## Aula 27/09
 
 Finalizando o projeto C-ULA e começo do projeto D-Lógica Sequencial.
 
@@ -305,7 +307,7 @@ Finalizando o projeto C-ULA e começo do projeto D-Lógica Sequencial.
     - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
 
 1. Aula estúdio (1h00)
--->  
+
 
 ## Aula 22/09
 

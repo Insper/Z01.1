@@ -42,7 +42,7 @@ Liberado consulta ao material da disciplina.
     - Conjunto de Instruções
 
 [Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
-
+-->
 
 ## AV2 - AI
 
@@ -74,7 +74,7 @@ Liberado consulta ao material da disciplina.
 
 [Prova - Av2 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
 
--->
+
 ## AV1 - quarta 06/09 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_resolucao.pdf ) 
 
 - Conteúdos: 
