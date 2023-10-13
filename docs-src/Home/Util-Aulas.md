@@ -190,10 +190,16 @@ Projeto D-Lógica Sequencial.
 
 ## Aula 05/05
 
+    
+
+1. Aula estúdio
+-->
+
+## Aula 08/11
 Terceira Avaliação Individual - Av3
 
 
-## Aula 03/05
+## Aula 01/11
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -207,7 +213,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 14: Praticando](https://insper.github.io/Z01.1/Labs/Lab14-Assembly/)   
 
 
-## Aula 28/04
+## Aula 27/10
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -220,7 +226,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 12: Periféricos](https://insper.github.io/Z01.1/Labs/Lab12-Assembly/)
     
     
-## Aula 26/04
+## Aula 25/10
 
 
 | Estudo prévio                                                                           |
@@ -236,12 +242,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 11: Assembly](https://insper.github.io/Z01.1/Labs/Lab11-Assembly/)
 
 
-## Aula 19/04    
-
-1. Aula estúdio
-
-
-## Aula 14/04
+## Aula 20/10
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -255,7 +256,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
 
 
-## Aula 12/04
+## Aula 18/10
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -267,7 +268,7 @@ Terceira Avaliação Individual - Av3
 
 1. Laboratório (1h00)
     - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
--->
+
 
 ## Aula 06/10 - AI
 

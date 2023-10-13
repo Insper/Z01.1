@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-| Quinta - 12/05 |
+| {{apsF_date}} |
 
 ![Assembly](../figs/F-Assembly/sistema-assembly.svg)
 
@@ -17,8 +17,10 @@ Seguir as instruções a seguir para desenvolvimento do projeto.
 A pasta do projeto F, no repositório Z01, possui a seguinte estrutura:
 
 ```
-F-Assembly/
-  testeAssembly.py
+f_Assembly/
+  compileALL.py
+  test_CPU.py
+  CPU_cocotb.py
   Z01simulator.py
   /Quartus
   /src
@@ -36,10 +38,11 @@ F-Assembly/
 
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `F-Assembly/` e execute o script python localizado nessa pasta:
+Abra o terminal na pasta `f_Assembly/` e execute:
 
 ```bash
-$ ./testeAssembly.py
+$ ./compileALL.py
+$ pytest -s
 ```
 
 O mesmo irá compilar os arquivos `src/*.nasm` e executar os testes unitários em cada um deles. Nesse momento do teste, como os módulos não estão implementados, o resultado deverá ser falho.
@@ -57,7 +60,7 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 ### Módulos 
 
-- Esses arquivos estão localizados em `F-Assembly/src/`
+- Esses arquivos estão localizados em `f_Assembly/src/`
 
 **A descrição de cada módulo está localizada no cabeçalho do arquivo.**
  
@@ -119,5 +122,7 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 ### Formulários
 
+<!--
 - [Scrum Master](https://forms.gle/B3gVDEsmHm8K2wbq9)
 - [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
+-->

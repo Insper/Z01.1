@@ -4,7 +4,7 @@ Ao final desse lab você deve ser capaz de:
 
 1. Usar o simulador gráfico 
 1. Fazer pequenas modificações em um código assembly
-1. Executar script de teste do projeto E - Assembly
+1. Executar script de teste do projeto F - Assembly
 
 > O uso simulador não é orbigatório. Para programar em Assembly, basta editar os aquivos `*.nasm`. Mas, o simulador ajuda a verificar o funcionamento do código e a encontrar eventuais erros.
 
@@ -51,11 +51,12 @@ O primeiro simulador roda a simulação no software Modelsim e é executado pelo
 ``` bash
 $ ./Z01simulador.py
 ```
-
+<!--
 > Se o simulador travar sem qualquer razão aparentes, é recomendado rodar o script `updateZ01tools.sh` no terminal:
 ``` bash
 $ ./updateZ01tools.sh
 ```
+-->
 
 O segundo simulador (em fase de implementação na disciplina) utiliza o MyHDL (biblioteca python) para executar a simulação. Para utilizá-lo, é necessário instalá-lo:
 
@@ -176,7 +177,17 @@ Use o resumo das instruções: [AssemblyZ01](https://insper.github.io/Z01.1/Z01/
     
 ## Script automático de testes
 
-Além da interface gráfica do simulador, possuímos um script de teste automatizado (similar ao do VHDL), esse script: `F-Assembly/testeAssembly.py` compila os códigos que estão na pasta `F-Assembly/src/` para a pasta `F-Assembly/bin/hack` e executa os testes localizados em `F-Assembly/tests/`. Somente os arquivos configurados no `config_testes_nasm.txt` serão testados.
+Além da interface gráfica do simulador, possuímos um script de teste automatizado (similar ao do VHDL).
+Para isso, abra o terminal na pasta `f_Assembly` e execute:
+
+```bash
+$ ./compileALL.py
+$ pytest -s
+```
+
+Ele compila os códigos que estão na pasta `f_Assembly/src/` para a pasta `f_Assembly/bin/hack` e executa os testes localizados em `f_Assembly/tests/`. 
+
+Somente os arquivos configurados no `config_testes_nasm.txt` serão testados.
 
 ### `config_testes_nasm.txt`
 
@@ -195,7 +206,7 @@ Exemplo do `config_testes_nasm.txt`
 
 ### Implementando o add.nasm
 
-Os arquivos a serem implementando estão na pasta `F-Assembly/src/` lá você vai encontrar todos os códigos fontes que deverão ser feitos nesse projeto. 
+Os arquivos a serem implementando estão na pasta `f_Assembly/src/` lá você vai encontrar todos os códigos fontes que deverão ser feitos nesse projeto. 
 
 !!! example "Tarefa"
     Edite o arquivo `add.nasm` realizando a implementação que ele pede no comentário do arquivo (já foi feito nesse lab)
@@ -203,7 +214,14 @@ Os arquivos a serem implementando estão na pasta `F-Assembly/src/` lá você va
 !!! linux "vscode"
     Abra o arquivo `add.nasm` no VsCode.
 
-Agora com o módulo implementando podemos testar seu funcionamento. Para isso execute o script `testeAssembly.py`. Esse script irá compilar o nasm e gerar os arquivos `.hack` e `.mif` (salvos no `/bin/hack/`) que serão carregados no simulador junto com uma configuração inicial da memória RAM (como no gui do simulador), ao término da simulação um arquivo com o estado final da RAM é salvo na pasta `/tests/add/add0_end.mif`.
+Agora com o módulo implementando podemos testar seu funcionamento. Para isso execute 
+
+```bash
+$ ./compileALL.py
+$ pytest -s
+```
+
+Esse script irá compilar o nasm e gerar os arquivos `.hack` e `.mif` (salvos no `/bin/hack/`) que serão carregados no simulador junto com uma configuração inicial da memória RAM (como no gui do simulador), ao término da simulação um arquivo com o estado final da RAM é salvo na pasta `/tests/add/add0_end.mif`.
 
 Executamos um script que compara o estado final da RAM com o um esperado (`add0_tst.mif`), em caso de algum erro, o script irá reportar falha.
 

@@ -56,7 +56,7 @@ Podendo ser traduzido para o código em VHDL (via soma dos produtos):
 
 
 !!! example "Implementando e testando"
-    1. Abra o arquivo `/Projetos/E-Computador/src/controlUnit.vhd`
+    1. Abra o arquivo `/e_CPU/src/controlUnit.vhd`
     1. Insira a implementação anterior do `loadD` na arquitetura
 
 
@@ -79,9 +79,12 @@ Agora implemente o `loadA`, esse sinal que controla o load do registrador A.
 !!! example "Implementando e testando"
     1. Entenda os bits envolvidos
     1. Escreva uma tabela verdade
-    1. Encontre a equação e implemente no `controlUnit.vhd`
-    1. Teste com o comando `./testeHW.py`
+    1. Encontre a equação e implemente no `controlunit.vhd`
+
+<!--
+    1. Teste com o comando `pytest -k controlunit`
        - Deve passar nos 7 primeiros testes e, então, apresentar erro.
+-->
        
 ### `muxALUI_A`
 
@@ -95,10 +98,13 @@ Esse sinal (`muxALUI_A`) controla o mux que seleciona qual o sinal que entra no 
 !!! example "Implementando e testando"
     1. Entenda os bits envolvidos
     1. Escreva uma tabela verdade
-    1. Encontre a equação e implemente no `controlUnit.vhd`
+    1. Encontre a equação e implemente no `controlunit.vhd`
+
+<!--
     1. Teste com o comando `./testeHW.py`
        - Deve passar no ==TESTE 7== e ==TESTE 8==
        - Deve parar para no ==TESTE 9==
+-->
        
 ### `zx`
 
@@ -108,10 +114,13 @@ Agora faça o sinal `zx` que controla o zerador do sinal x da ULA.
 !!! example "Implementando e testando"
     1. Entenda os bits envolvidos
     1. Escreva uma tabela verdade
-    1. Encontre a equação e implemente no `controlUnit.vhd`
+    1. Encontre a equação e implemente no `controlunit.vhd`
+
+<!--
     1. Teste com o comando `./testeHW.py`
        - Deve passar no ==TESTE 9== e ==TESTE 10==
        - Deve parar para no ==TESTE 11==
+-->
 
 ## Memory IO 
 

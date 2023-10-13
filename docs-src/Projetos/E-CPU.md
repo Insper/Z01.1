@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-| Terça - 25/04 |
+| {{apsE_date}} |
 
 ![](../figs/G-CPU/sistema-cpu.svg)
 
@@ -17,29 +17,32 @@ A seguir explicações de como começar o projeto.
 A pasta do projeto E no repositório Z01, possui a seguinte estrutura:
 
 ```
-E-Computador/
-    testeHW.py
-    src/
-    Quartus/
+e_CPU/
+    test_CPU.py
+    CPU_cocotb.py
+    /Quartus
+    /src
+        *.vhd
 ```
 
-1. `testeHW.py`: Testa o `controlUnit.vhd`, `memoryIO.vhd` e `CPU.vhd` (todo o HW do computador)
-2. `src/`: Pasta com os arquivos fonte.
+1. Quartus: Projeto Quartus que faz uso dos arquivos VHDL localizados em src/*.vhd;
+1. *.py: Scripts em python que automatizam a execução dos testes;
+1. src/*.vhd: Arquivos VHDL que serão implementados pelo grupo;
 
 
 ### Testando HW 
 
-Abra o terminal na pasta `E-Computador`, deixe descomentado apenas as linhas referentes ao respectivo módulo (`ControlUnit.vhd`, `MemoryIO.vhd` e/ou `CPU.vhd`) no arquivo `config_testes.txt` e execute o script python:
+Abra o terminal na pasta `e_CPU` e execute:
 
 ```bash
-$ ./testeHW.py
+$ pytest -s
 ```
 
 > O teste do CPU apenas funcionará se o ControlUnit tiver sido implementado.
 
-Todos os módulos vhdl (desde o projeto B) serão compilados e o `CPU.vhd` será executado. 
+Todos os módulos vhdl (desde o projeto B) serão compilados e o `cpu.vhd` será executado. 
 
-
+<!--
 ### Actions
 
 Adicione ao Actions o teste:
@@ -48,7 +51,7 @@ Adicione ao Actions o teste:
 
 !!! tip
     No Actions você tem que colocar o caminho completo: `E-Computador/...`
-
+-->
 
 ## Projeto
 
@@ -58,7 +61,7 @@ Deve-se implementar o `Control Unit` e integrar os módulos: `MemoryIO` e `CPU`.
 ## Módulos 
 
 !!! note
-    Esses arquivos estão localizados em `E-Computador/src/`
+    Esses arquivos estão localizados em `e_CPU/src/`
 
 <!--
 Os módulos estão listados de maneira Top - Down
@@ -76,27 +79,27 @@ Os módulos estão listados de maneira Top - Down
 -->
 
 - MemoryIO
-    - **Arquivo**   : `MemoryIO.vhd`
+    - **Arquivo**   : `memoryio.vhd`
     - **Descrição** : Faz o mapa de memória para a CPU.
     - **Dependências** :
-         - `.Dispositivos/RAM16K.vhd` : RAM a ser utilizada no projeto (já foi dado pronto)
-         - `.Dispositivos/Screen.vhd` : Controlador do LCD a ser utilizada no projeto (já foi dado pronto)
+         - `.Dispositivos/ram16k.vhd` : RAM a ser utilizada no projeto (já foi dado pronto)
+         - `.Dispositivos/screen.vhd` : Controlador do LCD a ser utilizada no projeto (já foi dado pronto)
     
 ---------------------------
 
 - CPU
-    - **Arquivo**   : `CPU.vhd`
+    - **Arquivo**   : `cpu.vhd`
     - **Descrição** : CPU do Z01 integra registradores, controlUnit, ULA e PC.
     - **Dependências** :
-         - `ControlUnit.vhd` : Unidade de controle a ser implementada
-         - `ULA.vhd` : Unidade lógica desenvolvida no projeto D
-         - `PC.vhd` : Program counter do projeto E
+         - `controlunit.vhd` : Unidade de controle a ser implementada
+         - `alu.vhd` : Unidade lógica desenvolvida no projeto D
+         - `pc.vhd` : Program counter do projeto E
          - `register16.vhd`, `mux16.vhd` : Componentes do projeto C e D 
 
 ---------------------------
 
 - ControlUnit
-    - **Arquivo**   : `ControlUnit.vhd`
+    - **Arquivo**   : `controlunit.vhd`
     - **Descrição** : Unidade de controle da CPU do Z01.
     - **Dependências** :
          - não há 
@@ -105,11 +108,11 @@ Os módulos estão listados de maneira Top - Down
 
 ---------------------------
 
-![MemoryIo.vhd](../figs/G-CPU/memoryIO.png)
+![memoryio.vhd](../figs/G-CPU/memoryIO.png)
 
 ---------------------------
 
-![ControlUnit.vhd](../figs/G-CPU/controlUnit.svg){width=400}
+![controlunit.vhd](../figs/G-CPU/controlUnit.svg){width=400}
 
 ---------------------------
 
@@ -141,11 +144,12 @@ Os módulos estão listados de maneira Top - Down
 
 ### Testagem mais completa na próxima APS
 
-Para testar o computador de uma forma mais completa, iremos executar os programas realizados na APS `F-Assembly` no Harware que vocês montaram. 
+Para testar o computador de uma forma mais completa, iremos executar os programas realizados na APS `f_Assembly` no Harware que vocês montaram. 
 
 ### Formulários
 
+<!--
 - [Scrum Master](https://forms.gle/KGFbHLrSzf26HCs19)
 - [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
- 
+-->
 

@@ -13,12 +13,12 @@ Ao final desse lab você deve ser capaz de:
 !!! note
     Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)
 
-Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script== `Z01simulador.py` dentro da pasta do projeto `F-Assembly`
+Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script== `Z01simulador.py` dentro da pasta do projeto `f_Assembly`
 
 ## Incondicional
 
 !!! example "lcd1.nasm" 
-    - `F-Assembly/src/labs/lcd1.nasm`
+    - `f_Assembly/src/labs/lcd1.nasm`
     
     Preencha todos os px do LCD de preto!
     
@@ -59,7 +59,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
 
 
 !!! example "jmp1.nasm" 
-    - `F-Assembly/src/labs/jmp1.nasm`
+    - `f_Assembly/src/labs/jmp1.nasm`
     
     Implemente o pseudo código a seguir em nasm:
     
@@ -107,7 +107,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         ```
         
 !!! example "jmp3.nasm" 
-    - `F-Assembly/src/labs/jmp3.nasm`
+    - `f_Assembly/src/labs/jmp3.nasm`
     
     Implemente o pseudo código a seguir em nasm:
     
@@ -145,7 +145,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         ```
 
 !!! example "jmp4.nasm" 
-    - Criar o arquivo `F-Assembly/src/labs/jmp4.nasm`
+    - Criar o arquivo `f_Assembly/src/labs/jmp4.nasm`
     
     Implemente o pseudo código a seguir em nasm:
     
@@ -167,7 +167,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         - Teste 2: RAM[0] = 2
 
 !!! example "jmp5.nasm" 
-    - Criar o arquivo `F-Assembly/src/labs/jmp5.nasm`
+    - Criar o arquivo `f_Assembly/src/labs/jmp5.nasm`
     
     Acione a metade superior dos pxs do LCD de preto.
     

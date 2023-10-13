@@ -12,7 +12,7 @@ Ao final desse lab você deve ser capaz de:
 !!! note
     Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)
 
-Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script `Z01simulador.py`== dentro da pasta do projeto `F-Assembly`
+Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script `Z01simulador.py`== dentro da pasta do projeto `f_Assembly`
 
 Todos os arquivos possuem teste, após programar no `Simulador` execute o teste
 
@@ -28,7 +28,7 @@ Problemas relacionados ao LED do nosso Z01
         - `21184`
 
 !!! example "led1.nasm"
-    - `F-Assembly/src/labs/led1.nasm`
+    - `f_Assembly/src/labs/led1.nasm`
     
     Faça o LED0 acender
     
@@ -44,7 +44,7 @@ Problemas relacionados ao LED do nosso Z01
         ```
         
 !!! example "led2.nasm"
-    - `F-Assembly/src/labs/led2.nasm`
+    - `f_Assembly/src/labs/led2.nasm`
     
     Faça os LEDs: 9,7,5,3,1 acenderem
     
@@ -68,7 +68,7 @@ Problemas relacionado a chave do nosso Z01
         - `21185`
 
 !!! example "sw1.nasm"
-    - `F-Assembly/src/labs/sw1.nasm`
+    - `f_Assembly/src/labs/sw1.nasm`
     
     Faça os LEDs serem o valor das chaves: LED = SW
     
@@ -89,7 +89,7 @@ Problemas relacionado a chave do nosso Z01
         ```
 
 !!! example "sw2.nasm"
-    - `F-Assembly/src/labs/sw2.nasm`
+    - `f_Assembly/src/labs/sw2.nasm`
     
     Faça os LEDs serem o contrário do valor das chaves: LED = !SW
     
@@ -109,7 +109,7 @@ Problemas relacionado a chave do nosso Z01
 Trabalhando com o LCD.
 
 !!! example "LCD" 
-    - Linhas 6-7 do arquivo `F-Assembly/src/labs/lcd2.nasm` -->
+    - Linhas 6-7 do arquivo `f_Assembly/src/labs/lcd2.nasm` -->
     
     Acione os 16 primeiros pxs do LCD.
     
@@ -125,7 +125,7 @@ Trabalhando com o LCD.
         > `movw $-1, (%A)`: Gera o vetor `1111111111111` e grava no endereço que %A aponta (primeiros pxs do LCD)
 
 !!! example "lcd2.nasm" 
-    - `F-Assembly/src/labs/lcd2.nasm`
+    - `f_Assembly/src/labs/lcd2.nasm`
     
     Acione todos os pxs da primeira posição de memória do LCD, do meio do LCD e da última posição de memória do LCD.
     
