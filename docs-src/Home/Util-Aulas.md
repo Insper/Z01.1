@@ -232,7 +232,7 @@ Terceira Avaliação Individual - Av3
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
 | [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
-| [ASM - Assembly](https://insper.github.io/Z01.1/Teoria/Teoria-Assembly/)           |
+| [ASM - Assembly](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembly/)           |
 | [Resumo - Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)           |
 
    
