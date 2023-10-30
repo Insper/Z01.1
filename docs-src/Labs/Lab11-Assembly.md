@@ -58,7 +58,10 @@ $ ./updateZ01tools.sh
 ```
 -->
 
-O segundo simulador (em fase de implementação na disciplina) utiliza o MyHDL (biblioteca python) para executar a simulação. Para utilizá-lo, é necessário instalá-lo:
+O segundo simulador (em fase de implementação na disciplina) utiliza o MyHDL (biblioteca python) para executar a simulação. 
+
+<!--
+Para utilizá-lo, é necessário instalá-lo:
 
 1. Primeiro instale o [python venv](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
 1. Faça o download das versões modificadas dos arquivos [`updateZ01tools.sh`](https://github.com/Insper/Z01.1-proj/blob/main/updateZ01tools.sh) e [`requirements.txt`](https://github.com/Insper/Z01.1-proj/blob/main/requirements.txt). 
@@ -67,8 +70,10 @@ O segundo simulador (em fase de implementação na disciplina) utiliza o MyHDL (
 $ ./updateZ01tools.sh
 ```
 > O script deve criar um ambiente virtual e instalar todas as libraries necessárias (indicadas no `requirements.txt`).
+(criado pelo script do `updateZ01tools.sh`)
+-->
 
-Para inicializar o simulador basta entrar no ambiente virtual nasm (criado pelo script do `updateZ01tools.sh`) e executar o script, utilizando os comandos a seguir:
+Para inicializar o simulador basta entrar no ambiente virtual nasm e executar o script, utilizando os comandos a seguir:
 
 ``` bash
 $ source ~/nasm/bin/activate
