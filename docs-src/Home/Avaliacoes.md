@@ -19,8 +19,9 @@ Liberado consulta ao material da disciplina.
 [Prova - Av4 - 21b - Repositório](https://github.com/insper-classroom/21b-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
 
 [Prova - Av4 - 22a - Repositório](https://github.com/insper-classroom/22a-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
+-->
 
-## AV3 - sexta 05/05
+## AV3 - sexta 10/11
 
 Avaliação prática individual a ser realizada no SSD Linux. 
 
@@ -42,7 +43,7 @@ Liberado consulta ao material da disciplina.
     - Conjunto de Instruções
 
 [Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
--->
+
 
 ## AV2 - AI
 
