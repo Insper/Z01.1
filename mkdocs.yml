@@ -34,6 +34,7 @@ extra:
     apsE_date: 'Terça  - 31/10'
     apsF_date: 'Quarta - 15/11'
     apsG_date: 'Quinta - 23/11'
+    apsMR_date: 'Quarta - 06/12'
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -82,7 +83,7 @@ nav:
   - 'Projetos/G-Assembler.md'
   - 'Projetos/H-VM.md'
   #- 'Projetos/I-VMtranslator.md'
-  #- 'Projetos/X-MR.md'
+  - 'Projetos/X-MR.md'
 
 - Labs:
   - 'Labs/Lab1-A-Transistores.md'

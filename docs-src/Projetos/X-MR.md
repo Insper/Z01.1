@@ -1,14 +1,12 @@
 # Mundo Real
 
-!!! warning ""
-    Entregar até dia 05/06
+| Data da entrega| 
+|----------------|
+| {{apsMR_date}} |
 
-| HW | SW |
-|----|----|
-| 10 | 10 |
 
 Esse projeto extra optativo (individual) fornece **10 pontos** 
-extras de **Hardware** e **10 pontos extras** de **Software**. 
+extras de **Hardware**, **10 pontos extras** de **Software** e **5 pontos extras** de **Hardware** ou **Software** (o que for mais vantajoso). 
 
 ## (10 HW) Processadores
 
@@ -54,7 +52,9 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (de 
     - [ ] Comparação com o Z01.1
     
 ==Muito importante sempre que possível realizar uma comparação com a nossa CPU==
-    
+
+## (**5 HW ou SW**) 
+
 - Instruções
     - [ ] Descritivo das instruções e seus padrões
     - [ ] Quantidade total de instruções
@@ -65,11 +65,11 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (de 
 Você deve pegar um código de exemplo do assembly da CPU escolhida e comentar ele no vídeo, explicando o que está fazendo.
 
 - Explicar o que cada instrução está fazendo
-- O impacto dela no hardware
 - Muitas arquitetura possuem simulador! Interessante usar, mas não é necessário.
 
 
 ### Entrega
 
+<!--
 - [Link para entrega](https://forms.gle/ooNmuxeJsRCxPMs37)
-
+-->
