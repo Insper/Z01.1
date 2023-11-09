@@ -122,7 +122,6 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 ### Formulários
 
-<!--
-- [Scrum Master](https://forms.gle/B3gVDEsmHm8K2wbq9)
-- [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
--->
+
+- [Scrum Master](https://forms.gle/kg5W7zbFEQ1cqKkV9)
+- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
