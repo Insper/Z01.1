@@ -224,7 +224,6 @@ Projeto D-Lógica Sequencial.
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
 | [Assembler](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler/)     |
-| [Assembler](https://insper.github.io/Z01.1/Teoria/assembler-Dicas-SymbolTable/)         |
 
    
 1. Revisão/ Dúvidas/ Expositiva (1h00):
