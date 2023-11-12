@@ -195,6 +195,57 @@ Projeto D-Lógica Sequencial.
 1. Aula estúdio
 -->
 
+## Aula 29/11
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [VM - jump](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-jump/)       |
+| [VM - Funções](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-funcoes/) |
+
+1. Expositiva/Dúvidas (2h00)
+
+
+## Aula 24/11
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Linguagem de Máquina Virtual](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm/)        |
+| [VM - Segmentos](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-segmentos/)            |
+| [VM - Memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-memoria/)                |
+
+1. Expositiva/Dúvidas (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 17: VM](https://insper.github.io/Z01.1/Labs/Lab17-VM/) (Treinando RPN e VM Z01 - básico)
+
+
+## Aula 22/11
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Assembler](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler/)     |
+| [Assembler](https://insper.github.io/Z01.1/Teoria/assembler-Dicas-SymbolTable/)         |
+
+   
+1. Revisão/ Dúvidas/ Expositiva (1h00):
+
+1. Laboratório (1h00)
+    - [Lab 16: Assembler - parte 4](https://insper.github.io/Z01.1/Labs/Lab16.5-Assembler/)
+    - [Lab 16: Assembler - parte 5](https://insper.github.io/Z01.1/Labs/Lab16.6-Assembler/)
+    
+    
+## Aula 17/11
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Assembler](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler/)     |
+
+
+1. Expositiva/Dúvidas  (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 16: Assembler](https://insper.github.io/Z01.1/Labs/Lab16.2-Assembler/)
+
 ## Aula 10/11
 Terceira Avaliação Individual - Av3
 

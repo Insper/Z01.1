@@ -7,7 +7,7 @@ Como os testes não são perfeitos e não conseguem cobrir toda a funcionalidade
 
 Utilizaremos o mesmo recurso agora em java, onde cada módulo (método) possui um teste e quando todos os módulos estivem implementados e funcionando realizamos um teste de integração que valida tudo.
 
-Os testes unitários foram feitos com o [JUnit](https://junit.org/junit5/) e estão na pasta do projeto: `G-Assembler/Assembler/test/java/assembler`. Os testes cobrem todas os métodos do projeto.
+Os testes unitários foram feitos com o [JUnit](https://junit.org/junit5/) e estão na pasta do projeto: `g_Assembler/Assembler/test/java/assembler`. Os testes cobrem todas os métodos do projeto.
 
 ## Exemplo parser
 

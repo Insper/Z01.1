@@ -28,3 +28,17 @@ Agora com os demais métodos implementando faça o `initialize`.
     Use os testes para ajudar entender o que o método faz.
 
 Tabela de símbolos? De uma lida na [teoria/Tabela de Símbolos](https://insper.github.io/Z01.1/Teoria/assembler-Dicas-SymbolTable/)
+
+# Teste Final
+
+_Apenas após terminar todos os arquivos._
+
+Por fim, iremos traduzir todos os arquivos `nasm` da APS-F usando o Assembler que vocês criaram. Para isso, execute no terminal os comandos:
+
+``` bash
+$ ./genJAR.py
+$ ./compileALL.py
+$ pytest -s
+```
+
+O primeiro gera o `.jar` a partir do código de vocês, enquanto o segundo traduz todos os arquivos `nasm`. O terceiro roda os arquivos Assembly no CPU. 

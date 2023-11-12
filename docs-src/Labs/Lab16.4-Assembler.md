@@ -7,7 +7,7 @@ Iremos agora implementar um dos métodos da classe **Code**, a parte responsáve
 
 ![](../figs/H-Assembler/code-jump.png)
 
-No Intellij abra o código `code.java` e procure pelo método `jump`:
+No VSCode ou no Intellij abra o código `code.java` e procure pelo método `jump`:
 
 ``` java
 /**

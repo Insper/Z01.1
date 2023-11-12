@@ -3,13 +3,17 @@
 !!! warning
     Todos devem realizar de forma individual!
 
-Iremos realizar o desenvolvimento do Assembler na IDE do Intellij, para isso precisamos importar um projeto do tipo maven.
+Para realizar o desenvolvimento do Assembler podemos usar o VSCode ou a IDE do Intellij.
+
+Para trabalhar no VSCode abra a pasta Assembler no mesmo. Se necessário, instale a extensão `Test Runner for Java`.
+
+Para quem escolher a IDE do Intellij, siga os passos abaixo:
 
 ### Import Project:
 
 ![](../figs/H-Assembler/intellij/1.png){width=500}
 
-Importe o arquivo `.xml` que está dentro da pasta `G-Assebler/Assembler`:
+Importe o arquivo `.xml` que está dentro da pasta `g_Assebler/Assembler`:
 
 ![](../figs/H-Assembler/intellij/2.png){width=500}
 
