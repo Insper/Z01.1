@@ -116,9 +116,6 @@ Segunda Avaliação Individual - Av2
     - [Lab 3: GitHub](/Z01.1/A-Ambiente-Lab-2)
 
 
-
-## Av4 - PF - 02/12
-  
     
 ## Aula 19/10
 
@@ -194,6 +191,8 @@ Projeto D-Lógica Sequencial.
 
 1. Aula estúdio
 -->
+
+## Av4 - PF - 01/12
 
 ## Aula 29/11
 

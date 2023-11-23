@@ -60,8 +60,6 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 |          |                                                                                      |
 | C+       | - Criado assembler a partir de estrutura de código disponibilizada                   |
 |          | - Todos os testes unitários passam no teste                                          |
-|          | - Os testes de integração passam nos testes                                          |
-|          | - Actions configurado corretamente                                                    |
 |          |                                                                                      |
 | D        | - Teste unitário ou Teste integração não passa                                       |
 |          |                                                                                      |
@@ -71,12 +69,12 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 | A        | Proponha alguma outra melhoria e converse com o professor para saber se é valida.    |
 |          |                                                                                      |
 | B        | - Implementando modo verbose (-v) que possibilita analisar o assembler e suas etapas |
+|          | - Os testes de integração passam nos testes                                          |
+|          | - Actions configurado corretamente                                                    |
 -->
 
 
 ### Formulários
 
-<!--
-- [Scrum Master](https://forms.gle/PKkmH5qyAqmGzfGQ8)
-- [Desenvolvedores](https://forms.gle/1Cq2kS5hWZpnQBqU7)
--->
+- [Scrum Master](https://forms.gle/KNatz9SxBsXn3Ch5A)
+- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)

@@ -12,8 +12,6 @@ Esse laboratório mistura exercícios com leitura de teoria, é essencial que vo
     
     - ==Não seguir sem realizar a etapa anterior.==
 
-!!! warning "Z01-Tools"
-    Atualizar Z01-Tools! antes de seguir...
 
 ## Treinando RPN
 
@@ -31,13 +29,13 @@ Abra o simulador online da calculadora [hp48](http://www.poleyland.com/hp48/) e 
 !!! info "TEORIA"
     Leia a [Teoria/VM](/Z01.1/commum-content/teoria/Teoria-vm/) antes de seguir.
     
-Vamos agora trabalhar com a nossa vm, vocês terão que implementar os programas a seguir e testar com o script (`testeVM.py`). 
+Vamos agora trabalhar com a nossa vm, vocês terão que implementar os programas a seguir e testar com o script (executar `./compileALL.py` localizado na pasta do projeto e então `SIM=ghdl pytest --tb=no -s`.). 
 
 !!! info
     A descrição do que deve ser feito está no próprio código
 
-- `Projetos/H-VM/src/vm/1a-Add`
-- `Projetos/H-VM/src/vm/1b-Calculadora`
+- `h_VM/src/vm/1a-Add`
+- `h_VM/src/vm/1b-Calculadora`
 
 Você notou que nesses códigos pedimos para salvar o resultado em `temp 0`, fazemos
 isso pela operação de `pop temp 0`. Vamos estudar um pouco a respeito disso:
@@ -54,8 +52,8 @@ Nossa linguagem vm suporta realizar condições e loops, vamos ver como isso é 
     
 Implementem os códigos a seguir
 
-- `H-VM/src/vm/1c-loop`
-- `H-VM/src/vm/1c-div`
+- `h_VM/src/vm/1c-loop`
+- `h_VM/src/vm/1c-div`
 
 !!! tip
     De uma olhada nos códigos de exemplo, tem coisa de condição lá!
@@ -75,6 +73,6 @@ div(10,2) + div(mult(mult(15,3), sqrt(121.2))), exp(2,5))
     
 Vamos agora trabalhar com funções na nossa VM, implementem os códigos a seguir:
 
-- `H-VM/src/vm/2b-Calculadora`
-- `H-VM/src/vm/2c-Calculadora`
-- `H-VM/src/vm/2d-Calculadora`
+- `h_VM/src/vm/2b-Calculadora`
+- `h_VM/src/vm/2c-Calculadora`
+- `h_VM/src/vm/2d-Calculadora`
