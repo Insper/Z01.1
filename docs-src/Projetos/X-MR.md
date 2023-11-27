@@ -70,6 +70,5 @@ Você deve pegar um código de exemplo do assembly da CPU escolhida e comentar e
 
 ### Entrega
 
-<!--
-- [Link para entrega](https://forms.gle/ooNmuxeJsRCxPMs37)
--->
+- [Link para entrega](https://forms.gle/zZj6p9KG714Kvdrk6)
+
