@@ -3,7 +3,7 @@
 ![](figs/icon-elementos.png)
 
 - **Curso:** Engenharia Da Computação - Terceiro semestre
-- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2023-2.
+- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2024-1.
 - **Prof.** Renan Trevisoli / renantd@insper.edu.br
 <!-- - **Repositório:** [http:/github.com/Insper/Z01.1-proj](http:/github.com/Insper/Z01.1-proj) -->
 - **Local:** Laboratório de Informática - 404

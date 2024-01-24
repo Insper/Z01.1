@@ -3,7 +3,7 @@
 Resumo e planejamento das aulas.
 
 
-![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png){width=550}
+![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png)
 
 <!--
 ## 14/12 - Sub
