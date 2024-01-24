@@ -3,7 +3,7 @@
 Informações sobre as avaliações (e simulados) da disciplina:
 
 
-## AV4 - AF - sexta 01/12
+## AV4 - AF
 
 Avaliação prática individual a ser realizada no SSD Linux. 
 
@@ -21,7 +21,7 @@ Liberado consulta ao material da disciplina.
 [Prova - Av4 - 22a - Repositório](https://github.com/insper-classroom/22a-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
 
 
-## AV3 - sexta 10/11
+## AV3 - sexta 26/04
 
 Avaliação prática individual a ser realizada no SSD Linux. 
 
@@ -76,7 +76,7 @@ Liberado consulta ao material da disciplina.
 [Prova - Av2 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
 
 
-## AV1 - quarta 06/09 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_resolucao.pdf ) 
+## AV1 - quarta 28/02
 
 - Conteúdos: 
     - Organização de Computadores (visão geral)
@@ -101,7 +101,7 @@ Liberado consulta ao material da disciplina.
 Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
 
 - Atividade de revisão:
-    - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
+    <!-- - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491) -->
     - [Transistores](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Ex_transistores.pdf)
     - [Simulado](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado-solution.pdf)
     

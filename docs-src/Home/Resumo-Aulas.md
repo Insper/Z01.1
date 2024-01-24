@@ -192,6 +192,8 @@ Projeto D-Lógica Sequencial.
 1. Aula estúdio
 -->
 
+
+<!--
 ## Av4 - PF - 01/12
 
 ## Aula 29/11
@@ -428,14 +430,14 @@ Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
     - [Lab 2.1: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.1-Ambiente/)
     - [Lab 2.2: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.2-Ambiente/)
     - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
-    
+-->    
 
 
-## Aula 06/09
+## Aula 28/02
 
 Primeira Avaliação Individual - Av1
 
-## Aula 01/09
+## Aula 23/02
 
 Trabalhar com transistores e circuitos integrados.
 
@@ -447,11 +449,13 @@ Trabalhar com transistores e circuitos integrados.
 1. Expositiva/ Dúvidas  (0h40):
     - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf)
 
-1. Laboratório (1h20):
+1. Laboratório (0h40):
     - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores/)
-  
 
-## Aula 25/08
+1. [APS-A](/Z01.1/Projetos/A-Algebra-Transistores) (0h40):
+    - Montagem dos circuitos  
+
+## Aula 21/02
 
 Estudar lógica booleana e praticar
 
@@ -459,16 +463,17 @@ Estudar lógica booleana e praticar
 |------------------------------------------------------------------------------------|
 | [Teoria Álgebra Booleana](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Algebra-Booleana/) |
 
-1. Expositiva/ Dúvidas  (45 min)
+1. Expositiva/ Dúvidas  (40 min)
     - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf)
 
-1. Handout/ Exercício (1h15):
+1. Handout/ Exercício (1h00):
     - [Álgebra Booleana - 1](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
     - [Álgebra Booleana - 2](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2)
-    - [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores)
 
+1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores) (0h20):
+    - Minimização das funções lógicas
 
-## Aula 23/08
+## Aula 16/02
 
 Aritmética Binária/Lógica booleana
 
@@ -476,16 +481,18 @@ Aritmética Binária/Lógica booleana
 |------------------------------------------------------------------------------------|
 | [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/) |
 
-1. Expositiva/ Dúvidas  (1h00)
+1. Expositiva/ Dúvidas  (0h40)
     - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf)
 
 1. Handout/ Exercício (1h00):
     - [Aritmética Binária - **Fazer apenas ex. 1**](https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
     - [Álgebra Booleana - 1  - **Fazer até ex. 10**](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
 
+1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores) (0h20):
+    - Obtenção das funções lógicas
     
     
-## Aula 18/08
+## Aula 09/02
 
 Dúvidas sobre dados digitais.
 
@@ -501,7 +508,7 @@ Dúvidas sobre dados digitais.
     - [Dados Digitais 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Dados-2/)
 
 
-## Aula 16/08
+## Aula 07/02
 
 Aula de apresentação da matéria; visão geral do que vai ser feito.
 

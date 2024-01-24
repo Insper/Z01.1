@@ -20,21 +20,21 @@ plugins:
   - active-handout:
       telemetry: true
       backend_url: https://devlife-api.insper-comp.com.br/
-      course_slug: 23b-ele
+      course_slug: 24a-ele
   - glightbox
   - termynal
 
 extra:
   custom_variables:
     lab2_link: 'https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/EY8O-PDebW9Nq2BEAlg7IIMBWXCJEGVlZT6K-xs04ZHUNg?e=cePMMz'
-    apsA_date: 'Domingo  - 10/09'
-    apsB_date: 'Quarta  - 20/09'
-    apsC_date: 'Quarta  - 27/09'
-    apsD_date: 'Terça  - 17/10'
-    apsE_date: 'Terça  - 31/10'
-    apsF_date: 'Quarta - 15/11'
-    apsG_date: 'Sexta - 24/11'
-    apsMR_date: 'Quarta - 06/12'
+    apsA_date: 'Sexta  - 24/02'
+    apsB_date: 'Sexta  - 08/03'
+    apsC_date: 'Sexta  - 15/03'
+    apsD_date: 'Sexta  - 22/03'
+    apsE_date: 'Sexta  - 12/04'
+    apsF_date: 'Sexta - 26/04'
+    apsG_date: 'Sexta - 10/05'
+    apsMR_date: 'Quarta - 29/05'
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -68,8 +68,8 @@ nav:
 - 'Informações Gerais':
   - 'Home/Sobre-Criterios-de-Avaliacao.md'
   - 'Home/Sobre-Rubricas.md'
-  - 'Home/Util-Aulas.md'
-  - 'Home/Avaliacoes.md'
+  - 'Home/Resumo-Aulas.md'
+  - 'Home/Avaliacoes-Informacoes.md'
 
 - 'Projetos':
   - 'Projetos/A-Algebra-Transistores.md'
@@ -83,7 +83,7 @@ nav:
   - 'Projetos/G-Assembler.md'
   - 'Projetos/H-VM.md'
   #- 'Projetos/I-VMtranslator.md'
-  - 'Projetos/X-MR.md'
+  #- 'Projetos/X-MR.md'
 
 - Labs:
   - 'Labs/Lab1-A-Transistores.md'
