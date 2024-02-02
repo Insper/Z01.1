@@ -4,13 +4,6 @@ Devemos começar a preparar o terreno para os projetos em grupo que estarão por
 
 O grupo irá trabalhar de forma colaborativa via a utilização do git/ github. É imprescindível que todos trabalhem dessa forma, pois será a maneira que iremos avaliar individualmente vocês. 
 
-## Criando o grupo
-
-Grupo de até 6 pessoas! Preencher a tabela a seguir:
-
-
-[Tabela - Grupos]({{lab2_link}})
-
 
 ## GitHub
 
