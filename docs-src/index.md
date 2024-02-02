@@ -14,6 +14,14 @@
 
 -------------------------
 
+## Criando o grupo
+
+Grupo de até 6 pessoas! Preencher a tabela a seguir:
+
+
+[Tabela - Grupos]({{lab2_link}})
+
+
 ## Objetivos de aprendizagem
 
 Ao final da disciplina o estudante será capaz de:
