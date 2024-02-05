@@ -32,7 +32,7 @@
 
 - Criando um project no github
 
-![](figs/LogiComb/C-2-project.gif)
+![](../figs/LogiComb/C-2-project.gif)
 
 
 ## Adicionando issues
