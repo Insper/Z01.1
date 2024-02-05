@@ -23,15 +23,16 @@ Ao acessar a nova atividade, um novo repositório é criado. Assim, é necessár
 
 No terminal:
 
+<!--
 ``` bash
 $ git remote add --fetch APS-a https://github.com/insper-classroom/aps-<projeto anterior>-<nome do grupo>
 $ git merge --allow-unrelated-histories APS-a/main -X theirs
 $ git remote remove APS-a
 ```
+-->
 
 
-<!--
-Antes de começar será necessário atualizar o ==repositório de vocês== com os novos arquivos no repositório oficial da disciplina, e também configurar o Travis para executar os testes nesse novo projeto. 
+Antes de começar será necessário atualizar o ==repositório de vocês== com os novos arquivos no repositório oficial da disciplina (**apenas a partir da APS-C**). 
 
 
 ### upstream
@@ -44,7 +45,7 @@ No terminal:
 1. Referenciando repositório original da disciplina
 
 ``` bash
-$ git remote add upstream https://github.com/insper/Z01.1
+$ git remote add upstream https://github.com/insper/Z01.1-proj
 ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:
@@ -55,8 +56,8 @@ $ git checkout main
 $ git merge upstream/main
 ```
 
-Feito isso deve ter aparecido uma nova pasta dentro do repositório de vocês: `B-LogicaCombinacional/`.
--->
+Feito isso deve ter aparecido uma pasta da nova APS dentro do repositório de vocês.
+
 
 <!--
 ### travis
@@ -113,7 +114,7 @@ $ git commit -m "configurando actions para novo projeto"
 
 ### `SCRUM_MASTER.json`
 
-O mediador do projeto deve editar o arquivo `SCRUM_MASTER.json` localizado na pasta do projeto (no caso do projeto B: `B-LogicaCombinacional/SCRUM_MASTER.json`) com os seus dados.
+O mediador do projeto deve editar o arquivo `SCRUM_MASTER.json` localizado na pasta do projeto (no caso do projeto B: `b_logComb/SCRUM_MASTER.json`) com os seus dados.
 
 Após editar esse arquivo deve realizar um commit e fazer o envio para o github:
 

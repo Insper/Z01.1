@@ -26,7 +26,7 @@ A nota final de **prova** (atingido atingido o critério) será a média da soma
 | Total            | 100                 | 100                 | 200                 | |
 
 
-Haverá também um projeto individual extra optativo (a ser entregue até a AF) que fornece o total de **15 pontos** extra além de atividades a serem realizadas em aula no total de **10 pontos** extra. 
+Haverá(ão) também atividade(s) extra(s) optativa(s) (a ser(em) entregue(s) até a AF) que fornece o total de **20 pontos** extras a serem divididos entre HW e SW.
 
 
 ## Projetos (APS)
