@@ -17,13 +17,13 @@ Você deve fazer a secção do seu papel: Mediador/ Desenvolvedor
 
 Ao acessar a nova atividade, um novo repositório é criado. Assim, é necessário juntar os arquivos desenvolvidos nos projetos anteriores (camadas inferiores) ao novo repositório.
 
-
+<!--
 !!! tip "Abrindo terminal no Linux"
     <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>t</kbd>
 
 No terminal:
 
-<!--
+
 ``` bash
 $ git remote add --fetch APS-a https://github.com/insper-classroom/aps-<projeto anterior>-<nome do grupo>
 $ git merge --allow-unrelated-histories APS-a/main -X theirs
