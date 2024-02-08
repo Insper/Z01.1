@@ -72,7 +72,7 @@ nav:
   - 'Home/Avaliacoes-Informacoes.md'
 
 - 'Projetos':
-  - 'Projetos/A-Algebra-Transistores-CI.md'
+  - 'Projetos/A-Algebra-Transistores.md'
   - 'Projetos/B-LogiComb.md'
   - 'Projetos/C-ula.md'
   #- 'Projetos/C-ula-dicas.md'
@@ -86,7 +86,7 @@ nav:
   #- 'Projetos/X-MR.md'
 
 - Labs:
-  - 'Labs/Lab1-A-Transistores.md'
+  - 'Labs/Lab1-A-Transistores-CI.md'
   - 'Lab 2: Github':
     - 'Labs/Lab2.1-Ambiente.md'
     - 'Labs/Lab2.2-Ambiente.md'
