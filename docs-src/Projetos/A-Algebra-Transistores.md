@@ -6,7 +6,7 @@
 
 Nesse projeto iremos utilizar a álgebra booleana para obter as funções lógicas de um sistema as quais deverão ser implementadas utilizando CIs.
 
-Esse projeto deverá ser realizado em grupos de 3 integrantes e os arquivos devem ser enviados pelo Blackboard (é necessário que apenas um(a) integrante do grupo envie, desde que identifique os demais membros).
+Os arquivos relacionados a este projeto devem ser enviados pelo Blackboard (é necessário que apenas um(a) integrante do grupo envie, desde que identifique os demais membros).
 
 Queremos controlar o robô da figura a seguir:
 
@@ -54,6 +54,7 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 | > Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
 | - **Testes Simulados Efetivos:** As funções lógicas foram testadas no simulador, e o comportamento foi conforme o esperado. A simulação mostrou que os motores simulados reagem corretamente às diferentes combinações de entrada dos sensores, evidenciando a correta implementação das funções.
 | - **Vídeo ou Arquivo de Simulação Explicativo:** O grupo forneceu um vídeo explicativo ou um arquivo de texto que detalha a simulação das funções lógicas, incluindo a representação dos circuitos e os resultados observados em diferentes cenários. |
+| - **Video demonstrando partes 2 e 3 do Lab 1**                                  |
 |                                                                                 |
 | **C+**                                                                          |
 | - **Obtenção, Simplificação e Aplicação das Funções Lógicas:** As funções lógicas a seguir foram obtidas corretamente a partir dos requisitos do projeto e simplificadas usando técnicas de álgebra booleana:
@@ -67,6 +68,7 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 |   8. Motor esquerdo (y1) desligado e motor direito (y2) ligado para rotação anti-horária quando x4 detectar colisão, mas não x3.
 | > Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
 | - **Resolução das Funções Lógicas:** O grupo forneceu uma foto clara da resolução escrita das funções lógicas obtidas e simplificadas, demonstrando a aplicação dos conceitos de álgebra booleana. |
+| - **Video demonstrando parte 1 do Lab 1**                                |
 |                                                                                 |
 | **D**                                                                           |
 | - **Obtenção sem Simplificação das Funções Lógicas:** As funções lógicas a seguir foram obtidas a partir dos requisitos do projeto, mas não foram simplificadas usando álgebra booleana.
