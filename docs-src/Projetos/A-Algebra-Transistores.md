@@ -78,4 +78,9 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 | - **Vídeo de Demonstração Abrangente:** O grupo forneceu um vídeo detalhado que mostra a montagem dos CIs no protoboard, a conexão com os sensores, a interação das funções lógicas com os sinais dos sensores e como o robô respondeu a diferentes cenários. O vídeo destacou a funcionalidade e a coerência do sistema implementado. |
 
 
+### Entrega
+
+Nesta APS (e apenas nesta) não haverá forms para preencher. A entrega será feita pelo Blackboard.
+
+Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na [Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/ERiVX40tD1xGlL_L8a1KRlkBC9Ljze88QvvJdLZ4qxt0zQ?e=XIYWdF).
 

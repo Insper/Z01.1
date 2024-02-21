@@ -19,7 +19,7 @@
 Grupo de até 6 pessoas! Preencher a tabela a seguir:
 
 
-[Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/ERiVX40tD1xGlL_L8a1KRlkBu73HIaNWj-r5961JBCvZsQ?e=x1vbDt)
+[Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/ERiVX40tD1xGlL_L8a1KRlkBC9Ljze88QvvJdLZ4qxt0zQ?e=XIYWdF)
 
 
 ## Objetivos de aprendizagem
