@@ -210,9 +210,23 @@ Começo do projeto C-ULA.
 2. Aula estúdio (1h00)
 3. Laboratório (0h30)
     - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
+-->  
 
+## Aula 08/03
 
-## Aula 15/09
+Apresentação do projeto C-ULA.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/)         |
+| [Aritmética Binária - HW](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria-HW/) |
+
+Finalização da APS-B.
+
+1. Expositiva/ Dúvidas (0h30)
+1. APS-B (1h30)
+
+## Aula 06/03
 
 Projeto B - Lógica Combinacional
 
@@ -227,9 +241,9 @@ Projeto B - Lógica Combinacional
 1. Laboratórios (1h30)
     - [Lab4: Lógica Combinacional](https://insper.github.io/Z01.1/Labs/Lab4-LogiComb/)
     
-## Aula 13/09
+## Aula 01/03
 
-Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
+Preparação para projeto B - Lógica Combinacional, começo do uso de VHDL.
 
 | Estudo prévio                                      |
 |----------------------------------------------------|
@@ -244,7 +258,7 @@ Inicio do projeto B - Lógica Combinacional, começo do uso de VHDL.
     - [Lab 2.1: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.1-Ambiente/)
     - [Lab 2.2: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.2-Ambiente/)
     - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
--->    
+  
 
 
 ## Aula 28/02
@@ -264,7 +278,7 @@ Trabalhar com transistores e circuitos integrados.
     - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf)
 
 1. Laboratório (0h40):
-    - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores/)
+    - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores-CI/)
 
 1. [APS-A](/Z01.1/Projetos/A-Algebra-Transistores) (0h40):
     - Montagem dos circuitos  

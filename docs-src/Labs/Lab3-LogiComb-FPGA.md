@@ -19,6 +19,8 @@ Após essa etapa, iremos começar o desenvolvimento do projeto, programando os m
 
 <button class="button0" id="0:comecando" onClick="progressBut(this.id);">Começando laboratório!</button>
 
+
+<!--
 ## Antes de começar
 
 Executar os comandos:
@@ -31,6 +33,7 @@ $ pip3 install -r requirements.txt
 ```
 
 para instalar o simulador GHDL e as bibliotecas necessárias, caso não estejam instaladas.
+-->
 
 <!--
 Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](/Z01.1/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
