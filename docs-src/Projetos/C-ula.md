@@ -183,21 +183,20 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 | Conceito |                                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------|
-| A+       | - Modifique a ULA adicionando a operação de shift left/right                                          |
-|          | - Modifique o `toplevel` para mostrar o resultado da ULA nos displays de 7s (em hexa)                 |
+| I        | - Não implementou os módulos Add16, ULA, Comparador, FullAdder, HalfAdder, Inc16, Inversosr, Zerador. |
+|          |                                                                                                       |
+| D        | - Implementou todos os módulos menos a ULA.                                                           |
+|          |                                                                                                       |
+| C+       | - Todos os modulos básicos implementando e passam nos testes                                          |
+|          | - Faz reaproveitamentos dos módulos via `port map` sempre que possível                                |
+|          | - Possui a forma de onda de todos os módulos (.png).                                                  |
 |          |                                                                                                       |
 | B+       | - Modifique a ULA adicionando o sinal de estouro da soma (carry) a saída da ULA                       |
 |          | - Modifique a ULA adicionando a operação: X xor Y                                                     |
 |          | - Compila no Quartus a ULA do grupo e faz um vídeo demonstrando o seu funcionamento (FPGA).           |
 |          |                                                                                                       |
-| C+       | - Todos os modulos básicos implementando e passam nos                                                 |
-|          | - Faz reaproveitamentos dos módulos via `port map` sempre que possível                                |
-|          | - Possui a forma de onda de todos os módulos (.png).                                                  |
-|          |                                                                                                       |
-| D        | - Implementou todos os módulos menos a ULA.                                                           |
-|          |                                                                                                       |
-| I        | - Não implementou os módulos Add16, ULA, Comparador, FullAdder, HalfAdder, Inc16, Inversosr, Zerador. |
-
+| A+       | - Modifique a ULA adicionando a operação de shift left/right                                          |
+|          | - Modifique o `toplevel` para mostrar o resultado da ULA nos displays de 7s (em hexa)                 |
 
 
 !!! note
@@ -215,5 +214,5 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/XZsXSaFBAypqjcTE7)
-- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
+- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
+- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)
