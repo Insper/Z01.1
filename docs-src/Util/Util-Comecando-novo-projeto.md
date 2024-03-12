@@ -53,7 +53,7 @@ $ git remote add upstream https://github.com/insper/Z01.1-proj
 ``` bash
 $ git fetch upstream
 $ git checkout main
-$ git merge upstream/main
+$ git merge upstream/main --allow-unrelated-histories -X ours
 ```
 
 Feito isso deve ter aparecido uma pasta da nova APS dentro do repositório de vocês.
