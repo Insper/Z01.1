@@ -3,7 +3,7 @@
 
 É muito difícil sabermos porque uma implementação em VHDL não funciona, atualmente o fluxo é: transcreve para VHDL o componente; testa; não funcionou volta para o VHDL; testa.... Será que não existe uma forma de conseguirmos visualizar o resultado do teste e com isso mudarmos a implementação em VDHL? Sim existe! 
 
-Para isso, abra o terminal na pasta `C_ULA/` e execute:
+Para isso, abra o terminal na pasta `c_ULA/` e execute:
 
 ```bash
 $ WAVES=1 pytest -k fulladder
@@ -18,7 +18,6 @@ $ gtkwave sim_build/fulladder.ghw
 ```
 
 Esse comando irá abrir no software `gtkwave` o resultado do teste do `fulladder`.
+Para visualizar as formas de onda, selecione o módulo na caixa à esquerda e, em seguida, arraste os sinais desejado para a caixa `Signals`.
 
 ![GTKWave](../figs/D-ULA/gtkwave.png)
-
-Para visualizar as formas de onda, selecione o módulo na caixa à esquerda e, em seguida, arraste os sinais desejado para a caixa `Signals`.

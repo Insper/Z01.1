@@ -56,7 +56,7 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
 ---------------------------
 
 - Flip Flop
-   - **Arquivo**: `FlipFlopD.vhd`
+   - **Arquivo**: `flipflopd.vhd`
    - **Dependência**:
  
 É um bloco elementar e sua implementação é criada no [laboratório do projeto](/Z01.1/Labs/Lab8-Seq/).
@@ -66,8 +66,8 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
 ---------------------------
 
 - Binary Digit
-    - **Arquivo**: `BinaryDigit.vhd`
-    - **Dependência**: `FlipFlopD` e `Mux2Way`
+    - **Arquivo**: `binarydigit.vhd`
+    - **Dependência**: `flipflopd` e `mux2way`
     - **Descrição** : É um registrador feito para armazenar um único bit de informação (0 ou 1). A interface do módulo consiste em uma entrada (d) para o bit a ser armazenado, um sinal de **load** para indicar quando o bit de entrada deve ser armazenado um sinal de *clock* e a saída *output** que é o bit armazenado:
     
 ![Binary Digit](../figs/E-LogSeq/binarydigit_v2.svg){width=500}
@@ -75,8 +75,8 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
 ---------------------------
 
 - Register 8
-    - **Arquivo**   : `Register8.vhd`
-    - **Dependência** : `BinaryDigit`
+    - **Arquivo**   : `register8.vhd`
+    - **Dependência** : `binarydigit`
     - **Descrição** : É um registrador de 8 bits criado a partir do binaryDigit porém agora para armazenar um vetor de entrada de 8 bits de tamanho.
     
 ![Register 8](../figs/E-LogSeq/register8.png)
@@ -84,29 +84,29 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
 ---------------------------
 
 - Register 16
-    - **Arquivo**   : `Register16.vhd`
-    - **Dependência** : Register8
+    - **Arquivo**   : `register16.vhd`
+    - **Dependência** : `register8`
     - **Descrição** : É um registrador de 16 bits criado a partir do Register8 porém agora para armazenar um vetor de entrada de 16 bits de tamanho.
     
 ---------------------------
 
 - Register 32
-    - **Arquivo**   : `Register32.vhd`
-    - **Dependência** : `Register16`
+    - **Arquivo**   : `register32.vhd`
+    - **Dependência** : `register16`
     - **Descrição** : É um registrador de 32 bits criado a partir do Register16 porém agora para armazenar um vetor de entrada de 32 bits de tamanho.
  
 ---------------------------
  
 - Register 64
-    - **Arquivo**   : `Register64.vhd`
-    - **Dependência** : `Register32`
+    - **Arquivo**   : `register64.vhd`
+    - **Dependência** : `register32`
     - **Descrição** : É um registrador de 64 bits criado a partir do Register32 porém agora para armazenar um vetor de entrada de 64 bits de tamanho.
     
 ---------------------------
 
 - Program Counter
-    - **Arquivo**   : `PC.vhd`
-    - **Dependência** : `inc16`, `mux16`, `reg16`
+    - **Arquivo**   : `pc.vhd`
+    - **Dependência** : `inc16`, `mux16`, `register16`
     - **Descrição** : O program counter será o nosso endereçador de memória da CPU, ele será responsável por apontar para a próxima instrução a ser executada. Como normalmente um código segue um fluxo sequencial (uma linha na sequência da outra) o PC possui a habilidade de se auto incrementar a cada clock (apontando assim para  a próxima instrução), mas ele tem que suportar **condições** (if, while, ...) rompendo com esse fluxo contínuo.
  
 Sua lógica é descrita no pseudo código a seguir:
@@ -125,8 +125,8 @@ else
 ---------------------------
 
 - Ram8
-    - **Arquivo**   : `Ram8.vhd`
-    - **Dependência** : `Register16`, `Mux8Way16`, `Dmux8Way`
+    - **Arquivo**   : `ram8.vhd`
+    - **Dependência** : `register16`, `mux8way16`, `dmux8way`
     - **Descrição** : É uma memória de 8 endereços com 16 bits de largura. O componente possui como entrada o vetor input de 16 bits, o endereço a ser armazenado (address) o sinal **load** que indica quando é para ser armazenado e o clock. Como saída temos o valor lido no endereço especificado quando load for igual a 0.
      Note que sinal LOAD tem como função similar o do READ/WRITE, quando zero, indica que queremos ler o valor armazenado, quando 1 indica que queremos escrever (write) nessa posição.
     
@@ -135,22 +135,22 @@ else
 ---------------------------
     
 - Ram64
-    - **Arquivo**   : `Ram64.vhd`
-    - **Dependência** : `Ram8`, `Mux8Way16`, `Dmux8Way`
+    - **Arquivo**   : `ram64.vhd`
+    - **Dependência** : `ram8`, `mux8way16`, `dmux8way`
     - **Descrição** : Similar a RAM8 porém com 64 endereços.
 
 ---------------------------
 
 - Ram512
-    - **Arquivo**   : `Ram512.vhd`
-    - **Dependência** : `Ram64`, `Mux8Way16`, `Dmux8Way`
+    - **Arquivo**   : `ram512.vhd`
+    - **Dependência** : `ram64`, `mux8way16`, `dmux8way`
     - **Descrição** : Similar a RAM8 porém com 512 endereços.
     
 ---------------------------
 
 - Ram4k
-    - **Arquivo**   : `Ram4k.vhd`
-    - **Dependência** : `Ram512`, `Mux8Way16`, `Dmux8Way`
+    - **Arquivo**   : `ram4k.vhd`
+    - **Dependência** : `ram512`, `mux8way16`, `dmux8way`
     - **Descrição** : Similar a RAM8 porém com 4512 endereços.
  
 ![RAM](../figs/E-LogSeq/ram.png)
@@ -175,7 +175,7 @@ Para cada módulo deve-se gerar o `RTL` e salvar uma imagem da implementação n
 
 ### Testando em Hardware
 
-No hardware você deverá desenvolver um cenário de teste para o `Program Counter` e para para a `RAM8`.
+No hardware você deverá desenvolver um cenário de teste para o `Program Counter` e para para a `ram8`.
 
 ## Rubricas para avaliação de projetos
 
@@ -185,20 +185,21 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 | Conceito |                                                                           |
 |----------|---------------------------------------------------------------------------|
-| A+       | - Módulos extras (rtl + testes)                                           |
-|          | - Gravar vídeo explicando os rtl e as formas de onda dos módulos extras   |
+| I        | - Menos da metade dos módulos funcionando                                 |
+|          |                                                                           |
+| D        | - Ao menos um módulo não foi implementando ou não passa no testes.        |
+|          |                                                                           |
+| C+       | - Todos os módulos básicos passam nos testes                              |
+|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)          |
 |          |                                                                           |
 | B+       | - Usou sempre que possível outros módulos para criar um novo (hierarquia) |
 |          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                |
 |          | - Teste do PC e da RAM8 na FPGA                                           |
 |          |                                                                           |
-| C+       | - Todos os módulos básicos sendo testados no Actions                              |
-|          | - Todos os módulos básicos passam nos testes                                      |
-|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)          |
-|          |                                                                           |
-| D        | - Ao menos um módulo não foi implementando ou não passa no testes.        |
-|          |                                                                           |
-| I        | - Menos da metade dos módulos funcionando                                 |
+| A+       | - Módulos extras (rtl + testes)                                           |
+|          | - Gravar vídeo explicando os rtl e as formas de onda dos módulos extras   |
+
+
 
 ### A - Módulos extras
 
@@ -210,22 +211,22 @@ Para a rubrica A o grupo deve implementar os seguintes módulos extras
 -->
 
 - Flip Flop JK
-   - **Arquivo**: `conceitoA/FlipFlopJK.vhd`
+   - **Arquivo**: `conceito_a/flipflopjk.vhd`
    - **Dependência**:
 <!--   - **Arquivo Teste**: `tests/tb_FlipFlopJK.vhd`-->
 
 É é flipflop do tipo [JK](https://en.wikipedia.org/wiki/Flip-flop_(electronics))
 
 - Flip Flop T
-   - **Arquivo**: `ConceitoA/FlipFlopT.vhd`
+   - **Arquivo**: `conceito_a/flipflopt.vhd`
    - **Dependência**:
 <!--      - **Arquivo Teste**: `tests/tb_FlipFlopT.vhd`-->
 
 É é flipflop do tipo [T](https://en.wikipedia.org/wiki/Flip-flop_(electronics))
 
 - Counter Down
-   - **Arquivo**: `ConceitoA/CounterDown.vhd`
-   - **Dependência**: `FlipFlopT`
+   - **Arquivo**: `conceito_a/counterdown.vhd`
+   - **Dependência**: `flipflopjk`
 <!--      - **Arquivo Teste**: `tests/CoubterDown.vhd`-->
 
  O CouterDown é componente capaz de contar para 'baixo' em binário (000 -> 111 -> 110 -> 101 -> 100), esse componente é formado por FlipFlops do tipo T, como demonstrado no diagrama a seguir:
@@ -242,5 +243,5 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/LLnL1NzUFzpeTzLZ8)
-- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
+- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
+- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)

@@ -130,13 +130,12 @@ Os módulos estão listados de maneira Top - Down
 | D        |  Ao menos um módulo não está feito e não passa no testes.                          |
 |          |                                                                                    |
 | C+       |  Construiu com os módulos do grupo o seu próprio computador                        |
-|          |  Todos os módulos sendo testados no Actions.                                       |
 |          |  Todos os módulos passando nos testes.                                             |
 |          |                                                                                    |
-| B+       |  Adiciona um novo registrador a CPU  (`%S`)                                        |
+| B+       |  Possibilita realizar carregamento efetivo em %D (`leaw $5, %D`)                   |
 |          |  Modifica os testes para testar esse novo recurso!                                 |
 |          |                                                                                    |
-| A+       |  Possibilita realizar carregamento efetivo em %D (`leaw $5, %D`)                   |
+| A+       |  Adiciona um novo registrador a CPU  (`%S`)                                        |
 |          |  Modifica os testes para testar esse novo recurso!                                 |
 
 
@@ -148,6 +147,7 @@ Para testar o computador de uma forma mais completa, iremos executar os programa
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/w6XJEZHh2PbY7oyo7)
-- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
+- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
+- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)
+
 

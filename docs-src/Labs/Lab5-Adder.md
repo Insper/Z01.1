@@ -33,13 +33,12 @@ Com a tabela verdade podemos extrair as duas equações que descreve esse compon
 !!! tip
     $\bar{a} b + a \bar{b} = a \oplus b$
 
-1. Agora com a equação definida é possível realizarmos uma descrição em `VHDL` do componente `halfadder`. Abra o arquivo  `C-UnidadeLogicaAritmetica/src/HalfAdder.vhd` e modifique sua arquitetura para implementar a equação do halfadder. 
-2. Edite o arquivo de configuração do teste `config_testes.txt` e descomente a linha referente ao `halfadder`.
-3. Valide a implementação executando o script de testes: `testeULA.py`
+1. Agora com a equação definida é possível realizarmos uma descrição em `VHDL` do componente `halfadder`. Abra o arquivo  `c_ULA/src/halfadder.vhd` e modifique sua arquitetura para implementar a equação do halfadder. 
+2. Valide a implementação executando o script de testes: `pytest -k halfadder`
 
 ### Implementando
 
-Abra o projeto do Quartus e note que o `toplevel` faz uso do `HalfAdder`:
+Abra o projeto do Quartus e note que o `toplevel` faz uso do `halfadder`:
 
 ``` vhdl
 begin
@@ -70,8 +69,8 @@ SW(1) -->  b -->|      |--> Carry --> LEDR(1)
 Você deve fazer a mesma coisa com o fulladder: 
 
 1. Extrair a equação do FullAdder
-1. Transcrever para o arquivo: `FullAdder.vhd`
-1. Testar (`./testeULA.py`)
+1. Transcrever para o arquivo: `fulladder.vhd`
+1. Testar (`pytest -k fulladder`)
 
 Com o módulo passando nos testes, editar o `toplevel` para utilizar no lugar do HalfAdder o FullAdder recém implementando!
 
