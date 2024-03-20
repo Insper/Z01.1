@@ -151,7 +151,7 @@ else
 - Ram4k
     - **Arquivo**   : `ram4k.vhd`
     - **Dependência** : `ram512`, `mux8way16`, `dmux8way`
-    - **Descrição** : Similar a RAM8 porém com 4512 endereços.
+    - **Descrição** : Similar a RAM8 porém com 4096 endereços.
  
 ![RAM](../figs/E-LogSeq/ram.png)
  
