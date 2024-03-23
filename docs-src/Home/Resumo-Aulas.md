@@ -106,11 +106,28 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 11: Assembly](https://insper.github.io/Z01.1/Labs/Lab11-Assembly/)
 
-## Aula 25/10
 
-Cancelada.
+## Aula 04/10
 
-## Aula 20/10
+1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
+
+1. Aula estúdio (1h30)
+-->  
+
+## Aula 12/04
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
+| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
+| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
+
+
+1. Expositiva/Dúvidas (0h30)
+
+1. Aula estúdio (1h30)
+
+## Aula 10/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -123,8 +140,7 @@ Cancelada.
 1. Laboratório (1h00)
     - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
 
-
-## Aula 18/10
+## Aula 05/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -138,16 +154,9 @@ Cancelada.
     - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
 
 
-## Aula 06/10 - AI
+## Aula 27/03 - AI
 
-## Aula 04/10
-
-1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
-
-1. Aula estúdio (1h30)
-
-
-## Aula 29/09
+## Aula 22/03
 
 Projeto D-Lógica Sequencial.
 
@@ -162,9 +171,9 @@ Projeto D-Lógica Sequencial.
     - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
     
     
-## Aula 27/09
+## Aula 20/03
 
-Finalizando o projeto C-ULA e começo do projeto D-Lógica Sequencial.
+Começo do projeto D-Lógica Sequencial.
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -178,7 +187,7 @@ Finalizando o projeto C-ULA e começo do projeto D-Lógica Sequencial.
 1. Aula estúdio (1h00)
 
 
-## Aula 22/09
+## Aula 15/03
 
 Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
 
@@ -197,7 +206,7 @@ Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
     - [Lab 6: Visualizando simulação ](/Z01.1/Labs/Lab6-Waves/)
     - [Lab 7: ULA](/Z01.1/Labs/Lab7-ULA/)
         
-## Aula 20/09
+## Aula 13/03
 
 Começo do projeto C-ULA.
 
@@ -210,7 +219,7 @@ Começo do projeto C-ULA.
 2. Aula estúdio (1h00)
 3. Laboratório (0h30)
     - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
--->  
+
 
 ## Aula 08/03
 
