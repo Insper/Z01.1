@@ -60,11 +60,18 @@ Resumo e planejamento das aulas.
 1. Laboratório (1h00)
     - [Lab 16: Assembler](https://insper.github.io/Z01.1/Labs/Lab16.2-Assembler/)
 
-## Aula 10/11
+## Aula 04/10
+
+1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
+
+1. Aula estúdio (1h30)
+-->  
+
+## Aula 26/04
 Terceira Avaliação Individual - Av3
 
 
-## Aula 08/11
+## Aula 24/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -78,7 +85,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 14: Praticando](https://insper.github.io/Z01.1/Labs/Lab14-Assembly/)   
 
 
-## Aula 01/11
+## Aula 19/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -91,7 +98,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 12: Periféricos](https://insper.github.io/Z01.1/Labs/Lab12-Assembly/)
     
     
-## Aula 27/10
+## Aula 17/04
 
 
 | Estudo prévio                                                                           |
@@ -106,28 +113,7 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 11: Assembly](https://insper.github.io/Z01.1/Labs/Lab11-Assembly/)
 
-
-## Aula 04/10
-
-1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
-
-1. Aula estúdio (1h30)
--->  
-
 ## Aula 12/04
-
-| Estudo prévio                                                                           |
-|-----------------------------------------------------------------------------------------|
-| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
-| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
-| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
-
-
-1. Expositiva/Dúvidas (0h30)
-
-1. Aula estúdio (1h30)
-
-## Aula 10/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -140,7 +126,7 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
 
-## Aula 05/04
+## Aula 10/04
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
