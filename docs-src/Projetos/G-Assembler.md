@@ -53,17 +53,18 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 
 | Conceito |                                                                                      |
 |----------|--------------------------------------------------------------------------------------|
-| A+       | - Insere automaticamente um NOP após instrução de JUMP que não é seguida de nop.      |
-|          | - Imprime mensagem de alerta que isso foi feito.                                     |
+| I        | - Menos da metade dos módulos funcionando                                            |
 |          |                                                                                      |
-| B+       | - Verifica se instrução de jump é seguida de NOP, caso contrário dá erro             |
+| D        | - Teste unitário ou Teste integração não passa                                       |
 |          |                                                                                      |
 | C+       | - Criado assembler a partir de estrutura de código disponibilizada                   |
 |          | - Todos os testes unitários passam no teste                                          |
 |          |                                                                                      |
-| D        | - Teste unitário ou Teste integração não passa                                       |
+| B+       | - Verifica se instrução de jump é seguida de NOP, caso contrário dá erro             |
 |          |                                                                                      |
-| I        | - Menos da metade dos módulos funcionando                                            |
+| A+       | - Insere automaticamente um NOP após instrução de JUMP que não é seguida de nop.     |
+|          | - Imprime mensagem de alerta que isso foi feito.                                     |
+
 
 <!--
 | A        | Proponha alguma outra melhoria e converse com o professor para saber se é valida.    |
@@ -76,5 +77,5 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/KNatz9SxBsXn3Ch5A)
-- [Desenvolvedores](https://forms.gle/ALf7JW938tfYd6gx5)
+- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
+- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)

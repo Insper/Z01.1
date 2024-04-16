@@ -13,8 +13,10 @@ Ao final desse lab você deve ser capaz de:
 
     - Não seguir sem realizar a etapa anterior.
 
+<!--
 !!! tip
     - Atualizem o Z01-Tools! submodule antes de começar.
+-->
 
 ## Simulador
 
@@ -46,19 +48,7 @@ Após o término da simulação é exportado diversos sinais internos da CPU, o 
 
 Temos dois simuladores na disciplina. A interface gráfica de ambos é praticamente idêntica. O que muda é o software que executa a simulação.
 
-O primeiro simulador roda a simulação no software Modelsim e é executado pelo script:
-
-``` bash
-$ ./Z01simulador.py
-```
-<!--
-> Se o simulador travar sem qualquer razão aparentes, é recomendado rodar o script `updateZ01tools.sh` no terminal:
-``` bash
-$ ./updateZ01tools.sh
-```
--->
-
-O segundo simulador (em fase de implementação na disciplina) utiliza o MyHDL (biblioteca python) para executar a simulação. 
+O primeiro simulador (desejável usar esse) utiliza python para executar a simulação. 
 
 <!--
 Para utilizá-lo, é necessário instalá-lo:
@@ -79,6 +69,19 @@ Para inicializar o simulador basta entrar no ambiente virtual nasm e executar o 
 $ source ~/nasm/bin/activate
 $ bits gui nasm
 ```
+
+
+O segundo simulador roda a simulação no software Modelsim e é executado pelo script:
+
+``` bash
+$ ./Z01simulador.py
+```
+<!--
+> Se o simulador travar sem qualquer razão aparentes, é recomendado rodar o script `updateZ01tools.sh` no terminal:
+``` bash
+$ ./updateZ01tools.sh
+```
+-->
 
 ##Interface do Simulador 
 
