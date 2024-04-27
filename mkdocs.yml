@@ -83,7 +83,7 @@ nav:
   - 'Projetos/G-Assembler.md'
   - 'Projetos/H-VM.md'
   #- 'Projetos/I-VMtranslator.md'
-  #- 'Projetos/X-MR.md'
+  - 'Projetos/X-MR.md'
 
 - Labs:
   - 'Labs/Lab1-A-Transistores-CI.md'
@@ -165,9 +165,9 @@ nav:
   - 'Exercicios/Exercicio-Algebra-Booleana-1.md'
   - 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
   - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
-#  - 'Handout Aritmetica Booleana - Resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
+  - 'Handout Aritmetica Booleana - Resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
   - 'Lógica Sequencial': 'https://forms.gle/XMsFCDMYsmz1qUP86'
-#  - 'Lógica Sequencial - resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
+  - 'Lógica Sequencial - resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
   - 'Linguagem de Máquina': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf' #'https://forms.gle/6jNZR4CAELJ69ZjXA'
   - 'Linguagem de Máquina - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf' 
   - 'Exercicios/Exercicio-CPU-1.md'

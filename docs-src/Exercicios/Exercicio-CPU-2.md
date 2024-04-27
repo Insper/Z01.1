@@ -31,6 +31,11 @@ Que possui a RAM iniciada com os seguintes valores:
 | 1       | 0000000001000010 |
 | 3       | 0000000000000000 |
 
+
+!!! info "Resposta"
+    O loadA não está em '1' durante a execução da quarta linha do código (movw).
+
+<!--
 !!! info "Resolução"
      <video width="640" height="480" controls>
       <source src="http://54.162.111.146/shared/ele/erro-loadA.mp4" type="video/mp4">
@@ -38,7 +43,7 @@ Que possui a RAM iniciada com os seguintes valores:
     </video> 
     
     - Se o vídeo não abrir acesse pelo link e faça o download:  http://54.162.111.146/shared/ele/erro-loadA.mp4
-
+-->
 
 ## Engenharia reversa
 
@@ -52,6 +57,7 @@ Encontre os ==três== comandos em nasm que estão sendo executados no hardware n
     1. clique na imagem para ampliar
     1. esse waveform é dos sinais da `CPU.vhd`
 
+<!--
 !!! info "Resolução"
      <video width="640" height="480" controls>
       <source src="http://54.162.111.146/shared/ele/eng-rev.mp4" type="video/mp4">
@@ -59,5 +65,12 @@ Encontre os ==três== comandos em nasm que estão sendo executados no hardware n
     </video> 
     
     - Se o vídeo não abrir acesse pelo link e faça o download: http://54.162.111.146/shared/ele/eng-rev.mp4
+-->
 
+!!! info "Resposta"
+    ```nasm
+    leaw $3, %A
+    movw %A, %D
+    addw %A, %D, %D
+    ```
 
