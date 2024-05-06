@@ -27,7 +27,7 @@ Agora com os demais métodos implementando faça o `initialize`.
 !!! tip
     Use os testes para ajudar entender o que o método faz.
 
-Tabela de símbolos? De uma lida na [teoria/Tabela de Símbolos](https://insper.github.io/Z01.1/Teoria/assembler-Dicas-SymbolTable/)
+Tabela de símbolos? De uma lida na [teoria/Tabela de Símbolos](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler-SymbolTable/)
 
 # Teste Final
 

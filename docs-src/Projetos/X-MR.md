@@ -62,8 +62,7 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
 
 ## (**5 SW**) Comentar código
 
-Você deve pegar um código de exemplo do assembly da CPU escolhida e comentar ele no vídeo, explicando o que está fazendo.
-
+- Você deve pegar um código de exemplo do assembly da CPU escolhida e comentar ele no vídeo, explicando o que está fazendo.
     - [ ] Explicar o que cada instrução está fazendo
     - [ ] Muitas arquitetura possuem simulador! Interessante usar, mas não é necessário.
 
