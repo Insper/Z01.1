@@ -6,11 +6,9 @@ Resumo e planejamento das aulas.
 ![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png)
 
 
+## Av4 - PF - 24/05
 
-<!--
-## Av4 - PF - 01/12
-
-## Aula 29/11
+## Aula 22/05
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -19,8 +17,11 @@ Resumo e planejamento das aulas.
 
 1. Expositiva/Dúvidas (2h00)
 
+## Aula 21/05
 
-## Aula 24/11
+1. Aula estúdio para APS-H
+
+## Aula 10/05
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -34,7 +35,7 @@ Resumo e planejamento das aulas.
     - [Lab 17: VM](https://insper.github.io/Z01.1/Labs/Lab17-VM/) (Treinando RPN e VM Z01 - básico)
 
 
-## Aula 22/11
+## Aula 08/05
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -47,8 +48,13 @@ Resumo e planejamento das aulas.
     - [Lab 16: Assembler - parte 4](https://insper.github.io/Z01.1/Labs/Lab16.5-Assembler/)
     - [Lab 16: Assembler - parte 5](https://insper.github.io/Z01.1/Labs/Lab16.6-Assembler/)
     
-    
-## Aula 17/11
+
+## Aula 07/05
+
+1. Aula estúdio para APS-G
+
+       
+## Aula 03/05
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -60,12 +66,6 @@ Resumo e planejamento das aulas.
 1. Laboratório (1h00)
     - [Lab 16: Assembler](https://insper.github.io/Z01.1/Labs/Lab16.2-Assembler/)
 
-## Aula 04/10
-
-1. Expositiva/Dúvidas/Revisão para a AV-I (0h30)
-
-1. Aula estúdio (1h30)
--->  
 
 ## Aula 26/04
 Terceira Avaliação Individual - Av3
