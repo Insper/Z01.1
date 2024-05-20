@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>B LogiComb - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "24a-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Elementos de Sistemas"
+           class="ah-logo"
+           aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Informações Gerais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Criterios-de-Avaliacao/">Sobre Criterios de Avaliacao</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Rubricas/">Sobre Rubricas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Resumo-Aulas/">Resumo Aulas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliacoes Informacoes</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Projetos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../A-Algebra-Transistores/">A Algebra Transistores</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">B LogiComb</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#instrucoes">Instruções</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#entrega">Entrega</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#rubricas-para-avaliacao-do-projeto">Rubricas para avaliação do projeto</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../C-ula/">C ula</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../D-LogSeq/">D LogSeq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../E-CPU/">E CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../F-Assembly/">F Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../G-Assembler/">G Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../H-VM/">H VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../X-MR/">X MR</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Labs</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1-A-Transistores-CI/">Lab1 A Transistores CI</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 2: Github</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.1-Ambiente/">Lab2.1 Ambiente</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.2-Ambiente/">Lab2.2 Ambiente</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab3-LogiComb-FPGA/">Lab3 LogiComb FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab4-LogiComb/">Lab4 LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab5-Adder/">Lab5 Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab6-Waves/">Lab6 Waves</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab7-ULA/">Lab7 ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab8-Seq/">Lab8 Seq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab9-PequenaCPU/">Lab9 PequenaCPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10-CPU/">Lab10 CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab11-Assembly/">Lab11 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab12-Assembly/">Lab12 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab13-Assembly/">Lab13 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14-Assembly/">Lab14 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-Assembly-FPGA/">Lab15 Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 16: Assembler</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.1-Assembler/">Lab16.1 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.2-Assembler/">Lab16.2 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.3-Assembler/">Lab16.3 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.4-Assembler/">Lab16.4 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.5-Assembler/">Lab16.5 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.6-Assembler/">Lab16.6 Assembler</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab17-VM/">Lab17 VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Teoria</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria Dados</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria Aritmetica Binaria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria Algebra Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Teoria CMOS</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Teoria Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Teoria Aritmetica Binaria HW</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Teoria ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Logica-Sequencial/">Teoria Logica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria Sequencial Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Teoria Z01</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembly/">Teoria Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Teoria Z01 mapadeMemoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Teoria nasm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria Linguagem de Maquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler-SymbolTable/">Teoria Assembler SymbolTable</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Teoria vm</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Teoria vm segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Teoria vm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Teoria vm funcoes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Teoria vm memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">VMtranslator memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Video-Aulas/">Vídeo Aulas (Luciano)</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">VHDL basico</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL port map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-RTL/">VHDL RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-exemplos/">VHDL exemplos</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Z01</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Cheat-Sheet/">Z01.1 Cheat Sheet</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Estudo</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing">Dados Digitais - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Dados Digitais - 1 - pdf</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf">Dados Digitais - 1 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercicio Dados 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf">Dados Digitais - 2 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercicio Algebra Booleana 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercicio Algebra Booleana 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Handout Aritmetica Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf">Handout Aritmetica Booleana - Resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://forms.gle/XMsFCDMYsmz1qUP86">Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf">Lógica Sequencial - resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf">Linguagem de Máquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf">Linguagem de Máquina - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercicio CPU 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercicio CPU 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Util Comecando novo projeto</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-vixi-sou-scrum/">Util vixi sou scrum</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">História</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Historia-linux/">Historia linux</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Projetos</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="b-logica-combinacional">B - Lógica Combinacional</h1>
+<table>
+<thead>
+<tr>
+<th>Data da entrega</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Segunda  - 11/03</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" href="../../figs/LogiComb/sistema-comb.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/LogiComb/sistema-comb.svg" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Scrum Master 1</p>
+<p>Você é <code>Scrum Master</code> e não sabe por onde começar? De uma olhada nessas dicas: <a href="https://insper.github.io/Z01.1/Util/Util-vixi-sou-scrum/">Vixi! Sou Scrum Master</a></p>
+</div>
+<p>Esse projeto tem como objetivo trabalhar com portas lógicas e sistemas digitais combinacionais (sem um clock) em FPGA e VHDL. Os elementos lógicos desenvolvidos nessa etapa serão utilizados como elementos básicos para a construção do computador. </p>
+<h2 id="instrucoes">Instruções</h2>
+<p>O desenvolvimento será na linguagem VHDL, o grupo deve se organizar para implementar todos os elementos propostos. O facilitador escolhido será responsável pela completude e consistência do branch master do grupo.</p>
+<h3 id="integrantes">Integrantes</h3>
+<p>Tarefas devem ser criadas no <strong>Issues</strong> e atribuídas aos demais colegas.
+As tarefas devem ser resolvidas individualmente! Utilize a ajuda de seus colegas, mas resolva o que foi atribuído a vocês, essa é sua tarefa/ responsabilidade! </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Este  projeto é para ser realizado por todos os integrantes do grupo em seus próprios computadores, quem não participar, não implementar os módulos que foram atribuídos, ou não realizar pull-request não ganhará nota de participação individual.</p>
+</div>
+<h3 id="controle-de-tarefas-e-repositorio">Controle de Tarefas e Repositório</h3>
+<p>Nas discussões com os outros colegas o scrum master deve definir os módulos que cada um do grupo irá desenvolver. Crie uma rotina para commits e pull-request. Sempre teste os módulos e verifique se está fazendo o esperado.</p>
+<h4 id="facilitador-scrum-master">Facilitador (Scrum Master)</h4>
+<ul>
+<li>Fazer a <strong>atualização</strong> do fork com o upstream</li>
+<li>Organizar o <strong>github + issues + project</strong></li>
+<li>Gerenciar o grupo (atribuir tarefas)</li>
+<li><strong>Gerenciar os pull-requests</strong></li>
+<li>Criar relatório da performance de cada um do grupo</li>
+<li>Entregar/Apresentar o projeto no final </li>
+</ul>
+<h4 id="desenvolvedores">Desenvolvedores</h4>
+<ul>
+<li>Realizar as tarefas atribuidas pelo scrum-master</li>
+<li>Ajudar na entrega final </li>
+<li>Testar os códigos</li>
+<li>Realizar os pull-requests</li>
+</ul>
+<h3 id="arquivos">Arquivos</h3>
+<p>A pasta contém dois diretórios distintos : <code>src/</code> e <code>Quartus/</code>. O diretório <code>src</code> contém os arquivos fontes que deverão ser editados para implementar o projeto. O diretório <code>Quartus/</code> contém o projeto que possibilitará compilar os módulos e testar em hardware.</p>
+<h3 id="entendendo-o-projeto">Entendendo o projeto</h3>
+<p>A pasta do projeto B no repositório <code>Z01.1-proj</code> possui a seguinte estrutura :</p>
+<div class="highlight"><pre><span></span><code>/b_logComb
+  logComb_cocotb.py
+  test_logComb.py
+  /Quartus
+  /src
+    *.vhd
+</code></pre></div>
+<ol>
+<li><code>Quartus</code>: Projeto Quartus que faz uso dos arquivos VHDL localizados em <code>src/*.vhd</code> <ul>
+<li>Serve para programar a <strong>FPGA</strong></li>
+</ul>
+</li>
+<li><code>*.py</code>: Scripts em python automatiza a execução dos testes</li>
+<li><code>src/*.vhd</code>: Arquivos VHDL que serão implementado pelo grupo</li>
+</ol>
+<h3 id="executando-o-script-de-teste">Executando o script de teste</h3>
+<p>Abra o terminal na pasta <code>b_logComb</code> e execute os testes:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pytest<span class="w"> </span>-s
+</code></pre></div>
+<script id="asciicast-eolZDZIqCgTe3UQsX5jLrkF3D" src="https://asciinema.org/a/eolZDZIqCgTe3UQsX5jLrkF3D.js" async></script>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No exemplo de teste verificamos que aimplementação da <code>nand</code> está errada.</p>
+</div>
+<h2 id="entrega">Entrega</h2>
+<p>A entrega deve ser feita no ramo <code>main</code> do git.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implementar todos os módulos listados</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Todos os módulos devem passar nos testes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Implementar acionamento do diplay de 7 segmentos e demonstrar na FPGA</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Esses arquivos estão localizados em <code>b_logComb/src/</code></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 2</p>
+<p>Utilize o VScode para editar os arquivos em <code>vhdl</code> e valide a implementação executando o script de testes.</p>
+</div>
+<p>Arquivos relacionados com cada conceito: </p>
+<h3 id="conceito-c">Conceito C+</h3>
+<ul>
+<li>
+<p>AND 16 bits</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>and16.vhd</code></li>
+<li><strong>Descrição</strong> : And bit a bit entre duas palavras de 16 bits.</li>
+</ul>
+</li>
+<li>
+<p>OR de 16 bits</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>or16.vhd</code></li>
+<li><strong>Descrição</strong> : OR bit a bit entre duas palavras de 16 bits.</li>
+</ul>
+</li>
+<li>
+<p>NOT de 16 bits</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>not16.vhd</code></li>
+<li><strong>Descrição</strong> : NOT bit a bit entre duas palavras de 16 bits.</li>
+</ul>
+</li>
+<li>
+<p>NOR 8 Way </p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>nor8way.vhd</code></li>
+<li><strong>Descrição</strong> : NOR entre 8 bits, resulta em uma única saída</li>
+</ul>
+</li>
+<li>
+<p>OR 8 Way  </p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>or8way.vhd</code></li>
+<li><strong>Descrição</strong> : OR entre 8 bits, resulta em uma única saída</li>
+</ul>
+</li>
+<li>
+<p>Demultiplexador de 2 saídas </p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>dmux2way.vhd</code></li>
+<li><strong>Descrição</strong> : Demultiplexa uma entrada binária em duas saídas.</li>
+</ul>
+</li>
+<li>
+<p>Demultiplexador de 4 saídas</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>dmux4way.vhd</code></li>
+<li><strong>Descrição</strong> : Demultiplexa uma entrada binária em quatro saídas.</li>
+</ul>
+</li>
+<li>
+<p>Demultiplexador de 8 saídas</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>dmux8way.vhd</code></li>
+<li><strong>Descrição</strong> : Demultiplexa uma entrada binária em oito saídas.</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador de duas entradas de 16 bits </p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux16.vhd</code></li>
+<li><strong>Descrição</strong> : Multiplexa duas entradas de 16 bits para uma de 16 bits.</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador 2 entradas de um bit cada</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux2way.vhd</code></li>
+<li><strong>Descrição</strong> : Multiplexa 2 entradas binárias em uma saída binária</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador 4 entradas de um bit cada</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux4way.vhd</code></li>
+<li><strong>Descrição</strong> : Multiplexa 4 entradas binárias em uma saída binária</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador 8 entradas de um bit cada</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux8way.vhd</code></li>
+<li><strong>Descrição</strong> : Multiplexa 8 entradas binárias em uma saída binária</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador 4 entradas de 16 bits cada</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux4way16.vhd</code></li>
+<li><strong>Descrição</strong> : Multiplexa 4 entradas de 16 bits cada em uma saída de 16 bits.</li>
+</ul>
+</li>
+<li>
+<p>Multiplexador 8 entradas de 16 bits cada</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>mux8way16.vhd</code></li>
+</ul>
+</li>
+<li>
+<p>Deslocador de bits</p>
+<ul>
+<li><strong>Arquivo</strong>   : <code>barrelshifter16.vhd</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="conceito-b">Conceito B+</h3>
+<ul>
+<li>
+<p>Circuito lógico </p>
+<ul>
+<li><strong>Arquivo</strong> : <code>circuito.vhd</code></li>
+<li><strong>Descrição</strong>: Primeira questão da lista de exercícios <a href="https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/">Álgebra Booleana 2</a></li>
+</ul>
+</li>
+<li>
+<p>Detector de moedas</p>
+<ul>
+<li><strong>Arquivo</strong> : <code>detectordemoedas.vhd</code></li>
+<li><strong>Descrição</strong>: Questão do detector de moedas da lista de exercícios <a href="https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/">Álgebra Booleana 2</a></li>
+</ul>
+</li>
+<li>
+<p>Impressora</p>
+<ul>
+<li><strong>Arquivo</strong> : <code>impressora.vhd</code></li>
+<li><strong>Descrição</strong>: Questão da impressora da lista de exercícios <a href="https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/">Álgebra Booleana 2</a></li>
+</ul>
+</li>
+<li>
+<p>Display de 7s</p>
+<ul>
+<li><strong>Arquivo</strong>: `sevenSeg.vhd'</li>
+<li><strong>Descrição</strong>: Questão do display de sete segmentos da lista de exercícios <a href="https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/">Álgebra Booleana 2</a></li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Display 7s 3</p>
+<ol>
+<li>Esse item é uma continuação do que foi realizado no <a href="/Z01.1/Labs/Lab3-LogiComb-FPGA/">Lab3</a>, onde vocês tiveram que exibir um valor constante no display de 7s. </li>
+<li>Para cada segmento do display, vocês devem encontrar uma equação booleana que o represente, e então implementar em VHDL e testar na FPGA.</li>
+</ol>
+</div>
+<h3 id="conceito-a">Conceito A+</h3>
+<ul>
+<li>
+<p>Porta xor de 3 entradas</p>
+<ul>
+<li><strong>Arquivo</strong> : <code>xor3.vhd</code> (arquivos e testes não fornecidos)</li>
+<li><strong>Descrição</strong>: Implemente uma porta XOR de 3 entradas utilizando necessariamente apenas um mux8way.</li>
+</ul>
+</li>
+<li>
+<p>Funções da APS-A</p>
+<ul>
+<li><strong>Arquivo</strong> : <code>carrinho.vhd</code></li>
+<li><strong>Descrição</strong>: Implemente as funções relacionadas a y1 e y2 da APS-A.</li>
+</ul>
+</li>
+</ul>
+<!--
+- O grupo deve apresentar um vídeo da FPGA mostrando nos display de 7 segmentos o seguinte:
+    - (C) O valor em hexadecimal da palavra binária formada pelas chaves SW(3 .. 0)
+    - (C) O valor em hexadecimal da palavra binária formada pelas chaves SW(9 .. 0)
+    - (B) O valor em decimal da palavra binária formada pelas chaves SW(9 .. 0)
+-->
+
+<h2 id="rubricas-para-avaliacao-do-projeto">Rubricas para avaliação do projeto</h2>
+<p>Cada integrante do grupo irá receber duas notas: Uma referente ao desenvolvimento total do projeto (Projeto) e outra referente a sua participação individual no grupo.</p>
+<h3 id="grupo">Grupo</h3>
+<p>Para atingir os objetivos A+ e B+, deve-se antes atingir o C+.</p>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Descritivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>I</strong></td>
+<td>Mais de três módulos (do conceito C+) com falha</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Até dois Módulos (do conceito C+)  com falha</td>
+</tr>
+<tr>
+<td><strong>C+</strong></td>
+<td>Todos os módulos básicos implementados e funcionado</td>
+</tr>
+<tr>
+<td><strong>B+</strong></td>
+<td>Módulos adicionais implementados e funcionado (circuito, detector de moedas, impressora)</td>
+</tr>
+<tr>
+<td></td>
+<td>Implementar um único display de 7s (conta de 0x0 0xF) - anexar video ao repositório</td>
+</tr>
+<tr>
+<td><strong>A+</strong></td>
+<td>Exibe três dígitos em Hexadecimal na FPGA - anexar video no repositório</td>
+</tr>
+<tr>
+<td></td>
+<td>(exibir até o valor 0x3FF = 2^10 - 1)</td>
+</tr>
+<tr>
+<td></td>
+<td>Módulos adicionais implementados e funcionado (xor, carrinho)</td>
+</tr>
+<tr>
+<td></td>
+<td>Implemente as funções relacionadas a y1 e y2 da APS-A na FPGA - anexar video no repositório</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Conceito A 4</p>
+<p>Vocês devem implementar o "exibe hexadecimal" no arquivo <code>conceito_a.vhd</code>.
+Tem um teste para os módulos, <mark>você pode testar incluindo o arquivo de configuração de testes.</mark></p>
+<p>Sugerimos que vocês reutilizem o módulo <code>sevenSeg.vhd</code>, 
+para isso devem utilizar uma recurso do VHDL chamado de <code>port map</code>.</p>
+<ul>
+<li><a href="/Z01.1/VHDL/VHDL-port-map/">VHDL/port map</a>    </li>
+</ul>
+</div>
+<h3 id="individual">Individual</h3>
+<p>As rubricas a serem seguidas serão comuns a todos os projeto e está descrito no link:</p>
+<ul>
+<li><a href="/Z01.1/Home/Sobre-Rubricas/">Rubricas Scrum e Desenvolvedor</a></li>
+</ul>
+<h3 id="formularios">Formulários</h3>
+<ul>
+<li><a href="https://forms.gle/5LHjrSeccSVdnm2Q8">Scrum Master</a></li>
+<li><a href="https://forms.gle/SCUoqghpr4Y814DY7">Desenvolvedores</a></li>
+</ul>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../A-Algebra-Transistores/"
+               class="ah-prev"
+               title="A Algebra Transistores">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">A Algebra Transistores</span>
+            </a>
+          
+          
+            <a href="../C-ula/"
+               class="ah-next"
+               title="C ula">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">C ula</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

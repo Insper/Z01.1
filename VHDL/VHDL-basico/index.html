@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>VHDL basico - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "24a-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Elementos de Sistemas"
+           class="ah-logo"
+           aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Informações Gerais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Criterios-de-Avaliacao/">Sobre Criterios de Avaliacao</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Rubricas/">Sobre Rubricas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Resumo-Aulas/">Resumo Aulas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliacoes Informacoes</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Projetos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-Transistores/">A Algebra Transistores</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">B LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">C ula</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">D LogSeq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">E CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">F Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/G-Assembler/">G Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/H-VM/">H VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/X-MR/">X MR</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Labs</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1-A-Transistores-CI/">Lab1 A Transistores CI</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 2: Github</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.1-Ambiente/">Lab2.1 Ambiente</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.2-Ambiente/">Lab2.2 Ambiente</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab3-LogiComb-FPGA/">Lab3 LogiComb FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab4-LogiComb/">Lab4 LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab5-Adder/">Lab5 Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab6-Waves/">Lab6 Waves</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab7-ULA/">Lab7 ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab8-Seq/">Lab8 Seq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab9-PequenaCPU/">Lab9 PequenaCPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10-CPU/">Lab10 CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab11-Assembly/">Lab11 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab12-Assembly/">Lab12 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab13-Assembly/">Lab13 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14-Assembly/">Lab14 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-Assembly-FPGA/">Lab15 Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 16: Assembler</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.1-Assembler/">Lab16.1 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.2-Assembler/">Lab16.2 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.3-Assembler/">Lab16.3 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.4-Assembler/">Lab16.4 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.5-Assembler/">Lab16.5 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.6-Assembler/">Lab16.6 Assembler</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab17-VM/">Lab17 VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Teoria</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria Dados</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria Aritmetica Binaria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria Algebra Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Teoria CMOS</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Teoria Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Teoria Aritmetica Binaria HW</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Teoria ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Logica-Sequencial/">Teoria Logica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria Sequencial Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Teoria Z01</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembly/">Teoria Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Teoria Z01 mapadeMemoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Teoria nasm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria Linguagem de Maquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler-SymbolTable/">Teoria Assembler SymbolTable</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Teoria vm</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Teoria vm segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Teoria vm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Teoria vm funcoes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Teoria vm memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">VMtranslator memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Video-Aulas/">Vídeo Aulas (Luciano)</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">VHDL</span>
+    <ul>
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">VHDL basico</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#regras-de-ouro-do-vhdl">Regras de Ouro do VHDL</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#basico">Básico</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-port-map/">VHDL port map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-RTL/">VHDL RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-exemplos/">VHDL exemplos</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Z01</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Cheat-Sheet/">Z01.1 Cheat Sheet</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Estudo</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing">Dados Digitais - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Dados Digitais - 1 - pdf</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf">Dados Digitais - 1 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercicio Dados 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf">Dados Digitais - 2 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercicio Algebra Booleana 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercicio Algebra Booleana 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Handout Aritmetica Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf">Handout Aritmetica Booleana - Resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://forms.gle/XMsFCDMYsmz1qUP86">Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf">Lógica Sequencial - resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf">Linguagem de Máquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf">Linguagem de Máquina - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercicio CPU 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercicio CPU 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Util Comecando novo projeto</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-vixi-sou-scrum/">Util vixi sou scrum</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">História</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Historia-linux/">Historia linux</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>VHDL</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="introducao">Introdução</h1>
+<table>
+<thead>
+<tr>
+<th>Estudando</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leituras (extra)</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://freerangefactory.org/pdf/df344hdh4h8kjfh3500ft2/free_range_vhdl.pdf">Free Range VHDL BOOK</a></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><a href="https://www.ics.uci.edu/~alexv/154/VHDL-Cookbook.pdf">VHDL CookBook</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.embarcados.com.br/vhdl-basico-parte-1-entidade/">VHDL Básico: Parte 1 - Entidade</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.embarcados.com.br/vhdl-basico-parte-2-arquitetura/">VHDL Básico: Parte 2 - Arquitetura</a></td>
+</tr>
+<tr>
+<td>Vídeos (extra)</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><iframe width="200" height="200" src="https://www.youtube.com/embed/zm-RA6BsYmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+</tbody>
+</table>
+<p>O <a href="https://en.wikipedia.org/wiki/VHDL">VHDL</a> é uma linguagem de descrição de hardware (<a href="https://en.wikipedia.org/wiki/Hardware_description_language">Hardware Description Language - HDL</a>), não sendo uma linguagem de programação. Foi criada durante a Guerra Fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (complementava/substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).</p>
+<p>Por não ter sido criada para o fim que a utilizamos, o VHDL é no primeiro momento bastante intrigante. Mas com o usar, vocês irão se acostumar com a linguagem e serão capazes de realizar hardwares cada vez mais complexos.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Algumas vezes iremos utilizar a palavra 'código' para descrever um projeto em VHDL, 
+tenha em mente que não estamos falando de um programa e sim de uma
+descrição de hardware.</p>
+</div>
+<p>Um programa em <code>Python</code>/<code>Java</code>/<code>C</code> é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o sua CPU (processador), e não dá para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....</p>
+<p>No caso do VHDL não temos essa 'cozinha' pronta, na verdade, podemos criar qualquer cozinha que quisermos. Com o VHDL você será o arquiteto de cozinhas, capaz de criar praticamente qualquer hardware! E então realizar suas receitas na cozinha que criou.</p>
+<h2 id="regras-de-ouro-do-vhdl">Regras de Ouro do VHDL</h2>
+<ul>
+<li>VHDL é uma descrição, ou projeto, do hardware e não uma programação dele.<ul>
+<li>As linhas de código não são executadas sequencialmente com exceção de algumas construções da linguagem.</li>
+<li>As linhas de código serão executadas simultaneamente.</li>
+</ul>
+</li>
+<li>Deve-se possuir uma visão de como o circuito digital final será.<ul>
+<li>Se ele for muito complexo, use uma divisão em blocos menores até chegar às unidades construtivas básicas.</li>
+</ul>
+</li>
+</ul>
+<h2 id="basico">Básico</h2>
+<p>Um código em VHDL possui basicamente três partes:</p>
+<ol>
+<li>Declaração de bibliotecas utilizadas
+    <div class="highlight"><pre><span></span><code><span class="k">library</span><span class="w"> </span><span class="nn">ieee</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">ieee.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">work.</span><span class="k">all</span><span class="p">;</span>
+</code></pre></div></li>
+<li>Declaração das entradas e saídas desse bloco (entidade)
+    <div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div></li>
+<li>Implementação da lógica que relaciona as entradas e saídas do módulo (arquitetura)
+    <div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+
+<span class="k">begin</span>
+
+<span class="w">  </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">-- a saída A recebe a entrada B</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+<p><a class="glightbox" href="../../figs/VHDL/bloco.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/bloco.png" width="400" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Comentários em VHDL 1</p>
+<p>Comentários em VHDL são iniciados com dois traços: <code>--</code>. Exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Comentário em VHDL </span>
+<span class="c1">-- a &lt;= not b;          Trecho de código comentado</span>
+<span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="err">`</span><span class="mi">1</span><span class="err">`</span><span class="p">;</span><span class="w"> </span><span class="c1">-- comentário</span>
+</code></pre></div>
+</div>
+<h3 id="bibliotecas">Bibliotecas</h3>
+<p>As <a href="https://www.csee.umbc.edu/portal/help/VHDL/stdpkg.html">bibliotecas do VHDL</a> são onde as definições dos tipos e das operações são realizadas, não será necessário mexer com isso ao longo do semestre, essa parte já vai estar pronta nos projetos que vocês forem mexer. </p>
+<h3 id="entidade-entity">Entidade (entity)</h3>
+<p>Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.</p>
+<p>No exemplo anterior, o módulo é chamado de <code>TopLevel</code> e possui uma entrada <code>a</code> e uma saída <code>b</code>. Tanto a entrada quanto a saída são do tipo <code>std_logic</code>. Cada porta tem a descrição de sua direção (<code>in</code>, <code>out</code>), como detalhado a seguir:</p>
+<p><a class="glightbox" href="../../figs/VHDL/entidade-descricao.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/entidade-descricao.png" width="800" /></a></p>
+<p>Uma entidade pode ter nenhuma ou 'infinitas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:</p>
+<div class="highlight"><pre><span></span><code>   NOME : DIREÇÃO TIPO;
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 2</p>
+<p>Note a necessidade do <code>;</code> no final da linha, isso indica para o VHDL
+que essa descrição 'acabou'. A quebra de linha <code>Enter</code> não tem uso para o 
+VHDL, só serve para facilitar nossa leitura.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>O <code>;</code> não deve aparecer na última porta! No exemplo anterior a porta <code>b : out STD_LOGIC</code> não possui <code>;</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Adicionando uma entrada <code>x</code> ao módulo anterior:</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="p">(</span>
+<span class="w">       </span><span class="n">a</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">       </span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">       </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<h4 id="nome">Nome</h4>
+<p>No VHDL você <strong>não</strong> pode usar um nome de porta que:</p>
+<ul>
+<li>Comece com um número:  (<code>0</code>, <code>1</code>, ... ), ex: <code>0bus : out std_logic;</code></li>
+<li>É uma das muitas <a href="https://www.csee.umbc.edu/portal/help/VHDL/reserved.html">palavras reservadas</a>: <code>in</code>, <code>out</code>, <code>not</code>, ex: <code>bus : out std_logic;</code></li>
+<li>Possua espaço: <code>entrada 1: in std_logic;</code></li>
+</ul>
+<p>Para mais detalhes, dê uma olhada na <a href="https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html">documentação completa</a></p>
+<h4 id="direcao">Direção</h4>
+<p>A direção <code>in</code>, <code>out</code> define se a informação irá <strong>entrar</strong> no módulo ou <strong>sair</strong> do módulo. Por exemplo, se quisermos 'ler' um botão, devemos declarar essa
+porta como sendo uma 'entrada' (<code>in</code>) do módulo, mas se quisermos acionar um LED, devemos declarar essa porta como 'saída' (<code>out</code>), pois ela será controlada por nossa lógica.</p>
+<h4 id="tipo">Tipo</h4>
+<p>O tipo define se a porta será composta por um único bit <code>std_logic</code> ou por
+um vetor de bits <code>std_logic_vector(2 downto 0)</code> (vetor de 3 bits). </p>
+<p>O tipo <code>STD_LOGIC</code> é muito mais complexo que só um bit, mas vamos deixar isso de lado 
+por ora.</p>
+<h4 id="exemplos">Exemplos</h4>
+<ul>
+<li>Módulo com duas entradas binárias: <code>a</code>, <code>x</code> e uma saída <code>b</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">Comp1</span><span class="w"> </span><span class="k">is</span>
+<span class="w">      </span><span class="k">port</span><span class="p">(</span>
+<span class="w">            </span><span class="n">a</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">x</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">b</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../../figs/VHDL/VHDL-basico-exe1.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/VHDL-basico-exe1.svg" /></a></p>
+<ul>
+<li>Módulo chamado MUX que possui 4 entradas na forma de um vetor (<code>I : in std_logic_vector(3 downto 0)</code>), um seletor de dois bits na forma de um vetor (<code>S</code>) e uma saída <code>q</code> na forma de um bit.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">entity</span><span class="w"> </span><span class="nc">mux</span><span class="w"> </span><span class="k">is</span>
+<span class="w">      </span><span class="k">port</span><span class="p">(</span>
+<span class="w">            </span><span class="n">I</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">S</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">q</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">    </span><span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../../figs/VHDL/VHDL-basico-exe2.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/VHDL-basico-exe2.svg" /></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip 3</p>
+<p>Note que a entrada <code>I</code> foi declarada como sendo um vetor que começa em <code>3</code> e termina em <code>0</code>, possuindo no total 4 bits: <code>3</code>, <code>2</code>, <code>1</code>, <code>0</code></p>
+<p>Em diagrama elétrico é utilizado a seguinte notação para indicar um vetor de bits:</p>
+<ul>
+<li>Uso de uma <code>/</code> no fio com a indicação da quantidade de bits</li>
+<li>Uso de uma linha mais grossa, para indicar um vetor</li>
+</ul>
+<p><a class="glightbox" href="../../figs/VHDL/vector-bus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/vector-bus.png" width="300" /></a></p>
+</div>
+<ul>
+<li>Entidade de uma ULA</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">ALU</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">:</span><span class="w">   </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- entradas de dados da ALU</span>
+<span class="w">            </span><span class="n">zx</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- zera a entrada x</span>
+<span class="w">            </span><span class="n">nx</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte a entrada x</span>
+<span class="w">            </span><span class="n">zy</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- zera a entrada y</span>
+<span class="w">            </span><span class="n">ny</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte a entrada y</span>
+<span class="w">            </span><span class="n">f</span><span class="o">:</span><span class="w">     </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- se 0 calcula x &amp; y, senão x + y</span>
+<span class="w">            </span><span class="n">no</span><span class="o">:</span><span class="w">    </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                     </span><span class="c1">-- inverte o valor da saída</span>
+<span class="w">            </span><span class="n">zr</span><span class="o">:</span><span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                    </span><span class="c1">-- setado se saída igual a zero</span>
+<span class="w">            </span><span class="n">ng</span><span class="o">:</span><span class="w">    </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC</span><span class="p">;</span><span class="w">                    </span><span class="c1">-- setado se saída é negativa</span>
+<span class="w">            </span><span class="n">saida</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- saída de dados da ALU</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../../figs/VHDL/VHDL-basico-exe3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/VHDL-basico-exe3.png" width="400" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">nota</p>
+<p>Note que a primeira linha declara duas portas com nome <code>x</code> e <code>y</code> com a mesma direção <code>in</code> e do tipo <code>std_logic_vector(15 downto 0)</code>. Isso é um atalho no VHDL e deve ser evitado. O ideal é reescrever essa linha como a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">x</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- entrada X de dados da ALU</span>
+<span class="w">  </span><span class="n">y</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- entrada Y de dados da ALU</span>
+</code></pre></div>
+</div>
+<h3 id="arquitetura-architecture">Arquitetura (architecture)</h3>
+<p>A arquitetura (<code>architecture</code>) define a relação das entradas com as saídas da entidade. Nessa parte é onde será construída a lógica digital desse módulo. Pense que é na arquitetura onde transcrevemos uma equação lógica, ou onde descrevemos uma memória.</p>
+<div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+
+<span class="c1">-- Aqui é declaro os possíveis:</span>
+<span class="c1">--   a) sinais internos de uma entidade</span>
+<span class="c1">--   b) outras entidades que essa entidade pode utilizar</span>
+
+<span class="k">begin</span>
+
+<span class="w">    </span><span class="c1">-- Aqui é onde a coisa acontece de verdade</span>
+<span class="w">    </span><span class="c1">-- onde é feita a descrição da lógica digital</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+<h4 id="operacoes-basicas">Operações básicas</h4>
+<div class="admonition note">
+<p>Suponha o uso da entidade a seguir para os exemplos que serão apresentados</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">x</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">y</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">q</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>No VHDL usamos <code>&lt;=</code> para representar que alguma coisa (a esquerda da seta) recebe algum outro valor (a direita da seta). Exemplos:</p>
+<ol>
+<li><code>q &lt;= x;</code> <ul>
+<li><code>q</code> recebe o valor de <code>x</code></li>
+<li>Na prática estamos conectando um fio de <code>x</code> que liga em <code>q</code></li>
+</ul>
+</li>
+<li><code>q &lt;= '0';</code> <ul>
+<li><code>q</code> recebe o valor <code>0</code></li>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no terra</li>
+</ul>
+</li>
+<li><code>q &lt;= '1';</code> <ul>
+<li><code>q</code> recebe o valor <code>1</code></li>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no vcc</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note que aqui estamos usando aspas simples: <code>'0' e '1'</code> para indicar um número binário (<code>std_logic</code>). Aspas dupla <code>"0101"</code> em VHDL significa que estamos trabalhando com um vetor de números binários (<code>std_logic_vector</code>).</p>
+</div>
+<p>Podemos utilizar portas lógicas nas operações, alguns operadores implementados pela linguagem, são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>, <code>xnor</code>. O uso dos operadores é feito da seguinte maneira:</p>
+<ol>
+<li><code>q &lt;= not x;</code> <ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>negado</strong></li>
+</ul>
+</li>
+<li><code>q &lt;= x and y;</code> <ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>E</strong> <code>y</code></li>
+</ul>
+</li>
+<li><code>p &lt;= x xor y;</code> <ul>
+<li><code>q</code> recebe o valor de <code>x</code> <strong>XOR</strong> <code>y</code></li>
+</ul>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Em VHDL não é possível 'ler' uma saída, as seguintes operações <strong>não pode</strong> ser realizada:</p>
+<div class="highlight"><pre><span></span><code><span class="n">q</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">-- x é saída</span>
+<span class="n">p</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">q</span><span class="p">;</span><span class="w">     </span><span class="c1">-- q é saída</span>
+</code></pre></div>
+</div>
+<h4 id="operacao-com-vetores">Operação com vetores</h4>
+<div class="admonition note">
+<p>Suponha o uso da entidade a seguir para os exemplos que serão apresentados</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">Bar</span><span class="w"> </span><span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">a</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">q</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">p</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>Exemplos de operação com vetores:</p>
+<ol>
+<li><code>p &lt;= "100"</code><ul>
+<li><code>p</code> recebe o valor em binário <code>100</code></li>
+</ul>
+</li>
+<li><code>p &lt;= not "100"</code><ul>
+<li><code>p</code> recebe o valor em binário <code>011</code></li>
+</ul>
+</li>
+<li><code>p &lt;= b(2 downto 0);</code><ul>
+<li><code>p</code> recebe os três primeiros bits de <code>b</code></li>
+</ul>
+</li>
+<li><code>p(0) &lt;= a;</code> <ul>
+<li><code>p</code> <code>bit 0</code> recebe o valor da entrada <code>a</code></li>
+</ul>
+</li>
+<li><code>q &lt;= not b(1);</code><ul>
+<li>a saída binária <code>q</code> recebe o <code>bit 1</code> da entrada <code>b</code> negado.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip 4</p>
+<p>É comum confundir quando usar aspas simples <code>''</code> e aspas dupla <code>""</code>, fique atento aos 
+erros de compilação.</p>
+</div>
+<h4 id="signal">signal</h4>
+<p>Sinais são declarados entre a palavra reservada <code>architecture</code> e o <code>begin</code> e servem para
+facilitar/ possibilitar o desenvolvimento de um sistema digital, eles só são visíveis
+dentro de uma entidade e servem como 'fios' internos de um módulo. </p>
+<p><a class="glightbox" href="../../figs/VHDL/VHDL-basico-signals.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/VHDL-basico-signals.svg" width="400" /></a></p>
+<p><code>Sinais</code> são diferente de portas não possuem direção, e são declarados da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">TYPE</span>
+</code></pre></div>
+<ul>
+<li><code>TYPE</code> pode ser: <code>std_logic</code>/ <code>std_logic_vector</code>, entre outros.</li>
+</ul>
+<p>Exemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+
+<span class="c1">-- Declaração de sinais</span>
+<span class="k">signal</span><span class="w"> </span><span class="n">aux1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span><span class="w">                </span>
+<span class="k">signal</span><span class="w"> </span><span class="n">aux2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="c1">-- inicio da implementação</span>
+<span class="k">begin</span>
+
+<span class="w">    </span><span class="c1">--------------------</span>
+<span class="w">    </span><span class="n">aux1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">q</span><span class="w">    </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">--------------------</span>
+<span class="w">    </span><span class="n">aux2</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">p</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">aux2</span><span class="p">;</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+<p>No exemplo anterior, criamos um sinal auxiliar chamado de <code>aux1</code> que recebe a entrada <code>a</code> negada, esse sinal é então atribuído a saída <code>q</code> e ao <code>bit 0</code> da saída <code>p</code>. Outro sinal <code>aux2</code>, vetor de 2 bits recebe os dois bits mais significativos da entrada <code>b</code> e então é atribuído a saída <code>p</code>, bits 2 e 1.</p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../../Util/Util-Video-Aulas/"
+               class="ah-prev"
+               title="Vídeo Aulas (Luciano)">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Vídeo Aulas (Luciano)</span>
+            </a>
+          
+          
+            <a href="../VHDL-Combinacional/"
+               class="ah-next"
+               title="VHDL Combinacional">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">VHDL Combinacional</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
