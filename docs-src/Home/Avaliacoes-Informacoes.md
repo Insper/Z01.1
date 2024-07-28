@@ -3,7 +3,7 @@
 Informações sobre as avaliações (e simulados) da disciplina:
 
 
-## AV4 - AF
+## AF
 
 Avaliação prática individual a ser realizada no SSD Linux. 
 
@@ -12,10 +12,12 @@ A avaliação será distribuída via github classroom (link estará no blakcboar
 Liberado consulta ao material da disciplina.
 
 - Projetos:
+    - E: CPU (HW)
+    - F: Assembly (SW)
     - G: Assembler (SW)
     - H: VM (SW)
-    - Álgebra booleana (HW)
 
+<!--
 [Prova - Av4 - 21b - Repositório](https://github.com/insper-classroom/21b-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
 
 [Prova - Av4 - 22a - Repositório](https://github.com/insper-classroom/22a-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
@@ -31,8 +33,7 @@ A avaliação será distribuída via github classroom (link estará no blakcboar
 Liberado consulta ao material da disciplina.
 
 - Projetos:
-    - E: CPU
-    - F: Assembly 
+    
 
 - Conteúdos:
     - CPU
@@ -44,9 +45,9 @@ Liberado consulta ao material da disciplina.
     - Conjunto de Instruções
 
 [Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
+-->
 
-
-## AV2 - AI - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av2_resolucao.pdf)
+## AI
 
 Avaliação prática individual a ser realizada no SSD Linux. 
 
@@ -70,14 +71,15 @@ Liberado consulta ao material da disciplina.
     - Formas de onda
     - Arquivos de teste
 
+<!--
 [Prova - Av2 - 22b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/22b-ele-av2_resolucao.pdf)
 
 [Prova - Av2 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av2_resolucao.pdf ) - [Repositório](https://github.com/insper-classroom/22a-ele-av2-teste)
 
 [Prova - Av2 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
+-->
 
-
-## AV1 - quarta 28/02 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.1_resolucao.pdf)
+## AV1 - quarta 23/08
 
 - Conteúdos: 
     - Organização de Computadores (visão geral)

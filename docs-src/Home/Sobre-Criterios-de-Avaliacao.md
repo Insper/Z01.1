@@ -13,16 +13,15 @@ Os alunos devem:
 
 ## Provas
 
-Ao longo do semestre o aluno deve acumular `50 pontos` de `Software` e `50 pontos` de `Hardware` esses pontos estarão distribuídos nas quatro provas (A1, A2, A3, A4) que serão aplicadas ao longo do semestre. 
+Ao longo do semestre o aluno deve acumular `50 pontos` de `Software` e `50 pontos` de `Hardware` esses pontos estarão distribuídos nas três provas (A1, AI, AF) que serão aplicadas ao longo do semestre. 
 
 A nota final de **prova** (atingido atingido o critério) será a média da soma das notas de HW e SW  aplicado o conceito (final da página).
 
 | Provas           | Pontuação HW        | Pontuação SW        |  Pontuação Total    | Conteúdo            |
 |------------------|---------------------|---------------------|---------------------|---------------------|
 | A1               | 30                  | 10                  | 40                  | Álgebra booleana, dados digitais |
-| A2               | 40                  | 10                  | 50                  | Dados digitais, lógica combinacional, ULA, Lógica sequencial |
-| A3               | 20                  | 35                  | 55                  | Assembly, CPU |
-| A4               | 10                  | 45                  | 55                  | Assembler, máquina virtual, Álgebra booleana |
+| AI               | 50                  | 10                  | 60                  | Lógica combinacional, ULA, Lógica sequencial |
+| AF               | 20                  | 80                  | 100                 | CPU, Assembly, Assembler, VM |
 | Total            | 100                 | 100                 | 200                 | |
 
 

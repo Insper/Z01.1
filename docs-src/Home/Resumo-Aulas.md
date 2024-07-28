@@ -5,7 +5,7 @@ Resumo e planejamento das aulas.
 
 ![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png)
 
-
+<!--
 ## Av4 - PF - 24/05
 
 ## Aula 22/05
@@ -255,12 +255,12 @@ Preparação para projeto B - Lógica Combinacional, começo do uso de VHDL.
     - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
   
 
-
-## Aula 28/02
+-->
+## Aula 23/08
 
 Primeira Avaliação Individual - Av1
 
-## Aula 23/02
+## Aula 21/08
 
 Trabalhar com transistores e circuitos integrados.
 
@@ -270,7 +270,7 @@ Trabalhar com transistores e circuitos integrados.
 | [Teoria CMOS](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-CMOS/) |
 
 1. Expositiva/ Dúvidas  (0h40):
-    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf)
+    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf) -->
 
 1. Laboratório (0h40):
     - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores-CI/)
@@ -278,7 +278,7 @@ Trabalhar com transistores e circuitos integrados.
 1. [APS-A](/Z01.1/Projetos/A-Algebra-Transistores) (0h40):
     - Montagem dos circuitos  
 
-## Aula 21/02
+## Aula 16/08
 
 Estudar lógica booleana e praticar
 
@@ -287,7 +287,7 @@ Estudar lógica booleana e praticar
 | [Teoria Álgebra Booleana](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Algebra-Booleana/) |
 
 1. Expositiva/ Dúvidas  (40 min)
-    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf)
+    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf) -->
 
 1. Handout/ Exercício (1h00):
     - [Álgebra Booleana - 1](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
@@ -296,7 +296,7 @@ Estudar lógica booleana e praticar
 1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores) (0h20):
     - Minimização das funções lógicas
 
-## Aula 16/02
+## Aula 14/08
 
 Aritmética Binária/Lógica booleana
 
@@ -305,7 +305,7 @@ Aritmética Binária/Lógica booleana
 | [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/) |
 
 1. Expositiva/ Dúvidas  (0h40)
-    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf)
+    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf) -->
 
 1. Handout/ Exercício (1h00):
     - [Aritmética Binária - **Fazer apenas ex. 1**](https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
@@ -315,7 +315,7 @@ Aritmética Binária/Lógica booleana
     - Obtenção das funções lógicas
     
     
-## Aula 09/02
+## Aula 09/08
 
 Dúvidas sobre dados digitais.
 
@@ -324,19 +324,19 @@ Dúvidas sobre dados digitais.
 | [Dados digitais](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Dados/) |
 
 1. Expositiva/ Dúvidas (0h40):
-    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/02-Slides-DadosDigitais.pdf)     
+    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/02-Slides-DadosDigitais.pdf) -->    
 
 1. Handout/ Exercício (1h20):
     - [Dados Digitais 1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf)
     - [Dados Digitais 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Dados-2/)
 
 
-## Aula 07/02
+## Aula 07/08
 
 Aula de apresentação da matéria; visão geral do que vai ser feito.
 
 1. Slides (1h00):
-    - [Slide](https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf)
+    <!--  [Slide](https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf) -->
     - [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
 
 1. Handout/ Estudo/ Exercício (1h00):
