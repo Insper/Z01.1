@@ -154,7 +154,9 @@ nav:
   - "Resumo Assembly": "commum-content/z01/z01-Resumo-Assembly.md"
   - "Z01.1 Cheat Sheet": "commum-content/z01/z01-Cheat-Sheet.md"
   - "Instruction Set": "commum-content/z01/z01-InstructionSet.md"
+  - "Assembly Online Simualtor": "http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/assembly/"
   - "Resumo VM": "commum-content/z01/z01-Resumo-VM.md"
+  - "VM Online Simualtor": "http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/vm/"
 
 - 'Estudo':
   - 'Dados Digitais - 1': 'https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing'
