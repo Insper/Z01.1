@@ -336,8 +336,8 @@ Dúvidas sobre dados digitais.
 Aula de apresentação da matéria; visão geral do que vai ser feito.
 
 1. Slides (1h00):
-    <!--  [Slide](https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf) -->
-    - [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
+    - [Slide](https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf)
+    <!--  [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/) -->
 
 1. Handout/ Estudo/ Exercício (1h00):
     - Mural
