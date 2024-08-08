@@ -287,7 +287,7 @@ Estudar lógica booleana e praticar
 | [Teoria Álgebra Booleana](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Algebra-Booleana/) |
 
 1. Expositiva/ Dúvidas  (40 min)
-    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf) -->
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf)
 
 1. Handout/ Exercício (1h00):
     - [Álgebra Booleana - 1](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
@@ -305,7 +305,7 @@ Aritmética Binária/Lógica booleana
 | [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/) |
 
 1. Expositiva/ Dúvidas  (0h40)
-    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf) -->
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf) 
 
 1. Handout/ Exercício (1h00):
     - [Aritmética Binária - **Fazer apenas ex. 1**](https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
@@ -324,7 +324,7 @@ Dúvidas sobre dados digitais.
 | [Dados digitais](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Dados/) |
 
 1. Expositiva/ Dúvidas (0h40):
-    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/02-Slides-DadosDigitais.pdf) -->    
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/02-Slides-DadosDigitais.pdf)   
 
 1. Handout/ Exercício (1h20):
     - [Dados Digitais 1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf)
