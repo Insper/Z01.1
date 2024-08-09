@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>Resumo Aulas - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "24a-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Elementos de Sistemas"
+           class="ah-logo"
+           aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Informações Gerais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Sobre-Criterios-de-Avaliacao/">Sobre Criterios de Avaliacao</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Sobre-Rubricas/">Sobre Rubricas</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">Resumo Aulas</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#aula-2308">Aula 23/08</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aula-2108">Aula 21/08</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aula-1608">Aula 16/08</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aula-1408">Aula 14/08</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aula-0908">Aula 09/08</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aula-0708">Aula 07/08</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Avaliacoes-Informacoes/">Avaliacoes Informacoes</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Projetos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">A Algebra CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">B LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">C ula</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">D LogSeq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">E CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">F Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/G-Assembler/">G Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/H-VM/">H VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/X-MR/">X MR</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Labs</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1-A-Transistores-CI/">Lab1 A Transistores CI</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 2: Github</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.1-Ambiente/">Lab2.1 Ambiente</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.2-Ambiente/">Lab2.2 Ambiente</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab3-LogiComb-FPGA/">Lab3 LogiComb FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab4-LogiComb/">Lab4 LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab5-Adder/">Lab5 Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab6-Waves/">Lab6 Waves</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab7-ULA/">Lab7 ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab8-Seq/">Lab8 Seq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab9-PequenaCPU/">Lab9 PequenaCPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10-CPU/">Lab10 CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab11-Assembly/">Lab11 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab12-Assembly/">Lab12 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab13-Assembly/">Lab13 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14-Assembly/">Lab14 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-Assembly-FPGA/">Lab15 Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 16: Assembler</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.1-Assembler/">Lab16.1 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.2-Assembler/">Lab16.2 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.3-Assembler/">Lab16.3 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.4-Assembler/">Lab16.4 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.5-Assembler/">Lab16.5 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.6-Assembler/">Lab16.6 Assembler</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab17-VM/">Lab17 VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Teoria</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria Dados</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria Aritmetica Binaria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria Algebra Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Teoria CMOS</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Teoria Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Teoria Aritmetica Binaria HW</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Teoria ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Logica-Sequencial/">Teoria Logica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria Sequencial Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Teoria Z01</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembly/">Teoria Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Teoria Z01 mapadeMemoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Teoria nasm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria Linguagem de Maquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler-SymbolTable/">Teoria Assembler SymbolTable</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Teoria vm</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Teoria vm segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Teoria vm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Teoria vm funcoes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Teoria vm memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">VMtranslator memoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Video-Aulas/">Vídeo Aulas (Luciano)</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">VHDL basico</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL port map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-RTL/">VHDL RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-exemplos/">VHDL exemplos</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Z01</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Cheat-Sheet/">Z01.1 Cheat Sheet</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/assembly/">Assembly Online Simualtor</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/vm/">VM Online Simualtor</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Estudo</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing">Dados Digitais - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Dados Digitais - 1 - pdf</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf">Dados Digitais - 1 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercicio Dados 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf">Dados Digitais - 2 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercicio Algebra Booleana 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercicio Algebra Booleana 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Handout Aritmetica Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf">Handout Aritmetica Booleana - Resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://forms.gle/XMsFCDMYsmz1qUP86">Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf">Lógica Sequencial - resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf">Linguagem de Máquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf">Linguagem de Máquina - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercicio CPU 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercicio CPU 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Util Comecando novo projeto</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-vixi-sou-scrum/">Util vixi sou scrum</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">História</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Historia-linux/">Historia linux</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Informações Gerais</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="resumo-aulas">Resumo Aulas</h1>
+<p>Resumo e planejamento das aulas.</p>
+<p><a class="glightbox" href="https://github.com/Insper/Z01.1/raw/main/Planejamento.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://github.com/Insper/Z01.1/raw/main/Planejamento.png" /></a></p>
+<!--
+## Av4 - PF - 24/05
+
+## Aula 22/05
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [VM - jump](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-jump/)       |
+| [VM - Funções](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-funcoes/) |
+
+1. Expositiva/Dúvidas (2h00)
+
+## Aula 21/05
+
+1. Aula estúdio para APS-H
+
+## Aula 10/05
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Linguagem de Máquina Virtual](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm/)        |
+| [VM - Segmentos](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-segmentos/)            |
+| [VM - Memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-vm-memoria/)                |
+
+1. Expositiva/Dúvidas (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 17: VM](https://insper.github.io/Z01.1/Labs/Lab17-VM/) (Treinando RPN e VM Z01 - básico)
+
+
+## Aula 08/05
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Assembler](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler/)     |
+
+
+1. Revisão/ Dúvidas/ Expositiva (1h00):
+
+1. Laboratório (1h00)
+    - [Lab 16: Assembler - parte 4](https://insper.github.io/Z01.1/Labs/Lab16.5-Assembler/)
+    - [Lab 16: Assembler - parte 5](https://insper.github.io/Z01.1/Labs/Lab16.6-Assembler/)
+
+
+## Aula 07/05
+
+1. Aula estúdio para APS-G
+
+
+## Aula 03/05
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Assembler](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembler/)     |
+
+
+1. Expositiva/Dúvidas  (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 16: Assembler](https://insper.github.io/Z01.1/Labs/Lab16.2-Assembler/)
+
+
+## Aula 26/04
+Terceira Avaliação Individual - Av3
+
+
+## Aula 24/04
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [ASM - Jump](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-nasm-jump/)       |
+
+
+1. Revisão/ Dúvidas/ Expositiva (0h30):
+
+1. Laboratório (1h30)
+    - [Lab 13: Jump](https://insper.github.io/Z01.1/Labs/Lab13-Assembly/)
+    - [Lab 14: Praticando](https://insper.github.io/Z01.1/Labs/Lab14-Assembly/)   
+
+
+## Aula 19/04
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [ASM - Mapa de memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01-mapadeMemoria/)       |
+
+
+1. Revisão/ Dúvidas/ Expositiva (1h00):
+
+1. Laboratório (1h00)
+    - [Lab 12: Periféricos](https://insper.github.io/Z01.1/Labs/Lab12-Assembly/)
+
+
+## Aula 17/04
+
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
+| [ASM - Assembly](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembly/)           |
+| [Resumo - Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)           |
+
+
+1. Expositiva/ Dúvidas (1h00):
+
+1. Laboratório (1h00)
+    - [Lab 11: Assembly](https://insper.github.io/Z01.1/Labs/Lab11-Assembly/)
+
+## Aula 12/04
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
+| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
+| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
+
+1. Expositiva/ Dúvidas  (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
+
+## Aula 10/04
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
+| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
+| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
+
+1. Expositiva/ Dúvidas  (1h00)
+
+1. Laboratório (1h00)
+    - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
+
+
+## Aula 27/03 - AI
+
+## Aula 22/03
+
+Projeto D-Lógica Sequencial.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Componentes síncronos](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Sequencial-Componentes/)           |
+
+
+1. Expositiva/ Dúvidas (1h00):
+
+1. Aula estúdio (1h00)
+    - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
+
+
+## Aula 20/03
+
+Começo do projeto D-Lógica Sequencial.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Lógica Sequencial](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Logica-Sequencial/)           |
+
+1. Expositiva/Dúvidas (0h30)
+
+1. Laboratórios (0h30)
+    - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
+
+1. Aula estúdio (1h00)
+
+
+## Aula 15/03
+
+Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/)         |
+| [Aritmética Binária - HW](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria-HW/) |
+| [ULA](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-ULA/)                                       |
+
+1. Expositiva/ Dúvidas (0h30):
+
+1. Handout (0h30):
+    - [Handout Aritmética Booleana](https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
+
+1. Laboratórios (1h00)
+    - [Lab 6: Visualizando simulação ](/Z01.1/Labs/Lab6-Waves/)
+    - [Lab 7: ULA](/Z01.1/Labs/Lab7-ULA/)
+
+## Aula 13/03
+
+Começo do projeto C-ULA.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/)         |
+| [Aritmética Binária - HW](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria-HW/) |
+
+1. Expositiva/ Dúvidas (0h30)
+2. Aula estúdio (1h00)
+3. Laboratório (0h30)
+    - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
+
+
+## Aula 08/03
+
+Apresentação do projeto C-ULA.
+
+| Estudo prévio                                                                           |
+|-----------------------------------------------------------------------------------------|
+| [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/)         |
+| [Aritmética Binária - HW](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria-HW/) |
+
+Finalização da APS-B.
+
+1. Expositiva/ Dúvidas (0h30)
+1. APS-B (1h30)
+
+## Aula 06/03
+
+Projeto B - Lógica Combinacional
+
+| Estudo prévio                                      |
+|----------------------------------------------------|
+| https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Componentes/ |
+| https://insper.github.io/Z01.1/VHDL/VHDL-basico/   |
+| https://insper.github.io/Z01.1/VHDL/VHDL-Combinacional/ |
+
+1. Expositiva/ Dúvidas (0h30)
+
+1. Laboratórios (1h30)
+    - [Lab4: Lógica Combinacional](https://insper.github.io/Z01.1/Labs/Lab4-LogiComb/)
+
+## Aula 01/03
+
+Preparação para projeto B - Lógica Combinacional, começo do uso de VHDL.
+
+| Estudo prévio                                      |
+|----------------------------------------------------|
+| https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Componentes/ |
+| https://insper.github.io/Z01.1/VHDL/VHDL-basico/   |
+| https://insper.github.io/Z01.1/VHDL/VHDL-Combinacional/ |
+
+1. Expositiva/ Dúvidas (0h30)
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/Aula6.pdf)
+
+1. Laboratórios (1h30)
+    - [Lab 2.1: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.1-Ambiente/)
+    - [Lab 2.2: GitHub](https://insper.github.io/Z01.1/Labs/Lab2.2-Ambiente/)
+    - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
+
+
+-->
+<h2 id="aula-2308">Aula 23/08</h2>
+<p>Primeira Avaliação Individual - Av1</p>
+<h2 id="aula-2108">Aula 21/08</h2>
+<p>Trabalhar com transistores e circuitos integrados.</p>
+<table>
+<thead>
+<tr>
+<th>Estudo prévio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-RTL/">Teoria RTL</a></td>
+</tr>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-CMOS/">Teoria CMOS</a></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Expositiva/ Dúvidas  (0h40):
+    <!--  - <a href="https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf">Slides</a> --></p>
+</li>
+<li>
+<p>Laboratório (0h40):</p>
+<ul>
+<li><a href="https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores-CI/">Lab 1: Transistores / CI</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/Z01.1/Projetos/A-Algebra-Transistores">APS-A</a> (0h40):</p>
+<ul>
+<li>Montagem dos circuitos  </li>
+</ul>
+</li>
+</ol>
+<h2 id="aula-1608">Aula 16/08</h2>
+<p>Estudar lógica booleana e praticar</p>
+<table>
+<thead>
+<tr>
+<th>Estudo prévio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Algebra-Booleana/">Teoria Álgebra Booleana</a></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Expositiva/ Dúvidas  (40 min)</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Aulas/04-Algebra.pdf">Slides</a></li>
+</ul>
+</li>
+<li>
+<p>Handout/ Exercício (1h00):</p>
+<ul>
+<li><a href="/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1">Álgebra Booleana - 1</a></li>
+<li><a href="/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2">Álgebra Booleana - 2</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/Z01.1/Projetos/A-Algebra-Transistores">APS-A - Início</a> (0h20):</p>
+<ul>
+<li>Minimização das funções lógicas</li>
+</ul>
+</li>
+</ol>
+<h2 id="aula-1408">Aula 14/08</h2>
+<p>Aritmética Binária/Lógica booleana</p>
+<table>
+<thead>
+<tr>
+<th>Estudo prévio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/">Aritmética Binária</a></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Expositiva/ Dúvidas  (0h40)</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Aulas/03-Aritmetica.pdf">Slides</a> </li>
+</ul>
+</li>
+<li>
+<p>Handout/ Exercício (1h00):</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Aritmética Binária - <strong>Fazer apenas ex. 1</strong></a></li>
+<li><a href="/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1">Álgebra Booleana - 1  - <strong>Fazer até ex. 10</strong></a></li>
+</ul>
+</li>
+<li>
+<p><a href="/Z01.1/Projetos/A-Algebra-Transistores">APS-A - Início</a> (0h20):</p>
+<ul>
+<li>Obtenção das funções lógicas</li>
+</ul>
+</li>
+</ol>
+<h2 id="aula-0908">Aula 09/08</h2>
+<p>Dúvidas sobre dados digitais.</p>
+<table>
+<thead>
+<tr>
+<th>Estudo prévio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Dados/">Dados digitais</a></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Expositiva/ Dúvidas (0h40):</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Aulas/02-Slides-DadosDigitais.pdf">Slides</a>   </li>
+</ul>
+</li>
+<li>
+<p>Handout/ Exercício (1h20):</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Dados Digitais 1</a></li>
+<li><a href="https://insper.github.io/Z01.1/Exercicios/Exercicio-Dados-2/">Dados Digitais 2</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="aula-0708">Aula 07/08</h2>
+<p>Aula de apresentação da matéria; visão geral do que vai ser feito.</p>
+<ol>
+<li>
+<p>Slides (1h00):</p>
+<ul>
+<li><a href="https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf">Slide</a>
+<!--  <a href="https://prezi.com/view/InQMPs4wjxMtznUGlW6L/">Prezi</a> --></li>
+</ul>
+</li>
+<li>
+<p>Handout/ Estudo/ Exercício (1h00):</p>
+<ul>
+<li>Mural</li>
+</ul>
+</li>
+</ol>
+<!--
+
+1. Laboratório (20 min): 
+    - [Lab 1: Configurando GitHub](/Z01.1/A-Ambiente-Lab-1)
+-->
+
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../Sobre-Rubricas/"
+               class="ah-prev"
+               title="Sobre Rubricas">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Sobre Rubricas</span>
+            </a>
+          
+          
+            <a href="../Avaliacoes-Informacoes/"
+               class="ah-next"
+               title="Avaliacoes Informacoes">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Avaliacoes Informacoes</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

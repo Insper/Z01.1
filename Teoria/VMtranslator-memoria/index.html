@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>VMtranslator memoria - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "24a-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../.."
+           title="Elementos de Sistemas"
+           class="ah-logo"
+           aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Informações Gerais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Criterios-de-Avaliacao/">Sobre Criterios de Avaliacao</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Sobre-Rubricas/">Sobre Rubricas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Resumo-Aulas/">Resumo Aulas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliacoes Informacoes</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Projetos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">A Algebra CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">B LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">C ula</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">D LogSeq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">E CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">F Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/G-Assembler/">G Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/H-VM/">H VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/X-MR/">X MR</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Labs</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1-A-Transistores-CI/">Lab1 A Transistores CI</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 2: Github</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.1-Ambiente/">Lab2.1 Ambiente</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2.2-Ambiente/">Lab2.2 Ambiente</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab3-LogiComb-FPGA/">Lab3 LogiComb FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab4-LogiComb/">Lab4 LogiComb</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab5-Adder/">Lab5 Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab6-Waves/">Lab6 Waves</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab7-ULA/">Lab7 ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab8-Seq/">Lab8 Seq</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab9-PequenaCPU/">Lab9 PequenaCPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10-CPU/">Lab10 CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab11-Assembly/">Lab11 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab12-Assembly/">Lab12 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab13-Assembly/">Lab13 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14-Assembly/">Lab14 Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-Assembly-FPGA/">Lab15 Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab 16: Assembler</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.1-Assembler/">Lab16.1 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.2-Assembler/">Lab16.2 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.3-Assembler/">Lab16.3 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.4-Assembler/">Lab16.4 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.5-Assembler/">Lab16.5 Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab16.6-Assembler/">Lab16.6 Assembler</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab17-VM/">Lab17 VM</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Teoria</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria Dados</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria Aritmetica Binaria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria Algebra Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Teoria CMOS</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Teoria Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Teoria Aritmetica Binaria HW</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Teoria ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Logica-Sequencial/">Teoria Logica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria Sequencial Componentes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Teoria Z01</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembly/">Teoria Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Teoria Z01 mapadeMemoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Teoria nasm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria Linguagem de Maquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria Assembler</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler-SymbolTable/">Teoria Assembler SymbolTable</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Teoria vm</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Teoria vm segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Teoria vm jump</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Teoria vm funcoes</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Teoria vm memoria</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">VMtranslator memoria</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#funcao">Função</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#exemplo-stack-chamada-de-funcao">Exemplo Stack chamada de função</a>
+              </li>
+            
+        
+          
+            
+            
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#this">This</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#that">That</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Video-Aulas/">Vídeo Aulas (Luciano)</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">VHDL basico</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL port map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-RTL/">VHDL RTL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-exemplos/">VHDL exemplos</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Z01</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Cheat-Sheet/">Z01.1 Cheat Sheet</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/assembly/">Assembly Online Simualtor</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="http://z01-1.eba-8rczn4hn.us-west-2.elasticbeanstalk.com/vm/">VM Online Simualtor</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Estudo</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing">Dados Digitais - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Dados Digitais - 1 - pdf</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf">Dados Digitais - 1 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercicio Dados 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf">Dados Digitais - 2 - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercicio Algebra Booleana 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercicio Algebra Booleana 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Handout Aritmetica Booleana</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf">Handout Aritmetica Booleana - Resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://forms.gle/XMsFCDMYsmz1qUP86">Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf">Lógica Sequencial - resolução</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf">Linguagem de Máquina</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf">Linguagem de Máquina - respostas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercicio CPU 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercicio CPU 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Util Comecando novo projeto</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-vixi-sou-scrum/">Util vixi sou scrum</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">História</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Historia-linux/">Historia linux</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Teoria</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="vm-translator">VM Translator</h1>
+<h2 id="funcao">Função</h2>
+<p>Os ponteiros <code>LCL</code> e <code>ARG</code> são utilizados somente na execução de uma função. O <code>ARG</code> indica em qual endereço da stack os parâmetros que serão passados para a função estão salvos e o <code>LCL</code> é usado para apontar para o endereço na pilha utilizado para armazenar variáveis locais da função.</p>
+<p>O fluxo de chamada de função, de forma simplificada é:</p>
+<ol>
+<li>Coloca na pilha os argumentos que ser passado para a função <ul>
+<li>a quantidade varia conforme a demanda da função</li>
+<li>primeiro argumento colocado na stack é o de index 0</li>
+</ul>
+</li>
+<li>Chama a função (<strong>call</strong>)</li>
+<li>Aloca na pilha os endereços de memória para armazenar as variáveis locais</li>
+<li>Atualiza os ponteiros: SP, LCL, ARG, THIS e THAT</li>
+</ol>
+<p>O fluxo de chamada de função (call) é um pouco complexo, pois demanda que salvemos algumas informações da pilha antes de executarmos a função (precisamos conseguir após a execução da função retornar para um estado similar antes da execução). Para isso é salvo na pilha, NA ORDEM A SEGUIR:</p>
+<ul>
+<li>Endereço de retorno </li>
+<li>LCL (antes da chamada de função)</li>
+<li>ARG (antes da chamada de função)</li>
+<li>This (antes da chamada de função)</li>
+<li>That (antes da chamada de função)</li>
+</ul>
+<h3 id="lcl-local">LCL - Local</h3>
+<p>Local indica o endereço na pilha na qual foi alocado para as variáveis locais de uma função, a quantidade de endereços alocados varia conforme a declaração da função, que pode possuir zero ou mais variáveis temporárias.</p>
+<p>Peguemos como exemplo uma função em java :</p>
+<div class="highlight"><pre><span></span><code>void example(int a, int b){
+ int aux0;
+ int aux1;
+
+ aux0 = a;
+ aux1 = b;
+}
+</code></pre></div>
+<p>Note que essa função possui duas variáveis locais: <code>aux0</code> e <code>aux1</code>, que são visíveis somente dentro do escopo da função, essas variáveis são alocadas quando a função é chamada e desalocada quando a função retorna. Essas variáveis (<code>aux0</code>, <code>aux1</code>) servem como variáveis locais da função, e são salvas na stack, como a ilustração a seguir :</p>
+<p><a class="glightbox" href="../../figs/I-VM/lclArg.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Local" src="../../figs/I-VM/lclArg.svg" /></a></p>
+<p>O exemplo em java anterior seria traduzido para a linguagem VM (de forma imediata) na seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code> function example 2
+     push argument 0  // coloca na pilha o valor a
+     pop local 0       // aux0 = a
+     push argument 1  // coloca na pilha o valor b
+     pop local 1       // aux1 = b
+</code></pre></div>
+<p>Note que o que define <code>local 0</code> e <code>local 1</code> é a ordem na qual as variáveis foram declaradas, como a variável <em>aux0</em> foi declarada primeiro, ela é alocada no <code>local 0</code>. </p>
+<p>O <code>LCL</code> aponta apenas para o endereço do primeiro <strong>local</strong>, os demais são inferidos da seguinte maneira:</p>
+<ul>
+<li>push local n</li>
+</ul>
+<blockquote>
+<p><strong>endereço local n = LCL + n</strong></p>
+</blockquote>
+<h3 id="arg-argumento">ARG - Argumento</h3>
+<p>O ponteiro ARG indica a onde na pilha estão salvos os argumentos que a função pode acessar, e segue a mesma lógica do LCL, onde o ARG aponta para o primeiro argumento e o endereço dos demais são inferidos com base no endereço do primeiro.</p>
+<p>Os <code>ARG</code> são salvos na própria pilha, antes da chamada da função:</p>
+<div class="highlight"><pre><span></span><code>   pilha       comando VM    endereços
+--------------------------------------------
+     12    |  call mult 2  |     12  &lt;- ARG
+     13    |               |     13  
+SP -&gt;      |    |----\     |    
+           |    |----/     |      
+</code></pre></div>
+<h2 id="exemplo-stack-chamada-de-funcao">Exemplo Stack chamada de função</h2>
+<div class="highlight"><pre><span></span><code>   258 : SP                   265 : SP                      257 : SP
+   333 : LCL                  263 : LCL                     333 : LCL
+   444 : ARG   call mult 2    256 : ARG           return    444 : ARG
+   555 : THIS    |----\       555 : THIS          |----\    555 : THIS
+   666 : THAT    |----/       666 : THAT          |----/    666 : THAT
+  ~~~~~~~~~~~~                ~~~~~~~~~~~                  ~~~~~~~~~~~~
+   8   : 256                  8   : 256 &lt;- LCL              32  : 256
+   4   : 257                  4   : 257                     4   : 257  &lt;- SP
+   0   : 258  &lt;- SP           256 : 258 : RETURN            0   : 258
+                              333 : 259 : LCL
+                              444 : 260 : ARG
+                              555 : 261 : THIS
+                              666 : 262 : THAT
+                              0   : 263 &lt;- LCL
+                              0   : 264 
+                              0   : 265 &lt;- SP
+</code></pre></div>
+<h1 id="static-variables">Static variables</h1>
+<p>É a região da memória utilizada para armazenar variáveis compartilhadas entre o mesmo arquivo .vm, conforme figura a seguir :</p>
+<p><a class="glightbox" href="../../figs/I-VM/static.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Static" src="../../figs/I-VM/static.svg" /></a></p>
+<p>A static não é visível entre diferentes arquivos .vm, deixando as variáveis limitadas a um escopo. O static será utilizado para armazenar as variáveis estáticas de uma determinada classe. Exemplo de acesso ao static :</p>
+<p>O exemplo a seguir demonstra duas classes (class1.vm e class2.vm) sendo utilizadas com os seus respectivos stacks. Nesse exemplo, a função main inicializa o static da classe 1 em : static[0] = 6, static[1] = 8 e o static ca classe 2 em : static[0] = 23, static[0] = 15.</p>
+<p><a class="glightbox" href="../../figs/I-VM/static2.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Static example" src="../../figs/I-VM/static2.svg" /></a></p>
+<p>Isso será bastante utilizado para fazer a implementação da estrutura a seguir :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">class1</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valor0</span><span class="p">;</span><span class="w">  </span><span class="c1">// alocado no static 0</span>
+<span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">valor1</span><span class="p">;</span><span class="w">  </span><span class="c1">// alocado no static 1</span>
+
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">var1</span><span class="p">,</span><span class="w"> </span><span class="n">va2</span><span class="p">){</span>
+<span class="w">      </span><span class="n">valor0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var1</span><span class="p">;</span>
+<span class="w">      </span><span class="n">valor1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">var2</span><span class="p">;</span>
+<span class="w"> </span><span class="p">}</span>
+
+<span class="w"> </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">     </span><span class="k">return</span><span class="p">(</span><span class="n">valor0</span><span class="o">-</span><span class="n">valor1</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>As variáveis estáticas são compartilhadas entre os objetos inicializados a partir da mesma classe, alocando assim apenas um slot de memória para todos os objetos criados a partir dessa classe ^1.</p>
+</blockquote>
+<p>^1: <a href="https://beginnersbook.com/2013/05/static-variable/">https://beginnersbook.com/2013/05/static-variable/</a></p>
+<h1 id="heap">HEAP</h1>
+<p>O HEAP é a região de memória a ser utilizada para armazenamento objetos e vetores, um objeto será construído a partir de uma classe  e compartilhará as mesma variáveis estáticas mas não as mesmas variáveis locais ao objeto. Vamos tomar como ponto de partida o exemplo a seguir que inicializa dois objetos (terra e lua) do tipo corpoCeleste :</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">corpoCeleste</span><span class="w"> </span><span class="n">terra</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">corpoCeletes</span><span class="p">();</span>
+<span class="w">    </span><span class="n">terra</span><span class="p">.</span><span class="na">setMassa</span><span class="p">(</span><span class="mi">1200</span><span class="p">);</span>
+<span class="w">    </span><span class="n">corpoCeleste</span><span class="w"> </span><span class="n">lua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">corpoCeleste</span><span class="p">();</span>
+<span class="w">    </span><span class="n">lua</span><span class="p">.</span><span class="na">setMassa</span><span class="p">(</span><span class="mi">32</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">lua</span><span class="p">.</span><span class="na">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">314</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nf">corpoCeleste</span><span class="p">(){</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">raio</span><span class="w"> </span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gravidade</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">massa</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">getMassa</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">return</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">massa</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMassa</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">){</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">massa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esse exemplo aloca no Heap três endereços em locais diferentes para cada objeto criado do tipo corpoCeleste, porém a variável <em>pi</em>, que é estática é comum a todos os objetos criados a partir da mesma classe. A figura a seguir ilustra como essas variáveis seriam alocadas em memória.</p>
+<p><a class="glightbox" href="../../figs/I-VM/heap.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Alocação de memórias para objetos - Heap" src="../../figs/I-VM/heap.svg" /></a></p>
+<h2 id="this">This</h2>
+<p>This é o ponteiro que referência o próprio objeto: objeto na qual o método ou construtor está sendo chamado. No caso da chamada do método getMassa() da classe corpoCeleste, o ponteiro <strong>This</strong> será ajustado para apontar para o objeto na qual o método foi chamado. O fluxo da máquina virtual será o seguinte :</p>
+<ol>
+<li>Ajusta o <strong>this</strong> para apontar para o início do HEAP pertencente ao objeto</li>
+<li>chama a função getMassa do arquivo corpoCeleste.vm</li>
+</ol>
+<h2 id="that">That</h2>
+<p>O ponteiro <strong>That</strong>  é utilizado para referenciar <strong>outro</strong>  objeto, utilizado no exemplo a seguir :</p>
+<p>Método objetoCeleste : </p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">compareMassa</span><span class="p">(</span><span class="n">corpoCeleste</span><span class="w"> </span><span class="n">outro</span><span class="p">){</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">massa</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">outro</span><span class="p">.</span><span class="na">massa</span><span class="p">){</span>
+<span class="w">            </span><span class="k">return</span><span class="p">(</span><span class="n">True</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span>
+<span class="w">        </span><span class="k">else</span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="p">(</span><span class="n">False</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w">    </span>
+</code></pre></div>
+<p>Código principal :</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<span class="w">       </span><span class="p">...</span>
+
+<span class="w">       </span><span class="n">rtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terra</span><span class="p">.</span><span class="na">compareMassa</span><span class="p">(</span><span class="n">lua</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+<p>Nesse exemplo, incluímos um novo método (compareMass) na classe corpoCeleste, esse novo método compara a massa de um outro objeto com a do próprio objeto, retornando verdadeiro ou falso dependendo do resultado.</p>
+<p>Como esse código seria traduzido para VM ? O objeto em questão será acessado utilizando o ponteiro <strong>this</strong> e o objeto a ser comparado será acessado via o <strong>that</strong>. O compilador da linguagem de alto nível para VM será responsável por alocar os objetos nos endereços certos.</p>
+<div class="highlight"><pre><span></span><code>function main 0
+    ...
+    push constant 2048  // endereço objeto terra
+    push constant 2051  // endereço objeto lua
+    call cortpoCeleste.compare mass 2
+
+function corpoCeleste.compareMass 0
+    push argument 0
+    pop pointer 0   // atualiza endereço this
+    push argument 1
+    pop pointer 1   // atualiza endereço that
+    push this 2     // this 0 = gravidade; this 1 = raio; this 2 = massa
+    push that 2     // that 0 = gravidade; this 1 = raio; this 2 = massa
+    eq
+    return
+</code></pre></div>
+<p>Note que quando o método for chamado (no caso da vm o método será traduzido para uma função), os ponteiros <strong>this</strong> e <strong>that</strong> devem ser passados via a chama da função, e no começo da função atualizado os endereços RAM[3] - This e RAM[4] - That. </p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../../commum-content/teoria/Teoria-vm-memoria/"
+               class="ah-prev"
+               title="Teoria vm memoria">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Teoria vm memoria</span>
+            </a>
+          
+          
+            <a href="../../Util/Util-Video-Aulas/"
+               class="ah-next"
+               title="Vídeo Aulas (Luciano)">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Vídeo Aulas (Luciano)</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
