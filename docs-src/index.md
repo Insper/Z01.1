@@ -22,6 +22,13 @@ Grupo de até 6 pessoas! Preencher a tabela a seguir:
 [Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/EchI08xmevpNmCWCvKlwPaUBHYSLxrcUvAlMa3wA5vMecw?e=qrtSty)
 
 
+## Resumo das aulas com indicação da leitura prévia
+
+[Conteúdos](https://insper.github.io/Z01.1/Home/Resumo-Aulas/)
+
+## Informações sobre as avaliações
+
+[Avaliações](https://insper.github.io/Z01.1/Home/Avaliacoes-Informacoes/)
 
 ## Objetivos de aprendizagem
 
