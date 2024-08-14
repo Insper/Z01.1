@@ -19,7 +19,7 @@
 Grupo de até 6 pessoas! Preencher a tabela a seguir:
 
 
-[Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/EchI08xmevpNmCWCvKlwPaUBHYSLxrcUvAlMa3wA5vMecw?e=qrtSty)
+[Tabela - Grupos]({{lab2_link}})
 
 
 ## Resumo das aulas com indicação da leitura prévia

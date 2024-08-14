@@ -65,5 +65,5 @@ O controle do carrinho deve funcionar da seguinte forma:
 
 Nesta APS (e apenas nesta) não haverá forms para preencher. A entrega será feita pelo Blackboard.
 
-Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na [Tabela - Grupos](https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/ERiVX40tD1xGlL_L8a1KRlkBC9Ljze88QvvJdLZ4qxt0zQ?e=XIYWdF).
+Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na [Tabela - Grupos]({{lab2_link}}).
 

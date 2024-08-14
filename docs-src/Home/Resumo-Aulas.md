@@ -270,12 +270,12 @@ Trabalhar com transistores e circuitos integrados.
 | [Teoria CMOS](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-CMOS/) |
 
 1. Expositiva/ Dúvidas  (0h40):
-    <!--  - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf) -->
+    - [Slides](https://github.com/Insper/Z01.1/blob/main/Aulas/05-Transistores.pdf) 
 
 1. Laboratório (0h40):
     - [Lab 1: Transistores / CI](https://insper.github.io/Z01.1/Labs/Lab1-A-Transistores-CI/)
 
-1. [APS-A](/Z01.1/Projetos/A-Algebra-Transistores) (0h40):
+1. [APS-A](/Z01.1/Projetos/A-Algebra-CIs) (0h40):
     - Montagem dos circuitos  
 
 ## Aula 16/08
@@ -293,7 +293,7 @@ Estudar lógica booleana e praticar
     - [Álgebra Booleana - 1](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
     - [Álgebra Booleana - 2](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2)
 
-1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores) (0h20):
+1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-CIs) (0h20):
     - Minimização das funções lógicas
 
 ## Aula 14/08
@@ -311,7 +311,7 @@ Aritmética Binária/Lógica booleana
     - [Aritmética Binária - **Fazer apenas ex. 1**](https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Aritmetica-Booleana.pdf)
     - [Álgebra Booleana - 1  - **Fazer até ex. 10**](/Z01.1/Exercicios/Exercicio-Algebra-Booleana-1)
 
-1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-Transistores) (0h20):
+1. [APS-A - Início](/Z01.1/Projetos/A-Algebra-CIs) (0h20):
     - Obtenção das funções lógicas
     
     
