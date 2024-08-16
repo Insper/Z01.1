@@ -198,7 +198,7 @@ Para as demais portas lógicas, consulte a referência: https://en.wikipedia.org
     - [ ] É um estilo musical
     
     !!! answer
-        .
+        É utilizado pelos computadores para armazenar dados/Representa dois estados: Ligado/ Desligado
 
 !!! exercise choice two-cols "CheckPoint"
     Qual o resultado de: `y =  1 and 0`
