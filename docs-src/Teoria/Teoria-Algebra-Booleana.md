@@ -207,7 +207,7 @@ Para as demais portas lógicas, consulte a referência: https://en.wikipedia.org
     - [x] 0
     
     !!! answer
-        .
+        0
     
 !!! exercise choice two-cols "CheckPoint"
     Qual o resultado de: `y =  1 or 0`
@@ -216,7 +216,7 @@ Para as demais portas lógicas, consulte a referência: https://en.wikipedia.org
     - [ ] 0
 
     !!! answer
-        .
+        1
       
       
 !!! progress 
@@ -242,11 +242,11 @@ Nessa tabela criamos colunas para cada variável de entrada e de saída e coloca
     
     - [ ] É uma equação lógica
     - [x] Cada linha representa uma combinação de entrada
-    - [x] É um forma gráfica de representar um circuito lógico
+    - [ ] É o esquemático de um circuito lógico
     - [x] Possui todas as combinações de entradas e saída possíveis
 
     !!! answer
-        .
+        Cada linha representa uma combinação de entrada/Possui todas as combinações de entradas e saída possíveis
         
 !!! exercise two-cols choice 
     Considerando um circuito de 4 entradas (A,B, C, D) quantas são as linhas da tabela verdade?
