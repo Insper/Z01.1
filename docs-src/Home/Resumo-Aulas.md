@@ -125,8 +125,11 @@ Terceira Avaliação Individual - Av3
 
 1. Laboratório (1h00)
     - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
+-->  
 
-## Aula 10/04
+## Aula 27/09 ou 02/10 - AI
+
+## Aula 25/09
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -139,10 +142,7 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
 
-
-## Aula 27/03 - AI
-
-## Aula 22/03
+## Aula 20/09
 
 Projeto D-Lógica Sequencial.
 
@@ -150,14 +150,13 @@ Projeto D-Lógica Sequencial.
 |-----------------------------------------------------------------------------------------|
 | [Componentes síncronos](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Sequencial-Componentes/)           |
 
-
 1. Expositiva/ Dúvidas (1h00):
 
 1. Aula estúdio (1h00)
     - [Lab 8: Lógica sequencial](/Z01.1/Labs/Lab8-Seq/)
+  
     
-    
-## Aula 20/03
+## Aula 18/09
 
 Começo do projeto D-Lógica Sequencial.
 
@@ -172,8 +171,15 @@ Começo do projeto D-Lógica Sequencial.
 
 1. Aula estúdio (1h00)
 
+## Aula 13/09
 
-## Aula 15/03
+Finalização da APS-C.
+
+1. Expositiva/ Dúvidas (0h30)
+1. APS-C (1h30)
+
+
+## Aula 11/09
 
 Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
 
@@ -192,7 +198,7 @@ Projeto C-ULA. Detalhes da ULA da CPU do Z01.1.
     - [Lab 6: Visualizando simulação ](/Z01.1/Labs/Lab6-Waves/)
     - [Lab 7: ULA](/Z01.1/Labs/Lab7-ULA/)
         
-## Aula 13/03
+## Aula 10/09
 
 Começo do projeto C-ULA.
 
@@ -207,21 +213,14 @@ Começo do projeto C-ULA.
     - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
 
 
-## Aula 08/03
-
-Apresentação do projeto C-ULA.
-
-| Estudo prévio                                                                           |
-|-----------------------------------------------------------------------------------------|
-| [Aritmética Binária](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria/)         |
-| [Aritmética Binária - HW](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Aritmetica-Binaria-HW/) |
+## Aula 30/08
 
 Finalização da APS-B.
 
 1. Expositiva/ Dúvidas (0h30)
 1. APS-B (1h30)
 
-## Aula 06/03
+## Aula 28/08
 
 Projeto B - Lógica Combinacional
 
@@ -236,7 +235,7 @@ Projeto B - Lógica Combinacional
 1. Laboratórios (1h30)
     - [Lab4: Lógica Combinacional](https://insper.github.io/Z01.1/Labs/Lab4-LogiComb/)
     
-## Aula 01/03
+## Aula 27/08
 
 Preparação para projeto B - Lógica Combinacional, começo do uso de VHDL.
 
@@ -255,7 +254,7 @@ Preparação para projeto B - Lógica Combinacional, começo do uso de VHDL.
     - [Lab 3: FPGA - VHDL](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/)
   
 
--->
+
 ## Aula 23/08
 
 Primeira Avaliação Individual - Av1
