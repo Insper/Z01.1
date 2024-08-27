@@ -210,7 +210,7 @@ Começo do projeto C-ULA.
 1. Expositiva/ Dúvidas (0h30)
 2. Aula estúdio (1h00)
 3. Laboratório (0h30)
-    - [Lab 5: Adders](/Z01.1/Labs/Lab5-ULA/)
+    - [Lab 5: Adders](/Z01.1/Labs/Lab5-Adder/)
 
 
 ## Aula 30/08
