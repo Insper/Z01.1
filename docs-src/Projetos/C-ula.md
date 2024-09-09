@@ -114,21 +114,7 @@ Deve-se implementar os seguintes circuitos combinacionais:
     - **Arquivo**   : `comparador16.vhd`
     - **Descrição** : Verifica se o vetor de saída (16 bits) é igual a zero (**zr**) e se menor que Zero (**ng**). Caso igual a zero, faz com que o sinal **zr** seja igual a '1' e caso contrário '0'. Se o sinal de entrada for negativo faz com que **ng** receba '1' e '0' caso contrário.
     - **Dependência**: Não tem.
-    
-Pseudo código :
-
-```python
-if(a == 0):
-  zr = 1
-else:
-  zr = 0
-  
-if (a < 0):
-  ng = 1
-else:
-  ng = 0
-```
-    
+        
 - ALU
     - **Arquivo**   : `alu.vhd`
     - **Descrição** : A entidade que faz o mapeamento de todas as demais, interligando os blocos (zerador, comparador, inversor, Add ....) em um único bloco.
@@ -187,8 +173,8 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 |          |                                                                                                       |
 | D        | - Implementou todos os módulos menos a ULA.                                                           |
 |          |                                                                                                       |
-| C+       | - Todos os modulos básicos implementando e passam nos testes                                          |
-|          | - Faz reaproveitamentos dos módulos via `port map` sempre que possível                                |
+| C+       | - Todos os modulos básicos implementandos e passando nos testes                                       |
+|          | - Fizeram reaproveitamento dos módulos via `port map` sempre que possível                             |
 |          | - Possui a forma de onda de todos os módulos (.png).                                                  |
 |          |                                                                                                       |
 | B+       | - Modifique a ULA adicionando o sinal de estouro da soma (carry) a saída da ULA                       |
@@ -214,5 +200,5 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
-- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)
+- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
+- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
