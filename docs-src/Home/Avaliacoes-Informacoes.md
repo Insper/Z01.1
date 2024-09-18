@@ -71,13 +71,10 @@ Liberado consulta ao material da disciplina.
     - Formas de onda
     - Arquivos de teste
 
-<!--
-[Prova - Av2 - 22b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/22b-ele-av2_resolucao.pdf)
+[Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
 
-[Prova - Av2 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av2_resolucao.pdf ) - [Repositório](https://github.com/insper-classroom/22a-ele-av2-teste)
+[Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
 
-[Prova - Av2 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
--->
 
 ## AV1 - sexta 23/08 - [Gabarito](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.2_resolucao.pdf)
 

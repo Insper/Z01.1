@@ -147,7 +147,7 @@ Para testar o computador de uma forma mais completa, iremos executar os programa
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/5LHjrSeccSVdnm2Q8)
-- [Desenvolvedores](https://forms.gle/SCUoqghpr4Y814DY7)
+- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
+- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
 
 
