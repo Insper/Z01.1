@@ -162,7 +162,7 @@ Começo do projeto D-Lógica Sequencial.
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
-| [Lógica Sequencial](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Logica-Sequencial/)           |
+| [Lógica Sequencial](https://insper.github.io/Z01.1/Teoria/Teoria-Logica-Sequencial/)           |
 
 1. Expositiva/Dúvidas (0h30)
    

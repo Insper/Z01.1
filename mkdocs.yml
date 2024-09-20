@@ -126,7 +126,8 @@ nav:
   - 'commum-content/teoria/Teoria-Componentes.md'
   - 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
   - 'commum-content/teoria/Teoria-ULA.md'
-  - 'commum-content/teoria/Teoria-Logica-Sequencial.md'
+  - 'Teoria/Teoria-Logica-Sequencial.md'
+  #- 'commum-content/teoria/Teoria-Logica-Sequencial.md'
   - 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
   - 'commum-content/teoria/Teoria-Z01.md'
   - "commum-content/teoria/Teoria-Assembly.md"
