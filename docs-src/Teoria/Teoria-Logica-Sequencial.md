@@ -1,7 +1,5 @@
 # Lógica Sequencial
 
-!!! success "2022-2"
-    Material atualizado.
 
 <iframe width="692" height="519" src="https://www.youtube.com/embed/lNW2d26S-gI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
