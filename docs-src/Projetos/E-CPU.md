@@ -132,14 +132,14 @@ Os módulos estão listados de maneira Top - Down
 | C+       |  Construiu com os módulos do grupo o seu próprio computador                        |
 |          |  Todos os módulos passando nos testes.                                             |
 |          |                                                                                    |
-| B+       |  Possibilita realizar carregamento efetivo em %D (`leaw $5, %D`)                   |
-|          |  Modifica os testes para testar esse novo recurso!                                 |
+| B+       |  Possibilita realizar carregamento da um valor da instrução diretamente para %D    |
+|          |  Modificar os testes para testar esse novo recurso!                                |
 |          |                                                                                    |
-| A+       |  Adiciona um novo registrador a CPU  (`%S`)                                        |
-|          |  Modifica os testes para testar esse novo recurso!                                 |
+| A+       |  Adiciona um novo registrador a CPU e fazer os ajustes correspondentes             |
+|          |  Modificar os testes para testar esse novo recurso!                                |
 
 
-> O grupo deve avaliar o melhor local para colocar o registrador %S e como fazer o carregamento em %D (Há mais de uma forma).
+> O grupo deve **avaliar o melhor local para colocar o novo registrador e como fazer o carregamento em %D** (Há mais de uma forma).
 
 ### Testagem mais completa na próxima APS
 
