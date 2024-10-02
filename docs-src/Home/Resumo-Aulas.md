@@ -85,7 +85,9 @@ Terceira Avaliação Individual - Av3
     - [Lab 14: Praticando](https://insper.github.io/Z01.1/Labs/Lab14-Assembly/)   
 
 
-## Aula 19/04
+-->  
+
+## Aula 18/10
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
@@ -97,11 +99,11 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 12: Periféricos](https://insper.github.io/Z01.1/Labs/Lab12-Assembly/)
     
-    
-## Aula 17/04
+
+## Aula 16/10
 
 
-| Estudo prévio                                                                           |
+| Teoria                                                                                  |
 |-----------------------------------------------------------------------------------------|
 | [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
 | [ASM - Assembly](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Assembly/)           |
@@ -113,11 +115,23 @@ Terceira Avaliação Individual - Av3
 1. Laboratório (1h00)
     - [Lab 11: Assembly](https://insper.github.io/Z01.1/Labs/Lab11-Assembly/)
 
-## Aula 12/04
+## Aula 11/10
+
+| Teoria                                                                                  |
+|-----------------------------------------------------------------------------------------|
+| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
+| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
+| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
+
+1. Expositiva/ Dúvidas  (1h00)
+
+1. Desenvolvimento APS-E
+
+
+## Aula 09/10
 
 | Estudo prévio                                                                           |
 |-----------------------------------------------------------------------------------------|
-| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
 | [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
 | [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
 
@@ -125,22 +139,15 @@ Terceira Avaliação Individual - Av3
 
 1. Laboratório (1h00)
     - [Lab 10: Control unit](https://insper.github.io/Z01.1/Labs/Lab10-CPU/)
--->  
 
-## Aula 27/09 ou 02/10 - AI
+## Aula 27/09 - AI
 
 ## Aula 25/09
 
-| Estudo prévio                                                                           |
-|-----------------------------------------------------------------------------------------|
-| [CPU](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01/)       |
-| [Linguagem de máquina](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Linguagem-de-Maquina/)           |
-| [Instruction Set](https://insper.github.io/Z01.1/Z01/Util-InstructionSet/)           |
+Finalização da APS-D.
 
-1. Expositiva/ Dúvidas  (1h00)
-
-1. Laboratório (1h00)
-    - [Lab 9: Pequena CPU](https://insper.github.io/Z01.1/Labs/Lab9-PequenaCPU/)
+1. Expositiva/ Dúvidas (0h30)
+1. APS-D (1h30)
 
 ## Aula 20/09
 
