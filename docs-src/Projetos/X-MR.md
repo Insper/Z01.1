@@ -68,6 +68,7 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
 
 
 ### Entrega
-
+<!--
 - [Link para entrega](https://forms.gle/nwdGVbSwkQHVmqqE7)
+-->
 

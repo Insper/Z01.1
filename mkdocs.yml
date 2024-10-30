@@ -83,7 +83,7 @@ nav:
   - 'Projetos/G-Assembler.md'
   - 'Projetos/H-VM.md'
   #- 'Projetos/I-VMtranslator.md'
-  #- 'Projetos/X-MR.md'
+  - 'Projetos/X-MR.md'
 
 - Labs:
   - 'Labs/Lab1-A-Transistores-CI.md'

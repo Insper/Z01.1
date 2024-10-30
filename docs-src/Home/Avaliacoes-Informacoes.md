@@ -17,10 +17,13 @@ Liberado consulta ao material da disciplina.
     - G: Assembler (SW)
     - H: VM (SW)
 
-<!--
-[Prova - Av4 - 21b - Repositório](https://github.com/insper-classroom/21b-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
+[Prova - Av3 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte1)
 
-[Prova - Av4 - 22a - Repositório](https://github.com/insper-classroom/22a-ele-av4-teste) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
+[Prova - Av4 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte2)
+
+[Prova - Av4 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
+<!--
+[Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
 
 
 ## AV3 - sexta 26/04 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
