@@ -27,13 +27,13 @@ plugins:
 extra:
   custom_variables:
     lab2_link: 'https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/EchI08xmevpNmCWCvKlwPaUBHYSLxrcUvAlMa3wA5vMecw?e=qrtSty'
-    apsA_date: 'Terça  - 27/08'
-    apsB_date: 'Sexta  - 06/09'
-    apsC_date: 'Terça  - 17/09'
-    apsD_date: 'Quarta  - 25/09'
-    apsE_date: 'Segunda  - 14/10'
-    apsF_date: 'Quinta - 24/10'
-    apsG_date: 'Sexta - 01/11'
+    apsA_date: 'Sexta  - 21/02'
+    apsB_date: 'Sexta  - 07/03'
+    apsC_date: 'Sexta  - 14/03'
+    apsD_date: 'Quarta - 26/03'
+    apsE_date: 'Quarta - 16/04'
+    apsF_date: 'Quarta - 30/04'
+    apsG_date: 'Quarta - 14/05'
     apsMR_date: 'Quarta - 27/11'
 
 markdown_extensions:
@@ -134,77 +134,90 @@ nav:
       - 'APS-E': 'Projetos/E-CPU.md'
     - 16/04: 
       - 'APS-E': 'Projetos/E-CPU.md'
+    - 23/04: 
+      - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
+      - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
+      - 'Assembly Online Simulator': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/assembly/'
+    - 25/04: 
+      - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
+      - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
+      - 'Lab 9': 'Labs/Lab12-Assembly.md'
+      - 'Lab 10': 'Labs/Lab13-Assembly.md'
+      - 'APS-F': 'Projetos/F-Assembly.md'
+    - 30/04: 
+      - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
+      - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
+      - 'Lab 11': 'Labs/Lab14-Assembly.md'
+      - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
+      - 'APS-F': 'Projetos/F-Assembly.md'
+  - Maio:
+    - 07/05: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
+    - 09/05: 
+      - 'Lab 13 - Assembler':
+        - 'Labs/Lab16.1-Assembler.md'
+        - 'Labs/Lab16.2-Assembler.md'
+        - 'Labs/Lab16.3-Assembler.md'
+        - 'Labs/Lab16.4-Assembler.md'
+        - 'Labs/Lab16.5-Assembler.md'
+        - 'Labs/Lab16.6-Assembler.md'
+      - 'APS-G: 'Projetos/G-Assembler.md'
+    - 14/05: 
+      - 'APS-G: 'Projetos/G-Assembler.md'
+    - 16/05: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
+      - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
+      - 'VM Online Simualtor': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/'
+    - 21/05: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'
+      - 'Lab 14': 'Labs/Lab17-VM.md'
+      - 'APS-H: 'Projetos/H-VM.md'
+    - 23/05: 
+      - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'
+      - 'Lab 15 - VMtranslator':
+        - 'Labs/Lab18.1-VMtranslator.md'
+        - 'Labs/Lab18.2-VMtranslator.md'
+      - 'APS-I: 'Projetos/I-VMtranslator.md'
 
 
+# - 'Projetos':
+#   - 'Projetos/X-MR.md'
 
-- 'Projetos':
-  - 'Projetos/F-Assembly.md'
-  - 'Projetos/G-Assembler.md'
-  - 'Projetos/H-VM.md'
-  #- 'Projetos/I-VMtranslator.md'
-  - 'Projetos/X-MR.md'
+# - Labs:
+#   - 'Lab 2: Github':
+#     - 'Labs/Lab2.1-Ambiente.md'
+#     - 'Labs/Lab2.2-Ambiente.md' 
+#   # 'Labs/Lab9-PequenaCPU.md'
+#   - 'Labs/Lab11-Assembly.md'
 
-- Labs:
-  - 'Lab 2: Github':
-    - 'Labs/Lab2.1-Ambiente.md'
-    - 'Labs/Lab2.2-Ambiente.md' 
-  # 'Labs/Lab9-PequenaCPU.md'
-  - 'Labs/Lab11-Assembly.md'
-  - 'Labs/Lab12-Assembly.md'
-  - 'Labs/Lab13-Assembly.md'
-  - 'Labs/Lab14-Assembly.md'
-  - 'Labs/Lab15-Assembly-FPGA.md'
-  - 'Lab 16: Assembler':
-    - 'Labs/Lab16.1-Assembler.md'
-    - 'Labs/Lab16.2-Assembler.md'
-    - 'Labs/Lab16.3-Assembler.md'
-    - 'Labs/Lab16.4-Assembler.md'
-    - 'Labs/Lab16.5-Assembler.md'
-    - 'Labs/Lab16.6-Assembler.md'
-  - 'Labs/Lab17-VM.md'
-  #- 'Lab 18: VMtranslator':
-  #  - 'Labs/Lab18.1-VMtranslator.md'
-  #  - 'Labs/Lab18.2-VMtranslator.md'
+# - 'Teoria':
+#   #- 'commum-content/teoria/Teoria-Logica-Sequencial.md'
+#   #- "commum-content/teoria/Teoria-Assembly.md"
+#   - 'Vídeo Aulas (Luciano)': 'Util/Util-Video-Aulas.md'
 
-- 'Teoria':
-  #- 'commum-content/teoria/Teoria-Logica-Sequencial.md'
-  #- "commum-content/teoria/Teoria-Assembly.md"
-  - 'Teoria/Teoria-Assembly.md'
-  - 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
-  - 'commum-content/teoria/Teoria-nasm-jump.md'
-  - 'commum-content/teoria/Teoria-Assembler.md'
-  - 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
-  - 'commum-content/teoria/Teoria-vm.md'
-  - 'commum-content/teoria/Teoria-vm-segmentos.md'
-  - 'commum-content/teoria/Teoria-vm-jump.md'
-  - 'commum-content/teoria/Teoria-vm-funcoes.md'
-  - 'commum-content/teoria/Teoria-vm-memoria.md'
-  - 'Teoria/VMtranslator-memoria.md'
-  - 'Vídeo Aulas (Luciano)': 'Util/Util-Video-Aulas.md'
+# - 'VHDL':
+#   - 'VHDL/VHDL-RTL.md'
+#   - 'VHDL/VHDL-exemplos.md'
 
-- 'VHDL':
-  - 'VHDL/VHDL-RTL.md'
-  - 'VHDL/VHDL-exemplos.md'
+# - 'Z01':
+#   - "Z01.1 Cheat Sheet": "commum-content/z01/z01-Cheat-Sheet.md"
 
-- 'Z01':
-  - "Resumo Assembly": "commum-content/z01/z01-Resumo-Assembly.md"
-  - "Z01.1 Cheat Sheet": "commum-content/z01/z01-Cheat-Sheet.md"
-  - "Assembly Online Simualtor": "http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/assembly/"
-  - "Resumo VM": "commum-content/z01/z01-Resumo-VM.md"
-  - "VM Online Simualtor": "http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/"
+# - 'Estudo':
+#   - 'Linguagem de Máquina': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf' #'https://forms.gle/6jNZR4CAELJ69ZjXA'
+#   - 'Linguagem de Máquina - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf' 
 
-- 'Estudo':
-  - 'Linguagem de Máquina': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf' #'https://forms.gle/6jNZR4CAELJ69ZjXA'
-  - 'Linguagem de Máquina - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf' 
+# - Útil:
+# #  - "commum-content/util/Util-Comecando-novo-projeto.md"
+#   - "Util/Util-Comecando-novo-projeto.md"
+# #  - "commum-content/util/Util-vixi-sou-scrum.md"
+#   - "Util/Util-vixi-sou-scrum.md"
+# #  - 'Dicas git': 'Util/Util-Dicas-GIT.md'
 
-- Útil:
-#  - "commum-content/util/Util-Comecando-novo-projeto.md"
-  - "Util/Util-Comecando-novo-projeto.md"
-#  - "commum-content/util/Util-vixi-sou-scrum.md"
-  - "Util/Util-vixi-sou-scrum.md"
-#  - 'Dicas git': 'Util/Util-Dicas-GIT.md'
-
-- História:
-  - 'Util/Historia-linux.md'
+# - História:
+#   - 'Util/Historia-linux.md'
 
 
