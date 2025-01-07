@@ -99,25 +99,25 @@ nav:
       - 'Lab 3': 'Labs/Lab4-LogiComb.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
   - Março:
-    - 07/03: 
+    - '07/03 - Formas de ondas': 
       - 'Lab 4': 'Labs/Lab6-Waves.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
-    - 12/03: 
+    - '12/03 - Aritmética HW': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
       - 'Lab 5': 'Labs/Lab5-Adder.md'
       - 'APS-C': 'Projetos/C-ula.md'
-    - 14/03: 
+    - '14/03 - ULA': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-ULA.md'
       - 'Lab 6': 'Labs/Lab7-ULA.md'  
       - 'APS-C': 'Projetos/C-ula.md'
-    - 19/03: 
+    - '19/03 - Lógica Sequencial': 
       - 'Leitura Prévia': 'Teoria/Teoria-Logica-Sequencial.md'
       - 'VHDL Sequencial': 'VHDL/VHDL-Sequencial.md'
       - 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
       #- 'Exercícios - solução': : 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
       - 'Lab 7': 'Labs/Lab8-Seq.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
-    - 21/03: 
+    - '21/03 - Componentes sequenciais': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
     - 26/03: 
