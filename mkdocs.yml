@@ -123,10 +123,10 @@ nav:
     - 26/03: 
       - 'APS-D': 'Projetos/D-LogSeq.md'
   - Abril:
-    - 09/04: 
+    - '09/04 - Linguagem de Máquina': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Linguagem-de-Maquina.md'
       - 'Instruction Set': "commum-content/z01/z01-InstructionSet.md"
-    - 11/04: 
+    - '11/04 - CPU': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-CPU-2.md'
@@ -134,11 +134,11 @@ nav:
       - 'APS-E': 'Projetos/E-CPU.md'
     - 16/04: 
       - 'APS-E': 'Projetos/E-CPU.md'
-    - 23/04: 
+    - '23/04 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
       - 'Assembly Online Simulator': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/assembly/'
-    - 25/04: 
+    - '25/04 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab 9': 'Labs/Lab12-Assembly.md'
@@ -151,7 +151,7 @@ nav:
       - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
   - Maio:
-    - 07/05: 
+    - '07/05 - Assembler': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
     - 09/05: 
@@ -165,18 +165,18 @@ nav:
       - 'APS-G': 'Projetos/G-Assembler.md'
     - 14/05: 
       - 'APS-G': 'Projetos/G-Assembler.md'
-    - 16/05: 
+    - '16/05 - VM': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
       - 'VM Online Simualtor': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/'
-    - 21/05: 
+    - '21/05 - VM Saltos': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'
       - 'Lab 14': 'Labs/Lab17-VM.md'
       - 'APS-H': 'Projetos/H-VM.md'
-    - 23/05: 
+    - '23/05 - VM Translator': 
       - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'
       - 'Lab 15 - VMtranslator':
         - 'Labs/Lab18.1-VMtranslator.md'
