@@ -69,9 +69,30 @@ nav:
   - Fevereiro:
     - 05/02: 
       - Slides: 'https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf'
-      
+    - 07/02:
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Dados.md'
+      - 'Exercícios 1': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf'
+      #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf'
+      - 'Exercícios 2': 'Exercicios/Exercicio-Dados-2.md'
+      #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf'
+    - 12/02:
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
+      - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
+      #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
+    - 14/02:
+      - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
+      - 'Exercícios 1': 'Exercicios/Exercicio-Algebra-Booleana-1.md'
+      - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
+      - 'APS-A - Início': 'Projetos/A-Algebra-CIs.md'
+    - 19/02:
+      - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'
+      - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
+      - 'Lab 1': 'Labs/Lab1-A-Transistores-CI.md'
+      - 'APS-A': 'Projetos/A-Algebra-CIs.md'
+    - 21/02:
+
+
 - 'Projetos':
-  - 'Projetos/A-Algebra-CIs.md'
   - 'Projetos/B-LogiComb.md'
   - 'Projetos/C-ula.md'
   #- 'Projetos/C-ula-dicas.md'
@@ -85,7 +106,6 @@ nav:
   - 'Projetos/X-MR.md'
 
 - Labs:
-  - 'Labs/Lab1-A-Transistores-CI.md'
   - 'Lab 2: Github':
     - 'Labs/Lab2.1-Ambiente.md'
     - 'Labs/Lab2.2-Ambiente.md'
@@ -115,13 +135,6 @@ nav:
   #  - 'Labs/Lab18.2-VMtranslator.md'
 
 - 'Teoria':
-  - 'commum-content/teoria/Teoria-Dados.md'
-  - 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
-  #- Teoria Algebra Booleana: 'https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Algebra-Booleana/'
-  #- 'commum-content/teoria/Teoria-Algebra-Booleana.md'
-  - 'Teoria/Teoria-Algebra-Booleana.md'
-  - 'commum-content/teoria/Teoria-CMOS.md'
-  - 'commum-content/teoria/Teoria-RTL.md'
   - 'commum-content/teoria/Teoria-Componentes.md'
   - 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
   - 'commum-content/teoria/Teoria-ULA.md'
@@ -161,15 +174,6 @@ nav:
   - "VM Online Simualtor": "http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/"
 
 - 'Estudo':
-  - 'Dados Digitais - 1': 'https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing'
-  - 'Dados Digitais - 1 - pdf': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf'
-  - 'Dados Digitais - 1 - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf'
-  - 'Exercicios/Exercicio-Dados-2.md'
-  - 'Dados Digitais - 2 - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf'
-  - 'Exercicios/Exercicio-Algebra-Booleana-1.md'
-  - 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
-  - 'Handout Aritmetica Booleana': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
-  - 'Handout Aritmetica Booleana - Resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
   - 'Lógica Sequencial': 'https://forms.gle/XMsFCDMYsmz1qUP86'
   - 'Lógica Sequencial - resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
   - 'Linguagem de Máquina': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf' #'https://forms.gle/6jNZR4CAELJ69ZjXA'
