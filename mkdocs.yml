@@ -130,7 +130,7 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-CPU-2.md'
-      - 'Lab 8': ''Labs/Lab10-CPU.md'
+      - 'Lab 8': 'Labs/Lab10-CPU.md'
       - 'APS-E': 'Projetos/E-CPU.md'
     - 16/04: 
       - 'APS-E': 'Projetos/E-CPU.md'
