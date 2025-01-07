@@ -89,16 +89,55 @@ nav:
       - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
       - 'Lab 1': 'Labs/Lab1-A-Transistores-CI.md'
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
+    - 26/02:
+      - 'Leitura Prévia - VHDL': 'VHDL/VHDL-basico.md'
+      - 'VHDL Combinacional': 'VHDL/VHDL-Combinacional.md'
+      - 'VHDL Port Map': 'VHDL/VHDL-port-map.md'
+      - 'Lab 2': 'Labs/Lab3-LogiComb-FPGA.md'
+    - 28/02:
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Componentes.md'
+      - 'Lab 3': 'Labs/Lab4-LogiComb.md'
+      - 'APS-B': 'Projetos/B-LogiComb.md'
+  - Março:
+    - 07/03: 
+      - 'Lab 4': 'Labs/Lab6-Waves.md'
+      - 'APS-B': 'Projetos/B-LogiComb.md'
+    - 12/03: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
+      - 'Lab 5': 'Labs/Lab5-Adder.md'
+      - 'APS-C': 'Projetos/C-ula.md'
+    - 14/03: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-ULA.md'
+      - 'Lab 6': 'Labs/Lab7-ULA.md'  
+      - 'APS-C': 'Projetos/C-ula.md'
+    - 19/03: 
+      - 'Leitura Prévia': 'Teoria/Teoria-Logica-Sequencial.md'
+      - 'VHDL Sequencial': 'VHDL/VHDL-Sequencial.md'
+      - 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
+      #- 'Exercícios - solução': : 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
+      - 'Lab 7': 'Labs/Lab8-Seq.md'
+      - 'APS-D': 'Projetos/D-LogSeq.md'
+    - 21/03: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
+      - 'APS-D': 'Projetos/D-LogSeq.md'
+    - 26/03: 
+      - 'APS-D': 'Projetos/D-LogSeq.md'
+  - Abril:
+    - 09/04: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Linguagem-de-Maquina.md'
+      - 'Instruction Set': "commum-content/z01/z01-InstructionSet.md"
+    - 11/04: 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
+      - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
+      - 'Exercícios 2': 'Exercicios/Exercicio-CPU-2.md'
+      - 'Lab 8': ''Labs/Lab10-CPU.md'
+      - 'APS-E': 'Projetos/E-CPU.md'
+    - 16/04: 
+      - 'APS-E': 'Projetos/E-CPU.md'
 
 
 
 - 'Projetos':
-  - 'Projetos/B-LogiComb.md'
-  - 'Projetos/C-ula.md'
-  #- 'Projetos/C-ula-dicas.md'
-  - 'Projetos/D-LogSeq.md'
-  - 'Projetos/E-CPU.md'
-  #    - 'Projetos/E-CPU-Testando.md'
   - 'Projetos/F-Assembly.md'
   - 'Projetos/G-Assembler.md'
   - 'Projetos/H-VM.md'
@@ -108,15 +147,8 @@ nav:
 - Labs:
   - 'Lab 2: Github':
     - 'Labs/Lab2.1-Ambiente.md'
-    - 'Labs/Lab2.2-Ambiente.md'
-  - 'Labs/Lab3-LogiComb-FPGA.md'
-  - 'Labs/Lab4-LogiComb.md'
-  - 'Labs/Lab5-Adder.md'
-  - 'Labs/Lab6-Waves.md'
-  - 'Labs/Lab7-ULA.md'  
-  - 'Labs/Lab8-Seq.md'
-  - 'Labs/Lab9-PequenaCPU.md'
-  - 'Labs/Lab10-CPU.md'
+    - 'Labs/Lab2.2-Ambiente.md' 
+  # 'Labs/Lab9-PequenaCPU.md'
   - 'Labs/Lab11-Assembly.md'
   - 'Labs/Lab12-Assembly.md'
   - 'Labs/Lab13-Assembly.md'
@@ -135,18 +167,11 @@ nav:
   #  - 'Labs/Lab18.2-VMtranslator.md'
 
 - 'Teoria':
-  - 'commum-content/teoria/Teoria-Componentes.md'
-  - 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
-  - 'commum-content/teoria/Teoria-ULA.md'
-  - 'Teoria/Teoria-Logica-Sequencial.md'
   #- 'commum-content/teoria/Teoria-Logica-Sequencial.md'
-  - 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
-  - 'commum-content/teoria/Teoria-Z01.md'
   #- "commum-content/teoria/Teoria-Assembly.md"
   - 'Teoria/Teoria-Assembly.md'
   - 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
   - 'commum-content/teoria/Teoria-nasm-jump.md'
-  - 'commum-content/teoria/Teoria-Linguagem-de-Maquina.md'
   - 'commum-content/teoria/Teoria-Assembler.md'
   - 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
   - 'commum-content/teoria/Teoria-vm.md'
@@ -158,28 +183,19 @@ nav:
   - 'Vídeo Aulas (Luciano)': 'Util/Util-Video-Aulas.md'
 
 - 'VHDL':
-  - 'VHDL/VHDL-basico.md'
-  - 'VHDL/VHDL-Combinacional.md'
-  - 'VHDL/VHDL-port-map.md'
-  - 'VHDL/VHDL-Sequencial.md'
   - 'VHDL/VHDL-RTL.md'
   - 'VHDL/VHDL-exemplos.md'
 
 - 'Z01':
   - "Resumo Assembly": "commum-content/z01/z01-Resumo-Assembly.md"
   - "Z01.1 Cheat Sheet": "commum-content/z01/z01-Cheat-Sheet.md"
-  - "Instruction Set": "commum-content/z01/z01-InstructionSet.md"
   - "Assembly Online Simualtor": "http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/assembly/"
   - "Resumo VM": "commum-content/z01/z01-Resumo-VM.md"
   - "VM Online Simualtor": "http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/"
 
 - 'Estudo':
-  - 'Lógica Sequencial': 'https://forms.gle/XMsFCDMYsmz1qUP86'
-  - 'Lógica Sequencial - resolução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
   - 'Linguagem de Máquina': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Linguagem_de_maquina.pdf' #'https://forms.gle/6jNZR4CAELJ69ZjXA'
   - 'Linguagem de Máquina - respostas': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Linguagem_de_maquina_respostas.pdf' 
-  - 'Exercicios/Exercicio-CPU-1.md'
-  - 'Exercicios/Exercicio-CPU-2.md'
 
 - Útil:
 #  - "commum-content/util/Util-Comecando-novo-projeto.md"
