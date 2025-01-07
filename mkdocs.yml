@@ -20,7 +20,7 @@ plugins:
   - active-handout:
       telemetry: true
       backend_url: https://devlife-api.insper-comp.com.br/
-      course_slug: 24b-ele
+      course_slug: 25a-ele
   - glightbox
   - termynal
 
@@ -64,13 +64,12 @@ markdown_extensions:
 
 nav:
 - Home: 'index.md'
-
-- 'Informações Gerais':
-  - 'Home/Sobre-Criterios-de-Avaliacao.md'
-  - 'Home/Sobre-Rubricas.md'
-  - 'Home/Resumo-Aulas.md'
-  - 'Home/Avaliacoes-Informacoes.md'
-
+- Avaliação: 'Home/Avaliacoes-Informacoes.md'
+- Aulas:
+  - Fevereiro:
+    - 05/02: 
+      - Slides: 'https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf'
+      
 - 'Projetos':
   - 'Projetos/A-Algebra-CIs.md'
   - 'Projetos/B-LogiComb.md'

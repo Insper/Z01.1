@@ -19,7 +19,7 @@ A nota final de **prova** (atingido atingido o critério) será a média da soma
 
 | Provas           | Pontuação HW        | Pontuação SW        |  Pontuação Total    | Conteúdo            |
 |------------------|---------------------|---------------------|---------------------|---------------------|
-| A1               | 30                  | 10                  | 40                  | Álgebra booleana, dados digitais |
+| Atividade em aula| 30                  | 10                  | 40                  | Álgebra booleana, dados digitais |
 | AI               | 50                  | 10                  | 60                  | Lógica combinacional, ULA, Lógica sequencial |
 | AF               | 20                  | 80                  | 100                 | CPU, Assembly, Assembler, VM |
 | Total            | 100                 | 100                 | 200                 | |

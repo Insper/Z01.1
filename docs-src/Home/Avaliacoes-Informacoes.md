@@ -1,5 +1,146 @@
-# Avaliações
+# Critérios de Avaliação
 
+Os critérios de avaliação a seguir serão aplicados a disciplina:
+
+## Critérios
+
+Os alunos devem:
+
+1. Ter acumulado no mínimo 50 pontos de `HW` (Álgebra booleana, lógica combinacional, unidade lógica aritmética, lógica sequencial, CPU) nas provas
+1. Ter acumulado no mínimo 50 pontos de `SW` (Dados digitais, assembly, assembler, máquina virtual, VM translator) nas provas
+1. Ter no mínimo conceito C na média de todos os Projetos 
+1. Ter no máximo duas notas inferiores a C na avaliação individual e uma nota inferior a C na avaliação coletiva dos Projetos
+
+## Provas
+
+Ao longo do semestre o aluno deve acumular `50 pontos` de `Software` e `50 pontos` de `Hardware` esses pontos estarão distribuídos nas três provas (A1, AI, AF) que serão aplicadas ao longo do semestre. 
+
+A nota final de **prova** (atingido atingido o critério) será a média da soma das notas de HW e SW  aplicado o conceito (final da página).
+
+| Provas           | Pontuação HW        | Pontuação SW        |  Pontuação Total    | Conteúdo            |
+|------------------|---------------------|---------------------|---------------------|---------------------|
+| Atividade em aula| 30                  | 10                  | 40                  | Álgebra booleana, dados digitais |
+| AI               | 50                  | 10                  | 60                  | Lógica combinacional, ULA, Lógica sequencial |
+| AF               | 20                  | 80                  | 100                 | CPU, Assembly, Assembler, VM |
+| Total            | 100                 | 100                 | 200                 | |
+
+
+Haverá(ão) também atividade(s) extra(s) optativa(s) (a ser(em) entregue(s) até a AF) que fornece o total de **20 pontos** extras a serem divididos entre HW e SW.
+
+
+## Projetos (APS)
+
+O projeto é composto por duas notas: `Grupo` e `Individual` sendo que cada uma segue uma rubrica diferente e avalia objetivos diferentes do curso.
+
+A rubrica de nota `Grupo` está apresentada na página de cada projeto.
+
+A rubrica da nota `Individual` está na página [Sobre-Rubricas](https://insper.github.io/Z01.1/Home/Sobre-Rubricas/).
+
+A nota final de cada APS será calculada da seguinte forma:
+
+| Nota`Individual` | Nota final da APS         |
+|------------------|---------------------------|
+| A                | Nota  `Grupo`             |
+| B                | Nota  `Grupo` - 1 conceito  |
+| C                | Nota  `Grupo` - 2 conceitos |
+| D                | D                         |
+| I                | I                         |
+
+
+Exemplos: 
+
+1. Se alguém obter: `Grupo` = A+ e `Individual` = A, nota da APS será A+
+2. Se alguém obter: `Grupo` = A+ e `Individual` = B, nota da APS será A
+3. Se alguém obter: `Grupo` = A+ e `Individual` = C, nota da APS será B+
+4. Se alguém obter: `Grupo` = A+ e `Individual` = D, nota da APS será D
+5. Se alguém obter: `Grupo` = C+ e `Individual` = B, nota da APS será C
+
+
+A nota final de **Projeto** (quando atingindo o critério) será a média de todas as notas das APSs.
+
+### Rubricas individuais
+
+Você será avaliado conforme o seu papel no desenvolvimento
+do projeto. Podendo ser: 
+
+- Facilitador
+- Desenvolvedor
+
+O Facilitador será atribuído no inicio de cada projeto.
+
+Tanto o facilitador como o desenvolvedor serão avaliados por meio de Forms que devem ser preenchidos na **entrega** de cada projeto. Os conceitos individuais poderão ser (A, B, C, D ou I).
+
+#### Facilitador
+
+O facilitador será avaliado pelos 'Desenvolvedores' com base em seus objetivos:
+
+- Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, dá feedback de issues.
+- Gerenciou os pull-requests.
+- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
+- Ajudou outros colegas com o objetivo da entrega final e não somente das suas tarefas
+
+<!--
+A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de participação em aula`(1, 0.5, 0).
+
+- Fator de Participação em aula: 
+    - 1: Esteve presente e participou nas aulas referentes aos projetos
+    - 0.5: Faltou e/ou não participou de alguma aula referente ao projeto
+    - 0: Faltou e/ou não participou da maioria das aulas do projeto
+-->
+
+!!! warning
+    Se algum facilitador não preencher o formulário no prazo estipulado sua nota será I
+
+#### Desenvolvedor
+
+
+A nota dos desenvolvedores será definida pelas avaliações do facilitador e dos demais desenvolvedores com base nos objetivos:
+
+- **Participou das aulas referentes ao projetos (handouts, labs)**
+- Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes!      
+- Submeteu alterações por pull requests.                         
+- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
+- Entregas orientadas para o objetivo do projeto 
+
+<!--
+!!! tip 
+    Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média da avaliação dos seus colegas.
+    -->
+
+!!! warning
+    Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I
+
+
+## Nota final da Disciplina
+
+A nota final será composta pela média das notas de Projeto e da Prova:
+
+- `Nota Final = mean([Prova, Projeto])`
+
+## Conceito
+
+A seguinte tabela será aplicada para o cálculo dos conceitos.
+
+| Nota | Conceito |
+|------|----------|
+| 10   | A+       |
+| 9    | A        |
+| 8    | B+       |
+| 7    | B        |
+| 6    | C+       |
+| 5    | C        |
+| 4-3  | D        |
+| 3-0  | I        |
+
+
+
+
+
+
+
+
+## Conteúdos das Avaliações
+<!--
 Informações sobre as avaliações (e simulados) da disciplina:
 
 
@@ -48,7 +189,7 @@ Liberado consulta ao material da disciplina.
     - Conjunto de Instruções
 
 [Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
--->
+
 
 ## AI
 
@@ -77,9 +218,9 @@ Liberado consulta ao material da disciplina.
 [Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
 
 [Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
+-->
 
-
-## AV1 - sexta 23/08 - [Gabarito](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.2_resolucao.pdf)
+### Atividade 1
 
 - Conteúdos: 
     - Organização de Computadores (visão geral)
@@ -101,7 +242,7 @@ Liberado consulta ao material da disciplina.
     - Aritmética binária
 
 
-Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
+<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta. -->
 
 - Atividade de revisão:
     - [Prova 24.1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.1_resolucao.pdf)

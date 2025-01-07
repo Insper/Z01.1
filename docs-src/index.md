@@ -3,9 +3,8 @@
 ![](figs/icon-elementos.png)
 
 - **Curso:** Engenharia Da Computação - Terceiro semestre
-- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2024-2.
+- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2025-1.
 - **Prof.** Renan Trevisoli / renantd@insper.edu.br
-<!-- - **Repositório:** [http:/github.com/Insper/Z01.1-proj](http:/github.com/Insper/Z01.1-proj) -->
 - **Local:** Laboratório de Informática - 404
 
 **© Todos os direitos reservados**
@@ -13,7 +12,7 @@
 - Criado por prof. Rafael Corsi / rafael.corsi@insper.edu.br
 
 -------------------------
-
+<!--
 ## Criando o grupo
 
 Grupo de até 6 pessoas! Preencher a tabela a seguir:
@@ -25,10 +24,7 @@ Grupo de até 6 pessoas! Preencher a tabela a seguir:
 ## Resumo das aulas com indicação da leitura prévia
 
 [Conteúdos](https://insper.github.io/Z01.1/Home/Resumo-Aulas/)
-
-## Informações sobre as avaliações
-
-[Avaliações](https://insper.github.io/Z01.1/Home/Avaliacoes-Informacoes/)
+-->
 
 ## Objetivos de aprendizagem
 
@@ -44,19 +40,11 @@ Ao final da disciplina o estudante será capaz de:
 
 Desenvolver um computador do ZERO!
 
-## Avaliação
-
-A disciplina é avaliada em duas frentes: avaliação individual e APS:
-
-- Individual: ao longo do semestre o aluno deve acumular `50 pontos` de `Software` e `50 pontos` de `Hardware` 
-esses pontos estarão distribuídos em três avaliações (A1, sAI, AF) que serão aplicadas ao longo do semestre. 
-
-- APS: Compostas por duas notas: `Grupo` e `Individual` sendo que cada uma segue uma 
-rubrica diferente e avalia objetivos diferentes do curso.
-
+<!--
 ## Infraestrutura
 
 O ferramental da disciplina foi desenvolvido para o sistema operacional  **Linux** e necessita de uma série de softwares e configurados. Você receberá um SSD com tudo pronto.
+-->
 
 ## Bibliografia
 
