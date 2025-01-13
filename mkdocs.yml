@@ -108,7 +108,8 @@ nav:
       - 'APS-C': 'Projetos/C-ula.md'
     - '14/03 - ULA': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-ULA.md'
-      - 'Lab 6': 'Labs/Lab7-ULA.md'  
+      - 'Lab 6': 'Labs/Lab7-ULA.md'
+      - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula'  
       - 'APS-C': 'Projetos/C-ula.md'
     - '19/03 - Lógica Sequencial': 
       - 'Leitura Prévia': 'Teoria/Teoria-Logica-Sequencial.md'
@@ -137,7 +138,7 @@ nav:
     - '23/04 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
-      - 'Assembly Online Simulator': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/assembly/'
+      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
     - '25/04 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
@@ -169,7 +170,7 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
-      - 'VM Online Simualtor': 'http://subject.eba-ccnymatn.sa-east-1.elasticbeanstalk.com/vm/'
+      - 'VM Online Simualtor': 'https://renan-tr.github.io/simulador/vm'
     - '21/05 - VM Saltos': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
