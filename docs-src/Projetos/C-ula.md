@@ -169,20 +169,23 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 | Conceito |                                                                                                       |
 |----------|-------------------------------------------------------------------------------------------------------|
-| I        | - Não implementou os módulos Add16, ULA, Comparador, FullAdder, HalfAdder, Inc16, Inversosr, Zerador. |
+| I        | Não implementou ao menos um dos módulos Add16, ULA, Comparador, FullAdder, HalfAdder, Inc16, Inversor, Zerador. |
 |          |                                                                                                       |
-| D        | - Implementou todos os módulos menos a ULA.                                                           |
+| D        | Implementou todos os módulos menos a ULA.                                                             |
 |          |                                                                                                       |
-| C+       | - Todos os modulos básicos implementandos e passando nos testes                                       |
-|          | - Fizeram reaproveitamento dos módulos via `port map` sempre que possível                             |
-|          | - Possui a forma de onda de todos os módulos (.png).                                                  |
+| C        | Todos os modulos básicos implementados e passando nos testes                                          |
 |          |                                                                                                       |
-| B+       | - Modifique a ULA adicionando o sinal de estouro da soma (carry) a saída da ULA                       |
-|          | - Modifique a ULA adicionando a operação: X xor Y                                                     |
-|          | - Compila no Quartus a ULA do grupo e faz um vídeo demonstrando o seu funcionamento (FPGA).           |
+| C+       | Todos os modulos básicos implementados e passando nos testes                                          |
+|          | **E** realizar reaproveitamento dos módulos via `port map` sempre que possível                        |
+|          | **E** obter a forma de onda de todos os módulos (.png).                                               |
 |          |                                                                                                       |
-| A+       | - Modifique a ULA adicionando a operação de shift left/right                                          |
-|          | - Modifique o `toplevel` para mostrar o resultado da ULA nos displays de 7s (em hexa)                 |
+| B+       | Todos os itens do conceito **C+** implementados e funcionando                                         |
+|          | **E** modificar a ULA adicionando o sinal de estouro da soma (carry) a saída da ULA                   |
+|          | **E** implementar e testar a ULA com o sinal de estouro na FPGA                                       |
+|          |                                                                                                       |
+| A+       | Todos os itens do conceito **C+** E **B+** implementados e funcionando                                |
+|          | **E** modificar a ULA adicionando a operação de shift left/right                                      |
+|          | _Para testar este último, implementar na FPGA a ULA modificada na FPGA, mostrando o resultado no 7seg_ |
 
 
 !!! note
@@ -200,5 +203,5 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
-- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})

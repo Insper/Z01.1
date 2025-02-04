@@ -30,13 +30,13 @@ Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
 O controle do carrinho deve funcionar da seguinte forma:
 
 1. Todos os motores desligados se (x1 ou x2) e (x3 ou x4) indicarem colisão.
-2. Todos os motores ligados diretamente se nenhum sensor indicar colisão.
+2. Todos os motores ligados reversamente se nenhum sensor indicar colisão.
 3. Ambos os motores ligados reversamente se os sensores (x1 e x2) detectarem colisão.
 4. Ambos os motores ligados diretamente se os sensores (x3 e x4) detectarem colisão.
-5. Motor esquerdo (y1) desligado e motor direito (y2) ligado reversamente quando x1 detectar colisão, mas não x2.
-6. Motor esquerdo (y1) ligado reversamente e motor direito (y2) desligado quando x2 detectar colisão, mas não x1.
-7. Motor esquerdo (y1) desligado e motor direito (y2) ligado diretamente quando x3 detectar colisão, mas não x4.
-8. Motor esquerdo (y1) ligado diretamente e motor direito (y2) desligado quando x4 detectar colisão, mas não x3.
+5. Motor esquerdo (y1) ligado reversamente e motor direito (y2) desligado quando x1 detectar colisão, mas não x2.
+6. Motor esquerdo (y1) desligado e motor direito (y2) ligado reversamente quando x2 detectar colisão, mas não x1.
+7. Motor esquerdo (y1) ligado diretamente e motor direito (y2) desligado quando x3 detectar colisão, mas não x4.
+8. Motor esquerdo (y1) desligado e motor direito (y2) ligado diretamente quando x4 detectar colisão, mas não x3.
 
 > Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
 
@@ -44,20 +44,20 @@ O controle do carrinho deve funcionar da seguinte forma:
 
 | Conceito | Descritivo                                                  |
 |----------|-------------------------------------------------------------|
-| **I**    | **Funções Lógicas Não Obtidas:** O grupo não conseguiu derivar as funções lógicas necessárias para o controle do motor com base nos requisitos do projeto.|
+| **I**    | **Funções Lógicas Não Obtidas**                            |
 |          |                                                                      |
-| **D**    | **Obtenção sem Simplificação das Funções Lógicas:** As funções foram obtidas a partir dos requisitos do projeto, mas não foram simplificadas usando álgebra booleana.|   
-|          | **Apresentação Pouco Clara das Funções Lógicas:** A apresentação das funções lógicas e sua relação com as condições do projeto pode estar confusa ou pouco clara, dificultando a compreensão.|  
+| **D**    | **Obtenção sem Simplificação das Funções Lógicas** OU **Apresentação Pouco Clara das Funções Lógicas** |  
 |          |                                                                      |
-| **C**    | **Obtenção, Simplificação e Aplicação das Funções Lógicas:** As funções lógicas foram obtidas corretamente a partir dos requisitos do projeto e simplificadas usando técnicas de álgebra booleana|   
-|          | **Video demonstrando parte 1 do Lab 1**                              |  
+| **C**    | **Obtenção E Simplificação das Funções Lógicas** OU **Video demonstrando parte 1 do Lab 1**|   
+| **C+**   | **Obtenção E Simplificação das Funções Lógicas** E **Video demonstrando parte 1 do Lab 1** |  
 |          |                                                                      |
-| **B**    | **Implementação em Simulador das Funções Lógicas:** As funções lógicas foram derivadas dos requisitos do projeto e implementadas de forma precisa usando um simulador de circuitos, como o Falstad ou o Tinkercad|   
-|          | **Vídeo ou Arquivo de Simulação Explicativo:**                            |  
-|          | **Video demonstrando partes 2 e 3 do Lab 1**                              |  
-|          |                                                                      |
-| **A**    | **Implementação no Robô das Funções Lógicas:** As funções lógicas foram  implementadas com sucesso usando Circuitos Integrados (CIs) no protoboard|   
-|          | **Vídeo de Demonstração Abrangente:**  grupo forneceu um vídeo detalhado que mostra a montagem dos CIs no protoboard, a conexão com os sensores, a interação das funções lógicas com os sinais dos sensores e como o robô respondeu a diferentes cenários.                           |  
+| **B+**   | **Obtenção E Simplificação das Funções Lógicas E Implementação em Simulador das Funções Lógicas** |   
+|          | E **Vídeo ou Arquivo de Simulação Explicativo**                             |  
+|          | E **Video demonstrando partes 2 e 3 do Lab 1**                              |  
+|          |                                                                             |
+| **A+**   | **Todos os itens anteriores** |
+|          | E **Implementação no Robô das Funções Lógicas usando FPGA** |   
+|          | E **Vídeo de Demonstração do Funcionamento em diferentes cenários**  |  
 
 
 

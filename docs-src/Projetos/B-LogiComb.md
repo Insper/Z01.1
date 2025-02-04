@@ -171,7 +171,7 @@ Arquivos relacionados com cada conceito:
     - **Descrição**: Questão da impressora da lista de exercícios [Álgebra Booleana 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/)
 
 - Display de 7s
-    - **Arquivo**: `sevenSeg.vhd'
+    - **Arquivo**: `sevenSeg.vhd`
     - **Descrição**: Questão do display de sete segmentos da lista de exercícios [Álgebra Booleana 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Algebra-Booleana-2/)
 
 !!! tip "Display 7s"
@@ -182,11 +182,11 @@ Arquivos relacionados com cada conceito:
 
 - Porta xor de 3 entradas
     - **Arquivo** : `xor3.vhd` (arquivos e testes não fornecidos)
-    - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando necessariamente apenas um mux8way.
+    - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando **necessariamente** apenas um mux8way.
 
 - Funções da APS-A
     - **Arquivo** : `carrinho.vhd`
-    - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A.
+    - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A em VHDL.
 
 <!--
 - O grupo deve apresentar um vídeo da FPGA mostrando nos display de 7 segmentos o seguinte:
@@ -206,25 +206,27 @@ Para atingir os objetivos A+ e B+, deve-se antes atingir o C+.
 
 | Conceito | Descritivo                                                  |
 |----------|-------------------------------------------------------------|
-| **I**    | Mais de três módulos (do conceito C+) com falha             |
-| **D**    | Até dois Módulos (do conceito C+)  com falha                |
-| **C+**   | Todos os módulos básicos implementados e funcionado         |
-| **B+**   | Módulos adicionais implementados e funcionado (circuito, detector de moedas, impressora) |
-|          | Implementar um único display de 7s (conta de 0x0 0xF) - anexar video ao repositório      |
-| **A+**   | Exibe três dígitos em Hexadecimal na FPGA - anexar video no repositório                     |
-|          | (exibir até o valor 0x3FF = 2^10 - 1)                         |
-|          | Módulos adicionais implementados e funcionado (xor, carrinho) |
-|          | Implemente as funções relacionadas a y1 e y2 da APS-A na FPGA - anexar video no repositório |
+| **I**    | Mais de três módulos (dos arquivos listados em conceito C+) com falha             |
+|          | |
+| **D**    | Até dois Módulos (dos arquivos listados em conceito C+)  com falha                |
+|          | |
+| **C+**   | Todos os módulos básicos (arquivos listados em conceito C+) implementados e funcionado   |
+|          | |
+| **B+**   | Todos os módulos básicos (arquivos listados em conceito C+) implementados e funcionado   |
+|          | **E** Módulos adicionais implementados e funcionado (circuito, detector de moedas, impressora)      |
+|          | **E** Implementar um único display de 7s na FPGA (conta de 0x0 0xF) - anexar video ao repositório   |
+|          | |
+| **A+**   | Todos os módulos dos conceitos **C+** e **B+** implementados e funcionado       |
+|          | **E** Exibe três dígitos em Hexadecimal na FPGA - anexar video no repositório   |
+|          | **E** Módulos adicionais implementados e funcionado (xor, carrinho) |
+|          | _Para testar estes dois últimos, implementar na FPGA ou criar os testes._ |
 
 
 
 
 !!! tip "Conceito A"
 
-    Vocês devem implementar o "exibe hexadecimal" no arquivo `conceito_a.vhd`.
-    Tem um teste para os módulos, ==você pode testar incluindo o arquivo de configuração de testes.==
-
-    Sugerimos que vocês reutilizem o módulo `sevenSeg.vhd`, 
+    Sugerimos que vocês reutilizem o módulo `sevenSeg.vhd` para impementar a exibição dos dígitos na FPGA, 
     para isso devem utilizar uma recurso do VHDL chamado de `port map`.
     
     - [VHDL/port map](/Z01.1/VHDL/VHDL-port-map/)    
@@ -238,6 +240,6 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
-- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})
 

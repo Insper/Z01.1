@@ -145,14 +145,15 @@ else
     - **Arquivo**   : `ram512.vhd`
     - **Dependência** : `ram64`, `mux8way16`, `dmux8way`
     - **Descrição** : Similar a RAM8 porém com 512 endereços.
-    
+
+<!--   
 ---------------------------
 
 - Ram4k
     - **Arquivo**   : `ram4k.vhd`
     - **Dependência** : `ram512`, `mux8way16`, `dmux8way`
     - **Descrição** : Similar a RAM8 porém com 4096 endereços.
- 
+--> 
 ![RAM](../figs/E-LogSeq/ram.png)
  
  
@@ -185,19 +186,20 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 | Conceito |                                                                           |
 |----------|---------------------------------------------------------------------------|
-| I        | - Menos da metade dos módulos funcionando                                 |
+| I        | Menos da metade dos módulos funcionando                                   |
 |          |                                                                           |
-| D        | - Ao menos um módulo não foi implementando ou não passa no testes.        |
+| D        | Ao menos um módulo não foi implementando ou não passa no testes.          |
 |          |                                                                           |
-| C+       | - Todos os módulos básicos passam nos testes                              |
-|          | - Possui a forma de onda (.png) e rtl de todos os módulos (.png)          |
+| C+       | Todos os módulos básicos passam nos testes                                |
+|          | **E** obter o rtl de todos os módulos (.png)                              |
 |          |                                                                           |
-| B+       | - Usou sempre que possível outros módulos para criar um novo (hierarquia) |
-|          | - Exemplo: usou o `inc16`, `mux16` e `reg16` para criar PC                |
-|          | - Teste do PC e da RAM8 na FPGA                                           |
-|          |                                                                           |
-| A+       | - Módulos extras (rtl + testes)                                           |
-|          | - Gravar vídeo explicando os rtl e as formas de onda dos módulos extras   |
+| B+       | Todos os módulos básicos (conceito **C+**) passam nos testes              |
+|          | **E** usar sempre que possível outros módulos para criar um novo (hierarquia)   |
+|          | **E** PC e da RAM8 demonstrados na FPGA                                         |
+|          |                                                                                 |
+| A+       | Todos os módulos dos conceitos **C+** e **B+** implementados e funcionando      |
+|          | **E** Módulos extras funcionando com a obtenção dos rtl                         |
+|          | _Gravar vídeo explicando os rtl e o funcionamento dos módulos extras_           |
 
 
 
@@ -243,5 +245,5 @@ As rubricas a serem seguidas serão comuns a todos os projeto e está descrito n
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
-- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})

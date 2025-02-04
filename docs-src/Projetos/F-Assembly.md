@@ -63,7 +63,8 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 - Esses arquivos estão localizados em `f_Assembly/src/`
 
 **A descrição de cada módulo está localizada no cabeçalho do arquivo.**
- 
+
+#### Conceito C+ 
 - add
     - **Arquivo**   : `add.nasm` (==lab 11==)
 - sub
@@ -88,22 +89,22 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
     - **Arquivo** : `stringLength.nasm`
 
 
-#### Conceito B
+#### Conceito B+
 - Palindromo 
     - **Arquivo** : `palindromo.nasm`
-- fatorial
-    - **Arquivo**   : `fatorial.nasm`    
-- Mean
-    - **Arquivo** : `vectorMean.nasm`
-- Chaves e Leds 
-    - **Arquivo** : `SWeLED.nasm`
-
-#### Conceito A
 - Linha
     - **Arquivo**   : `LCDlinha.nasm`
     - Edite o arquivo para desenhar uma linha completa
+- Mean
+    - **Arquivo** : `vectorMean.nasm`
 - Quadrado
     - **Arquivo**   : `quadrado.nasm`
+
+#### Conceito A+
+- fatorial
+    - **Arquivo**   : `fatorial.nasm`    
+- Chaves e Leds 
+    - **Arquivo** : `SWeLED.nasm`
 - Letra Grupo
     - **Arquivo**   : `LCDletraGrupo.nasm`
 
@@ -119,9 +120,9 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
     - **Arquivo** : `excelToLCD.py`
     - Criar um programa em python que converte um tabela do excel (onde cada célula equivale a um px pintado) em um código nasm que executa no Z01 e gera a imagem da tabela
 
+> Os arquivos extras podem substituir algum do conceito **A+** se este não foi implementado.
 
 ### Formulários
 
-
-- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
-- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})

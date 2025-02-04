@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-|              |
+| {{apsI_date}} |
 
 Nesse projeto iremos criar o programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
 
@@ -124,8 +124,7 @@ A seguir os testes que devem passar para cada nota :
 - SimpleGoto 
 - SimpleIfGoto
 
-<!--
 ### Formulários
- - [Scrum Master](https://forms.gle/tYabMR4cSaCDWRXAA)
- - [Desenvolvedores](https://forms.gle/jTrSaBegjKZZF6za6)
--->
+
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})

@@ -62,8 +62,7 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 |          |                                                                                      |
 | B+       | - Verifica se instrução de jump é seguida de NOP, caso contrário dá erro             |
 |          |                                                                                      |
-| A+       | - Insere automaticamente um NOP após instrução de JUMP que não é seguida de nop.     |
-|          | - Imprime mensagem de alerta que isso foi feito.                                     |
+| A+       | - Implementando modo verbose (-v) que possibilita analisar o assembler e suas etapas |
 
 
 <!--
@@ -77,5 +76,5 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 
 ### Formulários
 
-- [Scrum Master](https://forms.gle/niX9G27BLPofXmeY6)
-- [Desenvolvedores](https://forms.gle/vEV8VAAcP3yZjKMj7)
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})
