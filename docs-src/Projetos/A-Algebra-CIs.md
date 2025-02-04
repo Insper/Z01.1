@@ -44,20 +44,25 @@ O controle do carrinho deve funcionar da seguinte forma:
 
 | Conceito | Descritivo                                                  |
 |----------|-------------------------------------------------------------|
-| **I**    | **Funções Lógicas Não Obtidas**                            |
-|          |                                                                      |
-| **D**    | **Obtenção sem Simplificação das Funções Lógicas** OU **Apresentação Pouco Clara das Funções Lógicas** |  
-|          |                                                                      |
-| **C**    | **Obtenção E Simplificação das Funções Lógicas** OU **Video demonstrando parte 1 do Lab 1**|   
-| **C+**   | **Obtenção E Simplificação das Funções Lógicas** E **Video demonstrando parte 1 do Lab 1** |  
-|          |                                                                      |
-| **B+**   | **Obtenção E Simplificação das Funções Lógicas E Implementação em Simulador das Funções Lógicas** |   
-|          | E **Vídeo ou Arquivo de Simulação Explicativo**                             |  
-|          | E **Video demonstrando partes 2 e 3 do Lab 1**                              |  
-|          |                                                                             |
-| **A+**   | **Todos os itens anteriores** |
-|          | E **Implementação no Robô das Funções Lógicas usando FPGA** |   
-|          | E **Vídeo de Demonstração do Funcionamento em diferentes cenários**  |  
+| **I**    | Funções Lógicas Não Obtidas                                 |
+|          |                                                             |
+| **D**    | Obtenção sem Simplificação das Funções Lógicas              |
+|          | **OU** Apresentação Pouco Clara das Funções Lógicas         |  
+|          |                                                             |
+| **C**    | Obtenção E Simplificação das Funções Lógicas                |
+|          | **OU** Video demonstrando parte 1 do Lab 1                  |  
+|          |                                                             |
+| **C+**   | Obtenção E Simplificação das Funções Lógicas                |
+|          | **E** Video demonstrando parte 1 do Lab 1                   |  
+|          |                                                             |
+| **B+**   | Obtenção E Simplificação das Funções Lógicas                |
+|          | **E** Implementação das Funções Lógicas em Simulador        |   
+|          | **E** Vídeo ou Arquivo de Simulação Explicativo             |  
+|          | **E** Video demonstrando partes 2 e 3 do Lab 1              |  
+|          |                                                             |
+| **A+**   | Todos os itens anteriores dos conceitos **C+** e **B+**     |
+|          | **E** Implementação no Robô das Funções Lógicas usando FPGA |   
+|          | **E** Vídeo de Demonstração do Funcionamento em diferentes cenários  |  
 
 
 
@@ -65,5 +70,5 @@ O controle do carrinho deve funcionar da seguinte forma:
 
 Nesta APS (e apenas nesta) não haverá forms para preencher. A entrega será feita pelo Blackboard.
 
-Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na [Tabela - Grupos]({{lab2_link}}).
+Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na Tabela dos Grupos (link no Blackboard).
 
