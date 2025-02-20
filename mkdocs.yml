@@ -27,9 +27,9 @@ plugins:
 extra:
   custom_variables:
     lab2_link: ''
-    form_scrum_link: ''
-    form_dev_link: ''
-    apsA_date: 'Sexta  - 21/02'
+    form_scrum_link: 'https://forms.gle/N39CPVszb47G1QP18'
+    form_dev_link: 'https://forms.gle/dLycYTxD3mgAuDQU9'
+    apsA_date: 'Quarta  - 26/02'
     apsB_date: 'Sexta  - 07/03'
     apsC_date: 'Sexta  - 14/03'
     apsD_date: 'Quarta - 26/03'

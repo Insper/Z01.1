@@ -74,10 +74,13 @@ Abra o terminal na pasta `b_logComb` e execute os testes:
 $ pytest -s
 ```
 
+<!--
 <script id="asciicast-eolZDZIqCgTe3UQsX5jLrkF3D" src="https://asciinema.org/a/eolZDZIqCgTe3UQsX5jLrkF3D.js" async></script>
+
 
 !!! note
     No exemplo de teste verificamos que aimplementação da `nand` está errada.
+-->
 
 ## Entrega
 
@@ -185,7 +188,7 @@ Arquivos relacionados com cada conceito:
     - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando **necessariamente** apenas um mux8way.
 
 - Funções da APS-A
-    - **Arquivo** : `carrinho.vhd`
+    - **Arquivo** : `carrinho.vhd` (arquivos e testes não fornecidos)
     - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A em VHDL.
 
 <!--
