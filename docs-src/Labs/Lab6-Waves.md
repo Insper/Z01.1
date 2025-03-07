@@ -9,7 +9,7 @@ Para isso, abra o terminal na pasta do projeto (por exemplo, `b_logComb/`) e exe
 $ WAVES=1 pytest -k and16
 ```
 
-Cada simulação realizada usando o software GHDL salva um arquivo `.ghw`que contém as formas de onda que resultam dos testes.
+Cada simulação realizada usando o software GHDL salva um arquivo `.ghw` que contém as formas de onda que resultam dos testes.
 
 Assim, após executar o teste, pode-se utilizar o software `gtkwave` para visualizar o resultado. Por exemplo:
 
