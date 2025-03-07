@@ -1,4 +1,4 @@
-# Lab 3: FPGA - VHDL
+# Lab 2: FPGA - VHDL
 
 | Material de estudos                                |
 |----------------------------------------------------|

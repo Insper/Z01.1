@@ -1,4 +1,4 @@
-# Lab 4: Lógica Combinacional
+# Lab 3: Lógica Combinacional
 
 !!! info "Individual"
     Esse laboratório é para ser realizado individualmente.

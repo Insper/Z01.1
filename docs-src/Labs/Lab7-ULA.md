@@ -1,4 +1,4 @@
-# Lab 7: ULA 
+# Lab 6: ULA 
 
 <!--
 !!! note "Sugestão"

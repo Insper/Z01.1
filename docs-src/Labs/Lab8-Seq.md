@@ -1,4 +1,4 @@
-# Lab 8: Lógica Sequencial
+# Lab 7: Lógica Sequencial
 
 !!! warning "Antes de começar"
     Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](https://insper.github.io/Z01.1/Util/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
