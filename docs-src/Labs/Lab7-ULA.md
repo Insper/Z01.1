@@ -49,7 +49,7 @@ Com o simulador podemos testar a ULA modificando seus sinais de controle. A segu
 !!! example "Tarefa: `out = X`"
     - Configure os controles da ULA para fazer com que a saída da ULA seja a entrada **X**
     
-    Para isso você deve mexer nas chaves da FPGA e verificar a saída nos leds.
+<!--Para isso você deve mexer nas chaves da FPGA e verificar a saída nos leds.-->
 
 !!! example "Tarefa: `out = Y`"
     - Configure os controles da ULA para fazer com que a saída da ULA seja a entrada Y
