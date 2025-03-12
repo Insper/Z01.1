@@ -16,6 +16,11 @@ O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da 
 
 ## Simulador
 
+Iremos utilizar um simulador da ULA no link
+
+![Simulador](https://renan-tr.github.io/simulador/ula)
+
+<!--
 Iremos utilizar um simulador da ULA feito em python + Qt. Siga os passos a seguir:
 
 ```sh
@@ -29,6 +34,7 @@ python3 main.py
 Você deve obter a seguinte interface:
 
 ![](https://raw.githubusercontent.com/eduardomarossi/z01.1-ula/master/image.png)
+-->
 
 ## Controlando ULA
 
