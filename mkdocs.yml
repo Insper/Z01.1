@@ -117,7 +117,7 @@ nav:
     - '19/03 - Lógica Sequencial': 
       - 'Leitura Prévia': 'Teoria/Teoria-Logica-Sequencial.md'
       - 'VHDL Sequencial': 'VHDL/VHDL-Sequencial.md'
-      - 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
+      #- 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
       #- 'Exercícios - solução': : 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
       - 'Lab 7': 'Labs/Lab8-Seq.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
