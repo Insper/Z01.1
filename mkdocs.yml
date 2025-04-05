@@ -137,6 +137,7 @@ nav:
       - 'Lab 8': 'Labs/Lab10-CPU.md'
       - 'APS-E': 'Projetos/E-CPU.md'
     - 16/04: 
+      - 'Programando na FPGA': 'Lab10.2-CPU-FPGA'
       - 'APS-E': 'Projetos/E-CPU.md'
     - '23/04 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'

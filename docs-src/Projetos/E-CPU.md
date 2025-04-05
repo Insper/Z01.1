@@ -20,12 +20,15 @@ A pasta do projeto E no repositório Z01, possui a seguinte estrutura:
 e_CPU/
     test_CPU.py
     CPU_cocotb.py
+    programCPU_FPGA.py
+    /CPU_FPGA
     /Quartus
     /src
         *.vhd
 ```
 
 1. Quartus: Projeto Quartus que faz uso dos arquivos VHDL localizados em src/*.vhd;
+1. CPU_FPGA: Arquivos necessários para programar a FPGA;
 1. *.py: Scripts em python que automatizam a execução dos testes;
 1. src/*.vhd: Arquivos VHDL que serão implementados pelo grupo;
 
@@ -133,12 +136,12 @@ Os módulos estão listados de maneira Top - Down
 |          |  Todos os módulos passando nos testes.                                             |
 |          |                                                                                    |
 | B+       |  Construiu com os módulos do grupo o seu próprio computador (conceito **C+**)      |
+|          |  **E** teste da CPU básica na FPGA                                                 |
 |          |  **E** modificou a CPU para realizar carregamento de um valor da instrução diretamente para %D    |
-|          |  **E** modificou os testes para testar esse novo recurso                           |
 |          |                                                                                    |
 | A+       |  Todos os itens do conceito **B++**                                                |
-| A+       |  **E** adicionou um novo registrador na CPU cos ajustes correspondentes            |
-|          |  **E** modificou o os testes para testar esse novo recurso                         |
+| A+       |  **E** adicionou um novo registrador na CPU com os ajustes correspondentes         |
+|          |  **E** modificou os testes para testar esse novo recurso                           |
 
 
 > O grupo deve **avaliar o melhor local para colocar o novo registrador e como fazer o carregamento em %D** (Há mais de uma forma).
