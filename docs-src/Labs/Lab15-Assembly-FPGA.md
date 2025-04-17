@@ -12,7 +12,7 @@ Ao final desse lab você deve ser capaz de:
 
 ## Programando a FPGA
 
-A FPGA é um hardware que pode ser configurável para implementar 'qualquer' sistema digital, incluindo um computador. Iremos primeiramente prograr a FPGA com o Hardware do Z01 para então podermos programar o nosso código em assembly. Ambas as programções são realizadas pelo script:
+A FPGA é um hardware que pode ser configurável para implementar 'qualquer' sistema digital, incluindo um computador. Iremos primeiramente prograr a FPGA com o Hardware do Z01 para então podermos programar o nosso código em assembly. Ambas as programações são realizadas pelo script:
 
 <!--
 ``` bash
