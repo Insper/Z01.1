@@ -66,17 +66,17 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 #### Conceito C+ 
 - add
-    - **Arquivo**   : `add.nasm` (==lab 11==)
+    - **Arquivo**   : `add.nasm` 
 - sub
-    - **Arquivo**   : `sub.nasm` (==lab 11==)
+    - **Arquivo**   : `sub.nasm` 
 - mov
     - **Arquivo**   : `mov.nasm` (==lab 11==)           
 - abs
-    - **Arquivo**   : `abs.nasm` (==lab 13==)
+    - **Arquivo**   : `abs.nasm` (==lab 11==)
 - max
-    - **Arquivo**   : `max.nasm` (==lab 13==)
+    - **Arquivo**   : `max.nasm` (==lab 11==)
 - mult
-    - **Arquivo**   : `mult.nasm` (==lab 13==)
+    - **Arquivo**   : `mult.nasm` (==lab 11==)
 - mod
     - **Arquivo**   : `mod.nasm`
 - div
@@ -97,21 +97,21 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
     - Edite o arquivo para desenhar uma linha completa
 - Mean
     - **Arquivo** : `vectorMean.nasm`
-- Quadrado
-    - **Arquivo**   : `quadrado.nasm`
+- Chaves e Leds 
+    - **Arquivo** : `SWeLED.nasm`
 
 #### Conceito A+
 - fatorial
-    - **Arquivo**   : `fatorial.nasm`    
+    - **Arquivo**   : `factorial.nasm`    
 - Chaves e Leds 
-    - **Arquivo** : `SWeLED.nasm`
-- Letra Grupo
-    - **Arquivo**   : `LCDletraGrupo.nasm`
+    - **Arquivo** : `SWeLED2.nasm`
+- Multiplicação com chaves
+    - **Arquivo**   : `mult_SW.nasm`
 
 **O funcionamento dos arquivos que envolvem SWs, LEDs e LCD deve ser demonstrado na FPGA.**
     
 #### Extra
-
+<!--
 - SWeLED2 
     - **Arquivo** : `SWeLED2.nasm`    
 - Nome grupo
@@ -121,6 +121,7 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
     - Criar um programa em python que converte um tabela do excel (onde cada célula equivale a um px pintado) em um código nasm que executa no Z01 e gera a imagem da tabela
 
 > Os arquivos extras podem substituir algum do conceito **A+** se este não foi implementado.
+-->
 
 ### Formulários
 

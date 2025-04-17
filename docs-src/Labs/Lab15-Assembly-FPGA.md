@@ -12,26 +12,33 @@ Ao final desse lab você deve ser capaz de:
 
 ## Programando a FPGA
 
-A FPGA é um hardware que pode sr configurável para implementar 'qualquer' sistema digital, incluindo um computador. Iremos primeiramente prograr a FPGA com o Hardware do Z01 para então podermos programar o nosso código em assembly. Para isso, execute o script python:
+A FPGA é um hardware que pode ser configurável para implementar 'qualquer' sistema digital, incluindo um computador. Iremos primeiramente prograr a FPGA com o Hardware do Z01 para então podermos programar o nosso código em assembly. Ambas as programções são realizadas pelo script:
 
+<!--
 ``` bash
 $ ./programFPGA.py
 ```
 
 Esse script irá carregar na FPGA o hardware do Z01.1
 
+
+## Programando o Z01.1
+
+Agora com o Z01.1 configurado na FPGA podemos executar nosso programa no hardware, basta chamar o script `programSoftware.py` com o parâmetro `-n` e o caminho para o código `nasm`. Como no exemplo a seguir:
+-->
+
+``` bash
+./programCPU_FPGA.py -n R-LCD
+```
+
+!!! note
+    Antes de programar, o arquivo nasm deve ser compilado (`./compileALL.py`).
+
 !!! note
     Nossa FPGA é dita do tipo volátil, ela perde a configuração sempre que for desligada! 
     
     - Essa etapa deve ser realizada sempre que ela desligar.
 
-## Programando o Z01.1
-
-Agora com o Z01.1 configurado na FPGA podemos executar nosso programa no hardware, basta chamar o script `programSoftware.py` com o parâmetro `-n` e o caminho para o código `nasm`. Como no exemplo a seguir:
-
-``` bash
-./programSoftware.py -n src/examples/R-LCD.nasm
-```
 
 O mesmo deve executar um código no Z01 que escreve a letra **R** no LCD. 
 
