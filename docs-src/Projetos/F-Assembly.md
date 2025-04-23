@@ -8,6 +8,11 @@
 
 Nesse projeto cada grupo terá que implementar diversos códigos em assembly a fim de entendermos a linguagem e as limitações do hardware propostos.
 
+!!! tip
+    Você é `Scrum Master` e não sabe por onde começar? 
+    De uma olhada nessas dicas:
+    [Vixi! Sou Scrum Master](https://insper.github.io/Z01.1/Util/Util-Comecando-novo-projeto/)
+
 ## Instruções 
 
 Seguir as instruções a seguir para desenvolvimento do projeto.
