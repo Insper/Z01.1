@@ -8,8 +8,6 @@
 Esse projeto extra optativo (individual) fornece **5 pontos** 
 extras de **Hardware**, **5 pontos extras** de **Software** e **10 pontos extras** de **Hardware** ou **Software** (o que for mais vantajoso). 
 
-## (5 HW) Processadores
-
 Você deverá escolher um dos processadores listados a seguir:
 
 - [ARM Cortex M0](https://en.wikipedia.org/wiki/ARM_Cortex-M)
@@ -30,7 +28,9 @@ Você deverá escolher um dos processadores listados a seguir:
 
 Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (máximo de 10 minutos) vocês devem explicar:
 
-- Histórico
+## (5 HW) Processadores
+
+- Histórico (muito breve)
     - [ ] História da arquitetura
     - [ ] Pessoas/ empresas responsáveis
     - [ ] Impacto histórico, impacto nos concorrentes/ comunidade/
@@ -48,7 +48,7 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
         - [ ] Especificidades
     
     
-==Muito importante sempre que possível realizar uma comparação com a nossa CPU==
+<!-- ==Muito importante sempre que possível realizar uma comparação com a nossa CPU== -->
 
 ## (**10 HW ou SW**) 
 
@@ -69,5 +69,5 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
 
 ### Entrega
 
-- [Link para entrega](https://forms.gle/wjZ3gcL5qFNtDn5WA)
+- [Link para entrega em breve]()
 
