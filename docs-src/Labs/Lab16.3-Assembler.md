@@ -5,7 +5,7 @@
 
 Para realizar o desenvolvimento do Assembler podemos usar o VSCode ou a IDE do Intellij.
 
-Para trabalhar no VSCode abra a pasta Assembler no mesmo. Se necessário, instale a extensão `Test Runner for Java`.
+Para trabalhar no VSCode abra a pasta Assembler no mesmo. Se necessário, instale a extensão `Extension Pack for Java` ou  `Test Runner for Java`.
 
 Para quem escolher a IDE do Intellij, siga os passos abaixo:
 
