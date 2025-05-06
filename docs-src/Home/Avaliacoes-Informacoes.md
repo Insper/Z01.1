@@ -144,29 +144,6 @@ A seguinte tabela será aplicada para o cálculo dos conceitos.
 Informações sobre as avaliações (e simulados) da disciplina:
 
 
-## AF
-
-Avaliação prática individual a ser realizada no SSD Linux. 
-
-A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
-
-Liberado consulta ao material da disciplina.
-
-- Projetos:
-    - E: CPU (HW)
-    - F: Assembly (SW)
-    - G: Assembler (SW)
-    - H: VM (SW)
-
-[Prova - Av3 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte1) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
-
-[Prova - Av4 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte2) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av4-24a.pdf)
-
-[Prova - Av4 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
-<!--
-[Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
-
-
 ## AV3 - sexta 26/04 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
 
 
@@ -187,8 +164,6 @@ Liberado consulta ao material da disciplina.
     - Assembly - Saltos
     - Linguagem de máquina
     - Conjunto de Instruções
-
-[Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
 
 -->
 
@@ -258,3 +233,30 @@ Liberado consulta ao material da disciplina.
 [Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
 
 [Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
+
+## AF
+
+Avaliação prática individual a ser realizada no SSD Linux. 
+
+A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
+
+Liberado consulta ao material da disciplina.
+
+- Projetos:
+    - E: CPU (HW)
+    - F: Assembly (SW)
+    - G: Assembler (SW)
+    - H: VM/Translator (SW)
+
+Recomendo **não executar** os testes dessas provas por conta de mudanças realizadas nos scripts.
+
+[Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf)
+
+[Prova - Av3 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte1) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
+
+[Prova - Av4 - 24a](https://github.com/insper-classroom/ele-AF-simulado-parte2) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av4-24a.pdf)
+
+[Prova - Av4 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_21b_resolucao.pdf)
+
+[Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
+
