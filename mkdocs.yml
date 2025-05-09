@@ -173,6 +173,7 @@ nav:
     - '14/05 - VM': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
       - 'VM Online Simualtor': 'https://renan-tr.github.io/simulador/vm'
     - '16/05 - VMtranslator':
@@ -183,7 +184,6 @@ nav:
     - '27/05 - VM Translator': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'   
       - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'   
       - 'Lab 15': 'Labs/Lab15-VM.md'   
       - 'APS-H': 'Projetos/I-VMtranslator.md'
