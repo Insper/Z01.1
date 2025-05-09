@@ -1,4 +1,4 @@
-# I - VM Translator
+# H - VM Translator
 
 | Entrega      |
 |--------------|
@@ -8,7 +8,7 @@ Nesse projeto iremos criar o programa *VM translator* que é responsável por tr
 
 ## Instruções 
 
-As instruções técnicas referente ao projeto está no [Lab 18](/Z01.1/Labs/Lab18.1-VMtranslator.md/).
+As instruções técnicas referente ao projeto está no [Lab 18](/Z01.1/Labs/Lab18.1-VMtranslator/).
 
 ## Módulos a serem implementados
 
@@ -42,27 +42,23 @@ O projeto no total possui 5 módulos, sendo que o módulo `VMTranslator.java`, `
 
 ## Sugestão de implementação (partes)
 
-Sugerimos que o `VMTranslator` seja implementado em duas partes, a primeira implementa somente o *Parser.java* e operações aritméticas e `push/pop`. A segunda parte faz a implementação de funções, goto e chamada de funções.
+Sugerimos que o `VMTranslator` seja implementado em duas partes, a primeira implementa no *Code.java* somente as operações aritméticas e `push/pop`. A segunda parte faz a implementação de funções, goto e chamada de funções.
 
-## Parte 1 - Conceito C
+## Parte 1 - Conceito C+
    
 - Code.writeArithmetic()
 - Code.writePushPop()
 
-## Parte 2 - Conceito B
+## Parte 2 - Conceito B+
 
 - Code.writeGoto()
 - Code.writeIf()
 
-## Parte 3 - Conceito A
+## Parte 3 - Conceito A+
 
 - Code.writeCall()
 - Code.writeReturn()
 - Code.writeFunction()
-
-# Rubricas para avaliação de projetos
-
-Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimento total do projeto (Projeto) e outra referente a sua participação individual no grupo (que depende do seu papel).
 
 ## Projeto
 
@@ -70,9 +66,9 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 |----------|-------------------------------------------|
 | I        | - Menos da metade dos módulos funcionando |
 |          |                                           |
-| D        | - writeArithmetic OU writePushPop  |
+| D        | - writeArithmetic OU writePushPop         |
 |          |                                           |
-| C+       | - writeArithmetic E writePushPop           |
+| C+       | - writeArithmetic E writePushPop          |
 |          |                                           |
 | B+       | - writeLabel, writeGoto, writeIf          |
 |          |                                           |
@@ -82,7 +78,7 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 
 A seguir os testes que devem passar para cada nota :
 
-### C
+### C+
 
 - SimpleAdd
 - SimpleNeg
@@ -106,11 +102,11 @@ A seguir os testes que devem passar para cada nota :
 - SimplePopPointer
 - ~StackTest~ (opcional) 
 
-### B
+### B+
 
 - BasicLoop 
 
-#### A
+#### A+
 
 - SimpleFunction
 - StaticsTest
@@ -123,6 +119,29 @@ A seguir os testes que devem passar para cada nota :
 - 2d-Calculadora 
 - SimpleGoto 
 - SimpleIfGoto
+
+## Importante
+
+Para os testes do Conceito A+, teremos que criar programas em VM para o nosso Z01.1.
+
+### Instruções 
+
+As instruções técnicas referente ao projeto estão no laboratório [Lab17-VM](/Z01.1/Labs/Lab17-VM/).
+
+## Módulos a serem implementados
+
+Os módulos estão na pasta `h_VM/src/vm/` e estão organizados por ordem de dificuldade:
+
+1. 1a-Add
+1. 1b-Add
+1. 1c-Dic
+1. 2a-Calculadora
+1. 2b-Calculadora
+1. 2c-Calculadora
+1. 2d-Calculadora
+
+Para testar, basta editar o arquivo `config_testes_vm.txt` com os módulos que deseja executar e então executar os scripts: `./genJAR.py`, `./compileALL.py` localizado na pasta do projeto e finalmente `SIM=ghdl pytest --tb=no -s`.
+
 
 ### Formulários
 

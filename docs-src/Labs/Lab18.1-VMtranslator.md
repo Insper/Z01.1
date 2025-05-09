@@ -1,16 +1,35 @@
-# Lab 18: Vm Translator
+# Lab 14: Vm Translator
 
 O VMTranslator é um programa escrito em Java que faz a tradução de códigos escrito na linguagem VM definida no curso e traduz para linguagem Assembly do computador Z01.
 
 ## Testando
 
-Para testar, basta executar o comando:
+Para testar, primeiramente executar o comando:
 
 ``` bash
-$ ./testeVMtraslator.py
+$ ./genJAR.py
 ```
 
-O teste executa:
+que irá criar o executável em Java.
+
+Na sequência, executar:
+
+``` bash
+$ ./compileALL.py
+```
+
+que irá converter todos os arquivos em VM para linguagem de máquina usando dois tradutores: um já fornecido e o criado por vocês.
+
+Por fim, executar:
+
+
+``` bash
+$ ./pytest --tb=no -s
+```
+
+que irá testar as saídas esperadas.
+
+O diagrama da testagem seria:
 
 ```
              genJAR.py
@@ -21,13 +40,10 @@ O teste executa:
             VMTranslator          Assembler            Z01-Simulator  ------------------
  arquivo.vm -------------> .nasm -----------> .hack  > ------------>  - Verifica saída -
                                                                       ------------------
-                 ^
-                 |   
-                 |- Desenvolvido no projeto I 
                                                                     
 ```
 
-Para isso foi criado alguns programas (`H-VM/src/vmExamples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
+Para auxiliar, foram criados alguns programas (`h_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
 ``` jar
 add
@@ -43,7 +59,7 @@ Esse teste foi criado para testar o `Code.writeArithmetic` no caso de um comando
 ```
 
 !!! note
-    `I-VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
+    `h_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
 
 Espera-se o resultado final após a execução do comando add :
 
@@ -83,14 +99,14 @@ Espera-se o resultado final após a execução do comando add :
 
 Vamos agora fazer a implementação do comando `push constant 3` no VMtranslator.
 
-1. Crie o projeto no IntelliJ da mesma maneira que do projeto do `Assembler`
-    - o arquivo maven está na pasta `I-VMTranslator/VMtranslator`
+1. Abra o projeto da mesma maneira que realizado no `Assembler`
+    - o arquivo maven está na pasta `h_VMTranslator/VMtranslator`
 
-Nesse projeto vocês terão que mexer apenas no `code.java`, os demais módulos já estão prontos (similar ao projeto do Assembler, temos nesse o `parser`, `VMTranslator`, ...).
+Nesse projeto vocês terão que mexer apenas no `Code.java`, os demais módulos já estão prontos (similar ao projeto do Assembler, temos nesse o `parser`, `VMTranslator`, ...).
 
-## Editando o `code.java`
+## Editando o `Code.java`
 
-No `code.java` encontre a implementação do método `push` , linha 121
+No `Code.java` encontre a implementação do método `push` , linha 121
 
 ```java
 
@@ -155,5 +171,5 @@ Precisamos agora traduzir a execução desse comando em `vm` para `nasm` para qu
     commands.add("movw %D, (%A)");
     ```
 
-Para testar o projeto VMtranslator, não há testes unitários disponíveis, no entanto, podemos já realizar o teste de integração direto (simulação), usando o `testeVMtranslator.py`. No caso do `push constant`, temos o teste SimplePushConst, bastando apenas habilitar este teste na config (`tests/config.txt`). Se observar o arquivo, irá perceber que existem diversos outros testes básicos, como `SimplePushLocal`, `SimplePopLocal` e outros que podem ser habilitados conforme estes recursos forem implementados no seu VMtranslator.
+Para testar o projeto VMtranslator, não há testes unitários disponíveis. No caso do `push constant`, temos o teste SimplePushConst, bastando apenas habilitar este teste na config (`config_testes_vm.txt`). Se observar o arquivo, irá perceber que existem diversos outros testes básicos, como `SimplePushLocal`, `SimplePopLocal` e outros que podem ser habilitados conforme estes recursos forem implementados no seu VMtranslator.
 

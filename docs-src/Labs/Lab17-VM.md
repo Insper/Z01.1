@@ -1,4 +1,4 @@
-# Lab 17: VM
+# Lab 15: VM
 
 !!! tip
     Realizar o laboratório individualmente. Mas trabalhar no grupo e trocar ideias.
@@ -7,11 +7,12 @@ Nesse lab iremos criar programas em VM para o nosso Z01.1, essa entrega é indiv
 
 Esse laboratório mistura exercícios com leitura de teoria, é essencial que você realize as leituras recomendadas para cada secção e então voltar para fazer os exercícios. 
 
+<!--
 !!! warning "Antes de começar"
     Esse laboratório não faz parte de um projeto, mas será necessário atualizar o repositório de vocês com o Z01. Escolham um do grupo para fazer isso, ele não será um scrum master!
     
     - ==Não seguir sem realizar a etapa anterior.==
-
+-->
 
 ## Treinando RPN
 

@@ -1,4 +1,4 @@
-# Lab 18: Vm Translator - Praticando
+# Lab 14: Vm Translator - Praticando
 
 O VMTranslator é um programa escrito em Java que faz a tradução de códigos escrito na linguagem VM definida no curso e traduz para linguagem Assembly do computador Z01.
 
@@ -10,11 +10,12 @@ Acesse a planilha no [google sheets](https://docs.google.com/spreadsheets/d/1dyw
 
 ## Praticando tradução VM -> nasm 
 
+<!--
 !!! warning "Antes de começar"
     Esse laboratório não faz parte de um projeto, mas será necessário atualizar o repositório de vocês com o Z01 para buscarem a nova pasta (`upstream`). Escolham um do grupo para fazer isso, ele não será um scrum master!
     
     - ==Não seguir sem realizar a etapa anterior.==
-
+-->
 
 
 Abra novamente a [planilha](https://docs.google.com/spreadsheets/d/1dywPIHgpUztDtpqzuEuGzAuTlcK9ryVUTp9-b84stJ4/edit?usp=sharing), agora vá para a aba ==Translator== e siga os passos ali indicados.
@@ -37,7 +38,7 @@ Abra novamente a [planilha](https://docs.google.com/spreadsheets/d/1dywPIHgpUztD
 
     ```
 
-    Para isso foi criado alguns programas (`H-VM/src/vmExamples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
+    Para isso foi criado alguns programas (`h_VM/src/vmExamples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
     ``` jar
     add
@@ -53,7 +54,7 @@ Abra novamente a [planilha](https://docs.google.com/spreadsheets/d/1dywPIHgpUztD
     ```
 
     !!! note
-        `I-VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
+        `h_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
 
     Espera-se o resultado final após a execução do comando add :
 
