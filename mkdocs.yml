@@ -175,19 +175,19 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
       - 'VM Online Simualtor': 'https://renan-tr.github.io/simulador/vm'
-    - '16/05 - VM Saltos':
+    - '16/05 - VMtranslator':
       - 'Lab 14 - VMtranslator':
-        - 'Labs/Lab18.1-VMtranslator.md'
-        - 'Labs/Lab18.2-VMtranslator.md' 
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'      
+        - 'Labs/Lab14.1-VMtranslator.md'
+        - 'Labs/Lab14.2-VMtranslator.md'    
       - 'APS-H': 'Projetos/I-VMtranslator.md'
     - '27/05 - VM Translator': 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'   
       - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'   
-      - 'Lab 14': 'Labs/Lab17-VM.md'   
+      - 'Lab 15': 'Labs/Lab15-VM.md'   
       - 'APS-H': 'Projetos/I-VMtranslator.md'
-    - '27/05 - VM Translator':  
+    - '28/05 - VM Translator':  
       - 'APS-H': 'Projetos/I-VMtranslator.md' 
 - 'APS-Extra': 'Projetos/X-MR.md'
 

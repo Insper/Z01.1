@@ -8,7 +8,7 @@ essa entrega é individual e não vale nota, mas será cobrado em prova
 
 ## Instruções 
 
-As instruções técnicas referente ao projeto estão no laboratório [Lab17-VM](/Z01.1/Labs/Lab17-VM/).
+As instruções técnicas referente ao projeto estão no laboratório [Lab15-VM](/Z01.1/Labs/Lab15-VM/).
 
 ## Módulos a serem implementados
 

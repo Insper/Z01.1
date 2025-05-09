@@ -8,7 +8,7 @@ Nesse projeto iremos criar o programa *VM translator* que é responsável por tr
 
 ## Instruções 
 
-As instruções técnicas referente ao projeto está no [Lab 18](/Z01.1/Labs/Lab18.1-VMtranslator/).
+As instruções técnicas referente ao projeto está no [Lab 14](/Z01.1/Labs/Lab14.1-VMtranslator/).
 
 ## Módulos a serem implementados
 
@@ -126,7 +126,7 @@ Para os testes do Conceito A+, teremos que criar programas em VM para o nosso Z0
 
 ### Instruções 
 
-As instruções técnicas referente ao projeto estão no laboratório [Lab17-VM](/Z01.1/Labs/Lab17-VM/).
+As instruções técnicas referente ao projeto estão no laboratório [Lab15-VM](/Z01.1/Labs/Lab15-VM/).
 
 ## Módulos a serem implementados
 
