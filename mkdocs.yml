@@ -173,7 +173,7 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
-      - 'VM Online Simualtor': 'https://renan-tr.github.io/simulador/vm'
+      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
     - '12/11 - VMtranslator':
       - 'Lab 14 - VMtranslator':
         - 'Labs/Lab14.1-VMtranslator.md'
@@ -185,6 +185,9 @@ nav:
       - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'   
       - 'Lab 15': 'Labs/Lab15-VM.md'   
       - 'APS-H': 'Projetos/I-VMtranslator.md'
+- Útil:
+  - 'Dicas git': 'Util/Util-Dicas-GIT.md'
+  - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
 #- 'APS-Extra': 'Projetos/X-MR.md'
 
 # - 'Projetos':
