@@ -61,7 +61,7 @@ O controle do carrinho deve funcionar da seguinte forma:
 |          | **E** Video demonstrando partes 2 e 3 do Lab 1              |  
 |          |                                                             |
 | **A+**   | Todos os itens anteriores dos conceitos **C+** e **B+**     |
-|          | **E** Implementação no Robô das Funções Lógicas usando FPGA |   
+|          | **E** Implementação das Funções Lógicas usando CIs          |   
 |          | **E** Vídeo de Demonstração do Funcionamento em diferentes cenários  |  
 
 

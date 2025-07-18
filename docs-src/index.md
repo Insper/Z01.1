@@ -9,7 +9,8 @@
 
 **© Todos os direitos reservados**
 
-- Criado por prof. Rafael Corsi / rafael.corsi@insper.edu.br
+- Criado originalmente pelo prof. Rafael Corsi / rafael.corsi@insper.edu.br
+- Atualizações pelo prof. Renan Trevisoli / renantd@insper.edu.br
 
 -------------------------
 <!--
@@ -45,6 +46,11 @@ Desenvolver um computador do ZERO!
 
 O ferramental da disciplina foi desenvolvido para o sistema operacional  **Linux** e necessita de uma série de softwares e configurados. Você receberá um SSD com tudo pronto.
 -->
+
+## Planejamento incial
+
+![](https://github.com/Insper/Z01.1/raw/main/Planejamento.png)
+
 
 ## Bibliografia
 

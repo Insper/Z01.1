@@ -140,7 +140,7 @@ nav:
     - '17/10 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
-      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
+      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
     - '22/10 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
@@ -188,6 +188,10 @@ nav:
 - Útil:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
   - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
+  - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
+  - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
+  - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
+  
 #- 'APS-Extra': 'Projetos/X-MR.md'
 
 # - 'Projetos':
