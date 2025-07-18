@@ -45,7 +45,7 @@ No terminal:
 1. Referenciando repositório original da disciplina
 
 ``` bash
-$ git remote add upstream https://github.com/insper/Z01.1-proj
+$ git remote add upstream https://github.com/insper/Z01.1-proj25b
 ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:

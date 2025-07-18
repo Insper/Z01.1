@@ -2,18 +2,20 @@
 
 ## Configurando o SSH no Github
 
+### Primeiramente é necessário criar um par de chaves
+
 Para criar uma chave ed25519, executar: 
 
 ```bash
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+ou, para criar uma chave rsa, executar: 
 
-Para criar uma chave rsa, executar: 
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
-Adicionar a chave SSH ao ssh-agent:
+### Adicionar a chave SSH ao ssh-agent
 
 ```bash
 $ ssh-add ~/.ssh/id_ed25519
@@ -24,7 +26,7 @@ ou
 $ ssh-add ~/.ssh/id_rsa
 ```
 
-Copiar a sua chave SSH pública
+### Copiar a sua chave SSH pública
 
 ```bash
 $ cat ~/.ssh/id_ed25519.pub
@@ -35,7 +37,7 @@ ou
 $ cat ~/.ssh/id_rsa.pub
 ```
 
-Adicionar a sua chave SSH pública ao GitHub:
+## Adicionar a sua chave SSH pública ao GitHub
 
 Na página de configurações do GitHub clique em "SSH and GPG keys". Depois, clique em "New SSH key".
 
