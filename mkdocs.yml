@@ -191,6 +191,14 @@ nav:
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
+- 'Atividades formativas':
+  - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
+  - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558342'
+  - 'Álgebra booleana': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564678'
+  - 'VHDL básico': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564711'
+  - 'VHDL sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564744'
+  - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564745'
+  - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564746'
   
 #- 'APS-Extra': 'Projetos/X-MR.md'
 
