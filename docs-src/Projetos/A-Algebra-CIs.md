@@ -68,7 +68,12 @@ O controle do carrinho deve funcionar da seguinte forma:
 
 ### Entrega
 
-Nesta APS (e apenas nesta) não haverá forms para preencher. A entrega será feita pelo Blackboard.
+<!--Nesta APS (e apenas nesta) não haverá forms para preencher. -->
+A entrega será feita pelo Blackboard.
 
 Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na Tabela dos Grupos (link no Blackboard).
 
+### Formulários
+
+- [Scrum Master]({{form_scrum_link}})
+- [Desenvolvedores]({{form_dev_link}})
