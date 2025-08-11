@@ -26,10 +26,10 @@ plugins:
 
 extra:
   custom_variables:
-    lab2_link: 'https://insper-my.sharepoint.com/:x:/g/personal/renantd_insper_edu_br/Ed6pODDqAIBNr5JiPMVpmhoB45T74ktEoF0B-w7NxQVSTw?e=d8CKDN'
+    lab2_link: ''
     form_scrum_link: 'https://forms.office.com/r/wTfDTR85Dr'
     form_dev_link: 'https://forms.office.com/r/mVgWmqWW8m'
-    apsA_date: 'Sexta  - 29/08'
+    apsA_date: 'Quarta  - 03/09'
     apsB_date: 'Quarta  - 10/09'
     apsC_date: 'Quarta  - 17/09'
     apsD_date: 'Sexta - 26/09'
@@ -71,7 +71,7 @@ nav:
 - Aulas:
   - Agosto:
     - '13/08 - Organização': 
-      - Slides: 'https://github.com/Insper/Z01.1/blob/main/Aulas/01-OrganizacaoDeComputadores.pdf'
+      - Introdução: 'index.md'
     - '15/08 - Dados digitais':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Dados.md'
       - 'Exercícios 1': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf'
