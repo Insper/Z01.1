@@ -82,18 +82,18 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
       - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
-    - '22/08 - Álgebra':
+    - '21/08 - Álgebra':
       - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-Algebra-Booleana-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
       - 'APS-A - Início': 'Projetos/A-Algebra-CIs.md'
-    - '27/08 - Transistores':
+    - '22/08 - Transistores':
       - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'
       - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
       - 'Lab 1': 'Labs/Lab1-A-Transistores-CI.md'
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
   - Setembro:
-    - '03/09 - VHDL':
+    - '04/09 - VHDL':
       - 'Leitura Prévia - VHDL': 'VHDL/VHDL-basico.md'
       - 'VHDL Combinacional': 'VHDL/VHDL-Combinacional.md'
       - 'VHDL Port Map': 'VHDL/VHDL-port-map.md'
