@@ -55,7 +55,7 @@ Vamos agora editar esse arquivo para realizar sua implementação. Esse módulo 
 q <= a or b;
 ```
 
-Teste novamente (`./testeLogicaCombinacional.py`) agora deve passar:
+Teste novamente (`pytest -k or16`) agora deve passar:
 
 <script id="asciicast-5CQCUV0yvDobOdOPZQgwaGMHI" src="https://asciinema.org/a/5CQCUV0yvDobOdOPZQgwaGMHI.js" async></script>
 
@@ -72,7 +72,7 @@ $ git push origin or16-SEU-USER
 ```
 
 !!! note
-    trocar **SEU-USER** pelo seu usuário insper, para evitar conflito quando
+    trocar **SEU-USER** pelo seu usuário, para evitar conflito quando
     forem enviar para o git.
 
 Com o branch enviado ao github você deve gerar um pull-request para o mediador verificar e aprovar ou não a sua implementação.
