@@ -233,6 +233,8 @@ Liberado consulta ao material da disciplina.
 
 [Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
 
+[Prova - AvI - 25a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/25a-ele-av2_resolucao.pdf) 
+
 [Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
 
 ## AF
