@@ -116,6 +116,15 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 **O funcionamento dos arquivos que envolvem SWs, LEDs e LCD deve ser demonstrado na FPGA.**
     
 #### Extra
+
+- Controle do carrinho:
+     - Considere que as chaves SW[0], SW[1], SW[2], SW[3] representam os quatros sensores do carrinho usado na APS-A. 
+     - Considere que os LEDs LEDR[0], LEDR[1], LEDR[2], LEDR[3] representam os quatros bits dos dois motores do carrinho. 
+     - Agora, queremos usar nosso CPU como controlador do carrinho. Assim, faça o código em Assembly que realize as mesmas condições lógicas indicadas na APS-A, mas desssa vez por software.
+     - _Esse item não tem arquivo e nem testes._
+     - **O funcionamento deve ser demonstrado na FPGA**
+     - **Se for feito, substitui um dos itens do Conceito A+**
+
 <!--
 - SWeLED2 
     - **Arquivo** : `SWeLED2.nasm`    

@@ -34,10 +34,10 @@ extra:
     apsC_date: 'Quarta  - 17/09'
     apsD_date: 'Terça - 07/10'
     apsE_date: 'Quarta - 15/10'
-    apsF_date: 'Sexta - 24/10'
+    apsF_date: 'Quarta - 29/10'
     apsG_date: 'Quarta - 05/11'
     apsI_date: 'Sexta - 14/11'
-    apsMR_date: 'Sexta - 30/05'
+    apsMR_date: 'Sexta - 21/11'
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -140,7 +140,7 @@ nav:
     - '17/10 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
-      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
+      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
     - '22/10 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
@@ -189,7 +189,7 @@ nav:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
   - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
-  - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
+  - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
 - 'Atividades formativas':
   - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
