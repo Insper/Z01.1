@@ -152,7 +152,7 @@ nav:
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab 11': 'Labs/Lab14-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - '29/10 - Assembler': 
+    - '29/10': 
       - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
