@@ -2,7 +2,7 @@
 
 | Entrega      |
 |--------------|
-| {{apsI_date}} |
+| {{apsG_date}} |
 
 Nesse projeto iremos criar o programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
 
@@ -130,7 +130,7 @@ As instruções técnicas referente ao projeto estão no laboratório [Lab15-VM]
 
 ## Módulos a serem implementados
 
-Os módulos estão na pasta `h_VM/src/vm/` e estão organizados por ordem de dificuldade:
+Os módulos estão na pasta `g_VM/src/vm/` e estão organizados por ordem de dificuldade:
 
 1. 1a-Add
 1. 1b-Add

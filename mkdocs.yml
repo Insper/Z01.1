@@ -35,8 +35,8 @@ extra:
     apsD_date: 'Terça - 07/10'
     apsE_date: 'Quarta - 15/10'
     apsF_date: 'Quarta - 29/10'
-    apsG_date: 'Quarta - 05/11'
-    apsI_date: 'Sexta - 14/11'
+    apsG_date: 'Quarta - 07/11'
+    #apsI_date: 'Sexta - 14/11'
     apsMR_date: 'Sexta - 21/11'
 
 markdown_extensions:
@@ -151,40 +151,47 @@ nav:
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab 11': 'Labs/Lab14-Assembly.md'
-      - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
     - '29/10 - Assembler': 
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
-    - 31/10: 
-      - 'Lab 13 - Assembler':
-        - 'Labs/Lab16.1-Assembler.md'
-        - 'Labs/Lab16.2-Assembler.md'
-        - 'Labs/Lab16.3-Assembler.md'
-        - 'Labs/Lab16.4-Assembler.md'
-        - 'Labs/Lab16.5-Assembler.md'
-        - 'Labs/Lab16.6-Assembler.md'
-      - 'APS-G': 'Projetos/G-Assembler.md'
-  - Novembro:
-    - 05/11: 
-      - 'APS-G': 'Projetos/G-Assembler.md'
-    - '07/11 - VM': 
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
+      - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
+      - 'APS-F': 'Projetos/F-Assembly.md'
+#      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
+#      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
+    - 31/10 - VM: 
+      - 'Leitura Prévia - VM': 'commum-content/teoria/Teoria-vm.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
       - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
-    - '12/11 - VMtranslator':
+#      - 'Lab 13 - Assembler':
+#        - 'Labs/Lab16.1-Assembler.md'
+#        - 'Labs/Lab16.2-Assembler.md'
+#        - 'Labs/Lab16.3-Assembler.md'
+#        - 'Labs/Lab16.4-Assembler.md'
+#        - 'Labs/Lab16.5-Assembler.md'
+#        - 'Labs/Lab16.6-Assembler.md'
+#      - 'APS-G': 'Projetos/G-Assembler.md'
+  - Novembro:
+    - '05/11 - VM': 
+      - 'Leitura Prévia - Segmentos': 'commum-content/teoria/Teoria-vm-segmentos.md'
+      - 'Leitura Prévia - Memória': 'commum-content/teoria/Teoria-vm-memoria.md'  
+#      - 'APS-G': 'Projetos/G-Assembler.md'
+    - '07/11 - VMtranslator':
       - 'Lab 14 - VMtranslator':
         - 'Labs/Lab14.1-VMtranslator.md'
         - 'Labs/Lab14.2-VMtranslator.md'    
-      - 'APS-H': 'Projetos/I-VMtranslator.md'
-    - '14/11 - VM Translator': 
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-jump.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-funcoes.md'
-      - 'Leitura Prévia': 'Teoria/VMtranslator-memoria.md'   
-      - 'Lab 15': 'Labs/Lab15-VM.md'   
-      - 'APS-H': 'Projetos/I-VMtranslator.md'
+      - 'APS-G': 'Projetos/I-VMtranslator.md'
+#      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
+#      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
+#      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
+#      - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
+#      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
+    - '12/11 - VMtranslator':
+      - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-vm-jump.md'
+      - 'Leitura Prévia - funções': 'commum-content/teoria/Teoria-vm-funcoes.md'
+      - 'Leitura Prévia - memória': 'Teoria/VMtranslator-memoria.md' 
+      - 'Lab 15': 'Labs/Lab15-VM.md' 
+      - 'APS-G': 'Projetos/I-VMtranslator.md'
+    - '14/11 - VM Translator':         
+      - 'APS-G': 'Projetos/I-VMtranslator.md'
 - Útil:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
   - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
@@ -200,7 +207,7 @@ nav:
   - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564745'
   - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564746'
   
-#- 'APS-Extra': 'Projetos/X-MR.md'
+- 'APS-Extra': 'Projetos/X-MR.md'
 
 # - 'Projetos':
 #   - 'Projetos/X-MR.md'

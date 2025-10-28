@@ -5,8 +5,7 @@
 | {{apsMR_date}} |
 
 
-Esse projeto extra optativo (individual) fornece **5 pontos** 
-extras de **Hardware**, **5 pontos extras** de **Software** e **10 pontos extras** de **Hardware** ou **Software** (o que for mais vantajoso). 
+Esse projeto extra optativo (individual) fornece **10 pontos** extras. 
 
 Você deverá escolher um dos processadores listados a seguir:
 
@@ -26,9 +25,9 @@ Você deverá escolher um dos processadores listados a seguir:
     Não pode repetir dentro do grupo!
     ==DPs: Não pode ser o mesmo do semestre passado==
 
-Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (máximo de 10 minutos) vocês devem explicar:
+Vocês devem entregar um vídeo de **no máximo 5 minutos** que explica a CPU em questão, abordando:
 
-## (5 HW) Processadores
+## Processadores
 
 - Histórico (muito breve)
     - [ ] História da arquitetura
@@ -36,7 +35,7 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
     - [ ] Impacto histórico, impacto nos concorrentes/ comunidade/
     - [ ] Curiosidades
     
-- Uso atual
+- Uso atual (muito breve)
     - [ ] Dispositivos e empresas que ainda fazem uso da arquitetura
     
 - Arquitetura
@@ -50,8 +49,6 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
     
 <!-- ==Muito importante sempre que possível realizar uma comparação com a nossa CPU== -->
 
-## (**10 HW ou SW**) 
-
 - Instruções
     - [ ] A arquitetura é CISC ou RISC?
     - [ ] Como é realizado o acesso a memória nessa arquitetura? (registrador-registrador, registrador-memória, memória-memória)
@@ -60,14 +57,12 @@ Vocês devem entregar um vídeo que explica a CPU em questão, neste vídeo (má
     - [ ] Descritivo das instruções e seus padrões
     - [ ] Quantidade total de instruções
 
-## (**5 SW**) Comentar código
-
-- Você deve pegar um código de exemplo do assembly da CPU escolhida e comentar ele no vídeo, explicando o que está fazendo.
+- Código de exemplo do assembly da CPU escolhida comentado, explicando o que está fazendo.
     - [ ] Explicar o que cada instrução está fazendo
-    - [ ] Muitas arquitetura possuem simulador! Interessante usar, mas não é necessário.
+<!--    - [ ] Muitas arquitetura possuem simulador! Interessante usar, mas não é necessário. -->
 
 
 ### Entrega
 
-- [Link para entrega](https://forms.gle/73hGCaqN5Wo88qEQ7)
+- [Link para entrega]()
 
