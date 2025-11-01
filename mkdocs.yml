@@ -29,6 +29,7 @@ extra:
     lab2_link: ''
     form_scrum_link: 'https://forms.office.com/r/wTfDTR85Dr'
     form_dev_link: 'https://forms.office.com/r/mVgWmqWW8m'
+    link_apsX: 'https://forms.office.com/r/efJwjQzHan'
     apsA_date: 'Quarta  - 03/09'
     apsB_date: 'Quarta  - 10/09'
     apsC_date: 'Quarta  - 17/09'
@@ -160,7 +161,7 @@ nav:
     - 31/10 - VM: 
       - 'Leitura Prévia - VM': 'commum-content/teoria/Teoria-vm.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
-      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
+      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
 #      - 'Lab 13 - Assembler':
 #        - 'Labs/Lab16.1-Assembler.md'
 #        - 'Labs/Lab16.2-Assembler.md'
@@ -183,7 +184,7 @@ nav:
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
 #      - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
-#      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
+#      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
     - '12/11 - VMtranslator':
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia - funções': 'commum-content/teoria/Teoria-vm-funcoes.md'
@@ -197,7 +198,7 @@ nav:
   - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
-  - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
+  - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
 - 'Atividades formativas':
   - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
   - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558342'

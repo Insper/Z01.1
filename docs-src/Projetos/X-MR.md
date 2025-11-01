@@ -64,5 +64,5 @@ Vocês devem entregar um vídeo de **no máximo 5 minutos** que explica a CPU em
 
 ### Entrega
 
-- [Link para entrega]()
+- [Link para entrega]({{link_apsX}})
 
