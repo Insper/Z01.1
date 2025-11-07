@@ -38,7 +38,7 @@ Abra novamente a [planilha](https://docs.google.com/spreadsheets/d/1dywPIHgpUztD
 
     ```
 
-    Para isso foi criado alguns programas (`h_VM/src/vmExamples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
+    Para isso foi criado alguns programas (`g_VM/src/vmExamples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
     ``` jar
     add
@@ -54,7 +54,7 @@ Abra novamente a [planilha](https://docs.google.com/spreadsheets/d/1dywPIHgpUztD
     ```
 
     !!! note
-        `h_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
+        `g_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
 
     Espera-se o resultado final após a execução do comando add :
 
