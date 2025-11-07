@@ -24,7 +24,7 @@ Por fim, executar:
 
 
 ``` bash
-$ ./pytest --tb=no -s
+$ pytest --tb=no -s
 ```
 
 que irá testar as saídas esperadas.
@@ -43,7 +43,7 @@ O diagrama da testagem seria:
                                                                     
 ```
 
-Para auxiliar, foram criados alguns programas (`h_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
+Para auxiliar, foram criados alguns programas (`g_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
 ``` jar
 add
@@ -59,7 +59,7 @@ Esse teste foi criado para testar o `Code.writeArithmetic` no caso de um comando
 ```
 
 !!! note
-    `h_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
+    `g_VM/tests/tst/SimpleAdd/SimpleAdd0_in.mif`
 
 Espera-se o resultado final após a execução do comando add :
 
@@ -100,7 +100,7 @@ Espera-se o resultado final após a execução do comando add :
 Vamos agora fazer a implementação do comando `push constant 3` no VMtranslator.
 
 1. Abra o projeto da mesma maneira que realizado no `Assembler`
-    - o arquivo maven está na pasta `h_VMTranslator/VMtranslator`
+    - o arquivo maven está na pasta `g_VMTranslator/VMtranslator`
 
 Nesse projeto vocês terão que mexer apenas no `Code.java`, os demais módulos já estão prontos (similar ao projeto do Assembler, temos nesse o `parser`, `VMTranslator`, ...).
 
