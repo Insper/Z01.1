@@ -38,7 +38,7 @@ extra:
     apsF_date: 'Quarta - 29/10'
     apsG_date: 'Sexta - 14/11'
     #apsI_date: 'Sexta - 14/11'
-    apsMR_date: 'Sexta - 21/11'
+    apsMR_date: 'Quarta - 26/11'
 
 markdown_extensions:
   - markdown.extensions.admonition
