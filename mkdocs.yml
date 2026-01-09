@@ -30,15 +30,15 @@ extra:
     form_scrum_link: 'https://forms.office.com/r/wTfDTR85Dr'
     form_dev_link: 'https://forms.office.com/r/mVgWmqWW8m'
     link_apsX: 'https://forms.office.com/r/efJwjQzHan'
-    apsA_date: 'Quarta  - 03/09'
-    apsB_date: 'Quarta  - 10/09'
-    apsC_date: 'Quarta  - 17/09'
-    apsD_date: 'Terça - 07/10'
-    apsE_date: 'Quarta - 15/10'
-    apsF_date: 'Quarta - 29/10'
-    apsG_date: 'Sexta - 14/11'
+    apsA_date: 'Quarta  - 04/03'
+    apsB_date: 'Sexta  - 13/03'
+    apsC_date: 'Sexta  - 20/03'
+    apsD_date: 'Sexta - 10/04'
+    apsE_date: 'Quarta - 22/04'
+    apsF_date: 'Sexta - 08/05'
+    apsG_date: 'Sexta - 22/05'
     #apsI_date: 'Sexta - 14/11'
-    apsMR_date: 'Quarta - 26/11'
+    #apsMR_date: 'Quarta - 26/11'
 
 markdown_extensions:
   - markdown.extensions.admonition
@@ -70,95 +70,96 @@ nav:
 - Home: 'index.md'
 - Avaliação: 'Home/Avaliacoes-Informacoes.md'
 - Aulas:
-  - Agosto:
-    - '13/08 - Organização': 
+  - Fevereiro:
+    - '11/02 - Organização': 
       - Introdução: 'index.md'
-    - '15/08 - Dados digitais':
+    - '13/02 - Dados digitais':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Dados.md'
       - 'Exercícios 1': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1_respostas.pdf'
       - 'Exercícios 2': 'Exercicios/Exercicio-Dados-2.md'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Exercicio-Dados-2_resolucao.pdf'
-    - '20/08 - Aritmética':
+    - '20/02 - Aritmética':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
       - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
-    - '21/08 - Álgebra':
+    - '25/02 - Álgebra':
       - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-Algebra-Booleana-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
       - 'APS-A - Início': 'Projetos/A-Algebra-CIs.md'
-    - '22/08 - Transistores':
+    - '27/02 - Transistores':
       - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'
       - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
       - 'Lab 1': 'Labs/Lab1-A-Transistores-CI.md'
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
-  - Setembro:
-    - '04/09 - VHDL':
+  - Março:
+    - '06/03 - VHDL':
       - 'Leitura Prévia - VHDL': 'VHDL/VHDL-basico.md'
       - 'VHDL Combinacional': 'VHDL/VHDL-Combinacional.md'
       - 'VHDL Port Map': 'VHDL/VHDL-port-map.md'
       - 'Lab 2': 'Labs/Lab3-LogiComb-FPGA.md'
-    - '05/09 - Componentes digitais':
+    - '11/03 - Componentes digitais':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Componentes.md'
       - 'Lab 3': 'Labs/Lab4-LogiComb.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
-    - '10/09 - Formas de ondas': 
+    - '13/03 - Formas de ondas': 
       - 'Lab 4': 'Labs/Lab6-Waves.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
-    - '12/09 - Aritmética HW': 
+    - '18/03 - Aritmética HW': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
       - 'Lab 5': 'Labs/Lab5-Adder.md'
       - 'APS-C': 'Projetos/C-ula.md'
-    - '17/09 - ULA': 
+    - '20/03 - ULA': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-ULA.md'
       - 'Lab 6': 'Labs/Lab7-ULA.md'
       - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula'  
       - 'APS-C': 'Projetos/C-ula.md'
-    - '19/09 - Lógica Sequencial': 
+  - Abril:
+    - '08/04 - Lógica Sequencial': 
       - 'Leitura Prévia': 'Teoria/Teoria-Logica-Sequencial.md'
       - 'VHDL Sequencial': 'VHDL/VHDL-Sequencial.md'
       #- 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
       #- 'Exercícios - solução': : 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
       - 'Lab 7': 'Labs/Lab8-Seq.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
-    - '24/09 - Componentes sequenciais': 
+    - '10/04 - Componentes sequenciais': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
-  - Outubro:
-    - '08/10 - Linguagem de Máquina': 
+    - '15/04 - Linguagem de Máquina': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Linguagem-de-Maquina.md'
       - 'Instruction Set': "commum-content/z01/z01-InstructionSet.md"
-    - '10/10 - CPU': 
+    - '17/04 - CPU': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-CPU-2.md'
       - 'Lab 8': 'Labs/Lab10-CPU.md'
       - 'APS-E': 'Projetos/E-CPU.md'
-    - 15/10: 
+    - '22/04 - CPU na FPGA': 
       - 'Programando na FPGA': 'Labs/Lab10.2-CPU-FPGA.md'
       - 'APS-E': 'Projetos/E-CPU.md'
-    - '17/10 - Assembly': 
+    - '24/04 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
       - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
-    - '22/10 - Assembly Saltos': 
+    - '29/04 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab 9': 'Labs/Lab12-Assembly.md'
       - 'Lab 10': 'Labs/Lab13-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - 24/10: 
+  - Maio:
+    - '06/05 - memória': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab 11': 'Labs/Lab14-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - '29/10': 
+    - '08/05 - prática assembly': 
       - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
-    - 31/10 - VM: 
+    - '13/05 - VM': 
       - 'Leitura Prévia - VM': 'commum-content/teoria/Teoria-vm.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
       - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
@@ -170,12 +171,12 @@ nav:
 #        - 'Labs/Lab16.5-Assembler.md'
 #        - 'Labs/Lab16.6-Assembler.md'
 #      - 'APS-G': 'Projetos/G-Assembler.md'
-  - Novembro:
-    - '05/11 - VM': 
+  
+    - '15/05 - VM funções': 
       - 'Leitura Prévia - Segmentos': 'commum-content/teoria/Teoria-vm-segmentos.md'
       - 'Leitura Prévia - Memória': 'commum-content/teoria/Teoria-vm-memoria.md'  
 #      - 'APS-G': 'Projetos/G-Assembler.md'
-    - '07/11 - VMtranslator':
+    - '20/05 - VMtranslator':
       - 'Lab 14 - VMtranslator':
         - 'Labs/Lab14.1-VMtranslator.md'
         - 'Labs/Lab14.2-VMtranslator.md'    
@@ -185,13 +186,11 @@ nav:
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-memoria.md'  
 #      - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
 #      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
-    - '12/11 - VMtranslator':
+    - '22/05 - VMtranslator':
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia - funções': 'commum-content/teoria/Teoria-vm-funcoes.md'
       - 'Leitura Prévia - memória': 'Teoria/VMtranslator-memoria.md' 
       - 'Lab 15': 'Labs/Lab15-VM.md' 
-      - 'APS-G': 'Projetos/I-VMtranslator.md'
-    - '14/11 - VM Translator':         
       - 'APS-G': 'Projetos/I-VMtranslator.md'
 - Útil:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
@@ -199,16 +198,16 @@ nav:
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
-- 'Atividades formativas':
-  - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
-  - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558342'
-  - 'Álgebra booleana': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564678'
-  - 'VHDL básico': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564711'
-  - 'VHDL sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564744'
-  - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564745'
-  - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564746'
+#- 'Atividades formativas':
+#  - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
+#  - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558342'
+#  - 'Álgebra booleana': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564678'
+#  - 'VHDL básico': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564711'
+#  - 'VHDL sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564744'
+#  - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564745'
+#  - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564746'
   
-- 'APS-Extra': 'Projetos/X-MR.md'
+#- 'APS-Extra': 'Projetos/X-MR.md'
 
 # - 'Projetos':
 #   - 'Projetos/X-MR.md'
