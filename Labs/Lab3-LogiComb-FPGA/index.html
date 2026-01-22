@@ -1,0 +1,1434 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Lab FPGA - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "25b-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Elementos de Sistemas" class="ah-logo" aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Aulas</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Fevereiro</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/02 - Organização</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/02 - Dados digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/02 - Aritmética</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab1.1-Ambiente/">Lab - Github grupo</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab1.2-Ambiente/">Lab - Github individual</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">25/02 - Álgebra</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Algebra-Booleana/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">27/02 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Leitura Prévia - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Leitura Prévia - 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab2-A-Transistores-CI/">Lab - CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Março</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">06/03 - VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">Leitura Prévia - VHDL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL Port Map</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">Lab FPGA</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#entendendo-a-estrutura-de-pastas-dos-projetos">Entendendo a estrutura de pastas dos projetos</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#abrindo-o-quartus">Abrindo o Quartus</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#exercicios">Exercícios</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#sete-segmentos">Sete segmentos</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/03 - Componentes digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab4-LogiComb/">Lab Lógica Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/03 - Formas de ondas</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab6-Waves/">Lab Formas de Ondas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">18/03 - Aritmética HW</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab5-Adder/">Lab Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/03 - ULA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab7-ULA/">Lab ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Abril</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/04 - Lógica Sequencial</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Logica-Sequencial/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab8-Seq/">Lab Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">10/04 - Componentes sequenciais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/04 - Linguagem de Máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">17/04 - CPU</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab10-CPU/">Lab CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/04 - CPU na FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab10.2-CPU-FPGA/">Programando na FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">24/04 - Assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Assembly/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">29/04 - Assembly Saltos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab12-Assembly/">Lab Assembly - parte 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab13-Assembly/">Lab Assembly - parte 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Maio</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/05 - memória</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14-Assembly/">Lab Assembly - parte 3</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/05 - prática assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab15-Assembly-FPGA/">Lab Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/05 - VM</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Leitura Prévia - VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/05 - VM funções</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Leitura Prévia - Segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Leitura Prévia - Memória</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/05 - VMtranslator</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab14.1-VMtranslator/">Lab14.1 VMtranslator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14.2-VMtranslator/">Lab14.2 VMtranslator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/05 - VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Leitura Prévia - funções</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab15-VM/">Lab VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Dicas-GIT/">Dicas git</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Novo projeto (a partir da APS-C)</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Aulas</li>
+                  
+                
+                  
+                    <li>Março</li>
+                  
+                
+                  
+                    <li>06/03 - VHDL</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="lab-fpga-vhdl">Lab: FPGA - VHDL</h1>
+<table>
+<thead>
+<tr>
+<th>Material de estudos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Componentes/">https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Componentes/</a></td>
+</tr>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/VHDL/VHDL-basico/">https://insper.github.io/Z01.1/VHDL/VHDL-basico/</a></td>
+</tr>
+<tr>
+<td><a href="https://insper.github.io/Z01.1/VHDL/VHDL-Combinacional/">https://insper.github.io/Z01.1/VHDL/VHDL-Combinacional/</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Trabalhando</p>
+<ol>
+<li>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" data-desc-position="bottom"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" width="30"></a> Usar o Linux fornecido.</p>
+</li>
+<li>
+<p>Esse laboratório é para ser realizado individualmente. Ficar conectado no canal
+do grupo para discutir com os colegas.    </p>
+</li>
+</ol>
+</div>
+<p>Este laboratório é introdutório para o desenvolvimento do projeto (<a href="/Z01.1/Projetos/B-LogiComb/"><code>B-Lógica-Combinacional</code></a>), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de VHDL e entender a ferramenta e o fluxo de compilação, teste e programação (Quartus).</p>
+<p>Após essa etapa, iremos começar o desenvolvimento do projeto, programando os módulos que virão a ser utilizados no computador Z01 (próximo lab).</p>
+<p><button class="button0" id="0:comecando" onclick="progressBut(this.id);">Começando laboratório!</button></p>
+<!--
+## Antes de começar
+
+Executar os comandos:
+
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ghdl<span class="w"> </span>gtkwave
+$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+$<span class="w"> </span>.<span class="w"> </span>env/bin/activate
+$<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div>
+
+para instalar o simulador GHDL e as bibliotecas necessárias, caso não estejam instaladas.
+-->
+
+<!--
+Toda vez que um novo projeto começar será necessário realizar algumas configurações no repositório do grupo, vocês devem seguir para o documento: [`Util/Começando novo Projeto`](/Z01.1/Util-Comecando-novo-projeto/) e depois voltar para esse lab.
+
+!!! warning
+    Não seguir sem realizar a etapa anterior.
+-->
+
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-0"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="entendendo-a-estrutura-de-pastas-dos-projetos">Entendendo a estrutura de pastas dos projetos</h2>
+<p>A pasta do projeto <code>b_logComb</code> no repositório possui a seguinte estrutura (assim como todos os demais projetos): </p>
+<div class="highlight"><pre><span></span><code>/b_logComb
+  logComb_cocotb.py
+  test_logComb.py
+  /Quartus
+  /src
+    *.vhd
+</code></pre></div>
+<ol>
+<li><code>Quartus</code>: Projeto Quartus que faz uso dos arquivos VHDL localizados em <code>src/*.vhd</code> <ul>
+<li>Serve para programar a <strong>FPGA</strong></li>
+</ul>
+</li>
+<li><code>*.py</code>: Scripts em python automatiza a execução dos testes</li>
+<li><code>src/*.vhd</code>: Arquivos VHDL que serão implementado pelo grupo</li>
+</ol>
+<h2 id="abrindo-o-quartus">Abrindo o Quartus</h2>
+<p>Abra o software do <code>Quartus</code> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/quartusIcon.png" data-desc-position="bottom"><img alt="" src="../../figs/LogiComb/quartusIcon.png" width="30px"></a> e clique em <code>File</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>Open Project</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> escolha o projeto localizado na pasta <code>b_logComb/Quartus</code>. O arquivo que o Quartus irá reconhecer é o: <code>DE0_CV_Default.qpf</code> como no gif a seguir:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip 1</p>
+<p>Se não encontrar o software na barra de tarefas abra o terminal e escreva <code>quartus</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>enter</code>.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/Quartus1.gif" data-desc-position="bottom"><img alt="Abrindo o Quartus" src="../../figs/LogiComb/Quartus1.gif"></a></p>
+<p>Abra o arquivo <code>TopLevel.vhd</code> como demonstrado no gif anterior, este arquivo é o que chamamos de <a href="https://www.xilinx.com/support/documentation/sw_manuals/xilinx10/isehelp/pfp_p_toplevelhdl.htm">top level</a> (pode-se fazer uma analogia com o <code>main</code> de um código), ele será o primeiro a ser executado na compilação e utilizará os demais módulos do sistema.</p>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-1"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h3 id="compilando-o-codigo">Compilando o código</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>O código original disponível não realiza nenhuma lógica, repare que sua arquitetura está vazia!</p>
+</div>
+<p>Para compilarmos esse código VHDL basta irmos em: <code>Processing</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>Start Compilation</code>. A ferramenta irá "realizar" o código, ou seja, interpretar e torna-lo um hardware.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/Quartus2.gif" data-desc-position="bottom"><img alt="Compilando" src="../../figs/LogiComb/Quartus2.gif"></a></p>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-2"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h3 id="rtl-view">RTL View</h3>
+<p>Podemos gerar a visão <a href="https://en.wikipedia.org/wiki/Register-transfer_level">RTL</a> do código em vhdl, esse diagrama é a interpretação do código em VHDL pelo compilador e como ele seria supostamente implementando em hardware. Para isso: </p>
+<ul>
+<li><code>Tools</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>Netlist Viewers</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>RTL viewer</code></li>
+</ul>
+<p>Ele irá gerar o diagrama a seguir:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/Quartus3.png" data-desc-position="bottom"><img alt="Compilando" src="../../figs/LogiComb/Quartus3.png" width="450"></a></p>
+<p>Onde podemos analisar que não existe nenhuma lógica que relaciona entrada com saída.</p>
+<div class="admonition note">
+<p class="admonition-title">RTL</p>
+<p>O RTL aqui tem outro significado de quando foi utilizado com transistores, aqui é <strong>Register-transfer level</strong> e nos transistores é <strong>Resistor–transistor logic</strong>.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>SW = Switchs = Chaves da placa</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 2</p>
+<p>Iremos utilizar bastante o RTL, aprenda a gerar e a interpretar! </p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-3"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h3 id="modificando-o-projeto">Modificando o projeto</h3>
+<p>Vamos modificar o arquivo <code>TopLevel.vhd</code> do projeto para que o <code>bit 0</code> do vetor <code>LEDR</code> seja igual ao <code>bit 0</code> da chave <code>SW</code>, a arquitetura deve ficar como a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">---------------</span>
+<span class="c1">-- implementacao</span>
+<span class="c1">---------------</span>
+<span class="k">begin</span>
+
+<span class="w">  </span><span class="n">LEDR</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">SW</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<ol>
+<li>Edite o toplevel</li>
+<li>Compile</li>
+<li>Gere o RTL Viewer novamente</li>
+</ol>
+</div>
+<p>O resultado deve ser o seguinte:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/Quartus-rtl2.png" data-desc-position="bottom"><img alt="Compilando" src="../../figs/LogiComb/Quartus-rtl2.png" width="450"></a></p>
+<p>Onde o valor do <code>LEDR0</code> será o próprio valor de entrada chave <code>SW0</code>.</p>
+<h3 id="programando-a-fpga">"Programando a FPGA"</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/de0-cv.jpeg" data-desc-position="bottom"><img alt="" src="../../figs/LogiComb/de0-cv.jpeg" wdith="10px"></a></p>
+<p>Para programar a FPGA você deve:</p>
+<ul>
+<li>Conectar a placa via USB (não precisa da fonte)</li>
+<li>Ligar a placa (botão vermelho)</li>
+<li>Verificar se a chave SW10 está em 'run'</li>
+</ul>
+<p>No quartus vá em <code>Tools</code> <img alt="➡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/27a1.svg" title=":arrow_right:"> <code>Programmer</code>. Ele deve abrir uma nova interface:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/quartus-pgr.gif" data-desc-position="bottom"><img alt="Programando" src="../../figs/LogiComb/quartus-pgr.gif"></a></p>
+<p>Mexa na chave SW0 e note que o LED irá acender conforme a chave é colocada na posição on.</p>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-4"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="exercicios">Exercícios</h2>
+<p>Para cada desafio proposto a seguir, verifique se o RTL corresponde a lógica que deseja implementar.</p>
+<ol>
+<li>Compile</li>
+<li>Verifique o RTL</li>
+<li>Programe a FPGA</li>
+</ol>
+<!-- !!! tip
+    valide analisando o RTL ou programando a placa. -->
+
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Faça a saída <code>LEDR(0)</code> ser o inverso da entrada <code>SW(0)</code></p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-5"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Faça a saída <code>LEDR(0)</code> ser a entrada <code>SW(0) ou SW(1)</code></p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-6"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Faça:</p>
+<ul>
+<li><code>LEDR(0)</code> ser a entrada <code>SW(0) ou SW(1)</code> </li>
+<li><code>LEDR(1)</code> ser a chave <code>SW(1)</code></li>
+</ul>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-7"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Faça TODOs os LEDs acenderem quando a seguinte combinação de entrada for:</p>
+<div class="highlight"><pre><span></span><code>SW9               SW0
+  1 0 0 1 1 0 1 0 1 0
+</code></pre></div>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-8"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Escreva um código VHDL para implementar o circuito a seguir:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/circuito.png" data-desc-position="bottom"><img alt="Circuito" src="../../figs/LogiComb/circuito.png" width="450"></a></p>
+<p>Sendo:</p>
+<ul>
+<li>X: chave 0 (SW(0))</li>
+<li>y: chave 1 (SW(1))</li>
+<li>z: chave 2 (SW(2))</li>
+</ul>
+<p><strong>Dica:</strong> encontre a equação, implemente em VHDL.</p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-9"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<hr>
+<h2 id="sete-segmentos">Sete segmentos</h2>
+<p>Note que na nossa FPGA possuímos seis <a href="https://en.wikipedia.org/wiki/Seven-segment_display">displays de sete segmentos</a>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/7seg.png" data-desc-position="bottom"><img alt="" src="../../figs/LogiComb/7seg.png"></a></p>
+<p>Para termos acesso a esses displays, basta modificar a entidade do projeto para:</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">SW</span><span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">9</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">HEX0</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">-- 7seg0</span>
+<span class="w">        </span><span class="n">LEDR</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">9</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+</code></pre></div>
+<p>Agora com um display de 7 segmentos mapeado como saída (<code>out</code>) na nossa <code>entity</code> podemos acionar cada led do display como descrito no manual da placa (isso só é possível pois o projeto já foi configurado corretamente antes pelo seu professor).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/LogiComb/7seg-manual.png" data-desc-position="bottom"><img alt="" src="../../figs/LogiComb/7seg-manual.png" width="450"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip 3</p>
+<p>Para acender um segmento é necessário colocar <code>0</code> e para apagar <code>1</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<ol>
+<li>Modifique a <code>entity</code> para possuir a nova saída</li>
+<li>Faça aparecer o número <code>5</code> no <code>HEX0</code>.</li>
+</ol>
+</div>
+<!--
+## Adicionando um novo componente ao projeto
+
+O desenvolvimento de projetos de hardware assim como os de softwares devem ser feitos de forma modular, onde especifica-se e implementa-se pequenos módulos (entidades) que são combinadas em sistemas cada vez mais complexos até chegar ao `TopLevel`. 
+
+Para usarmos um novo componente no projeto é necessário:
+
+1. Adicionar o arquivo ao projeto
+1. Usar na arquitetura
+
+### binário para BCD
+
+Vamos inserir no `toplevel` um componente que faz a conversão de números binários para `BCD`, esse componente já está implementando e se encontra na pasta `B-LogicaCombinacional/src/` junto com outros módulos: 
+
+- And16.vhd
+- Mux8Way.vhd
+- :arrow_right: binarioToBcd.vhd
+- ...
+- Nor8Way.vhd
+- TopLevel.vhd
+
+O módulo [`binarioToBcd.vhd`](https://github.com/Insper/Z01.1/blob/master/Projetos/B-LogicaCombinacional/src/rtl/binarioToBcd.vhd) possui a seguinte entidade (entradas e saídas):
+
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">binary_bcd</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="p">(</span>
+<span class="w">        </span><span class="n">clk</span><span class="p">,</span><span class="w"> </span><span class="n">reset</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">binary_in</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">bcd0</span><span class="p">,</span><span class="w"> </span><span class="n">bcd1</span><span class="p">,</span><span class="w"> </span><span class="n">bcd2</span><span class="p">,</span><span class="w"> </span><span class="n">bcd3</span><span class="p">,</span><span class="w"> </span><span class="n">bcd4</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">binary_bcd</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+
+Esse módulo possui as seguintes interfaces: um vetor de entrada `binary_in` e cinco saídas (`bcd0` .. `bcd5`) e implementa um conversor de binário para BCD. 
+
+!!! note "clock e rst"
+    Além das portas descritas anteriormente, esse componente possui outras duas entradas: `clk` e `reset`, isso é necessário pois ele é um componente sequencial (ainda não vimos isso).
+
+### Inserindo `binarioToBcd` no projeto
+
+Para inserirmos o componente no projeto devemos:
+
+- no `quartus` :arrow_right: `Project` :arrow_right: `Add/Remove files in Project`. 
+Uma nova janela deve aparecer, nela clicar em `File name ...` e procurar pelo arquivo `binarioToBcd.vhd` que está na pasta `src/` um nível a cima. Ao final, clicar em `apply`.
+
+![](figs/LogiComb/quartus-add-file.gif)
+
+### Usando no `toplevel` 
+
+Podemos inserir o conversor `binarioToBcd` no `toplevel` da seguinte maneira:
+
+<div class="highlight"><pre><span></span><code><span class="k">begin</span>
+<span class="w">   </span><span class="n">u1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nn">work</span><span class="p">.</span><span class="n">binarioToBcd</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="p">(</span><span class="n">clk</span><span class="w">   </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">CLOCK_50</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">reset</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">binary_in</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">SW</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">bcd0</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">LEDR</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span>
+<span class="w">                                   </span><span class="n">bcd1</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">LEDR</span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span>
+<span class="w">                                   </span><span class="n">bcd2</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">open</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">bcd3</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">open</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">bcd4</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">open</span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">rtl</span><span class="p">;</span>
+</code></pre></div>
+
+Essa linha de código pode ser lida como:
+
+> Cria um componente chamada de **u1**, esse componente é uma implementação do `binarioToBcd`, nesse componente mapeasse a entrada `clk` para o pino `CLOCK_50`, a entrada `reset` para `0` e a entrada `binary_in` para as chaves da FPGA. Os dígitos 0 e 1 são exibidos nos LEDs e os demais deixamos desconectados.
+
+Compilando o projeto podemos analisar o RTL gerado:
+
+![](figs/LogiComb/rtl-binaryToBcd.png)
+
+### Testando
+
+!!! example "Tarefa"
+    1. Compile
+    1. Gere o RTL e análise 
+    1. Programe a FPGA e teste (se estiver no Insper)
+
+        - você deve mudar as chaves SW e observar se os LEDs (3..0) e (7..4) estão acendendo corretamente.
+        - Coloque a palavra 13 em binário nas chaves (1101) você deve obter: LED(3..0) = "0011" e os LED(7..4) = "0001".
+
+-->
+
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../../VHDL/VHDL-port-map/" class="ah-prev" title="VHDL Port Map">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">VHDL Port Map</span>
+            </a>
+          
+          
+            <a href="../../commum-content/teoria/Teoria-Componentes/" class="ah-next" title="Leitura Prévia">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Leitura Prévia</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

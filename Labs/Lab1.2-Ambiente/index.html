@@ -1,0 +1,1231 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Lab - Github individual - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "25b-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Elementos de Sistemas" class="ah-logo" aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Aulas</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Fevereiro</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/02 - Organização</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/02 - Dados digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">20/02 - Aritmética</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab1.1-Ambiente/">Lab - Github grupo</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">Lab - Github individual</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#clonando">Clonando</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#adicionando-nomes-ao-integrantesjson">Adicionando nomes ao INTEGRANTES.json</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#branch-commit">branch / commit</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#realizando-pull-request">Realizando pull-request</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#aceitando-pull-request">Aceitando pull-request</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">25/02 - Álgebra</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Algebra-Booleana/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">27/02 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Leitura Prévia - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Leitura Prévia - 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab2-A-Transistores-CI/">Lab - CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Março</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/03 - VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">Leitura Prévia - VHDL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL Port Map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab3-LogiComb-FPGA/">Lab FPGA</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/03 - Componentes digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab4-LogiComb/">Lab Lógica Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/03 - Formas de ondas</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab6-Waves/">Lab Formas de Ondas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">18/03 - Aritmética HW</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab5-Adder/">Lab Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/03 - ULA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab7-ULA/">Lab ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Abril</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/04 - Lógica Sequencial</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Logica-Sequencial/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab8-Seq/">Lab Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">10/04 - Componentes sequenciais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/04 - Linguagem de Máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">17/04 - CPU</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab10-CPU/">Lab CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/04 - CPU na FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab10.2-CPU-FPGA/">Programando na FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">24/04 - Assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Assembly/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">29/04 - Assembly Saltos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab12-Assembly/">Lab Assembly - parte 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab13-Assembly/">Lab Assembly - parte 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Maio</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/05 - memória</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14-Assembly/">Lab Assembly - parte 3</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/05 - prática assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab15-Assembly-FPGA/">Lab Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/05 - VM</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Leitura Prévia - VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/05 - VM funções</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Leitura Prévia - Segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Leitura Prévia - Memória</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/05 - VMtranslator</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab14.1-VMtranslator/">Lab14.1 VMtranslator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14.2-VMtranslator/">Lab14.2 VMtranslator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/05 - VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Leitura Prévia - funções</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab15-VM/">Lab VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Dicas-GIT/">Dicas git</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Novo projeto (a partir da APS-C)</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Aulas</li>
+                  
+                
+                  
+                    <li>Fevereiro</li>
+                  
+                
+                  
+                    <li>20/02 - Aritmética</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="lab-primeiro-commit-e-pr-individual">Lab: Primeiro commit e PR individual</h1>
+<p>Nesse laboratório iremos trabalhar com o uso do git de forma colaborativa.</p>
+<blockquote>
+<p>Aconselhável fazer no Linux, mas pode fazer no Windows (precisa ter git instalado).</p>
+</blockquote>
+<h2 id="clonando">Clonando</h2>
+<div class="admonition warning">
+<p class="admonition-title">Individual</p>
+<p>Todos do grupo devem realizar de maneira individual!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Individual</p>
+<p>Caso seja necessário gerar a chave ssh, confira as dicas em <a href="../../Util/Util-Dicas-GIT/">Dicas-GIT</a></p>
+</div>
+<p>Vcês deverão clonar o repositório para o computador de vocês com o comando:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$URL_DO_FORK</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">$URL_DO_FORK</p>
+<p>A URL do seu fork pode ser obtida pelo botão 'Clone or Download' do github</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/A-Transistores/url-fork.png" data-desc-position="bottom"><img alt="" src="../../figs/A-Transistores/url-fork.png" width="500"></a></p>
+<p><mark>Note que a url exibida é do repositório base da disciplina, vocês
+devem clonar o repositório que foi criado no Lab 1</mark></p>
+</div>
+<div class="admonition linux">
+<p class="admonition-title">Linux</p>
+<p>O símbolo <code>$</code> indica que é um comando para ser executado no 
+terminal do Linux (<code>bash</code>), mas ele não deve fazer parte do comando.
+No caso anterior, o comando a ser colado deve ser: <code>git clone URL_DO_FORK</code>.</p>
+</div>
+<div class="admonition linux">
+<p class="admonition-title">Linux</p>
+<p>Para abrir o terminal: <code>meta</code>+<code>t</code> </p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-0"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="adicionando-nomes-ao-integrantesjson">Adicionando nomes ao <code>INTEGRANTES.json</code></h2>
+<div class="admonition warning">
+<p class="admonition-title">Individual</p>
+<p>Deve ser realizado individual por todos do grupo.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 1</p>
+<p>Antes de começar, atualize seu repositório com o remoto</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+</div>
+<p>Nesse etapa cada integrante do grupo irá editar um arquivo no seu computador e realizar um pull-request para o repositório do grupo. Para isso seguiremos as etapas a seguir:</p>
+<ol>
+<li>Gerar mudanças no repositório local</li>
+<li>Criando um branch com as mudanças </li>
+<li>Enviar mudanças para o repositório remoto</li>
+<li>Gerar pull-request</li>
+</ol>
+<h3 id="integrantesjson"><code>INTEGRANTES.json</code></h3>
+<p><strong>Cada integrante</strong> do grupo deve editar o documento com na raiz do projeto com nome <code>INTEGRANTES.json</code> 
+e adicionar a esse arquivo o seu nome, e-mail (Insper) e usuário github. Conforme o exemplo a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"aluno-1"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rafael Corsi"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"email-insper"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rafael.corsi@insper.edu.br"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"user-github"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rafaelcorsi"</span>
+<span class="w">  </span><span class="p">},</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Uma única pessoa não deve editar o documento com todos os nomes.</p>
+<ul>
+<li>Cada um deve realizar individualmente em seu computador.</li>
+</ul>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-1"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="branch-commit">branch / commit</h2>
+<p>A fim de realizarmos um pull-request ao mediador do projeto é preciso salvarmos essas modificações em um novo branch. O comando a seguir faz isso:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="c1"># criando um novo branch</span>
+$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-B<span class="w"> </span><span class="nv">$NOME</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">git 2</p>
+<p>Substitua nos comandos o termo <code>$NOME</code> pelo seu nome.</p>
+</div>
+<p>Agora vamos fazer um commit com o seu nome nesse novo branch:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>INTEGRANTES.json
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Adicionado meu </span><span class="nv">$NOME</span><span class="s2"> ao arquivo"</span>
+</code></pre></div>
+<p>Será necessário enviarmos esse branch ao servidor (github) antes de realizarmos o <code>pull-request</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="c1"># enviando o branch para o repositório remoto</span>
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$NOME</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">git 3</p>
+<p>Esse comando diz para o git que é para enviar o branch <code>$NOME</code> 
+para o repositório remoto <code>origin</code>. Aquele que aparece no comando <code>$ git remote -v</code>.</p>
+</div>
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-2"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="realizando-pull-request">Realizando pull-request</h2>
+<p>Uma vez enviando o branch para o servidor, podemos via a interface <strong>web</strong> do <code>github</code> realizar o <code>pull-request</code>. <mark>Abra a página do github do seu grupo.</mark> </p>
+<p>Vamos agora gerar o pull-request na interface do github, de forma similar ao exemplo a seguir:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/B-CI/pullrequest.gif" data-desc-position="bottom"><img alt="" src="../../figs/B-CI/pullrequest.gif"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">git 4</p>
+<p>Se tiver instalado o software <a href="https://github.com/github/hub"><code>hub</code></a> digite na linha de comando: <code>$ hub browser</code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cuidado! Escolher o seu repositório no momento de realizar o pullrequest.</p>
+</div>
+<!--
+!!! tip
+    Ao realizar o PR, o `Actions` irá verificar o seu arquivo com o mesmo teste que você executou anteriormente, esse será o fluxo geral da disciplina, onde o mesmo teste é realizado local na máquina de cada aluno e remoto automaticamente pelo Actions.
+-->
+
+<div>
+<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-3"> Progress </button></div>
+</div>
+</section>
+<section class="progress-section">
+<h2 id="aceitando-pull-request">Aceitando pull-request</h2>
+<div class="admonition warning">
+<p class="admonition-title">Apenas o mediador</p>
+<p>Vocês devem escolher um do grupo para assumir o papel do mediador!</p>
+</div>
+<p>O <strong>mediador</strong> do projeto deve revisar os pull-requests (e corrigir eventuais erros de merge) 
+e aceitar ou negar o pedido. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/B-CI/pullrequest-accept.gif" data-desc-position="bottom"><img alt="" src="../../figs/B-CI/pullrequest-accept.gif"></a></p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../Lab1.1-Ambiente/" class="ah-prev" title="Lab - Github grupo">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">Lab - Github grupo</span>
+            </a>
+          
+          
+            <a href="../../Teoria/Teoria-Algebra-Booleana/" class="ah-next" title="Leitura Prévia">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Leitura Prévia</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

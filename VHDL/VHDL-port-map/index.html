@@ -1,0 +1,1338 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>VHDL Port Map - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "25b-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Elementos de Sistemas" class="ah-logo" aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Aulas</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Fevereiro</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/02 - Organização</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/02 - Dados digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/02 - Aritmética</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1.1-Ambiente/">Lab - Github grupo</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab1.2-Ambiente/">Lab - Github individual</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">25/02 - Álgebra</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Algebra-Booleana/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">27/02 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Leitura Prévia - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Leitura Prévia - 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab2-A-Transistores-CI/">Lab - CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Março</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">06/03 - VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../VHDL-basico/">Leitura Prévia - VHDL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">VHDL Port Map</span>
+      <ul>
+        
+          
+            
+            
+              <li class="ah-toc-item">
+                <a href="#desenvolvimento-hierarquico">Desenvolvimento hierárquico</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#port-map_1">port map</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#video-exemplo-construindo-um-adder-de-4-bits-usando-fulladder-de-1-bit">Video-Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit</a>
+              </li>
+            
+              <li class="ah-toc-item">
+                <a href="#versao-texto-exemplo-construindo-um-adder-de-4-bits-usando-fulladder-de-1-bit">Versão Texto - Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit</a>
+              </li>
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab3-LogiComb-FPGA/">Lab FPGA</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/03 - Componentes digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab4-LogiComb/">Lab Lógica Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/03 - Formas de ondas</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab6-Waves/">Lab Formas de Ondas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">18/03 - Aritmética HW</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab5-Adder/">Lab Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/03 - ULA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab7-ULA/">Lab ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Abril</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/04 - Lógica Sequencial</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Logica-Sequencial/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab8-Seq/">Lab Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">10/04 - Componentes sequenciais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/04 - Linguagem de Máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">17/04 - CPU</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10-CPU/">Lab CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/04 - CPU na FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab10.2-CPU-FPGA/">Programando na FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">24/04 - Assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Assembly/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">29/04 - Assembly Saltos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab12-Assembly/">Lab Assembly - parte 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab13-Assembly/">Lab Assembly - parte 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Maio</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/05 - memória</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14-Assembly/">Lab Assembly - parte 3</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/05 - prática assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-Assembly-FPGA/">Lab Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/05 - VM</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Leitura Prévia - VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/05 - VM funções</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Leitura Prévia - Segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Leitura Prévia - Memória</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/05 - VMtranslator</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14.1-VMtranslator/">Lab14.1 VMtranslator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab14.2-VMtranslator/">Lab14.2 VMtranslator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/05 - VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Leitura Prévia - funções</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Labs/Lab15-VM/">Lab VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Dicas-GIT/">Dicas git</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Novo projeto (a partir da APS-C)</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Aulas</li>
+                  
+                
+                  
+                    <li>Março</li>
+                  
+                
+                  
+                    <li>06/03 - VHDL</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="port-map">port map</h1>
+<p>Esse texto explica como realizar o <code>port map</code> em VHDL, técnica que permite o reaproveitamento
+de módulos e o desenvolvimento hierárquico.</p>
+<h2 id="desenvolvimento-hierarquico">Desenvolvimento hierárquico</h2>
+<p>É uma técnica de organização de projeto onde são desenvolvidos pequenos módulos e esses módulos fazem parte de um sistema maior, que por sua vez, fazem parte de algo muito mais complexo. As vantagens de um desenvolvimento desse tipo são:</p>
+<ul>
+<li>Facilidade em realizar testes e validação<ul>
+<li>Cada módulo é testado independentemente</li>
+</ul>
+</li>
+<li>Trabalho em equipe<ul>
+<li>A partir do momento que as interfaces são bem estabelecidas, cada um do time pode desenvolver um módulo</li>
+</ul>
+</li>
+<li>Ferramentas gostam / se adaptam bem<ul>
+<li>As ferramentas de desenvolvimento conseguem otimizar o hardware melhor</li>
+</ul>
+</li>
+<li>Reaproveitamento de módulos<ul>
+<li>Muito mais fácil para reaproveitar outros módulos.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Leitura extra 1</p>
+<blockquote>
+<p><a href="https://www.intel.com/content/www/us/en/programmable/support/support-resources/design-examples/design-software/vhdl/v_hier.html">https://www.intel.com/content/www/us/en/programmable/support/support-resources/design-examples/design-software/vhdl/v_hier.html</a></p>
+</blockquote>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.embedded.com/wp-content/uploads/media-1044685-0108esdsmith02.gif" data-desc-position="bottom"><img alt="" src="https://www.embedded.com/wp-content/uploads/media-1044685-0108esdsmith02.gif"></a></p>
+<blockquote>
+<p>Fonte: <a href="https://www.embedded.com/the-art-of-fpga-construction/">https://www.embedded.com/the-art-of-fpga-construction/</a></p>
+</blockquote>
+<h2 id="port-map_1"><code>port map</code></h2>
+<p><code>port map</code> é a maneira em VHDL de reaproveitamos uma entidade definida em outro lugar no nosso arquivo. Pensar em <code>port map</code> como uma função não é de todo errado, mas devesse notar que quando usamos <code>port map</code> estamos <strong>criando uma cópia do hardware</strong> que é descrito pela entidade usada, isso é diferente de uma função em Python, que reaproveita o mesmo trecho de código para cada chamada de função.</p>
+<p>É mais apropriado pensar que a descrição de um <code>hardware</code> é uma receita (que vemos na <code>architecture</code>), o <code>port map</code> seria como o bolo, você pode ter vários bolos com a mesma receita e cada bolo pode ser usado/ir para pessoa diferente (entrada e saídas).</p>
+<p>Vamos ver como usar <code>port map</code> com um exemplo a seguir, nesse exemplo possuímos dois arquivos <code>modulo2.vhd</code> e <code>modulo1.vhd</code>, e desejamos utilizar o modulo1 dentro do componente 2 (modulo2):</p>
+<div class="highlight"><pre><span></span><code>       -------------------
+  i1  |     --------      | o1
+   --&gt;|---&gt;| modulo1|-----|--&gt;
+  i2  | --&gt;|        |     |
+   --&gt;|/    --------      |
+      |      modulo2      |
+       -------------------
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">-- `modulo1.vhd`</span>
+<span class="k">entity</span><span class="w"> </span><span class="nc">modulo1</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">       </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w">  </span><span class="nc">rtl</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="nc">modulo1</span><span class="w"> </span><span class="k">IS</span>
+<span class="k">begin</span>
+<span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">xor</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="k">end</span><span class="w"> </span><span class="k">architecture</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">-- `modulo2.vhd`</span>
+<span class="k">entity</span><span class="w"> </span><span class="nc">modulo2</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">     </span><span class="n">o1</span><span class="w">    </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w">  </span><span class="nc">rtl</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="nc">modulo2</span><span class="w"> </span><span class="k">IS</span>
+
+<span class="c1">-- Aqui devemos fazer a declaração do componente</span>
+<span class="c1">-- que queremos utilizar, a declaração</span>
+<span class="c1">-- tem que ser igual a entidade do componente </span>
+<span class="c1">-- original, mas trocando a palavra `entity`</span>
+<span class="c1">-- pelo keyword `component`</span>
+
+<span class="k">component</span><span class="w"> </span><span class="nc">modulo1</span><span class="w"> </span><span class="k">is</span>
+<span class="w">  </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">     </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">       </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+
+<span class="k">begin</span>
+
+<span class="c1">-- Agora com o componente 'criado'</span>
+<span class="c1">-- podemos utilizar no nosso projeto</span>
+<span class="c1">--</span>
+<span class="c1">-- podemos dar um 'nome' a intancia do componente</span>
+<span class="c1">--  |    </span>
+<span class="c1">--  |    | nome do componente a ser usado</span>
+<span class="c1">--  v    v</span>
+<span class="w">   </span><span class="n">u1</span><span class="o">:</span><span class="w"> </span><span class="n">modulo1</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="p">(</span>
+<span class="w">      </span><span class="n">a</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">i1</span><span class="p">,</span><span class="w">  </span><span class="c1">-- o sinal a do componente é conectado no sinal i1</span>
+<span class="w">      </span><span class="n">b</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">i2</span><span class="p">,</span><span class="w">  </span><span class="c1">-- o sinal a do componente é conectado no sinal i1</span>
+<span class="w">      </span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">o1</span><span class="w">   </span><span class="c1">-- o sinal a do componente é conectado no sinal i1</span>
+<span class="w">   </span><span class="p">);</span>
+
+<span class="k">end</span><span class="w"> </span><span class="k">architecture</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 2</p>
+<ul>
+<li>O nome da instância não pode repetir (<code>u1</code>, ...)</li>
+<li>Podemos instanciar a quantidade de componente que desejarmos <ul>
+<li>(vai depender do tamanho da FPGA)</li>
+</ul>
+</li>
+<li>Nenhuma porta de entrada pode ficar vazia! Você não precisa ligar todas saídas.</li>
+<li>Para deixar uma saída desconectada utilize o keyword <code>OPEN</code>:
+    <code>vhdl
+  u1: modulo1 port map(
+    a =&gt; OPEN,</code></li>
+<li>Não podemos aplicar operações no <code>port map</code>:
+    <code>vhdl
+  u1: modulo1 port map(
+    a =&gt; i1 and i2,</code></li>
+<li>Evitar a notação de <code>port map</code> que não indica qual porta vai para onde:
+    <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">u1</span><span class="o">:</span><span class="w"> </span><span class="n">modulo1</span><span class="w"> </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">(</span><span class="n">i1</span><span class="p">,</span><span class="w"> </span><span class="n">i2</span><span class="p">,</span><span class="w"> </span><span class="n">o1</span><span class="p">);</span>
+</code></pre></div></li>
+<li>As vezes é necessário criarmos sinais (<code>signals</code>) para atribuirmos aos componentes</li>
+</ul>
+</div>
+<h2 id="video-exemplo-construindo-um-adder-de-4-bits-usando-fulladder-de-1-bit">Video-Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GfpuRfTqWwc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="versao-texto-exemplo-construindo-um-adder-de-4-bits-usando-fulladder-de-1-bit">Versão Texto - Exemplo: Construindo um Adder de 4-bits usando FullAdder de 1-bit</h2>
+<p>Neste exemplo vamos ver a elaboração de um somador (<code>adder</code>) de 4-bits atráves do uso de vários somadores de 1-bit. </p>
+<p>Suponha que você já tenha um somador pronto porém o mesmo é apenas de 1-bit, criar um somador de 4-bits do zero, pode ser uma tarefa trabalhosa, elaborar uma tabela verdade de 2^4 = 16 linhas, econtrar 4 saídas distintas (cada bit de saída), enfim... será que não é possível usar o conceito que vimos de port-map anteriormente e multiplos somadores para obter o desejado?</p>
+<p>Sim, é possível, desde que nosso somador de 1-bit seja um Full-Adder, lembre-se que a principal diferença de um Full-Adder e um Half-Adder, é a presença de uma entrada de Carry In, que permite que a ligação em cascata de vários somadores.</p>
+<p>Portanto, o nosso somador de 4-bits, nada mais será que uma <code>caixa preta</code> que dentro terá 4 somadores de 1-bit realizando o trabalho, para o usuário final, que irá utilizar o componente isto ficará transparente e o mesmo não saberá deste detalhe. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/VHDL/VHDL-Esquema-Adder.svg" data-desc-position="bottom"><img alt="" src="../../figs/VHDL/VHDL-Esquema-Adder.svg"></a></p>
+<p>Vamos criar nosso componente Somador de 4-bits, <code>Adder.vhdl</code> e definir suas entradas e saídas (4-bits).
+</p><div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">Adder</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Y</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Z</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">Adder</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w"> </span><span class="nc">archAdder</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Adder</span><span class="w"> </span><span class="k">is</span>
+<span class="k">begin</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">archAdder</span><span class="p">;</span>
+</code></pre></div><p></p>
+<p>Agora suponha que temos o arquivo de nosso <code>FullAdder</code> de 1-bit, <code>FullAdder1.vhdl</code> e que tenha a definição (entidade da seguinte forma):
+</p><div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">FullAdder1</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Y</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Cin</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Z</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Cout</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">FullAdder1</span><span class="p">;</span>
+</code></pre></div><p></p>
+<p>Observe que nós preocupamos apenas em ver a entidade (onde existem as entradas e saídas). Quer dizer que agora podemos usar a entidade <code>FullAdder1</code> diretamente no <code>Adder</code>? Não ainda! O componente <code>Adder</code> não conhece nenhum <code>FullAdder1</code> ! para poder usar.</p>
+<p>Por isto devemos declarar na arquitetura do Adder que existe um componente com este nome e com tais entradas e saídas disponíveis para uso! Para isso usamos a declaração <code>component</code> do VHDL, permitindo especificar os nomes e entradas.</p>
+<div class="highlight"><pre><span></span><code><span class="k">architecture</span><span class="w"> </span><span class="nc">archAdder</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">Adder</span><span class="w"> </span><span class="k">is</span>
+<span class="k">component</span><span class="w"> </span><span class="nc">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="c1">-- Input ports</span>
+<span class="w">        </span><span class="n">X</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Y</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Cin</span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">-- Output ports</span>
+<span class="w">        </span><span class="n">Z</span><span class="w">   </span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Cout</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">component</span><span class="p">;</span>
+<span class="k">begin</span>
+<span class="k">end</span><span class="w"> </span><span class="nc">archAdder</span><span class="p">;</span>
+</code></pre></div>
+<p>Pronto! Agora podemos usar o componente <code>FullAdder1</code>, na verdade, podemos usar vários! Isso mesmo, podemos criar várias instâncias deste <code>FullAdder1</code>, vamos precisar de 4. A forma de fazer isto em VHDL, é usar definir um nome de instancia, nome do componente e suas ligações (port-map).</p>
+<p>Sintaxe:
+</p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">instance_name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">component_name</span><span class="o">&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="n">formal_input</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">signal</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="n">formal_output</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="k">signal</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+Exemplo para os nosso 4 FAs (por enquanto vamos ligar apenas as entradas X, Y e saídas Z sem se preocupar com os Cin/Cout).<p></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">A0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">A1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">A2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">A3</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+</code></pre></div>
+<p>Observe que conseguimos facilmente instanciar 4 somadores de 1-bit! Outro detalhe importante no port-map é que sempre o sinal a esquerda pertence ao componente e este é conectado ao sinal da direita (pertence ao arquivo atual). Por isto podemos ligar X a X(0), sem dar erro de nome duplicado, pois o VHDL é espertinho e sabe que o primeiro X se refere ao X do componente e o segundo, ao do nosso Adder de 4-bits.</p>
+<p>Agora precisamos ligar os Carrys para que nosso somador some corretamente, lembre, o primeiro somador (bit 0), terá carry de entrada (Cin) zero (0), e os demais somadores receberam o carry de saída (Cout) do somador anterior. </p>
+<p>No entanto no VHDL não é possível ligar diretamente entre componentes diferentes!! E agora?
+Existem no VHDL, sinais virtuais, literalmente chamados <code>signals</code>, podemos pensar nestes sinais como um <code>fio</code>, cuidado, eles não são variavéis (o VHDL possui elas, porém tem algumas pecularidades diferentes que não iremos abordar aqui)</p>
+<p>Os sinais devem serem declarados dentro de um arquitetura com a seguinte sintaxe
+</p><div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div>
+Como teremos 4 carrys de saída, podemos usar então
+<div class="highlight"><pre><span></span><code><span class="k">signal</span><span class="w"> </span><span class="n">carry</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</code></pre></div><p></p>
+<p>Agora basta ligar o carry dos somadores intermediarios e o final, no anterior (não esquece de ligar o carry de entrada e saída). Exemplo dos dois primeiros somadores.</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="n">A0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Cin</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="sc">'0'</span><span class="p">,</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Cout</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">carry</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">A1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">FullAdder1</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="k">map</span><span class="w"> </span>
+<span class="w">    </span><span class="p">(</span>
+<span class="w">        </span><span class="n">X</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Y</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Cin</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">carry</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Z</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Cout</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">carry</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="p">...</span>
+</code></pre></div>
+<p>Feito isto, seu somador está completo, basta utiliza-lo em um TopLevel ou outro VHDL que desejar para ver os resultados!</p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../VHDL-Combinacional/" class="ah-prev" title="VHDL Combinacional">
+              <span class="nav-label">Previous</span>
+              <span class="nav-title">VHDL Combinacional</span>
+            </a>
+          
+          
+            <a href="../../Labs/Lab3-LogiComb-FPGA/" class="ah-next" title="Lab FPGA">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Lab FPGA</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

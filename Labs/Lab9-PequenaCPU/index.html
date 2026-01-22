@@ -1,0 +1,1261 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Lab9 PequenaCPU - Elementos de Sistemas</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "25b-ele";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../termynal.css">
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Elementos de Sistemas" class="ah-logo" aria-label="Elementos de Sistemas">
+          Elementos de Sistemas
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+            
+              
+  
+    <li>
+      <a href="../../Home/Avaliacoes-Informacoes/">Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aulas</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Fevereiro</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/02 - Organização</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">Home</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/02 - Dados digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Dados-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/02 - Aritmética</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab1.1-Ambiente/">Lab - Github grupo</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab1.2-Ambiente/">Lab - Github individual</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">25/02 - Álgebra</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Algebra-Booleana/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-Algebra-Booleana-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">27/02 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-CMOS/">Leitura Prévia - 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Leitura Prévia - 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab2-A-Transistores-CI/">Lab - CIs</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/A-Algebra-CIs/">APS-A - Início</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Março</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/03 - VHDL</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-basico/">Leitura Prévia - VHDL</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Combinacional/">VHDL Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-port-map/">VHDL Port Map</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab3-LogiComb-FPGA/">Lab FPGA</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">11/03 - Componentes digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab4-LogiComb/">Lab Lógica Combinacional</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/03 - Formas de ondas</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab6-Waves/">Lab Formas de Ondas</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/B-LogiComb/">APS-B</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">18/03 - Aritmética HW</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab5-Adder/">Lab Adder</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/03 - ULA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-ULA/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab7-ULA/">Lab ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/C-ula/">APS-C</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Abril</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/04 - Lógica Sequencial</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Logica-Sequencial/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../VHDL/VHDL-Sequencial/">VHDL Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab8-Seq/">Lab Lógica Sequencial</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">10/04 - Componentes sequenciais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/D-LogSeq/">APS-D</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/04 - Linguagem de Máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Instruction Set</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">17/04 - CPU</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-1/">Exercícios 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Exercicios/Exercicio-CPU-2/">Exercícios 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab10-CPU/">Lab CPU</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/04 - CPU na FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab10.2-CPU-FPGA/">Programando na FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/E-CPU/">APS-E</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">24/04 - Assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Teoria/Teoria-Assembly/">Leitura Prévia</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-Assembly/">Resumo Assembly</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">29/04 - Assembly Saltos</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab12-Assembly/">Lab Assembly - parte 1</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab13-Assembly/">Lab Assembly - parte 2</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Maio</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">06/05 - memória</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Z01-mapadeMemoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-nasm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14-Assembly/">Lab Assembly - parte 3</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">08/05 - prática assembly</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab15-Assembly-FPGA/">Lab Assembly FPGA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/F-Assembly/">APS-F</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">13/05 - VM</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm/">Leitura Prévia - VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-Resumo-VM/">Resumo VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">15/05 - VM funções</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-segmentos/">Leitura Prévia - Segmentos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-memoria/">Leitura Prévia - Memória</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">20/05 - VMtranslator</span>
+    <ul>
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Lab VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Lab14.1-VMtranslator/">Lab14.1 VMtranslator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab14.2-VMtranslator/">Lab14.2 VMtranslator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">22/05 - VMtranslator</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-jump/">Leitura Prévia - saltos</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-vm-funcoes/">Leitura Prévia - funções</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Teoria/VMtranslator-memoria/">Leitura Prévia - memória</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Lab15-VM/">Lab VM</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Projetos/I-VMtranslator/">APS-G</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Útil</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Dicas-GIT/">Dicas git</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../Util/Util-Comecando-novo-projeto/">Novo projeto (a partir da APS-C)</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/ula">Simulador ULA</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/assembly">Assembly Online Simulator</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://renan-tr.github.io/simulador/vm">VM Online Simulator</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="lab-pequena-cpu">Lab: Pequena CPU</h1>
+<div class="admonition tip">
+<p class="admonition-title">Sugestão de trabalho 1</p>
+<ol>
+<li>
+<p>Cada um faz na sua máquina </p>
+</li>
+<li>
+<p>Um integrante faz na sua máquina e compartilha a tela com os demais (todos comentam o mesmo código)</p>
+</li>
+</ol>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Tempo</p>
+<p>Tempo estimando no lab: 60 min</p>
+</div>
+<h2 id="comecando">Começando</h2>
+<p>Este lab está disponível em um novo repositório, para começarem trabalhar clonem o repositório para sua máquina, iremos trabalhar com ele neste lab.</p>
+<div class="highlight"><pre><span></span><code>cd ~
+git clone https://github.com/Insper/Z01.1-Lab-Pequena-CPU
+</code></pre></div>
+<h2 id="cpu">CPU</h2>
+<p>O objetivo desse lab é o de começarmos entender como a ULA pode ser utilizada por um programa para realizar ações de um programa. Nas CPUs a ULA é controlada por um bloco chamado de Unidade de Controle (<code>control unit</code>), que é responsável por interpretar as instruções e comandar a ULA!</p>
+<p>Para entender como isso funciona vamos usar a ULA desenvolvida por vocês em uma arquitetura de CPU muito simples, mas que servirá de exemplo (o nosso computador não será assim). Essa arquitetura de CPU possui uma entrada do usuário (que pode ser por exemplo as chaves da placa) que são conectados a entrada <code>Y</code> da ULA e uma saída (que pode ser os LEDs) conectada a saída (out), a entrada X é conectada a um registrador que recebe o valor da saída da ULA. </p>
+<p>Na CPU deste lab iremos trabalhar com o conceito de registrador acumulador, onde o resultado da ULA será sempre salvo em <code>REG_C</code>, consforme diagrama a seguir:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../figs/D-ULA/ula-aplicada.svg" data-desc-position="bottom"><img alt="" src="../../figs/D-ULA/ula-aplicada.svg" width="600"></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Registrador é o termo utilizado para uma unidade simples de memória
+capaz de armazenar apenas uma unidade de dados (nesse caso 16 bits).</p>
+<p>Nesse caso, a cada operação do sistema (clock) o registrador salvo
+o resultado da ULA.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 2</p>
+<p>O <code>REG_C</code> guarda um resultado da operação da ULA até a próxima instrução (clock)</p>
+</div>
+<h2 id="control-unit">Control Unit</h2>
+<p>A unidade de controle (UC) é o hardware responsável por ler as instruções a serem executadas (que estão em binário) e comandar toda a CPU para executar o que deve ser feito. Nesse exemplo a UC comanda apenas a ULA, mas ela poderia controlar outras coisas também (mux, pipeline, ...).</p>
+<p>A UC apenas transcreve instruções (programa) em controle da CPU, para isso temos que definir uma linguagem de máquina.</p>
+<h2 id="programa">Programa</h2>
+<p>Linguagem de máquina é uma palavra de 4 bits de largura que descreve qual operação deve ser realizada na CPU, no exemplo fornecido temos as seguintes operações definidas:</p>
+<table>
+<thead>
+<tr>
+<th>Linguagem de maquina</th>
+<th>Instrução</th>
+<th>OP CODE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0000</code></td>
+<td><code>REG_C</code> = <code>REG_C</code></td>
+<td>nop</td>
+</tr>
+<tr>
+<td><code>0001</code></td>
+<td><code>REG_C</code> = <code>0</code></td>
+<td>mov 0,C</td>
+</tr>
+<tr>
+<td><code>1000</code></td>
+<td><code>REG_C</code> = !<code>REG_C</code></td>
+<td>not C</td>
+</tr>
+<tr>
+<td><code>1001</code></td>
+<td><code>REG_C</code> = <code>REG_C</code> + 1</td>
+<td>add 1,C</td>
+</tr>
+<tr>
+<td><code>1010</code></td>
+<td><code>REG_C</code> = <code>REG_C</code> + <code>Y</code></td>
+<td>add Y,C</td>
+</tr>
+<tr>
+<td><code>1011</code></td>
+<td><code>REG_C</code> = <code>REG_C</code> - 1</td>
+<td>sub 1,C</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip 3</p>
+<p><code>OP CODE</code> é o termo usado para descrever uma instrução, 
+programas escritos em assembly fazem uso de opcodes 
+para facilitar a programação.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>nop</code> = No Operation (não faz nada/ não modifica nada!) </p>
+</div>
+<h3 id="exemplo">Exemplo</h3>
+<p>Vamos pensar em um programa muito simples que faz o seguinte:</p>
+<ol>
+<li>Carrega <code>0</code> em <code>REG_C</code></li>
+<li><code>REG_C</code> + <code>1</code></li>
+</ol>
+<p>O código disso em assembly (usando os opcodes) seria:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">mov</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nv">C</span>
+<span class="nf">add</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nv">C</span>
+<span class="nf">nop</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Esse <code>nop</code> é implementando pelo comando que faz com que a entrada <code>X</code> passe pela ULA (sem modificação), assim <code>REG_C</code> = <code>REG_C</code>, ou seja, não faz nada.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Uma instrução (linha do programa assembly) é executada a cada clock.</p>
+</div>
+<p>Para executarmos esse programa, devemos traduzir o programa assembly em linguagem de máquina que é de fato o que a CPU é capaz de ler (lembre que no final é tudo uns e zeros), para  isso temos que ter a memória (ROM) inicializada com os seguintes valores:</p>
+<div class="highlight"><pre><span></span><code>0:   0001     &lt;--- O Programa começa na linha 0
+1:   1001     |     e a cada 'clock' executa para próxima linha
+2:   0000     v
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>O programa responsável por traduzir linguagem assembly em "binário" é chamado de montador ou assembler.</p>
+</div>
+<p>Legal né? Mas para isso funcionar a Unidade de Controle deve ser capaz de ler a instrução (4 bits) e controlar a ULA para executar tal comando. A unidade foi fornecida apenas com duas instruções implementadas: <code>mov 0,C</code>, <code>add 1,c</code>.</p>
+<p>Para testar o projeto com o código exemplo anterior basta executar o comando a seguir no terminar:</p>
+<p><code>./testeLab.py</code>.</p>
+<!--
+O teste deve passar, como a seguir:
+
+<script id="asciicast-rnFQXSSGiHuCGuUD3vVJw5I1Z" src="https://asciinema.org/a/rnFQXSSGiHuCGuUD3vVJw5I1Z.js" async></script>
+-->
+
+<div class="admonition tip">
+<p class="admonition-title">Tip 4</p>
+<p>Execute o comando com <code>-g</code> e verifique a forma de onda (e todos os sinais internos da CPU)</p>
+</div>
+<h2 id="terminando-o-control-unit">Terminando o Control Unit</h2>
+<p>Nossa primeira atividade do lab será a de termina de implementar a Unidade de Controle, para poder executar todas as instruções anteriores. A versão disponível para vocês só possui as instruções: <code>mov 0,C</code>, <code>add 1,C</code> e <code>nop</code>, vamos implementar as demais?</p>
+<p>Para isso será necessário modificar o arquivo <code>/src/ControlUnit.vhd</code>, nele stá implementando a lógica que traduz instruções em comando do hardware. O control unit lê o a instrução que está salva na memória (<code>op</code>) e aciona a ULA (<code>ula</code>) para realizar tal operação.</p>
+<p>A saída do controlUnit (<code>ula out std_logic_vector</code>) é um vetor composto pelos sinais de controle da ula: [<code>zx</code>, <code>nx</code>, <code>zy</code>, <code>ny</code>, <code>f</code>, <code>no</code>] e pelo 'en' que controla se iremos salvar a informação no registrador C (<code>en &lt;= '1'</code>) ou não iremos armazenar a informação que sai da ULA (<code>en&lt;='0'</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="k">entity</span><span class="w"> </span><span class="nc">controlunit</span><span class="w"> </span><span class="k">is</span>
+<span class="w">    </span><span class="k">port</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="n">op</span><span class="o">:</span><span class="w">  </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">            </span><span class="n">en</span><span class="o">:</span><span class="w">  </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ng</span><span class="o">:</span><span class="w">  </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">zr</span><span class="o">:</span><span class="w">  </span><span class="k">in</span><span class="w">  </span><span class="kt">std_logic</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ula</span><span class="o">:</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">end</span><span class="w"> </span><span class="k">entity</span><span class="p">;</span>
+
+<span class="k">architecture</span><span class="w">  </span><span class="nc">rtl</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nc">controlunit</span><span class="w"> </span><span class="k">is</span>
+
+<span class="w">  </span><span class="k">signal</span><span class="w"> </span><span class="n">control</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="k">begin</span>
+
+<span class="w">  </span><span class="n">ula</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">control</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="k">downto</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">en</span><span class="w">  </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">control</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">control</span><span class="w"> </span><span class="o">&lt;=</span>
+<span class="w">    </span><span class="s">"101010"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="sc">'1'</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0001"</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="c1">-- mov 0, C</span>
+<span class="w">    </span><span class="s">"011111"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="sc">'1'</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1001"</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="c1">-- add 1, C</span>
+<span class="w">    </span><span class="s">"000000"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="sc">'1'</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">op</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0000"</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="c1">-- nop</span>
+<span class="w">    </span><span class="s">"101000"</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="sc">'0'</span><span class="p">;</span><span class="w"> </span><span class="c1">-- qualquer coisa!</span>
+
+<span class="k">end</span><span class="w"> </span><span class="k">architecture</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Quando a instrução for <code>0001</code> (<code>mov 0,C</code>) o controlUnit irá acionar a ula: <code>zx=1</code>, <code>nx=0</code>, <code>zy=1</code>, <code>ny=1</code>, <code>f=1</code>, <code>no=0</code> para que a sua saída seja 0 e então salvar o valor no registrador C ('en=1')</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<p>Você deve implementar as instruções que estão faltando no ControlUnit:</p>
+<ol>
+<li><code>not C</code></li>
+<li><code>add Y,C</code></li>
+<li><code>sub 1,C</code></li>
+</ol>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip 5</p>
+<p>Você precisa adicionar os casos a serem implementando no when do ControlUnit.</p>
+</div>
+<p>Agora para testar os novos comandos você deve aplicar o patch a seguir que modifica o teste do laboratório inserindo os novos comandos, execute no terminar:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>git<span class="w"> </span>apply<span class="w"> </span>teste1.patch
+</code></pre></div>
+<p>E então teste:</p>
+<div class="highlight"><pre><span></span><code>./testeLab.py
+</code></pre></div>
+<h2 id="analisando-cpu">Analisando CPU</h2>
+<p>Discuta em grupo as limitações dessa nossa CPU, e o que poderia ser feito para melhorar:</p>
+<ol>
+<li>Essa CPU é capaz de realizar qualquer tipo de cálculo?</li>
+<li>Quais limitações você percebe nela?</li>
+<li>Temos condicionais? Como implementar?</li>
+<li>....</li>
+</ol>
+<!--
+Responda o formulário com a resposta do grupo após discussão (pode ser uma resposta por grupo ou uma mais de uma, vocês que escolhem):
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9E3FFm7BxbeLG6C-YxsPattmbwfZz_MVnKwrZ_kkc-k1R1A/viewform?embedded=true" width="640" height="769" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+-->
+
+<h2 id="adicionando-condicional">Adicionando condicional</h2>
+<p>Vamos agora adicionar uma instrução de condicional a nossa CPU, será algo bem simples e pouco funcional na prática, mas vai dar a ideia de como as coisas funcionam. Para isso iremos criar uma nova instrução que copia a entrada Y para <code>REG_C</code> apenas se Y for menor ou igual a zero. Como a seguir:</p>
+<div class="highlight"><pre><span></span><code>if Y&lt;=0:
+    REG_C = Y
+else
+    REG_C = REG_C
+</code></pre></div>
+<p>Vamos atribuir a está operação o valor <code>1111</code>. Para realizarmos essa operação teremos que fazer a leitura dos valores <code>ng</code> e <code>zr</code> que a ULA fornece para nós e então tomarmos a decisão se iremos salvar Y em <code>REG_C</code> (<code>en=1</code>) ou não (<code>en=0</code>).</p>
+<div class="admonition example">
+<p class="admonition-title">Tarefa</p>
+<ol>
+<li>Implemente a nova funcionalidade no ControlUnit, lembre que agora é necessário verificar o valor de <code>ng</code> e <code>zr</code> para saber se o valor de Y é menor ou igual a zero.</li>
+</ol>
+</div>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="../../termynal.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
