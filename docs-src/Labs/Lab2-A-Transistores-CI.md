@@ -1,4 +1,4 @@
-# Lab 1: Transistores / CI
+# Lab: Transistores / CI
 
 Esse laboratório tem como objetivo trabalhar com os conceitos básicos de portas lógicas realizadas a base de transistores e também trabalhar com componentes integrados (CI).
 

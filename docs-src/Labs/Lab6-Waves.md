@@ -1,4 +1,4 @@
-# Lab 4: Visualizando simulação
+# Lab: Visualizando simulação
 
 
 É muito difícil sabermos porque uma implementação em VHDL não funciona, atualmente o fluxo é: transcreve para VHDL o componente; testa; não funcionou volta para o VHDL; testa.... Será que não existe uma forma de conseguirmos visualizar o resultado do teste e com isso mudarmos a implementação em VDHL? Sim existe! 

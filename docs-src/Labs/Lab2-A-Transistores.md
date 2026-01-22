@@ -1,4 +1,4 @@
-# Lab 1: Transistores / CI
+# Lab: Transistores / CI
 
 !!! info "Sugestão de como trabalhar"
     1. Realizar individualmente as simulações online

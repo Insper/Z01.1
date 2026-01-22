@@ -1,4 +1,4 @@
-# Lab 1.2: Github
+# Lab: Primeiro commit e PR individual
 
 Nesse laboratório iremos trabalhar com o uso do git de forma colaborativa.
 

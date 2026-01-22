@@ -1,4 +1,4 @@
-# Lab 8.2: Programando FPGA
+# Lab: Programando o CPU na FPGA
 
 Ao final desse lab você deve ser capaz de:
 
