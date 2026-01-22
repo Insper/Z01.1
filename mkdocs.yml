@@ -82,6 +82,8 @@ nav:
     - '20/02 - Aritmética':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
       - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
+      - 'Lab - Github grupo': 'Labs/Lab1.1-Ambiente.md'
+      - 'Lab - Github individual': 'Labs/Lab1.2-Ambiente.md'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
     - '25/02 - Álgebra':
       - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
@@ -91,28 +93,28 @@ nav:
     - '27/02 - Transistores':
       - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'
       - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
-      - 'Lab 1': 'Labs/Lab1-A-Transistores-CI.md'
+      - 'Lab - CIs': 'Labs/Lab2-A-Transistores-CI.md'
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
   - Março:
     - '06/03 - VHDL':
       - 'Leitura Prévia - VHDL': 'VHDL/VHDL-basico.md'
       - 'VHDL Combinacional': 'VHDL/VHDL-Combinacional.md'
       - 'VHDL Port Map': 'VHDL/VHDL-port-map.md'
-      - 'Lab 2': 'Labs/Lab3-LogiComb-FPGA.md'
+      - 'Lab FPGA': 'Labs/Lab3-LogiComb-FPGA.md'
     - '11/03 - Componentes digitais':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Componentes.md'
-      - 'Lab 3': 'Labs/Lab4-LogiComb.md'
+      - 'Lab Lógica Combinacional': 'Labs/Lab4-LogiComb.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
     - '13/03 - Formas de ondas': 
-      - 'Lab 4': 'Labs/Lab6-Waves.md'
+      - 'Lab Formas de Ondas': 'Labs/Lab6-Waves.md'
       - 'APS-B': 'Projetos/B-LogiComb.md'
     - '18/03 - Aritmética HW': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md'
-      - 'Lab 5': 'Labs/Lab5-Adder.md'
+      - 'Lab Adder': 'Labs/Lab5-Adder.md'
       - 'APS-C': 'Projetos/C-ula.md'
     - '20/03 - ULA': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-ULA.md'
-      - 'Lab 6': 'Labs/Lab7-ULA.md'
+      - 'Lab ULA': 'Labs/Lab7-ULA.md'
       - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula'  
       - 'APS-C': 'Projetos/C-ula.md'
   - Abril:
@@ -121,7 +123,7 @@ nav:
       - 'VHDL Sequencial': 'VHDL/VHDL-Sequencial.md'
       #- 'Exercícios': 'https://forms.gle/XMsFCDMYsmz1qUP86'
       #- 'Exercícios - solução': : 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Lógica-Sequencial_resolucao.pdf'
-      - 'Lab 7': 'Labs/Lab8-Seq.md'
+      - 'Lab Lógica Sequencial': 'Labs/Lab8-Seq.md'
       - 'APS-D': 'Projetos/D-LogSeq.md'
     - '10/04 - Componentes sequenciais': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Sequencial-Componentes.md'
@@ -133,7 +135,7 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-CPU-2.md'
-      - 'Lab 8': 'Labs/Lab10-CPU.md'
+      - 'Lab CPU': 'Labs/Lab10-CPU.md'
       - 'APS-E': 'Projetos/E-CPU.md'
     - '22/04 - CPU na FPGA': 
       - 'Programando na FPGA': 'Labs/Lab10.2-CPU-FPGA.md'
@@ -145,17 +147,17 @@ nav:
     - '29/04 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
-      - 'Lab 9': 'Labs/Lab12-Assembly.md'
-      - 'Lab 10': 'Labs/Lab13-Assembly.md'
+      - 'Lab Assembly - parte 1': 'Labs/Lab12-Assembly.md'
+      - 'Lab Assembly - parte 2': 'Labs/Lab13-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
   - Maio:
     - '06/05 - memória': 
       - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
-      - 'Lab 11': 'Labs/Lab14-Assembly.md'
+      - 'Lab Assembly - parte 3': 'Labs/Lab14-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
     - '08/05 - prática assembly': 
-      - 'Lab 12': 'Labs/Lab15-Assembly-FPGA.md'
+      - 'Lab Assembly FPGA': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
@@ -177,7 +179,7 @@ nav:
       - 'Leitura Prévia - Memória': 'commum-content/teoria/Teoria-vm-memoria.md'  
 #      - 'APS-G': 'Projetos/G-Assembler.md'
     - '20/05 - VMtranslator':
-      - 'Lab 14 - VMtranslator':
+      - 'Lab VMtranslator':
         - 'Labs/Lab14.1-VMtranslator.md'
         - 'Labs/Lab14.2-VMtranslator.md'    
       - 'APS-G': 'Projetos/I-VMtranslator.md'
@@ -190,7 +192,7 @@ nav:
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-vm-jump.md'
       - 'Leitura Prévia - funções': 'commum-content/teoria/Teoria-vm-funcoes.md'
       - 'Leitura Prévia - memória': 'Teoria/VMtranslator-memoria.md' 
-      - 'Lab 15': 'Labs/Lab15-VM.md' 
+      - 'Lab VM': 'Labs/Lab15-VM.md' 
       - 'APS-G': 'Projetos/I-VMtranslator.md'
 - Útil:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'

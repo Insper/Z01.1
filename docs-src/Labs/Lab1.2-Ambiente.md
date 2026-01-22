@@ -1,4 +1,4 @@
-# Lab 2.2: Github
+# Lab 1.2: Github
 
 Nesse laboratório iremos trabalhar com o uso do git de forma colaborativa.
 
@@ -8,6 +8,9 @@ Nesse laboratório iremos trabalhar com o uso do git de forma colaborativa.
 
 !!! warning "Individual"
     Todos do grupo devem realizar de maneira individual!
+
+!!! warning "Individual"
+    Caso seja necessário gerar a chave ssh, confira as dicas em [Dicas-GIT](../Util/Util-Dicas-GIT.md)
 
 Vcês deverão clonar o repositório para o computador de vocês com o comando:
 
