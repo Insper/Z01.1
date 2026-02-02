@@ -27,9 +27,9 @@ plugins:
 extra:
   custom_variables:
     lab2_link: ''
-    form_scrum_link: 'https://forms.office.com/r/wTfDTR85Dr'
-    form_dev_link: 'https://forms.office.com/r/mVgWmqWW8m'
-    link_apsX: 'https://forms.office.com/r/efJwjQzHan'
+    form_scrum_link: 'https://forms.office.com/r/UcT1VPH6Ty'
+    form_dev_link: 'https://forms.office.com/r/eRhyUr4eGC'
+    #link_apsX: 'https://forms.office.com/r/efJwjQzHan'
     apsA_date: 'Quarta  - 04/03'
     apsB_date: 'Sexta  - 13/03'
     apsC_date: 'Sexta  - 20/03'
@@ -198,14 +198,14 @@ nav:
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
-#- 'Atividades formativas':
-#  - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558309'
-#  - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2558342'
-#  - 'Álgebra booleana': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564678'
-#  - 'VHDL básico': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564711'
-#  - 'VHDL sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564744'
-#  - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564745'
-#  - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/185842/assessment/2564746'
+- 'Atividades formativas':
+  - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643198'
+  - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643199'
+  - 'Álgebra booleana': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643201'
+  - 'VHDL básico': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643202'
+  - 'VHDL sequencial': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643203'
+  - 'Lógica sequencial': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643204'
+  - 'Assembly/Linguagem de Máquina': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643205'
   
 #- 'APS-Extra': 'Projetos/X-MR.md'
 
