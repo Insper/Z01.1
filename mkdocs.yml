@@ -20,7 +20,7 @@ plugins:
   - active-handout:
       telemetry: true
       backend_url: https://devlife-api.insper-comp.com.br/
-      course_slug: 25b-ele
+      course_slug: 26a-ele
   - glightbox
   - termynal
 
@@ -71,8 +71,6 @@ nav:
 - Avaliação: 'Home/Avaliacoes-Informacoes.md'
 - Aulas:
   - Fevereiro:
-    - '11/02 - Organização': 
-      - Introdução: 'index.md'
     - '13/02 - Dados digitais':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Dados.md'
       - 'Exercícios 1': 'https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf'
