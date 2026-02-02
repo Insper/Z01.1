@@ -2,125 +2,68 @@
 
 Os critérios de avaliação a seguir serão aplicados a disciplina:
 
-## Critérios
+## Avaliações Individuais
 
-Os alunos devem:
-
-<!--1. Ter acumulado no mínimo 50 pontos de `SW` (Dados digitais, assembly, assembler, máquina virtual, VM translator) nas provas-->
-1. Ter acumulado no mínimo 100 pontos nas provas
-1. Ter no mínimo conceito C na média de todos os Projetos 
-1. Ter no máximo duas notas inferiores a C na avaliação individual e uma nota inferior a C na avaliação coletiva dos Projetos
-
-## Provas
-
-Ao longo do semestre o aluno deve acumular `100 pontos` que estarão distribuídos nas três provas (A1, AI, AF) que serão aplicadas ao longo do semestre. 
-
-<!--
-A nota final de **prova** (atingido atingido o critério) será a média da soma das notas de HW e SW  aplicado o conceito (final da página).
-
-| Provas           | Pontuação HW        | Pontuação SW        |  Pontuação Total    | Conteúdo            |
-|------------------|---------------------|---------------------|---------------------|---------------------|
-| Atividade em aula| 20                  | 20                  | 40                  | Álgebra booleana, dados digitais |
-| AI               | 60                  | 00                  | 60                  | Lógica combinacional, ULA, Lógica sequencial |
-| AF               | 20                  | 80                  | 100                 | CPU, Assembly, Assembler, VM |
-| Total            | 100                 | 100                 | 200                 | |
--->
-
-Haverá(ão) também atividade(s) extra(s) optativa(s) (a ser(em) entregue(s) até a AF) que fornece o total de **20 pontos** extras a serem divididos entre HW e SW.
+Serão três avaliações com pesos:
+- 0,2: Avaliação 1 (em aula)
+- 0,3: Avaliação Intermediária
+- 0,5: Avaliação Final
 
 
 ## Projetos (APS)
 
-O projeto é composto por duas notas: `Grupo` e `Individual` sendo que cada uma segue uma rubrica diferente e avalia objetivos diferentes do curso.
+O projeto é composto em duas dimensões: `Grupo` e `Individual` sendo que cada uma segue uma rubrica diferente e avalia objetivos diferentes do curso.
 
-A rubrica de nota `Grupo` está apresentada na página de cada projeto.
-
-A rubrica da nota `Individual` está na página [Sobre-Rubricas](https://insper.github.io/Z01.1/Home/Sobre-Rubricas/).
-
-A nota final de cada APS será calculada da seguinte forma:
-
-| Nota`Individual` | Nota final da APS         |
-|------------------|---------------------------|
-| A                | Nota  `Grupo`             |
-| B                | Nota  `Grupo` - 1 conceito  |
-| C                | Nota  `Grupo` - 2 conceitos |
-| D                | D                         |
-| I                | I                         |
-
-
-Exemplos: 
-
-1. Se alguém obter: `Grupo` = A+ e `Individual` = A, nota da APS será A+
-2. Se alguém obter: `Grupo` = A+ e `Individual` = B, nota da APS será A
-3. Se alguém obter: `Grupo` = A+ e `Individual` = C, nota da APS será B+
-4. Se alguém obter: `Grupo` = A+ e `Individual` = D, nota da APS será D
-5. Se alguém obter: `Grupo` = C+ e `Individual` = B, nota da APS será C
-
-
-A nota final de **Projeto** (quando atingindo o critério) será a média de todas as notas das APSs.
-
-### Rubricas individuais
-
-Você será avaliado conforme o seu papel no desenvolvimento
-do projeto. Podendo ser: 
-
-- Facilitador
-- Desenvolvedor
-
+### Rubricas Individual
 O Facilitador será atribuído no inicio de cada projeto.
 
 Tanto o facilitador como o desenvolvedor serão avaliados por meio de Forms que devem ser preenchidos na **entrega** de cada projeto. Os conceitos individuais poderão ser (A, B, C, D ou I).
 
-#### Facilitador
+- Desenvolvedor
+  - Insatisfatório
+    - Se comprometeu a fazer algum desenvolvimento (kanban) e não fez.
+    - Criou o branch mas não fez o desenvolvimento completo.
+    - Não trabalhou ativamente no projeto (avaliação cruzada / Facilitador)
+  - Satisfatório
+    - Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes!
+    - Acompanhou o Kanban board (github project). Ex: Puxou tarefas, etc.
+    - Submeteu alterações por pull requests.
+- Facilitador
+  - Insatisfatório
+    - Não acompanhou o projeto, deixando os colegas sozinhos.
+    - O relatório das atividades não é condizente com o real desempenho dos integrantes (analisado via git).
+    - Não participou das duas aulas referentes ao projeto
+  - Satisfatório
+    - Atualizou o repositório pelo Fork.
+    - Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, da feedback de issues.
+    - Aceitou os pull-requests.
+    - Resolveu conflitos de merge nos pull requests.
+    - Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
+    - **Entregou o branch main sem nenhum erro (passando no Actions)**
+    - Fez o relatório das atividades descrevendo o papel de cada integrante com clareza.
 
-O facilitador será avaliado pelos 'Desenvolvedores' com base em seus objetivos:
+A rubrica da dimensão `Grupo` está apresentada na página de cada projeto.
 
-- Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, dá feedback de issues.
-- Gerenciou os pull-requests.
-- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
-- Ajudou outros colegas com o objetivo da entrega final e não somente das suas tarefas
+Se um estudante obter desempenho satisfatório na rubrica individual de uma determinada APS, sua nota individual será a rubrica atingida pelo grupo na respectiva APS.
 
-<!--
-A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de participação em aula`(1, 0.5, 0).
+Caso o desempenho seja insatisfatório, sua nota individual será reduzida proporcionalmente (de acordo com as avaliações dos demais membros da equipe e do professor), a partir da rubrica atingida pelo grupo na respectiva APS.
 
-- Fator de Participação em aula: 
-    - 1: Esteve presente e participou nas aulas referentes aos projetos
-    - 0.5: Faltou e/ou não participou de alguma aula referente ao projeto
-    - 0: Faltou e/ou não participou da maioria das aulas do projeto
--->
-
-!!! warning
-    Se algum facilitador não preencher o formulário no prazo estipulado sua nota será I
-
-#### Desenvolvedor
-
-
-A nota dos desenvolvedores será definida pelas avaliações do facilitador e dos demais desenvolvedores com base nos objetivos:
-
-- **Participou das aulas referentes ao projetos (handouts, labs)**
-- Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes!      
-- Submeteu alterações por pull requests.                         
-- Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
-- Entregas orientadas para o objetivo do projeto 
-
-<!--
-!!! tip 
-    Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média da avaliação dos seus colegas.
-    -->
-
-!!! warning
-    Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I
-
+A média final de **APS** será a média de todas as notas individuais das APSs.
 
 ## Nota final da Disciplina
 
-A nota final será composta pela média das notas de Projeto e da Prova:
+A nota final será calculada pelas média das APS e pela média das avaliações, utilizando o seguinte critério:
 
-- `Nota Final = mean([Prova, Projeto])`
+Média = min(Av, APS) , se Av < 5,0 OU APS < 5,0
+
+OU
+
+Média = 0,5 Av + 0,5 APS , se Av >= 5,0 E APS >= 5,0
+
 
 ## Conceito
 
-A seguinte tabela será aplicada para o cálculo dos conceitos.
+A seguinte tabela será aplicada para o cálculo dos conceitos das APS.
 
 | Nota | Conceito |
 |------|----------|
@@ -132,11 +75,6 @@ A seguinte tabela será aplicada para o cálculo dos conceitos.
 | 5    | C        |
 | 4-3  | D        |
 | 3-0  | I        |
-
-
-
-
-
 
 
 
@@ -190,11 +128,11 @@ Liberado consulta ao material da disciplina.
     - Aritmética binária
 
 
-<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta. -->
+<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
 
 - Atividade de revisão:
     - [Prova 24.1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.1_resolucao.pdf)
-    <!-- - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491) -->
+    - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
     - [Transistores](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Ex_transistores.pdf)
     - [Simulado](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado-solution.pdf)
     
@@ -264,3 +202,5 @@ Recomendo **não executar** os testes dessas provas por conta de mudanças reali
 [Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
 
 [Prova - AF - 24b](https://github.com/insper-classroom/ele-AF-simulado2) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24b-prova.pdf)
+
+ -->
