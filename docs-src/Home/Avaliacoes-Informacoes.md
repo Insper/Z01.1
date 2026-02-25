@@ -127,12 +127,8 @@ Liberado consulta ao material da disciplina.
     - Complemento de 2
     - Aritmética binária
 
-
-<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
-
 - Atividade de revisão:
     - [Prova 24.1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av1_24.1_resolucao.pdf)
-    - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
     - [Transistores](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Ex_transistores.pdf)
     - [Simulado](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/av1-simulado-solution.pdf)
     
@@ -144,7 +140,10 @@ Liberado consulta ao material da disciplina.
     -  [2014](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2014.pdf)
     -  [2017](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2017.pdf)
     -  [Video](https://drive.google.com/file/d/1fPyAzyWFIXi8NeilBf5AIsQoe6tl9jbh/view?usp=sharing)
-
+    
+    
+<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
+    - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
 ## AI
 
 Avaliação prática individual a ser realizada no SSD Linux. 
