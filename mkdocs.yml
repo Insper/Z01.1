@@ -29,7 +29,7 @@ extra:
     lab2_link: ''
     form_scrum_link: 'https://forms.office.com/r/UcT1VPH6Ty'
     form_dev_link: 'https://forms.office.com/r/eRhyUr4eGC'    
-    apsA_date: 'Quarta  - 04/03'
+    apsA_date: 'Quarta  - 06/03'
     apsB_date: 'Sexta  - 13/03'
     apsC_date: 'Sexta  - 20/03'
     apsD_date: 'Sexta - 10/04'
@@ -194,7 +194,7 @@ nav:
       - 'APS-G': 'Projetos/I-VMtranslator.md'
 - Útil:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
-  - 'Novo projeto (a partir da APS-C)': "Util/Util-Comecando-novo-projeto.md"
+  - 'Novo projeto (a partir da APS-B)': "Util/Util-Comecando-novo-projeto.md"
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
