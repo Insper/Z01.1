@@ -21,8 +21,9 @@ $ pytest -k or16
 
 O mesmo irá executar a compilação dos arquivos `src/*.vhd` e realizar testes unitários em cada um do módulo, como os módulos não estão implementados e como estamos forçando o teste do `or16` devemos ter um erro nesse módulo.
 
+<!--
 <script id="asciicast-hScw7GXpCGnSPw4ocDzwbt23m" src="https://asciinema.org/a/hScw7GXpCGnSPw4ocDzwbt23m.js" async></script>
-
+-->
 
 !!! progress
     Cheguei aqui!
@@ -55,9 +56,11 @@ Vamos agora editar esse arquivo para realizar sua implementação. Esse módulo 
 q <= a or b;
 ```
 
-Teste novamente (`pytest -k or16`) agora deve passar:
+Teste novamente (`pytest -k or16`) agora deve passar
 
+<!--
 <script id="asciicast-5CQCUV0yvDobOdOPZQgwaGMHI" src="https://asciinema.org/a/5CQCUV0yvDobOdOPZQgwaGMHI.js" async></script>
+-->
 
 !!! progress
     Cheguei aqui!

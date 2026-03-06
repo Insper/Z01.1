@@ -30,7 +30,7 @@ Nas discussões com os outros colegas o scrum master deve definir os módulos qu
 #### Facilitador (Scrum Master)
 
 - Fazer a **atualização** do fork com o upstream
-- Organizar o **github + issues + project**
+- Organizar o **github + issues**
 - Gerenciar o grupo (atribuir tarefas)
 - **Gerenciar os pull-requests**
 - Criar relatório da performance de cada um do grupo
@@ -116,7 +116,7 @@ Arquivos relacionados com cada conceito:
     - **Arquivo**   : `nor8way.vhd`
     - **Descrição** : NOR entre 8 bits, resulta em uma única saída
     
-- OR 8 Way  
+- OR 8 Way 
     - **Arquivo**   : `or8way.vhd`
     - **Descrição** : OR entre 8 bits, resulta em uma única saída
  
@@ -232,7 +232,7 @@ Para atingir os objetivos A+ e B+, deve-se antes atingir o C+.
     Sugerimos que vocês reutilizem o módulo `sevenSeg.vhd` para impementar a exibição dos dígitos na FPGA, 
     para isso devem utilizar uma recurso do VHDL chamado de `port map`.
     
-    - [VHDL/port map](/Z01.1/VHDL/VHDL-port-map/)    
+    - [VHDL/port map](/Z01.1/VHDL/VHDL-port-map/) 
     
 
 ### Individual

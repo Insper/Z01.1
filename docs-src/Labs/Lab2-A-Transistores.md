@@ -353,8 +353,8 @@ Com base na situação descrita, projete um circuito lógico com o menor número
 para determinar a aprovação ou não do produto de acordo com a presença de seus parâmetros. As entradas
 do circuito serão os sinais `A`, `B`,`C`, e a saída será um sinal `Z`. Para atingir esse objetivo, faça o que se pede nos itens a seguir.
 
-1. Monte uma tabela verdade do sistema com a formação `A`, `B`, `C`. (valor: 4,0 pontos)
-1. Desenhe o circuito final otimizado utilizando portas lógicas. (valor: 6,0 pontos)
+1. Monte uma tabela verdade do sistema com a formação `A`, `B`, `C`.
+1. Desenhe o circuito final otimizado utilizando portas lógicas.
 1. *(extra, não tinha no enade)* Implemente a lógica encontrada com CIs da família 74xx
  
 

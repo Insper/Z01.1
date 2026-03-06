@@ -47,31 +47,28 @@ O controle do carrinho deve funcionar da seguinte forma:
 | **I**    | Funções Lógicas Não Obtidas                                 |
 |          |                                                             |
 | **D**    | Obtenção sem Simplificação das Funções Lógicas              |
-|          | **OU** Apresentação Pouco Clara das Funções Lógicas         |  
+|          | **OU** Apresentação Pouco Clara das Funções Lógicas         | 
 |          |                                                             |
 | **C**    | Obtenção E Simplificação das Funções Lógicas                |
-|          | **OU** Video demonstrando parte 1 do Lab 1                  |  
+|          | **OU** Video demonstrando parte 1 do Lab 1                  | 
 |          |                                                             |
 | **C+**   | Obtenção E Simplificação das Funções Lógicas                |
-|          | **E** Video demonstrando parte 1 do Lab 1                   |  
+|          | **E** Video demonstrando parte 1 do Lab 1                   | 
 |          |                                                             |
 | **B+**   | Obtenção E Simplificação das Funções Lógicas                |
-|          | **E** Implementação das Funções Lógicas em Simulador        |   
-|          | **E** Vídeo ou Arquivo de Simulação Explicativo             |  
-|          | **E** Video demonstrando partes 2 e 3 do Lab 1              |  
+|          | **E** Implementação das Funções Lógicas em Simulador        |
+|          | **E** Vídeo ou Arquivo de Simulação Explicativo             | 
+|          | **E** Video demonstrando partes 2 e 3 do Lab 1              | 
 |          |                                                             |
 | **A+**   | Todos os itens anteriores dos conceitos **C+** e **B+**     |
-|          | **E** Implementação das Funções Lógicas usando CIs          |   
-|          | **E** Vídeo de Demonstração do Funcionamento em diferentes cenários  |  
+|          | **E** Implementação das Funções Lógicas usando CIs          | 
+|          | **E** Vídeo de Demonstração do Funcionamento em diferentes cenários  | 
 
 
 
 ### Entrega
 
-<!--Nesta APS (e apenas nesta) não haverá forms para preencher. -->
-A entrega será feita pelo Blackboard.
-
-Apenas um aluno(a) deve enviar os arquivos/links. O(A) escolhido(a) para realizar o envio é o primeiro nome de cada grupo na Tabela dos Grupos (link no Blackboard).
+A entrega será feita pelo Github Classroom.
 
 ### Formulários
 

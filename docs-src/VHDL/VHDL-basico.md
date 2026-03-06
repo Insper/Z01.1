@@ -7,8 +7,11 @@
 | :+1:             | [VHDL CookBook](https://www.ics.uci.edu/~alexv/154/VHDL-Cookbook.pdf)                                                                                                                                      |
 |                  | [VHDL Básico: Parte 1 - Entidade](https://www.embarcados.com.br/vhdl-basico-parte-1-entidade/)                                                                                                             |
 |                  | [VHDL Básico: Parte 2 - Arquitetura](https://www.embarcados.com.br/vhdl-basico-parte-2-arquitetura/)                                                                                                       |
+
+<!--
 | Vídeos (extra)   |                                                                                                                                                                                                            |
 | :+1:             | <iframe width="200" height="200" src="https://www.youtube.com/embed/zm-RA6BsYmc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
+-->
 
 
 O [VHDL](https://en.wikipedia.org/wiki/VHDL) é uma linguagem de descrição de hardware ([Hardware Description Language - HDL](https://en.wikipedia.org/wiki/Hardware_description_language)), não sendo uma linguagem de programação. Foi criada durante a Guerra Fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (complementava/substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).

@@ -32,7 +32,7 @@ $ git remote remove APS-a
 -->
 
 
-Antes de começar será necessário atualizar o ==repositório de vocês== com os novos arquivos no repositório oficial da disciplina (**apenas a partir da APS-C**). 
+Antes de começar será necessário atualizar o ==repositório de vocês== com os novos arquivos no repositório oficial da disciplina (**apenas a partir da APS-B**). 
 
 
 ### upstream
@@ -45,7 +45,7 @@ No terminal:
 1. Referenciando repositório original da disciplina
 
 ``` bash
-$ git remote add upstream https://github.com/insper/Z01.1-proj25b
+$ git remote add upstream https://github.com/insper/Z01.1-proj26a
 ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:

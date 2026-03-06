@@ -30,12 +30,10 @@ Nessa disciplina iremos utilizar não só a ferramenta principal do github, que 
 Para isso será alteramos algumas configurações no repositório:
 
 !!! example "Execute"
-    Na página do seu repositório vá em: `Settings` :arrow_right: `Features` :arrow_right: e ative `Issues ` e `Project`.
+    Na página do seu repositório vá em: `Settings` :arrow_right: `Features` :arrow_right: e ative `Issues `.
 
 
 ??? tip "Ferramentas github"
-    - **Github Project**: Ferramenta do github para gerenciamento de projetos (estilo Kambam), cada repositório pode ter N projetos, e o github automatiza o processo de todo/doing/done deixando de maneira visual as tarefas.
-
     - **github issues**: Plataforma do github para criação de tarefas/ reportar erros. As tarefas aqui criadas serão associadas a um projeto específico e a um grupo de pessoas específicas.
 
     - **Branch**: Ramo criado para implementar um feature/ correção de bug que será futuramente incorporado no master (merge)
@@ -43,6 +41,8 @@ Para isso será alteramos algumas configurações no repositório:
     - **Main**: Ramo principal do projeto, gerenciado pelo Scrum Master
 
     - **Pull-request**: Maneira de um líder de projeto receber alterações a um projeto e ter controle do que será aceito ou não. Na maioria dos casos o pull-request é criado por um usuário e revisado por outro. Quem for fazer a eletiva de [`Desenvolvimento Aberto`](https://igordsm.github.io/dev-aberto/aulas.html) do [Prof. Igor](https://github.com/igordsm) verá bem a fundo essa questão. 
+    
+    - **Github Project**: Ferramenta do github para gerenciamento de projetos (estilo Kambam), cada repositório pode ter N projetos, e o github automatiza o processo de todo/doing/done deixando de maneira visual as tarefas.
 
 
 ## Actions

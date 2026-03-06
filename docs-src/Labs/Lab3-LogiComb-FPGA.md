@@ -66,7 +66,7 @@ A pasta do projeto `b_logComb` no repositório possui a seguinte estrutura (assi
 ## Abrindo o Quartus
 
 
-Abra o software do `Quartus` ![](../figs/LogiComb/quartusIcon.png){width=30px} e clique em `File` :arrow_right: `Open Project` :arrow_right: escolha o projeto localizado na pasta `b_logComb/Quartus`. O arquivo que o Quartus irá reconhecer é o: `DE0_CV_Default.qpf` como no gif a seguir:
+Abra o software do `Quartus` ![](../figs/LogiComb/quartusIcon.png){width=30px} e clique em `File` :arrow_right: `Open Project` :arrow_right: escolha o projeto localizado na pasta `b_logComb/Quartus`. O arquivo que o Quartus irá reconhecer é o: `elementos.qpf` como no gif a seguir:
 
 !!! tip
     Se não encontrar o software na barra de tarefas abra o terminal e escreva `quartus` :arrow_right: `enter`.
@@ -144,11 +144,12 @@ Onde o valor do `LEDR0` será o próprio valor de entrada chave `SW0`.
 
 ![](../figs/LogiComb/de0-cv.jpeg){wdith=10px}
 
-Para programar a FPGA você deve:
+Para programar a FPGA você deve conectar a placa via USB (não precisa da fonte).
 
-- Conectar a placa via USB (não precisa da fonte)
+<!--
 - Ligar a placa (botão vermelho)
 - Verificar se a chave SW10 está em 'run'
+-->
 
 No quartus vá em `Tools` :arrow_right: `Programmer`. Ele deve abrir uma nova interface:
 

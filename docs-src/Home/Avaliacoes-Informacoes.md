@@ -21,12 +21,11 @@ Tanto o facilitador como o desenvolvedor serão avaliados por meio de Forms que 
 
 - Desenvolvedor
   - Insatisfatório
-    - Se comprometeu a fazer algum desenvolvimento (kanban) e não fez.
+    - Se comprometeu a fazer algum desenvolvimento e não fez.
     - Criou o branch mas não fez o desenvolvimento completo.
     - Não trabalhou ativamente no projeto (avaliação cruzada / Facilitador)
   - Satisfatório
     - Desenvolveu as rotinas atribuídas pelo Facilitador para passarem nos testes!
-    - Acompanhou o Kanban board (github project). Ex: Puxou tarefas, etc.
     - Submeteu alterações por pull requests.
 - Facilitador
   - Insatisfatório
@@ -35,7 +34,6 @@ Tanto o facilitador como o desenvolvedor serão avaliados por meio de Forms que 
     - Não participou das duas aulas referentes ao projeto
   - Satisfatório
     - Atualizou o repositório pelo Fork.
-    - Fez a manutenção do Kanban board (GitHub project). Ex: cria cards, atribui tarefas, da feedback de issues.
     - Aceitou os pull-requests.
     - Resolveu conflitos de merge nos pull requests.
     - Acompanhou o desenvolvimento do grupo, dando o suporte sempre que necessário
