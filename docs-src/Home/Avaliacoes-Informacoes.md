@@ -138,32 +138,21 @@ Liberado consulta ao material da disciplina.
     -  [2014](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2014.pdf)
     -  [2017](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2017.pdf)
     
-    
-<!-- Avaliação teórica será realizado no blackboard, com proctorio e sem consulta.
-    - [Prairie Learn](https://us.prairielearn.com/pl/course_instance/129146/assessment/2359491)
+
 ## AI
 
-Avaliação prática individual a ser realizada no SSD Linux. 
-
-A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
-
-Liberado consulta ao material da disciplina.
-
-- Projetos:
-    - B: Lógica Combinacional  
-    - C: ULA
-    - D: Lógica sequencial 
+Avaliação individual sem consulta realizada no formato **impressa**.
 
 - Conteúdos:
+    - Implementação de funções lógicas com transistores
     - Componentes Digitais
     - Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores
     - ULA
-    - Lógica Sequencial
     - VHDL: Combinacional
-    - VHDL: Sequencial   
     - RTL
     - Formas de onda
-    - Arquivos de teste
+
+### Provas anteriores apenas de referência:
 
 [Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
 
@@ -173,17 +162,16 @@ Liberado consulta ao material da disciplina.
 
 ## AF
 
-Avaliação prática individual a ser realizada no SSD Linux. 
+Avaliação individual sem consulta realizada no formato **impressa**.
 
-A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
+- Conteúdos:
+    - Lógica Sequencial
+    - VHDL: Sequencial
+    - CPU/Control Unit
+    - Assembly
+    - Linguagem de Máquina
+    - Linguagem de Máquina Virtual
 
-Liberado consulta ao material da disciplina.
-
-- Projetos:
-    - E: CPU (HW)
-    - F: Assembly (SW)
-    - G: Assembler (SW)
-    - H: VM/Translator (SW)
 
 Recomendo **não executar** os testes dessas provas por conta de mudanças realizadas nos scripts.
 
@@ -198,5 +186,3 @@ Recomendo **não executar** os testes dessas provas por conta de mudanças reali
 [Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
 
 [Prova - AF - 24b](https://github.com/insper-classroom/ele-AF-simulado2) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24b-prova.pdf)
-
- -->
