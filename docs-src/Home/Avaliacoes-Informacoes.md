@@ -142,6 +142,7 @@ Liberado consulta ao material da disciplina.
 ## AI
 
 Avaliação individual sem consulta realizada no formato **impressa**.
+Na prova, será fornecido o material de [referência de VHDL](https://github.com/Insper/Z01.1/blob/docs/docs-src/VHDL/Refer%C3%AAncia%20de%20VHDL.pdf)
 
 - Conteúdos:
     - Implementação de funções lógicas com transistores
