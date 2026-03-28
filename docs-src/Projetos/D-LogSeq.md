@@ -172,14 +172,14 @@ Para cada teste realizado, deve-se carregar a interface gráfica do simulador e 
 
 Para cada módulo deve-se gerar o `RTL` e salvar uma imagem da implementação na pasta `src/doc/_rtl.png`. 
 
-!! warning
+!!! warning
     Não basta só gerar a imagem, você precisa analisar e entender. Isso será cobrado nas avaliações.
 
 ### Testando em Hardware
 
 No FPGA você deverá desenvolver um cenário de teste para o `Program Counter` e para para a `ram8`.
 
-!! warning
+!!! warning
     _Falta atualizar os arquivos *.vhd do projeto do Quartus_
 
 ## Rubricas para avaliação de projetos
