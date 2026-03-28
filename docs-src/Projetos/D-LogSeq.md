@@ -15,8 +15,9 @@ A pasta do projeto `d_logSeq` no repositório Z01.1-proj, possui a seguinte estr
 ```bash
 /d_logSeq
     test_ula.py
-    ula_cocotb.py
     /Quartus
+    /test_cases
+        *.py
     /src
         *.vhd
 ```
@@ -45,8 +46,8 @@ para testar apenas um módulo (neste caso a Ram8).
 
 ## Projeto
 
-- Deve-se gerar uma imagem com a forma de onda desses módulos.
-- Deve-se gerar um RTL para cada módulo do projeto (Lab 4)
+- Deve-se gerar uma imagem com a forma de onda desses módulos ([Lab Formas de Ondas](https://insper.github.io/Z01.1/Labs/Lab6-Waves/)).
+- Deve-se gerar um RTL para cada módulo do projeto ([Lab FPGA](https://insper.github.io/Z01.1/Labs/Lab3-LogiComb-FPGA/))
 - Note que é possível reaproveitar, via `port map`, os módulos dos projetos anteriores. Para isso basta usar port map.
 
 ### Módulos 
@@ -176,11 +177,12 @@ Para cada módulo deve-se gerar o `RTL` e salvar uma imagem da implementação n
 
 ### Testando em Hardware
 
-No hardware você deverá desenvolver um cenário de teste para o `Program Counter` e para para a `ram8`.
+No FPGA você deverá desenvolver um cenário de teste para o `Program Counter` e para para a `ram8`.
+
+!! warning
+    _Falta atualizar os arquivos *.vhd do projeto do Quartus_
 
 ## Rubricas para avaliação de projetos
-
-Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimento total do projeto (Projeto) e outra referente a sua participação individual no grupo (que depende do seu papel).
 
 ### Projeto
 
@@ -191,15 +193,15 @@ Cada integrante do grupo irá receber duas notas: uma referente ao desenvolvimen
 | D        | Ao menos um módulo não foi implementando ou não passa no testes.          |
 |          |                                                                           |
 | C+       | Todos os módulos básicos passam nos testes                                |
-|          | **E** obter o rtl de todos os módulos (.png)                              |
 |          |                                                                           |
 | B+       | Todos os módulos básicos (conceito **C+**) passam nos testes              |
-|          | **E** usar sempre que possível outros módulos para criar um novo (hierarquia)   |
-|          | **E** PC e da RAM8 demonstrados na FPGA                                         |
-|          |                                                                                 |
-| A+       | Todos os módulos dos conceitos **C+** e **B+** implementados e funcionando      |
-|          | **E** Módulos extras funcionando com a obtenção dos rtl                         |
-|          | _Gravar vídeo explicando os rtl e o funcionamento dos módulos extras_           |
+|          | **E** obter o rtl de todos os módulos (.png)                              |
+|          | **E** obter as formas de onda de todos os módulos (.png)                  |
+|          | **E** PC e da RAM8 demonstrados na FPGA                                   |
+|          |                                                                           |
+| A+       | Todos os itens dos conceitos **C+** e **B+**                              |
+|          | **E** Módulos extras funcionando com a obtenção dos rtl                   |
+|          | **E** _Gravar vídeo explicando os rtl e o funcionamento dos módulos extras_     |
 
 
 
