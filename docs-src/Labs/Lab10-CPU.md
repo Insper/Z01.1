@@ -124,29 +124,18 @@ Agora faça o sinal `zx` que controla o zerador do sinal x da ULA.
 
 ## Memory IO 
 
-O componente `memory IO` é a 'memória' do nosso computador. Interno nesse módulo possuímos além da memória RAM, outros componentes tais como: tela, chave, leds. Lembrando que para a CPU, não existe separação entre o que é memória e o que é periférico. 
+O componente `memory IO` é a 'memória' do nosso computador. Interno nesse módulo possuímos além da memória RAM, outros componentes tais como: chave, leds e GPIOs. Lembrando que para a CPU, não existe separação entre o que é memória e o que é periférico. 
 
 Os periféricos internos do `memoryIO` são:
 
-- Tela (`screen.vhd`)
-    - responsável por controlar o LCD 
 - RAM (`ram16k.vhd`)
     - memória RAM de 16k endereços
 - SW
     - chaves da FPGA
 - LED
     - LEDs da FPGA
-
-`screen` e `ram16k` possuem a interface detalhada a seguir:
-
-![](../figs/G-CPU/memoryIO.svg)
-
-!!! note
-    Os sinais do tipo `LCD_` da `screen` são conectados diretamente ao LCD, via `portmap`.
-
-O componente `memoryIO` possui a seguinte entidade:
-
-![](../figs/G-CPU/memoryio-entidade.png){width=200}
+- GPIO
+    - Pinos de entrada ou saída
 
 ### Estudando!
 
@@ -155,11 +144,8 @@ O componente `memoryIO` possui a seguinte entidade:
 
 1. Pense e discuta com seus colegas o `memoryIO`.
 
-2. Dos sinais de entrada do `memoryIO` qual define qual periférico (RAM/LCD/SW/LED) será acessado pela CPU? Explique.
+2. Dos sinais de entrada do `memoryIO` qual define qual periférico (RAM/GPIO/SW/LED) será acessado pela CPU? Explique.
 
-```
-
-```
 
 ??? info "Resposta"
     O sinal em questão é o `address`, pois os periféricos são mapeados em endereços diferentes, e é esse sinal que define qual periférico a CPU está querendo acessar. Exemplo: se o sinal `address = 1024`, a CPU está realizando uma operação na memória RAM, mas se o sinal `address = 21184` isso indica que a CPU está querendo acessar o `LED`.
@@ -168,75 +154,13 @@ O componente `memoryIO` possui a seguinte entidade:
 
 3. Qual sinal informa o `memoryIO` que a CPU está realizando uma escrita?
 
-```
-
-```
-
 ??? info "Resposta"
     É o `writeM`, se `1` indica que a CPU quer realizar uma escrita, caso contrário é uma leitura.
-    
-4. Quais são suas entradas e saídas do LCD que o memoryIO controla? (tudo tirando o que começa com **LCD_**)
-
-```
-
-```
-
-??? info "Resposta"
-    ``` vhdl
-      DISPLAY: Screen  port map (
-             RST          => RST,
-             CLK_FAST     => CLK_FAST,
-             CLK_SLOW     => CLK_SLOW,
-
-             INPUT        => INPUT,
-             LOAD         => LOAD_DISPLAY,
-             ADDRESS      => ADDRESS(13 downto 0),
-             LCD_INIT_OK  => LCD_INIT_OK,
-
-             LCD_CS_N 	  => LCD_CS_N ,
-             LCD_D 		  => LCD_D,
-             LCD_RD_N 	  => LCD_RD_N,
-             LCD_RESET_N  => LCD_RESET_N,
-             LCD_RS 	  => LCD_RS,
-             LCD_WR_N 	  => LCD_WR_N
-    );
-    ```
-    
-    - `input`: são os px a serem escritos
-    - `load`: se é para atualizar os px
-    - `adddress`: quais px serão escritos
-
-    Note que esses sinais são os mesmos sinais de uma memória RAM, porém sem a parte de leitura. O LCD como foi implementando, não suporta que realizemos a leitura de seus pxs.
 
 4. Como funciona o LED?
 
-```
-
-```
-
 ??? info "Resposta"
     O LED é um endereço da memória, como ele 'armazena' o dado, deve ser implementando com um registrador.
-
-5. Faça um esboço (diagrama) de como o `memoryIO` implementará a saída `LED` 
-
-```
-         |                                                          |
-   LOAD  --->                                                       |
-   ADDRESS ->                                                       |
-   INPUT --->                                                       |
-         |                                                          ---> LED
-         |                                                          |
-         |                                                          |
-         |                                                          |
-         |                                                          |
-```
-
-Pinos do `memoryIO`:
-
-- LOAD: indica escrita
-- ADDRESS(16 downto 0): endereço da escrita
-- INPUT(16 downto 0): dado a ser escrito 
-- LED(9 downto 0): Valor dos LEDs da FPGA
 
 ## CPU
 
@@ -249,7 +173,7 @@ Proponha uma modificação na `CPU` do nosso Z01.1 que:
  1. Possibilite fazer carregamento efetivo em %D
      - `leaw $5, %D`
 
-Para cada modificação faça o desenho da nova CPU.
+Para cada modificação faça o desenho da nova CPU. Essas modificações serão implementadas nos conceitos B+ e A+ da APS.
 
 ## Extras
 

@@ -19,10 +19,10 @@ A pasta do projeto E no repositório Z01, possui a seguinte estrutura:
 ```
 e_CPU/
     test_CPU.py
-    CPU_cocotb.py
     programCPU_FPGA.py
     /CPU_FPGA
     /Quartus
+    /test_cases
     /src
         *.vhd
 ```
@@ -41,7 +41,7 @@ Abra o terminal na pasta `e_CPU` e execute:
 $ pytest -s
 ```
 
-> O teste do CPU apenas funcionará se o ControlUnit tiver sido implementado.
+> *O teste do CPU apenas funcionará se o ControlUnit tiver sido implementado.*
 
 Todos os módulos vhdl (desde o projeto B) serão compilados e o `cpu.vhd` será executado. 
 
@@ -83,10 +83,9 @@ Os módulos estão listados de maneira Top - Down
 
 - MemoryIO
     - **Arquivo**   : `memoryio.vhd`
-    - **Descrição** : Faz o mapa de memória para a CPU.
+    - **Descrição** : Faz o mapa de memória para a CPU. *Apenas as linhas com ???????? devem ser alteradas*
     - **Dependências** :
-         - `.Dispositivos/ram16k.vhd` : RAM a ser utilizada no projeto (já foi dado pronto)
-         - `.Dispositivos/screen.vhd` : Controlador do LCD a ser utilizada no projeto (já foi dado pronto)
+         - `RAM.vhd` : RAM a ser utilizada no projeto (já foi dado pronto)
     
 ---------------------------
 
@@ -95,9 +94,9 @@ Os módulos estão listados de maneira Top - Down
     - **Descrição** : CPU do Z01 integra registradores, controlUnit, ULA e PC.
     - **Dependências** :
          - `controlunit.vhd` : Unidade de controle a ser implementada
-         - `alu.vhd` : Unidade lógica desenvolvida no projeto D
-         - `pc.vhd` : Program counter do projeto E
-         - `register16.vhd`, `mux16.vhd` : Componentes do projeto C e D 
+         - `alu.vhd` : Unidade lógica desenvolvida no projeto C
+         - `pc.vhd` : Program counter do projeto D
+         - `register16.vhd`, `mux16.vhd` : Componentes do projeto D e B 
 
 ---------------------------
 
@@ -108,10 +107,6 @@ Os módulos estão listados de maneira Top - Down
          - não há 
          
 ### Diagramas 
-
----------------------------
-
-![memoryio.vhd](../figs/G-CPU/memoryIO.png)
 
 ---------------------------
 
@@ -141,7 +136,7 @@ Os módulos estão listados de maneira Top - Down
 |          |                                                                                    |
 | A+       |  Todos os itens do conceito **B++**                                                |
 | A+       |  **E** adicionou um novo registrador na CPU com os ajustes correspondentes         |
-|          |  **E** modificou os testes para testar esse novo recurso                           |
+|          |  **E** modificou os testes para testar o Control Unit com as modificações extras   |
 
 
 > O grupo deve **avaliar o melhor local para colocar o novo registrador e como fazer o carregamento em %D** (Há mais de uma forma).
