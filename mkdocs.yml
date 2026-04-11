@@ -150,7 +150,7 @@ nav:
       - 'APS-F': 'Projetos/F-Assembly.md'
   - Maio:
     - '06/05 - memória': 
-      - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
+      - 'Leitura Prévia - memória': 'Teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab Assembly - parte 3': 'Labs/Lab14-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
