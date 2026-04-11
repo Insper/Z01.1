@@ -2,7 +2,7 @@
 
 A forma na qual a maioria das CPUs acessam periféricos (teclado/ mouse/ USB/ tela/ ...) é a do periférico mapeado em memória. Essa técnica utiliza da capacidade do computador de escrever e ler da memória RAM, **fazendo com que regiões de endereços da memória não sejam uma 'memória' física, mas sim um periférico do computador.**
 
-![](figs/F-Assembly/mapa-de-memoria-26a.svg){width=500}
+![](../figs/F-Assembly/mapa-de-memoria-26a.svg){width=500}
 
 Vamos trabalhar com o exemplo do nosso Z01, a memória é composta de:
 
@@ -90,7 +90,7 @@ A princípio podemos utilizar qualquer endereço da memória RAM para armazenar 
 | 16384               | LED                  | w                             |
 
 
-![](figs/F-Assembly/Z0-mapa-de-memoria-leds.svg){width=500}
+![](../figs/F-Assembly/Z0-mapa-de-memoria-leds.svg){width=500}
 
 Os LEDs da FPGA são mapeados no endereço de memória `16384` onde cada bit (9..0) representa um LED, se o bit específico estiver valor `1`o LED está aceso e `0` apagado.
 
@@ -117,7 +117,7 @@ Os LEDs da FPGA são mapeados no endereço de memória `16384` onde cada bit (9.
 | ------------------- | -------------------- | --------                      |
 | 16385               | SW                   | r                             |
 
-![](figs/F-Assembly/Z0-mapa-de-memoria-sw.svg){width=500}
+![](../figs/F-Assembly/Z0-mapa-de-memoria-sw.svg){width=500}
 
 Os chaves (SW) da FPGA são mapeados no endereço de memória `16385` onde cada bit (9..0) representa uma chave, se o bit específico estiver valor `1` indica que a chave está ligada (on) e `0` desligada.
 
