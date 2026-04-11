@@ -64,8 +64,6 @@ A princípio podemos utilizar qualquer endereço da memória RAM para armazenar 
         leaw $ARG, %A  ; faz %A = 3 (%A aponta para RAM[ARG])
         ```
 
-    === "hardware"
-        ![](figs/Teoria/Z0-nasm-ram.gif)
 
 
 !!! tip
