@@ -143,7 +143,7 @@ nav:
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
       - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
     - '29/04 - Assembly Saltos': 
-      - 'Leitura Prévia - memória': 'commum-content/teoria/Teoria-Z01-mapadeMemoria.md'
+      - 'Leitura Prévia - memória': 'Teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab Assembly - parte 1': 'Labs/Lab12-Assembly.md'
       - 'Lab Assembly - parte 2': 'Labs/Lab13-Assembly.md'
