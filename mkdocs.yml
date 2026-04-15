@@ -129,6 +129,7 @@ nav:
     - '15/04 - Linguagem de Máquina': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Linguagem-de-Maquina.md'
       - 'Instruction Set': "commum-content/z01/z01-InstructionSet.md"
+      - 'Simulador CPU/Linguagem de Máquina': 'https://renan-tr.github.io/simulador/cpu' 
     - '17/04 - CPU': 
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Z01.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-CPU-1.md'
@@ -196,6 +197,7 @@ nav:
   - 'Dicas git': 'Util/Util-Dicas-GIT.md'
   - 'Novo projeto (a partir da APS-B)': "Util/Util-Comecando-novo-projeto.md"
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
+  - 'Simulador CPU/Linguagem de Máquina': 'https://renan-tr.github.io/simulador/cpu' 
   - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
   - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
 - 'Atividades formativas':
