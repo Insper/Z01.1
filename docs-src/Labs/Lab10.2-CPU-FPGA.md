@@ -18,6 +18,16 @@ Por fim, deve ser incluído e configurado como toplevel o arquivo `Computador.vh
 
 No arquivo da ROM, é definido um arquivo `.mif`, que contém o programa que será executado no nosso computador.
 
+Antes de compilar, verificar a seguinte configuração: Menu Assignments -> Device -> Device and Pin Options -> Configuration Mode -> Single Uncompressed Image with Memory Initialization
+
+verifique também no arquivo `ROM.vhd` as linhas:
+
+```
+init_file => "../../CPU_FPGA/advinhe.mif",
+intended_device_family => "MAX 10",
+lpm_hint => "ENABLE_RUNTIME_MOD=YES",
+```
+
 Basta compilar o projeto e carregar no FPGA como normalmente, que o código será executado.
 
 <!--
