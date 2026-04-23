@@ -23,11 +23,10 @@ A pasta do projeto F, no repositório Z01, possui a seguinte estrutura:
 
 ```
 f_Assembly/
-  compileALL.py
-  test_CPU.py
-  CPU_cocotb.py
-  Z01simulator.py
-  /Quartus
+  Assembly_test.py
+  programCPU_FPGA.py
+  /FPGA
+  /jar
   /src
       *.nasm
   /tests
@@ -36,8 +35,8 @@ f_Assembly/
       ....
 ```
 
-1. `Quartus`: Projeto Quartus para gravar o computador na FPGA
-1. `*.py`: Scripts em python que automatizam a execução dos testes;
+1. `FPGA`: Projeto Quartus já compilado para gravar o computador na FPGA
+1. `*.py`: Scripts em python que automatizam a execução dos testes e grava software na FPGA;
 1. `src/*.nasm`: Arquivos ASSEMBLY que serão implementados pelo grupo;
 1. `tests/*`: Arquivos que realizam o teste nos arquivos códigos do rtl.
 
@@ -46,17 +45,18 @@ f_Assembly/
 Abra o terminal na pasta `f_Assembly/` e execute:
 
 ```bash
-$ ./compileALL.py
 $ pytest -s
 ```
 
 O mesmo irá compilar os arquivos `src/*.nasm` e executar os testes unitários em cada um deles. Nesse momento do teste, como os módulos não estão implementados, o resultado deverá ser falho.
 
-Esse comando executa um teste unitário em cada um dos módulos, verificando se sua implementação está correta. O resultado é exibido na tela como  **pass** ou **fail**.
+Esse comando executa um teste unitário em cada um dos módulos, verificando se sua implementação está correta.
 
+Para selecionar apenas um teste (como o add), abra o terminal na pasta `f_Assembly/` e execute:
 
-!!! tip
-    O arquivo `config_testes_nasm.txt` define quais testes serão executados.
+```bash
+$ pytest -k add
+```
 
 ## Projeto
 
@@ -97,9 +97,6 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 #### Conceito B+
 - Palindromo 
     - **Arquivo** : `palindromo.nasm`
-- Linha
-    - **Arquivo**   : `LCDlinha.nasm`
-    - Edite o arquivo para desenhar uma linha completa
 - Mean
     - **Arquivo** : `vectorMean.nasm`
 - Chaves e Leds 
@@ -112,18 +109,17 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
     - **Arquivo** : `SWeLED2.nasm`
 - Multiplicação com chaves
     - **Arquivo**   : `mult_SW.nasm`
-
-**O funcionamento dos arquivos que envolvem SWs, LEDs e LCD deve ser demonstrado na FPGA.**
-    
-#### Extra
-
 - Controle do carrinho:
-     - Considere que as chaves SW[0], SW[1], SW[2], SW[3] representam os quatros sensores do carrinho usado na APS-A. 
-     - Considere que os LEDs LEDR[0], LEDR[1], LEDR[2], LEDR[3] representam os quatros bits dos dois motores do carrinho. 
+     - Considere que os pinos GPIO_IN[0], GPIO_IN[1], GPIO_IN[2], GPIO_IN[3] representam os quatros sensores do carrinho usado na APS-A. 
+     - Considere que os pinos GPIO_OUT[0], GPIO_OUT[1], GPIO_OUT[2], GPIO_OUT[3] representam os quatros bits dos dois motores do carrinho. 
      - Agora, queremos usar nosso CPU como controlador do carrinho. Assim, faça o código em Assembly que realize as mesmas condições lógicas indicadas na APS-A, mas desssa vez por software.
      - _Esse item não tem arquivo e nem testes._
      - **O funcionamento deve ser demonstrado na FPGA**
      - **Se for feito, substitui um dos itens do Conceito A+**
+
+**O funcionamento dos arquivos que envolvem SWs, LEDs e GPIOs deve ser demonstrado na FPGA.**
+    
+
 
 <!--
 - SWeLED2 
