@@ -15,6 +15,7 @@ Ao final desse lab você deve ser capaz de:
 
 Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script== `Z01simulador.py` dentro da pasta do projeto `f_Assembly`
 
+<!--
 ## Incondicional
 
 !!! example "lcd1.nasm" 
@@ -52,6 +53,7 @@ Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar 
           jmp
           nop
         ```
+-->
 
 ## Condicional
 
@@ -166,6 +168,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         - Teste 1: RAM[0] = 1
         - Teste 2: RAM[0] = 2
 
+<!--
 !!! example "jmp5.nasm" 
     - Criar o arquivo `f_Assembly/src/labs/jmp5.nasm`
     
@@ -176,3 +179,4 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         
     === "resultado esperado"
         ![](../figs/F-Assembly/lab2-jmp5.png){width=350}
+-->

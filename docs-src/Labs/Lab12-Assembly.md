@@ -4,10 +4,9 @@ Ao final desse lab você deve ser capaz de:
 
 1. Escrever nos LEDs do nosso Z01
 1. Ler das chaves (SW) do nosso Z01
-1. Escrever no LCD do nosso Z01
 
 !!! tip
-    Para fazer esse lab, você deve ter lido a teoria sobre [mapa de memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01-mapadeMemoria/)
+    Para fazer esse lab, você deve ter lido a teoria sobre [mapa de memória](https://insper.github.io/Z01.1/Teoria/Teoria-Z01-mapadeMemoria/)
 
 !!! note
     Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)
@@ -25,7 +24,7 @@ Problemas relacionados ao LED do nosso Z01
         Qual endereço de memória para acessar os leds do Z01?
 
     === "Resposta"
-        - `21184`
+        - `16384`
 
 !!! example "led1.nasm"
     - `f_Assembly/src/labs/led1.nasm`
@@ -39,7 +38,7 @@ Problemas relacionados ao LED do nosso Z01
         ``` nasm
         leaw $1, %A
         movw %A, %D
-        leaw $21184, %A
+        leaw $16384, %A
         movw %D, (%A)
         ```
         
@@ -65,7 +64,7 @@ Problemas relacionado a chave do nosso Z01
         Qual endereço de memória para acessar as chaves SW do Z01?
 
     === "Resposta"
-        - `21185`
+        - `16385`
 
 !!! example "sw1.nasm"
     - `f_Assembly/src/labs/sw1.nasm`
@@ -82,9 +81,9 @@ Problemas relacionado a chave do nosso Z01
         
     === "resposta"
         ```nasm
-        leaw $21185, %A
+        leaw $16385, %A
         movw (%A), %D
-        leaw $21184, %A
+        leaw $16384, %A
         movw %D, (%A)
         ```
 
@@ -104,12 +103,13 @@ Problemas relacionado a chave do nosso Z01
     === "dica"
         Utilize a instrução `notw %D` para inverter o valor  salvo no registrador `%D`
 
+<!--
 ## LCD
 
 Trabalhando com o LCD.
 
 !!! example "LCD" 
-    - Linhas 6-7 do arquivo `f_Assembly/src/labs/lcd2.nasm` -->
+    - Linhas 6-7 do arquivo `f_Assembly/src/labs/lcd2.nasm`
     
     Acione os 16 primeiros pxs do LCD.
     
@@ -150,3 +150,4 @@ Trabalhando com o LCD.
         4. px_central            = 18784 + 10 
                                  = 18794
         ```
+-->

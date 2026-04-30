@@ -34,7 +34,7 @@ extra:
     apsC_date: 'Sexta  - 20/03'
     apsD_date: 'Sexta - 10/04'
     apsE_date: 'Quarta - 22/04'
-    apsF_date: 'Quarta - 06/05'
+    apsF_date: 'Sexta - 08/05'
     apsG_date: 'Sexta - 22/05'
     #apsI_date: 'Sexta - 14/11'
     #apsMR_date: 'Quarta - 26/11'
@@ -142,7 +142,7 @@ nav:
     - '24/04 - Assembly': 
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
-      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
+      - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
     - '29/04 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'Teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
@@ -163,7 +163,7 @@ nav:
     - '13/05 - VM': 
       - 'Leitura Prévia - VM': 'commum-content/teoria/Teoria-vm.md'
       - 'Resumo VM': 'commum-content/z01/z01-Resumo-VM.md'
-      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
+      - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
 #      - 'Lab 13 - Assembler':
 #        - 'Labs/Lab16.1-Assembler.md'
 #        - 'Labs/Lab16.2-Assembler.md'
@@ -198,8 +198,8 @@ nav:
   - 'Novo projeto (a partir da APS-B)': "Util/Util-Comecando-novo-projeto.md"
   - 'Simulador ULA': 'https://renan-tr.github.io/simulador/ula' 
   - 'Simulador CPU/Linguagem de Máquina': 'https://renan-tr.github.io/simulador/cpu' 
-  - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly'
-  - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm'
+  - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
+  - 'VM Online Simulator': 'https://renan-tr.github.io/simulador/vm-lite'
 - 'Atividades formativas':
   - 'Dados Digitais': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643198'
   - 'Aritmética': 'https://us.prairielearn.com/pl/course_instance/209701/assessment/2643199'
