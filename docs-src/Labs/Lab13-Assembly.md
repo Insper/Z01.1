@@ -7,13 +7,13 @@ Ao final desse lab você deve ser capaz de:
 !!! tip
     Para fazer esse lab, você deve ter lido a teoria sobre:
     
-    - [mapa de memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01-mapadeMemoria/)
+    - [mapa de memória](https://insper.github.io/Z01.1/Teoria/Teoria-Z01-mapadeMemoria/)
     - [jump](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-nasm-jump/)
 
 !!! note
     Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Z01/Util-Resumo-Assembly/)
 
-Esse lab deve ser feito no Z01Simulador, para abrir o programa basta ==executar o script== `Z01simulador.py` dentro da pasta do projeto `f_Assembly`
+Esse lab deve ser feito no Simulador.
 
 <!--
 ## Incondicional
