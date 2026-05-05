@@ -1,16 +1,40 @@
-# H - VM Translator
+# G - VM/Translator
 
 | Entrega      |
 |--------------|
 | {{apsG_date}} |
 
-Nesse projeto iremos criar o programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
+Nesse projeto iremos criar programas em VM além de uma parte do programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
 
 ## Instruções 
 
 As instruções técnicas referente ao projeto está no [Lab 14](/Z01.1/Labs/Lab14.1-VMtranslator/).
 
-## Módulos a serem implementados
+## Programas a serem implementados
+
+Os módulos estão na pasta `g_VM/src/vm/`:
+
+1. 1a-Add
+1. 1b-Calc
+1. 1c-Div
+1. 1d-loop
+1. 2a-Calculadora
+1. 2b-Calculadora
+1. 2c-Calculadora
+1. add32
+1. diff
+1. fibonacci
+1. invert
+1. overflow
+1. remove
+1. roll
+1. somatoria
+1. trapz
+1. xor
+
+As descrições do objetivo de cada implementação são apresentadas nos arquivos Main.
+
+## Módulos a serem implementados no tradutor
 
 > **Apenas o `Code.java`.**
 
@@ -40,39 +64,38 @@ O projeto no total possui 5 módulos, sendo que o módulo `VMTranslator.java`, `
     - **Descrição** : Encapsula o código de leitura. Carrega as instruções na linguagem vm, analisa, e oferece acesso as partes da instrução  (campos e símbolos). Além disso, remove todos os espaços em branco e comentários.
     - **Dependências** : none
 
-## Sugestão de implementação (partes)
+## Implementação
 
-Sugerimos que o `VMTranslator` seja implementado em duas partes, a primeira implementa no *Code.java* somente as operações aritméticas e `push/pop`. A segunda parte faz a implementação de funções, goto e chamada de funções.
+Deve-se implementar no *Code.java* somente as operações aritméticas e `push/pop`.
 
 ## Parte 1 - Conceito C+
-   
-- Code.writeArithmetic()
-- Code.writePushPop()
+
+1. 1a-Add
+1. 1b-Calc
+1. 1c-Div
+1. 1d-loop
+1. 2a-Calculadora
+1. 2b-Calculadora
+1. 2c-Calculadora
+1. somatoria
+1. trapz
+1. xor
 
 ## Parte 2 - Conceito B+
 
-- Code.writeGoto()
-- Code.writeIf()
+1. add32
+1. diff
+1. fibonacci
+1. invert
+1. overflow
+1. remove
+1. roll
 
 ## Parte 3 - Conceito A+
 
-- Code.writeCall()
-- Code.writeReturn()
-- Code.writeFunction()
+- Code.writeArithmetic()
+- Code.writePushPop()
 
-## Projeto
-
-| Conceito |                                           |
-|----------|-------------------------------------------|
-| I        | - Menos da metade dos módulos funcionando |
-|          |                                           |
-| D        | - writeArithmetic OU writePushPop         |
-|          |                                           |
-| C+       | - writeArithmetic E writePushPop          |
-|          |                                           |
-| B+       | - writeLabel, writeGoto, writeIf          |
-|          |                                           |
-| A+       | - writeCall, writeReturn, writeFunction   |
 
 ## Para testar 
 
@@ -80,67 +103,45 @@ A seguir os testes que devem passar para cada nota :
 
 ### C+
 
-- SimpleAdd
+1. 1a_Add
+1. 1b_Calc
+1. 1c_Div
+1. 1d_loop
+1. 2a_Calculadora
+1. 2b_Calculadora
+1. 2c_Calculadora
+1. somatoria
+1. trapz
+1. xor
+
+### B+
+
+1. add32
+1. diff
+1. fibonacci
+1. invert
+1. overflow
+1. remove
+1. roll
+
+#### A+
+
 - SimpleNeg
-- SimpleSub
 - SimpleEq 
 - SimpleGt 
 - SimpleLt 
 - SimpleAnd
 - SimpleOr 
-- SimplePushConst
-- SimplePushTemp 
-- SimplePushLocal
-- SimplePushArg 
-- SimplePushThis
-- SimplePushThat
 - SimplePopTemp 
-- SimplePopLocal
-- SimplePopThat 
-- SimplePopThis 
 - SimplePushAdd 
-- SimplePopPointer
-- ~StackTest~ (opcional) 
 
-### B+
-
-- BasicLoop 
-
-#### A+
-
-- SimpleFunction
-- StaticsTest
-- Mult 
-- 1a-Add
-- 1b-Add
-- 2a-Calculadora 
-- 2b-Calculadora 
-- 2c-Calculadora 
-- 2d-Calculadora 
-- SimpleGoto 
-- SimpleIfGoto
-
-## Importante
-
-Para os testes do Conceito A+, teremos que criar programas em VM para o nosso Z01.1.
 
 ### Instruções 
 
-As instruções técnicas referente ao projeto estão no laboratório [Lab15-VM](/Z01.1/Labs/Lab15-VM/).
+As instruções técnicas referente aos programas em VM estão no laboratório [Lab15-VM](/Z01.1/Labs/Lab15-VM/).
 
-## Módulos a serem implementados
 
-Os módulos estão na pasta `g_VM/src/vm/` e estão organizados por ordem de dificuldade:
-
-1. 1a-Add
-1. 1b-Add
-1. 1c-Dic
-1. 2a-Calculadora
-1. 2b-Calculadora
-1. 2c-Calculadora
-1. 2d-Calculadora
-
-Para testar, basta editar o arquivo `config_testes_vm.txt` com os módulos que deseja executar e então executar os scripts: `./genJAR.py`, `./compileALL.py` localizado na pasta do projeto e finalmente `SIM=ghdl pytest --tb=no -s`.
+Para testar, basta executar o `pytest -k <módulo>`.
 
 
 ### Formulários
