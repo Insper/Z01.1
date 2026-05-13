@@ -4,12 +4,12 @@ O VMTranslator é um programa escrito em Java que faz a tradução de códigos e
 
 ## Testando
 
-Para testar, primeiramente executar o comando:
+Para testar, basta executar o comando:
 
 ``` bash
-$ ./genJAR.py
+$ pytest -k <nome_do_teste>
 ```
-
+<!--
 que irá criar o executável em Java.
 
 Na sequência, executar:
@@ -28,22 +28,22 @@ $ pytest --tb=no -s
 ```
 
 que irá testar as saídas esperadas.
+-->
 
 O diagrama da testagem seria:
 
 ```
-             genJAR.py
-                 |   
-                 |   
-                 V
-                 
+
             VMTranslator          Assembler            Z01-Simulator  ------------------
  arquivo.vm -------------> .nasm -----------> .hack  > ------------>  - Verifica saída -
                                                                       ------------------
                                                                     
 ```
 
-Para auxiliar, foram criados alguns programas (`g_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
+Para auxiliar, foram criados alguns programas (`g_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. 
+
+<!-->
+Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
 ``` jar
 add
@@ -67,6 +67,7 @@ Espera-se o resultado final após a execução do comando add :
     0 : 0000000100000001
   256 : 0000000000000110
 ```
+-->
 
 !!! note ""
     A seguir uma lista de como cada parte do VMTranslator é testado:
@@ -171,5 +172,6 @@ Precisamos agora traduzir a execução desse comando em `vm` para `nasm` para qu
     commands.add("movw %D, (%A)");
     ```
 
-Para testar o projeto VMtranslator, não há testes unitários disponíveis. No caso do `push constant`, temos o teste SimplePushConst, bastando apenas habilitar este teste na config (`config_testes_vm.txt`). Se observar o arquivo, irá perceber que existem diversos outros testes básicos, como `SimplePushLocal`, `SimplePopLocal` e outros que podem ser habilitados conforme estes recursos forem implementados no seu VMtranslator.
+
+Para testar o projeto VMtranslator, por exemplo no caso do `sub`, temos o teste SimpleSub, bastando apenas executá-lo com o `pytest -k`.
 

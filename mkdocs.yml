@@ -180,7 +180,7 @@ nav:
     - '20/05 - VMtranslator':
       - 'Lab VMtranslator':
         - 'Labs/Lab14.1-VMtranslator.md'
-        - 'Labs/Lab14.2-VMtranslator.md'    
+        #- 'Labs/Lab14.2-VMtranslator.md'    
       - 'APS-G': 'Projetos/I-VMtranslator.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm.md'
 #      - 'Leitura Prévia': 'commum-content/teoria/Teoria-vm-segmentos.md'
