@@ -174,8 +174,8 @@ nav:
 #      - 'APS-G': 'Projetos/G-Assembler.md'
   
     - '15/05 - VM funções': 
-      - 'Leitura Prévia - Segmentos': 'commum-content/teoria/Teoria-vm-segmentos.md'
-      - 'Leitura Prévia - Memória': 'Teoria/Teoria-vm-memoria.md'  
+      - 'Leitura Prévia - Segmentos': 'Teoria/Teoria-vm-segmentos.md'
+      - 'Leitura Prévia - Memória': 'commum-content/teoria/Teoria-vm-memoria.md'  
 #      - 'APS-G': 'Projetos/G-Assembler.md'
     - '20/05 - VMtranslator':
       - 'Lab VMtranslator':
