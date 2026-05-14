@@ -42,7 +42,7 @@ O diagrama da testagem seria:
 
 Para auxiliar, foram criados alguns programas (`g_VM/src/Examples/`) em VM muito específicos que testam somente um comando, ou uma parte da tradução do `VMTranslator`. 
 
-<!-->
+<!--
 Por exemplo o teste `SimpleAdd` possui somente a seguinte linha:
 
 ``` jar
