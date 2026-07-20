@@ -1,4 +1,0 @@
-pytest
-pytest-sugar
-cocotb
-cocotb-test
