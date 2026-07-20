@@ -85,7 +85,7 @@ Terceira Avaliação Individual - Av3
     - [Lab 14: Praticando](https://insper.github.io/Z01.1/Labs/Lab14-Assembly/)   
 
 
--->  
+ 
 
 ## Aula 18/10
 
@@ -336,8 +336,8 @@ Dúvidas sobre dados digitais.
     - [Dados Digitais 1](https://github.com/Insper/Z01.1/blob/main/Exercicios/Dados_1.pdf)
     - [Dados Digitais 2](https://insper.github.io/Z01.1/Exercicios/Exercicio-Dados-2/)
 
-
-## Aula 07/08
+--> 
+## Aula 12/08
 
 Aula de apresentação da matéria; visão geral do que vai ser feito.
 

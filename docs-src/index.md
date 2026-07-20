@@ -3,7 +3,7 @@
 ![](figs/icon-elementos.png)
 
 - **Curso:** Engenharia Da Computação - Terceiro semestre
-- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2025-2.
+- **Disciplina:** Elementos de Sistemas [Insper](https://www.insper.edu.br/) - 2026-2.
 - **Prof.** Renan Trevisoli / renantd@insper.edu.br
 - **Local:** Laboratório de Informática - 404
 
@@ -13,19 +13,6 @@
 - Atualizações pelo prof. Renan Trevisoli / renantd@insper.edu.br
 
 -------------------------
-<!--
-## Criando o grupo
-
-Grupo de até 6 pessoas! Preencher a tabela a seguir:
-
-
-[Tabela - Grupos]({{lab2_link}})
-
-
-## Resumo das aulas com indicação da leitura prévia
-
-[Conteúdos](https://insper.github.io/Z01.1/Home/Resumo-Aulas/)
--->
 
 ## Objetivos de aprendizagem
 
