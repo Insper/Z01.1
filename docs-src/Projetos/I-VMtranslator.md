@@ -1,8 +1,8 @@
-# G - VM/Translator
+# H - VM/Translator
 
 | Entrega      |
 |--------------|
-| {{apsG_date}} |
+| {{apsH_date}} |
 
 Nesse projeto iremos criar programas em VM além de uma parte do programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
 
