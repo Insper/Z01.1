@@ -27,8 +27,8 @@ plugins:
 extra:
   custom_variables:
     lab2_link: ''
-    form_scrum_link: 'https://forms.office.com/r/UcT1VPH6Ty'
-    form_dev_link: 'https://forms.office.com/r/eRhyUr4eGC'    
+    form_scrum_link: 'https://forms.cloud.microsoft/r/1RSzsBQci5'
+    form_dev_link: 'https://forms.cloud.microsoft/r/rk6GLWkiuJ'    
     apsA_date: 'Quarta - 26/08'
     apsB_date: 'Quarta - 09/09'
     apsC_date: 'Quarta - 16/09'
