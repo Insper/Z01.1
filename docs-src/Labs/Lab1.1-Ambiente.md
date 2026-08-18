@@ -9,6 +9,19 @@ O grupo irá trabalhar de forma colaborativa via a utilização do git/ github. 
 
 O git será uma das ferramentas mais importantes para o projeto.
 
+Vocês devem criar um **repositório privado** para as APS da disciplina a partir de um repositório base fornecido.
+
+Para isso, **um** membro do grupo deve:
+
+1. Acessar o [github](https://github.com/new)
+1. Ir em **Import a repository**
+1. No URL, indicar: https://github.com/Insper/Z01.1-proj26b
+1. Como o repositório é público, não são necessárias credenciais.
+1. Atribua um nome ao repositório e defina como **repositório privado**.
+1. Após a criação, em _Settings_ -> _Access_ -> _Collaboratos_ adicione os membros do grupo e os professores.
+
+
+<!--
 Utilizar o link fornecido no Blackboard para acessar a atividade no Github Classroom. 
 O primeiro integrante a acessar o link deve fornecer um nome ao grupo.
 Um repositório com o nome "aps-&lt;nome do grupo&gt;" será criado.
@@ -16,6 +29,7 @@ Um repositório com o nome "aps-&lt;nome do grupo&gt;" será criado.
 O repositório criado no Classroom é um [Fork](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow) do repositório do projeto.
 
 Os demais integrantes devem acessar o grupo já criado.
+->>
 
 ### Ferramentas github
 
