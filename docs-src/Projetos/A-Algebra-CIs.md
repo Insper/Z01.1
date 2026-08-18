@@ -4,41 +4,37 @@
 |----------------|
 | {{apsA_date}} |
 
-Nesse projeto iremos utilizar a álgebra booleana para obter as funções lógicas de um sistema as quais deverão ser implementadas utilizando CIs.
+# APS: Detector de Bordas 2×2 
 
-Os arquivos relacionados a este projeto devem ser enviados pelo Blackboard (é necessário que apenas um(a) integrante do grupo envie, desde que identifique os demais membros).
+Nesse projeto iremos utilizar a álgebra booleana para obter as funções lógicas de um detector de bordas.
 
-Queremos controlar o robô da figura a seguir:
+Considere uma imagem binária formada por pixels (cada pixel corresponde a uma entrada booleana) que podem assumir os valores:
 
-![](../figs/A-Transistores/carro.png){width=400}
+- 0 = preto
+- 1 = branco
 
+O objetivo é determinar se existe uma mudança de intensidade horizontal, vertical ou diagonal dentro da janela.
 
-onde y1 e y2 são sinais de saída (de 2 bits cada) para os motores que controlam as esteiras da esquerda e direita. x1, x2, x3 e x4 são sensores (bumpers) para detectar a colisão do robô.
+O sistema analisa uma janela de quatro pixels:
 
-Os sinais de y1 e y2 (de 2 bits cada) descrevem os seguintes movimentos:
+<table>
+  <tr>
+    <td>A</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>D</td>
+  </tr>
+</table>
 
-- "01" - motor ligado diretamente (andando para frente)
-- "10" - motor ligado reversamente (andando para trás) 
-- "00" - motor desligado
+O circuito possui exatamente 3 saídas:
 
-> **os sinais y1 e y2 devem ser ligados as entradas I1, I2, I3 e I4 da ponte H.**
+- H - Indica mudança entre a linha superior e a linha inferior.
+- V - Indica mudança entre a coluna esquerda e a coluna direita.
+- D - Indica uma configuração diagonal, isto é, quando os pixels de uma diagonal possuem um valor e os pixels da outra diagonal possuem o valor oposto.
 
-![](../figs/A-Transistores/motor.png){width=400}
-
-## Controle
-
-O controle do carrinho deve funcionar da seguinte forma:
-
-1. Todos os motores desligados se (x1 ou x2) e (x3 ou x4) indicarem colisão.
-2. Todos os motores ligados reversamente se nenhum sensor indicar colisão.
-3. Ambos os motores ligados reversamente se os sensores (x1 e x2) detectarem colisão.
-4. Ambos os motores ligados diretamente se os sensores (x3 e x4) detectarem colisão.
-5. Motor esquerdo (y1) ligado reversamente e motor direito (y2) desligado quando x1 detectar colisão, mas não x2.
-6. Motor esquerdo (y1) desligado e motor direito (y2) ligado reversamente quando x2 detectar colisão, mas não x1.
-7. Motor esquerdo (y1) ligado diretamente e motor direito (y2) desligado quando x3 detectar colisão, mas não x4.
-8. Motor esquerdo (y1) desligado e motor direito (y2) ligado diretamente quando x4 detectar colisão, mas não x3.
-
-> Caso alguma condição lógica esteja presente em mais de uma instrução, considerar a primeira condição que ocorre!
+Deve-se obter as expressões lógicas, simplificá-las e testá-las.
 
 ## Rubricas de avaliação
 
@@ -46,23 +42,17 @@ O controle do carrinho deve funcionar da seguinte forma:
 |----------|-------------------------------------------------------------|
 | **I**    | Funções Lógicas Não Obtidas                                 |
 |          |                                                             |
-| **D**    | Obtenção sem Simplificação das Funções Lógicas              |
-|          | **OU** Apresentação Pouco Clara das Funções Lógicas         | 
-|          |                                                             |
-| **C**    | Obtenção E Simplificação das Funções Lógicas                |
-|          | **OU** Video demonstrando parte 1 do Lab 1                  | 
+| **D**    | Apresentação Pouco Clara das Funções Lógicas                | 
 |          |                                                             |
 | **C+**   | Obtenção E Simplificação das Funções Lógicas                |
-|          | **E** Video demonstrando parte 1 do Lab 1                   | 
 |          |                                                             |
 | **B+**   | Obtenção E Simplificação das Funções Lógicas                |
-|          | **E** Implementação das Funções Lógicas em Simulador        |
-|          | **E** Vídeo ou Arquivo de Simulação Explicativo             | 
-|          | **E** Video demonstrando partes 2 e 3 do Lab 1              | 
+|          | **E** Implementação das Funções Lógicas em Simulador (nível de portas lógicas)        |
+|          | **E** Video demonstrando parte 1 do Lab Transistores - CI   | 
 |          |                                                             |
-| **A+**   | Todos os itens anteriores dos conceitos **C+** e **B+**     |
-|          | **E** Implementação das Funções Lógicas usando CIs          | 
-|          | **E** Vídeo de Demonstração do Funcionamento em diferentes cenários  | 
+| **A+**   | Obtenção E Simplificação das Funções Lógicas                |
+|          | **E** Implementação das Funções Lógicas em Simulador (nível de portas lógicas e nível de transistores)        |
+|          | **E** Video demonstrando partes 2 e 3  Lab Transistores - CI | 
 
 
 

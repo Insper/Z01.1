@@ -29,7 +29,7 @@ extra:
     lab2_link: ''
     form_scrum_link: 'https://forms.cloud.microsoft/r/1RSzsBQci5'
     form_dev_link: 'https://forms.cloud.microsoft/r/rk6GLWkiuJ'    
-    apsA_date: 'Quarta - 26/08'
+    apsA_date: 'Quarta - 02/09'
     apsB_date: 'Quarta - 09/09'
     apsC_date: 'Quarta - 16/09'
     apsD_date: 'Quarta - 23/09'
@@ -78,18 +78,18 @@ nav:
     - '19/08 - Aritmética':
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
       - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
-      - 'Lab - Github grupo': 'Labs/Lab1.1-Ambiente.md'
-      - 'Lab - Github individual': 'Labs/Lab1.2-Ambiente.md'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
     - '21/08 - Álgebra':
       - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-Algebra-Booleana-1.md'
       - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
-      - 'APS-A - Início': 'Projetos/A-Algebra-CIs.md'
+      - 'Lab - Github grupo': 'Labs/Lab1.1-Ambiente.md'
+      - 'Lab - Github individual': 'Labs/Lab1.2-Ambiente.md'
+      - 'APS-A': 'Projetos/A-Algebra-CIs.md'
     - '26/08 - Transistores':
       - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'
       - 'Leitura Prévia - 2': 'commum-content/teoria/Teoria-RTL.md'
-      - 'Lab - CIs': 'Labs/Lab2-A-Transistores-CI.md'
+      - 'Lab - CIs': 'Labs/Lab2-A-Transistores.md'
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
   - Setembro:
     - '02/09 - VHDL':
