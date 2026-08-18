@@ -1,8 +1,8 @@
 # Lab: Configurando Github do grupo
 
-Devemos começar a preparar o terreno para os projetos em grupo que estarão por vir, nessa etapa vocês devem montar um grupo de 5/6 colegas e dar um nome a ele (os grupos são nomeados por letras, a primeira letra do nome do seu grupo é o nome da coluna na planilha dos grupos).
+Devemos começar a preparar o terreno para os projetos em grupo que estarão por vir, nessa etapa vocês devem montar um grupo de 5 ou 6 colegas e dar um nome a ele (os grupos são nomeados por letras, a primeira letra do nome do seu grupo é o nome da coluna na planilha dos grupos).
 
-O grupo irá trabalhar de forma colaborativa via a utilização do git/ github. É imprescindível que todos trabalhem dessa forma, pois será a maneira que iremos avaliar individualmente vocês. 
+O grupo irá trabalhar de forma colaborativa via a utilização do git/github. É imprescindível que todos trabalhem dessa forma, pois será a maneira que iremos avaliar individualmente vocês. 
 
 
 ## GitHub
@@ -18,7 +18,7 @@ Para isso, **um** membro do grupo deve:
 1. No URL, indicar: https://github.com/Insper/Z01.1-proj26b
 1. Como o repositório é público, não são necessárias credenciais.
 1. Atribua um nome ao repositório e defina como **repositório privado**.
-1. Após a criação, em _Settings_ -> _Access_ -> _Collaboratos_ adicione os membros do grupo e os professores.
+1. Após a criação, em _Settings_ -> _Access_ -> _Collaborators_ adicione os membros do grupo e os professores.
 
 
 <!--

@@ -45,7 +45,8 @@ No terminal:
 1. Referenciando repositório original da disciplina
 
 ``` bash
-$ git remote add upstream https://github.com/insper/Z01.1-proj26a
+$ git remote add upstream https://github.com/insper/Z01.1-proj26b
+$ git remote -v
 ```
 
 2. Atualizando repositório do grupo com alterações feitas no repositório da disciplina:
@@ -53,7 +54,7 @@ $ git remote add upstream https://github.com/insper/Z01.1-proj26a
 ``` bash
 $ git fetch upstream
 $ git checkout main
-$ git merge upstream/main --allow-unrelated-histories -X ours
+$ git merge upstream/main
 ```
 
 Feito isso deve ter aparecido uma pasta da nova APS dentro do repositório de vocês.

@@ -79,12 +79,12 @@ nav:
       - 'Leitura Prévia': 'commum-content/teoria/Teoria-Aritmetica-Binaria.md'
       - 'Exercícios 1':  'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana.pdf'
       #- 'Exercícios 1 - solução': 'https://github.com/Insper/Z01.1/blob/master/Exercicios/Exercicio-Aritmetica-Booleana_resolvido.pdf'
+      - 'Lab - Github grupo': 'Labs/Lab1.1-Ambiente.md'
+      - 'Lab - Github individual': 'Labs/Lab1.2-Ambiente.md'
     - '21/08 - Álgebra':
       - 'Leitura Prévia': 'Teoria/Teoria-Algebra-Booleana.md'
       - 'Exercícios 1': 'Exercicios/Exercicio-Algebra-Booleana-1.md'
-      - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'  
-      - 'Lab - Github grupo': 'Labs/Lab1.1-Ambiente.md'
-      - 'Lab - Github individual': 'Labs/Lab1.2-Ambiente.md'
+      - 'Exercícios 2': 'Exercicios/Exercicio-Algebra-Booleana-2.md'        
       - 'APS-A': 'Projetos/A-Algebra-CIs.md'
     - '26/08 - Transistores':
       - 'Leitura Prévia - 1': 'commum-content/teoria/Teoria-CMOS.md'

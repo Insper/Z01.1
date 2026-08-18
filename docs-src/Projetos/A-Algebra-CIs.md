@@ -58,7 +58,7 @@ Deve-se obter as expressões lógicas, simplificá-las e testá-las.
 
 ### Entrega
 
-A entrega será feita pelo Github Classroom.
+A entrega será feita pelo Github.
 
 ### Formulários
 
