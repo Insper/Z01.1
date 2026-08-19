@@ -56,9 +56,16 @@ Deve-se obter as expressões lógicas, simplificá-las e testá-las.
 
 
 
-### Entrega
+## Entrega
 
-A entrega será feita pelo Github.
+A entrega será feita pelo Github, na pasta **a_CI**.
+
+### O que deve ser entregue:
+
+- **Tabela Verdade** com todas as condições e saídas esperadas (pode ser arquivo excel, texto plano, markdown, ou imagem de resolução manuscrita).
+- Obtenção das **expressões** e processo de **simplificação**, seja por Álgebra Booleana ou por mapa de Karnaugh (pode ser texto plano, markdown, ou imagem de resolução manuscrita).
+- Simulação funcionando (se for no falstad, anexar **arquivo texto** com o código exportado do simulador; se for no tinkercad, anexar arquivo texto com o link da simulação).
+- Para os vídeos do laboratório, anexar **arquivo texto com um link para o video** (youtube, shorts, drive...) indicando a parte do laboratório e a função identificada.
 
 ### Formulários
 
