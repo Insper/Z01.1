@@ -75,34 +75,9 @@ A seguinte tabela será aplicada para o cálculo dos conceitos das APS.
 | 3-0  | I        |
 
 
-
 ## Conteúdos das Avaliações
-<!--
+
 Informações sobre as avaliações (e simulados) da disciplina:
-
-
-## AV3 - sexta 26/04 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
-
-
-Avaliação prática individual a ser realizada no SSD Linux. 
-
-A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
-
-Liberado consulta ao material da disciplina.
-
-- Projetos:
-    
-
-- Conteúdos:
-    - CPU
-    - ControlUnit
-    - Assembly
-    - Assembly - Mapa de memória
-    - Assembly - Saltos
-    - Linguagem de máquina
-    - Conjunto de Instruções
-
-
 
 ### Atividade 1
 
@@ -116,7 +91,7 @@ Liberado consulta ao material da disciplina.
     - Simplificação via mapa de Karnaught
     - Equação via circuito
     - Circuito via equação
-    - Transistores
+    - Transistores/Tecnologia CMOS/Funções lógicas com transistores
     - Portas lógicas: not, and, or
     - Dados digitais
     - Binário, Hexadecimal
@@ -138,6 +113,28 @@ Liberado consulta ao material da disciplina.
     -  [2014](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2014.pdf)
     -  [2017](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2017.pdf)
     
+<!--
+## AV3 - sexta 26/04 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
+
+
+Avaliação prática individual a ser realizada no SSD Linux. 
+
+A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
+
+Liberado consulta ao material da disciplina.
+
+- Projetos:
+    
+
+- Conteúdos:
+    - CPU
+    - ControlUnit
+    - Assembly
+    - Assembly - Mapa de memória
+    - Assembly - Saltos
+    - Linguagem de máquina
+    - Conjunto de Instruções
+
 
 ## AI
 
