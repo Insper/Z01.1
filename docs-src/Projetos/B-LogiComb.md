@@ -179,23 +179,23 @@ Arquivos relacionados com cada conceito:
 
 !!! tip "Display 7s"
     1. Esse item é uma continuação do que foi realizado no [Lab3](/Z01.1/Labs/Lab3-LogiComb-FPGA/), onde vocês tiveram que exibir um valor constante no display de 7s. 
-    1. Para cada segmento do display, vocês devem encontrar uma equação booleana que o represente, e então implementar em VHDL e testar na FPGA.
+    <!--1. Para cada segmento do display, vocês devem encontrar uma equação booleana que o represente, e então implementar em VHDL e testar na FPGA.-->
 
 ### Conceito A+
 
 - Porta xor de 3 entradas
     - **Arquivo** : `xor3.vhd` (arquivos e testes não fornecidos)
     - **Descrição**: Implemente uma porta XOR de 3 entradas utilizando **necessariamente** apenas um mux8way.
+    
+- O grupo deve apresentar um vídeo da FPGA mostrando nos display de 7 segmentos o seguinte:
+    - O valor em hexadecimal da palavra binária formada pelas chaves SW(3 .. 0)
+    - O valor em hexadecimal da palavra binária formada pelas chaves SW(9 .. 0)
+    - O valor em decimal da palavra binária formada pelas chaves SW(9 .. 0) **desafio adicional**
 
+<!--
 - Funções da APS-A
     - **Arquivo** : `carrinho.vhd` (arquivos e testes não fornecidos)
     - **Descrição**: Implemente as funções relacionadas a y1 e y2 da APS-A em VHDL.
-
-<!--
-- O grupo deve apresentar um vídeo da FPGA mostrando nos display de 7 segmentos o seguinte:
-    - (C) O valor em hexadecimal da palavra binária formada pelas chaves SW(3 .. 0)
-    - (C) O valor em hexadecimal da palavra binária formada pelas chaves SW(9 .. 0)
-    - (B) O valor em decimal da palavra binária formada pelas chaves SW(9 .. 0)
 -->
 
 ## Rubricas para avaliação do projeto
@@ -221,7 +221,7 @@ Para atingir os objetivos A+ e B+, deve-se antes atingir o C+.
 |          | |
 | **A+**   | Todos os módulos dos conceitos **C+** e **B+** implementados e funcionado       |
 |          | **E** Exibe três dígitos em Hexadecimal na FPGA - anexar video no repositório   |
-|          | **E** Módulos adicionais implementados e funcionado (xor, carrinho) |
+|          | **E** Módulos xor implementado e funcionado |
 |          | _Para testar estes dois últimos, implementar na FPGA ou criar os testes._ |
 
 
