@@ -112,6 +112,29 @@ Informações sobre as avaliações (e simulados) da disciplina:
     -  [2008](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2008.pdf)
     -  [2014](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2014.pdf)
     -  [2017](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/enade2017.pdf)
+
+## AI
+
+Avaliação individual sem consulta realizada no formato **impressa**.
+Na prova, será fornecido o material de [referência de VHDL](https://github.com/Insper/Z01.1/blob/docs/docs-src/VHDL/Refer%C3%AAncia%20de%20VHDL.pdf)
+
+- Conteúdos:
+    - Componentes Digitais
+    - Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores
+    - ULA
+    - VHDL: Combinacional
+    - RTL
+    - Formas de onda
+    - Lógica Sequencial
+    - VHDL: Sequencial
+
+### Provas anteriores apenas de referência:
+
+[Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
+
+[Prova - AvI - 25a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/25a-ele-av2_resolucao.pdf) 
+
+[Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
     
 <!--
 ## AV3 - sexta 26/04 - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24a-ele-av3_resolucao.pdf)
@@ -136,35 +159,12 @@ Liberado consulta ao material da disciplina.
     - Conjunto de Instruções
 
 
-## AI
-
-Avaliação individual sem consulta realizada no formato **impressa**.
-Na prova, será fornecido o material de [referência de VHDL](https://github.com/Insper/Z01.1/blob/docs/docs-src/VHDL/Refer%C3%AAncia%20de%20VHDL.pdf)
-
-- Conteúdos:
-    - Implementação de funções lógicas com transistores
-    - Componentes Digitais
-    - Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores
-    - ULA
-    - VHDL: Combinacional
-    - RTL
-    - Formas de onda
-
-### Provas anteriores apenas de referência:
-
-[Prova - AvI - 24a](https://github.com/insper-classroom/ele-Av2-simulado)
-
-[Prova - AvI - 25a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/25a-ele-av2_resolucao.pdf) 
-
-[Prova - AvI - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
 
 ## AF
 
 Avaliação individual sem consulta realizada no formato **impressa**.
 
-- Conteúdos:
-    - Lógica Sequencial
-    - VHDL: Sequencial
+- Conteúdos:    
     - CPU/Control Unit
     - Assembly
     - Linguagem de Máquina
