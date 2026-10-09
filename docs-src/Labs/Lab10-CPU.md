@@ -11,7 +11,7 @@ A unidade de controle é o periférico da CPU responsável por decodificar uma i
 
 ![](../figs/G-CPU/controlUnit.svg){width=60%}
 
-O `control unit` controla todos os componentes internos da nossa CPU, é ele que por exemplo seleciona como vai estar os sinais do seletor dos mux (`muxALUI/I`/`muxAM/D`, qual operação a ULA irá executar (`zr.nx.zy.ny.f.no`), onde o dado será salvo (`loadD`, `loadA`, `writeM`, `loadPC`) e se é para executar uma operação de salto (`loadPC`). 
+O `control unit` controla todos os componentes internos da nossa CPU, é ele que por exemplo seleciona como vai estar os sinais do seletor dos mux (`muxALUI/I`/`muxAM/D`, qual operação a ULA irá executar (`zx`, `nx`, `zy`, `ny`, `f`, `no`), onde o dado será salvo (`loadD`, `loadA`, `writeM`, `loadPC`) e se é para executar uma operação de salto (`loadPC`). 
 
 A figura a baixo ilustra tudo que o ==control unit controla==.
 
@@ -148,7 +148,7 @@ Os periféricos internos do `memoryIO` são:
 
 
 ??? info "Resposta"
-    O sinal em questão é o `address`, pois os periféricos são mapeados em endereços diferentes, e é esse sinal que define qual periférico a CPU está querendo acessar. Exemplo: se o sinal `address = 1024`, a CPU está realizando uma operação na memória RAM, mas se o sinal `address = 21184` isso indica que a CPU está querendo acessar o `LED`.
+    O sinal em questão é o `address`, pois os periféricos são mapeados em endereços diferentes, e é esse sinal que define qual periférico a CPU está querendo acessar. Exemplo: se o sinal `address = 1024`, a CPU está realizando uma operação na memória RAM, mas se o sinal `address = 16384` isso indica que a CPU está querendo acessar o `LED`.
 
     - Para mais informações, leia [Teoria/Z01 - Mapa de Memória](https://insper.github.io/Z01.1/commum-content/teoria/Teoria-Z01-mapadeMemoria/).
 
