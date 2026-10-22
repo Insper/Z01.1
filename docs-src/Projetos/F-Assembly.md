@@ -104,11 +104,13 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 
 #### Conceito A+
 - fatorial
-    - **Arquivo**   : `factorial.nasm`    
+    - **Arquivo**   : `factorial.nasm` 
 - Chaves e Leds 
     - **Arquivo** : `SWeLED2.nasm`
 - Multiplicação com chaves
     - **Arquivo**   : `mult_SW.nasm`
+    
+<!--
 - Controle do carrinho:
      - Considere que os pinos GPIO_IN[0], GPIO_IN[1], GPIO_IN[2], GPIO_IN[3] representam os quatros sensores do carrinho usado na APS-A. 
      - Considere que os pinos GPIO_OUT[0], GPIO_OUT[1], GPIO_OUT[2], GPIO_OUT[3] representam os quatros bits dos dois motores do carrinho. 
@@ -116,8 +118,9 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
      - _Esse item não tem arquivo e nem testes._
      - **O funcionamento deve ser demonstrado na FPGA**
      - **Se for feito, substitui um dos itens do Conceito A+**
+     -->
 
-**O funcionamento dos arquivos que envolvem SWs, LEDs e GPIOs deve ser demonstrado na FPGA.**
+**O funcionamento dos arquivos que envolvem SWs, LEDs deve ser demonstrado na FPGA.**
     
 
 
