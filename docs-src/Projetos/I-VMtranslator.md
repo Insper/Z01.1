@@ -4,7 +4,7 @@
 |--------------|
 | {{apsH_date}} |
 
-Nesse projeto iremos criar programas em VM além de uma parte do programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
+Nesse projeto iremos criar programas em VM além do programa *VM translator* que é responsável por traduzir os códigos escrito em linguagem VM de pilha para a linguagem assembly.
 
 ## Instruções 
 
@@ -80,9 +80,6 @@ Deve-se implementar no *Code.java* somente as operações aritméticas e `push/p
 1. somatoria
 1. trapz
 1. xor
-
-## Parte 2 - Conceito B+
-
 1. add32
 1. diff
 1. fibonacci
@@ -91,12 +88,22 @@ Deve-se implementar no *Code.java* somente as operações aritméticas e `push/p
 1. remove
 1. roll
 
-## Parte 3 - Conceito A+
+## Parte 2 - Conceito B+
 
 - Code.writeArithmetic()
 - Code.writePushPop()
+- Code.writeLabel()
+- Code.writeGoto()
+- Code.writeIf()
 
+## Parte 3 - Conceito A+
 
+- Code.writeCall()
+- Code.writeReturn()
+- Code.writeFunction()
+- Teste de código VM na FPGA
+
+<!--
 ## Para testar 
 
 A seguir os testes que devem passar para cada nota :
@@ -134,7 +141,7 @@ A seguir os testes que devem passar para cada nota :
 - SimpleOr 
 - SimplePopTemp 
 - SimplePushAdd 
-
+-->
 
 ### Instruções 
 

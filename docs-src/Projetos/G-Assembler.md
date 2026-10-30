@@ -60,9 +60,9 @@ O projeto no total possui 5 módulos, sendo que o módulo `AssemblerZ01.java` j�
 | C+       | - Criado assembler a partir de estrutura de código disponibilizada                   |
 |          | - Todos os testes unitários passam no teste                                          |
 |          |                                                                                      |
-| B+       | - Verifica se instrução de jump é seguida de NOP, caso contrário dá erro             |
+| B+       | - Verifica se instrução de jump é seguida de NOP, caso contrário incluí-la           |
 |          |                                                                                      |
-| A+       | - Implementando modo verbose (-v) que possibilita analisar o assembler e suas etapas |
+| A+       | - Implemente modo verbose (-v) que possibilita analisar o assembler e suas etapas    |
 
 
 <!--

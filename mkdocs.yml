@@ -141,25 +141,25 @@ nav:
       - 'Leitura Prévia': 'Teoria/Teoria-Assembly.md'
       - 'Resumo Assembly': 'commum-content/z01/z01-Resumo-Assembly.md'
       - 'Assembly Online Simulator': 'https://renan-tr.github.io/simulador/assembly-lite'
-    - '21/10 - Assembly Saltos': 
+    - '23/10 - Assembly Saltos': 
       - 'Leitura Prévia - memória': 'Teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab Assembly - parte 1': 'Labs/Lab12-Assembly.md'
       - 'Lab Assembly - parte 2': 'Labs/Lab13-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - '23/10 - memória': 
+    - '28/10 - memória': 
       - 'Leitura Prévia - memória': 'Teoria/Teoria-Z01-mapadeMemoria.md'
       - 'Leitura Prévia - saltos': 'commum-content/teoria/Teoria-nasm-jump.md'
       - 'Lab Assembly - parte 3': 'Labs/Lab14-Assembly.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - '28/10 - prática assembly': 
+    - '30/10 - prática assembly': 
       - 'Lab Assembly FPGA': 'Labs/Lab15-Assembly-FPGA.md'
       - 'APS-F': 'Projetos/F-Assembly.md'
-    - '30/10 - Assembler': 
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
-      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
   - Novembro:
     - '04/11 - Assembler': 
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler.md'
+      - 'Leitura Prévia': 'commum-content/teoria/Teoria-Assembler-SymbolTable.md'
+    - '06/11 - Assembler': 
       - 'Lab - Assembler':
 #        - 'Labs/Lab16.1-Assembler.md'
 #        - 'Labs/Lab16.2-Assembler.md'
@@ -168,7 +168,7 @@ nav:
         - 'Labs/Lab16.5-Assembler.md'
         - 'Labs/Lab16.6-Assembler.md'
       - 'APS-G': 'Projetos/G-Assembler.md'    
-    - '06/11 - Assembler': 
+    - '09/11 - Assembler': 
       - 'APS-G': 'Projetos/G-Assembler.md'  
     - '11/11 - VM': 
       - 'Leitura Prévia - VM': 'commum-content/teoria/Teoria-vm.md'
