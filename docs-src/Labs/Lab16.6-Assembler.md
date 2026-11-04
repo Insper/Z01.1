@@ -1,4 +1,4 @@
-# parte 5
+# Assembler - parte 2
 
 Implemente o método `initialize` da classe `SymbolTable` utilizando os conceitos visto nos outros labs. 
 
@@ -33,12 +33,10 @@ Tabela de símbolos? De uma lida na [teoria/Tabela de Símbolos](https://insper.
 
 _Apenas após terminar todos os arquivos._
 
-Por fim, iremos traduzir todos os arquivos `nasm` da APS-F usando o Assembler que vocês criaram. Para isso, execute no terminal os comandos:
+Por fim, iremos traduzir todos os arquivos `nasm` da APS-F usando o Assembler que vocês criaram. Para isso, execute no terminal na pasta da APS-G o comando:
 
 ``` bash
-$ ./genJAR.py
-$ ./compileALL.py
 $ pytest -s
 ```
 
-O primeiro gera o `.jar` a partir do código de vocês, enquanto o segundo traduz todos os arquivos `nasm`. O terceiro roda os arquivos Assembly no CPU. 
+Ele irá primeiramente gerar o `.jar` a partir do código de vocês, traduzir todos os arquivos `nasm`, e rodar os arquivos Assembly no CPU. 
