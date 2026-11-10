@@ -101,7 +101,7 @@ Deve-se implementar no *Code.java* somente as operações aritméticas e `push/p
 - Code.writeCall()
 - Code.writeReturn()
 - Code.writeFunction()
-- Teste de código VM na FPGA
+- Teste de código VM na FPGA (SWeLED, SWeLED2,  multSW)
 
 <!--
 ## Para testar 
