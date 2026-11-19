@@ -157,19 +157,21 @@ Liberado consulta ao material da disciplina.
     - Assembly - Saltos
     - Linguagem de máquina
     - Conjunto de Instruções
-
+-->
 
 
 ## AF
 
 Avaliação individual sem consulta realizada no formato **impressa**.
 
-- Conteúdos:    
+- Conteúdos: 
     - CPU/Control Unit
     - Assembly
+    - Assembler
     - Linguagem de Máquina
-    - Linguagem de Máquina Virtual
+    - Linguagem de Máquina Virtual (VM e Translator)
 
+#### Provas anteriores:
 
 Recomendo **não executar** os testes dessas provas por conta de mudanças realizadas nos scripts.
 
@@ -184,4 +186,4 @@ Recomendo **não executar** os testes dessas provas por conta de mudanças reali
 [Prova - Av4 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av4_22a_resolucao.pdf)
 
 [Prova - AF - 24b](https://github.com/insper-classroom/ele-AF-simulado2) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/24b-prova.pdf)
--->
+
